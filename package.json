@@ -17,8 +17,8 @@
     "./package.json": "./package.json"
   },
   "bin": {
-    "avatar": "./dist-node/cli.js",
-    "pix-avatar": "./dist-node/cli.js"
+    "avatar": "dist-node/cli.js",
+    "pix-avatar": "dist-node/cli.js"
   },
   "files": [
     "dist-node/",
