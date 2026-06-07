@@ -1,37 +1,58 @@
 {
   "name": "pix-avatar",
   "version": "0.1.0",
-  "private": true,
+  "description": "Spec-first 40x40 pixel avatar generator for agents, CLI, SDK, and HTTP workflows.",
   "type": "module",
-  "bin": {
-    "avatar": "./dist-node/cli.js"
+  "main": "./dist-node/sdk.js",
+  "types": "./dist-node/sdk.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist-node/sdk.d.ts",
+      "import": "./dist-node/sdk.js"
+    },
+    "./server": {
+      "types": "./dist-node/server.d.ts",
+      "import": "./dist-node/server.js"
+    },
+    "./package.json": "./package.json"
   },
+  "bin": {
+    "avatar": "./dist-node/cli.js",
+    "pix-avatar": "./dist-node/cli.js"
+  },
+  "files": [
+    "dist-node/",
+    "dist/",
+    "sdk-python/",
+    "README.md"
+  ],
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build && tsup src/cli.ts src/server.ts src/sdk.ts --format esm --dts --out-dir dist-node",
+    "build": "rm -rf dist dist-node && tsc --noEmit && vite build && tsup src/cli.ts src/server.ts src/sdk.ts --format esm --dts --out-dir dist-node",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "cli": "tsx src/cli.ts",
     "serve:api": "tsx src/server.ts",
     "render:samples": "tsx src/scripts/renderSamples.ts",
-    "validate:assets": "tsx src/scripts/crossValidate.ts"
+    "validate:assets": "tsx src/scripts/crossValidate.ts",
+    "prepublishOnly": "npm run typecheck && npm test && npm run validate:assets && npm run build"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "^5.0.0",
     "commander": "^12.1.0",
     "express": "^4.19.2",
-    "lucide-react": "^0.468.0",
     "pngjs": "^7.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "yaml": "^2.5.1"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
     "@types/express": "^4.17.21",
     "@types/node": "^22.7.4",
     "@types/pngjs": "^6.0.5",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "tsx": "^4.19.1",
     "tsup": "^8.3.0",
     "typescript": "^5.6.3",
