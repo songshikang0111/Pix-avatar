@@ -1,5 +1,5 @@
 {
-  "name": "pix-avatar",
+  "name": "@shiki0111/pix-avatar",
   "version": "0.1.0",
   "description": "Spec-first 40x40 pixel avatar generator for agents, CLI, SDK, and HTTP workflows.",
   "type": "module",

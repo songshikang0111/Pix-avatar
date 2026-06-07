@@ -7,6 +7,25 @@ reports, and pixel inspection are all deterministic render outputs.
 
 ## Quick Start
 
+Production CLI install:
+
+```bash
+npm install -g @shiki0111/pix-avatar
+
+pix-avatar random --seed 42 --out spec.json
+pix-avatar render spec.json --out avatar.png
+pix-avatar inspect spec.json --pixel 20,26 --json
+```
+
+Package-local install:
+
+```bash
+npm install @shiki0111/pix-avatar
+npx pix-avatar random --seed 42 --out spec.json
+```
+
+Local development:
+
 ```bash
 npm install
 npm run dev
