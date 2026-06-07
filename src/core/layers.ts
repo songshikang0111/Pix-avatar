@@ -2,6 +2,7 @@ export const LAYERS = {
   "background.base": 0,
   "background.pattern": 10,
   "background.effects": 20,
+  "character.outline": 90,
   "body.shadow": 100,
   "body.base": 110,
   neck: 120,

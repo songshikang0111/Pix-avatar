@@ -25,6 +25,17 @@ describe("rendering", () => {
     expect(render.inspect.anchors["mouth.center"]).toBeDefined();
   });
 
+  it("keeps default random output inside the visual SOP pool", () => {
+    for (let i = 0; i < 24; i += 1) {
+      const spec = randomSpec({ seed: `visual-sop-${i}` });
+      expect(spec.traits["background.style"]?.endsWith("_flat")).toBe(true);
+      expect(["fantasy_blue", "robot_gray"]).not.toContain(spec.traits["skin.tone"]);
+      expect(["frown", "surprised_o", "neutral"]).not.toContain(spec.traits["mouth.shape"]);
+      expect(["scar_left_cheek", "under_eye_lines"]).not.toContain(spec.traits["face.detail"]);
+      expect(["angry", "sad"]).not.toContain(spec.traits["eyebrows.shape"]);
+    }
+  });
+
   it("validates default avatar layout", () => {
     const result = validateAvatar(createDefaultSpec());
     expect(result.status).not.toBe("error");

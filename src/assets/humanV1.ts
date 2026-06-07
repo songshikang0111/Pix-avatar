@@ -175,6 +175,12 @@ export const TRAIT_OPTIONS: TraitOption[] = [
   ...options("background.style", "background", [
     ["transparent", "Transparent"],
     ["solid", "Solid"],
+    ["mint_flat", "Mint flat"],
+    ["cream_flat", "Cream flat"],
+    ["pink_flat", "Pink flat"],
+    ["sky_flat", "Sky flat"],
+    ["lavender_flat", "Lavender flat"],
+    ["peach_flat", "Peach flat"],
     ["circle", "Circle"],
     ["rounded_square", "Rounded square"],
     ["checker", "Checker"],
@@ -236,7 +242,13 @@ export const HUMAN_PALETTE: HumanPalette = {
   },
   background: {
     transparent: { base: "transparent", accent: "#E8EEF5", shadow: "#CBD5E1" },
-    solid: { base: "#DDEAD8", accent: "#8EBCA0", shadow: "#B7CEBA" },
+    solid: { base: "#BFE8D3", accent: "#8EBCA0", shadow: "#9CC9AD" },
+    mint_flat: { base: "#BFE8D3", accent: "#8EBCA0", shadow: "#9CC9AD" },
+    cream_flat: { base: "#F3E7B7", accent: "#D8BE75", shadow: "#E3D39B" },
+    pink_flat: { base: "#F2AFC6", accent: "#D7799C", shadow: "#E395B2" },
+    sky_flat: { base: "#AEE3E8", accent: "#67AFBC", shadow: "#8BCBD3" },
+    lavender_flat: { base: "#DAC9F0", accent: "#9277BD", shadow: "#BBA8D8" },
+    peach_flat: { base: "#F1C29D", accent: "#CF8656", shadow: "#DFA77E" },
     circle: { base: "#E8EEF5", accent: "#7C9EC8", shadow: "#C6D3E3" },
     rounded_square: { base: "#F0E4C9", accent: "#C7925B", shadow: "#DDC79E" },
     checker: { base: "#EEF0F2", accent: "#C8CDD4", shadow: "#AEB6C2" },
@@ -245,13 +257,13 @@ export const HUMAN_PALETTE: HumanPalette = {
     aura: { base: "#DBF2EC", accent: "#D9617A", shadow: "#81CBBE" }
   },
   semantic: {
-    "mouth.dark": "#5A2A24",
+    "mouth.dark": "#1B1412",
     "mouth.shadow": "#341412",
     "mouth.teeth": "#FFF4E6",
     "lip.highlight": "#E78A94",
     "blush.soft": "#D66B76",
     "scar.light": "#F2A1A1",
-    "line.dark": "#1B1412",
+    "line.dark": "#151313",
     "debug.grid": "#8EA0B7",
     "debug.anchor": "#FF306E"
   }
