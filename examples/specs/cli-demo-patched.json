@@ -2,10 +2,10 @@
   "version": "avatar/v1",
   "canvas": {
     "size": [
-      128,
-      128
+      40,
+      40
     ],
-    "scale": 4,
+    "scale": 12,
     "background": "transparent"
   },
   "asset_pack": {
@@ -36,9 +36,9 @@
     {
       "op": "rect",
       "layer": "custom.face",
-      "x": 60,
-      "y": 80,
-      "w": 8,
+      "x": 18,
+      "y": 26,
+      "w": 4,
       "h": 1,
       "color": "mouth.dark",
       "clip": "face"
@@ -46,8 +46,8 @@
     {
       "op": "px",
       "layer": "custom.face",
-      "x": 64,
-      "y": 79,
+      "x": 20,
+      "y": 25,
       "color": "lip.highlight",
       "clip": "face"
     }

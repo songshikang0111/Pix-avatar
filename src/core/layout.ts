@@ -21,135 +21,129 @@ interface FaceConfig {
 }
 
 const baseAnchors = {
-  "head.top": [64, 14] as Point,
-  "head.center": [64, 58] as Point,
-  "face.center": [64, 61] as Point,
-  "face.centerline.top": [64, 28] as Point,
-  "face.centerline.bottom": [64, 98] as Point,
-  "left_eye.center": [49, 56] as Point,
-  "right_eye.center": [79, 56] as Point,
-  "left_eyebrow.center": [49, 49] as Point,
-  "right_eyebrow.center": [79, 49] as Point,
-  "nose.bridge": [64, 60] as Point,
-  "nose.tip": [64, 69] as Point,
-  "mouth.center": [64, 81] as Point,
-  "mouth.baseline": [64, 82] as Point,
-  chin: [64, 101] as Point,
-  "left_ear.socket": [30, 59] as Point,
-  "right_ear.socket": [98, 59] as Point,
-  "hair.crown": [64, 19] as Point,
-  "hairline.center": [64, 31] as Point,
-  left_temple: [35, 39] as Point,
-  right_temple: [93, 39] as Point,
-  neck: [64, 102] as Point
+  "head.top": [20, 5] as Point,
+  "head.center": [20, 18] as Point,
+  "face.center": [20, 19] as Point,
+  "face.centerline.top": [20, 10] as Point,
+  "face.centerline.bottom": [20, 31] as Point,
+  "left_eye.center": [16, 18] as Point,
+  "right_eye.center": [24, 18] as Point,
+  "left_eyebrow.center": [16, 15] as Point,
+  "right_eyebrow.center": [24, 15] as Point,
+  "nose.bridge": [20, 19] as Point,
+  "nose.tip": [20, 22] as Point,
+  "mouth.center": [20, 26] as Point,
+  "mouth.baseline": [20, 26] as Point,
+  chin: [20, 32] as Point,
+  "left_ear.socket": [9, 19] as Point,
+  "right_ear.socket": [31, 19] as Point,
+  "hair.crown": [20, 5] as Point,
+  "hairline.center": [20, 10] as Point,
+  left_temple: [11, 12] as Point,
+  right_temple: [29, 12] as Point,
+  neck: [20, 32] as Point
 };
 
 const configs: Record<string, FaceConfig> = {
   soft_round: {
-    top: 14,
-    bottom: 103,
-    profile: (t) => 21 + Math.sin(Math.PI * t) * 18 - Math.max(0, t - 0.75) * 14,
+    top: 5,
+    bottom: 32,
+    profile: (t) => 5 + Math.sin(Math.PI * t) * 7 - Math.max(0, t - 0.76) * 5,
     anchors: baseAnchors,
     profiles: { face_width: "wide", face_height: "medium", jaw: "soft", forehead: "medium", cheek_width: "wide", ear_height: "medium", chin_space: "medium" }
   },
   oval: {
-    top: 13,
-    bottom: 106,
-    profile: (t) => 16 + Math.sin(Math.PI * t) * 17 - Math.max(0, t - 0.72) * 8,
+    top: 4,
+    bottom: 33,
+    profile: (t) => 4 + Math.sin(Math.PI * t) * 7 - Math.max(0, t - 0.72) * 3,
     anchors: {
       ...baseAnchors,
-      "left_eye.center": [49, 56],
-      "right_eye.center": [79, 56],
-      "mouth.center": [64, 82],
-      chin: [64, 104],
-      "left_ear.socket": [31, 60],
-      "right_ear.socket": [97, 60]
+      "mouth.center": [20, 27],
+      chin: [20, 33],
+      "left_ear.socket": [10, 19],
+      "right_ear.socket": [30, 19]
     },
     profiles: { face_width: "medium", face_height: "medium", jaw: "soft", forehead: "medium", cheek_width: "medium", ear_height: "medium", chin_space: "medium" }
   },
   round: {
-    top: 18,
-    bottom: 101,
-    profile: (t) => 14 + Math.sin(Math.PI * t) * 24 - Math.max(0, t - 0.72) * 9,
+    top: 6,
+    bottom: 31,
+    profile: (t) => 4 + Math.sin(Math.PI * t) * 8 - Math.max(0, t - 0.72) * 4,
     anchors: {
       ...baseAnchors,
-      "head.top": [64, 18],
-      "left_eye.center": [49, 55],
-      "right_eye.center": [79, 55],
-      "left_eyebrow.center": [49, 48],
-      "right_eyebrow.center": [79, 48],
-      "nose.tip": [64, 68],
-      "mouth.center": [64, 79],
-      chin: [64, 99],
-      "left_ear.socket": [28, 58],
-      "right_ear.socket": [100, 58],
-      "hair.crown": [64, 21],
-      "hairline.center": [64, 34]
+      "head.top": [20, 6],
+      "left_eye.center": [16, 17],
+      "right_eye.center": [24, 17],
+      "left_eyebrow.center": [16, 14],
+      "right_eyebrow.center": [24, 14],
+      "nose.tip": [20, 21],
+      "mouth.center": [20, 25],
+      chin: [20, 31],
+      "left_ear.socket": [8, 18],
+      "right_ear.socket": [32, 18],
+      "hair.crown": [20, 6],
+      "hairline.center": [20, 11]
     },
     profiles: { face_width: "wide", face_height: "short", jaw: "round", forehead: "medium", cheek_width: "wide", ear_height: "medium", chin_space: "small" }
   },
   square_soft: {
-    top: 14,
-    bottom: 106,
-    profile: (t) => {
-      const corner = Math.min(t, 1 - t) * 3.5;
-      return 31 + Math.min(8, corner * 8) - Math.max(0, t - 0.72) * 9;
-    },
+    top: 5,
+    bottom: 33,
+    profile: (t) => 8 + Math.min(3, Math.min(t, 1 - t) * 12) - Math.max(0, t - 0.72) * 4,
     anchors: {
       ...baseAnchors,
-      "left_eye.center": [48, 57],
-      "right_eye.center": [80, 57],
-      "mouth.center": [64, 83],
-      chin: [64, 104],
-      "left_ear.socket": [27, 60],
-      "right_ear.socket": [101, 60],
-      left_temple: [32, 39],
-      right_temple: [96, 39]
+      "left_eye.center": [15, 18],
+      "right_eye.center": [25, 18],
+      "mouth.center": [20, 27],
+      chin: [20, 33],
+      "left_ear.socket": [8, 19],
+      "right_ear.socket": [32, 19],
+      left_temple: [10, 12],
+      right_temple: [30, 12]
     },
     profiles: { face_width: "wide", face_height: "medium", jaw: "square", forehead: "wide", cheek_width: "wide", ear_height: "medium", chin_space: "medium" }
   },
   heart: {
-    top: 13,
-    bottom: 104,
-    profile: (t) => 14 + Math.sin(Math.PI * t) * 22 + (t < 0.35 ? 7 : 0) - Math.max(0, t - 0.55) * 23,
+    top: 4,
+    bottom: 32,
+    profile: (t) => 4 + Math.sin(Math.PI * t) * 8 + (t < 0.34 ? 2 : 0) - Math.max(0, t - 0.55) * 9,
     anchors: {
       ...baseAnchors,
-      "left_eye.center": [49, 55],
-      "right_eye.center": [79, 55],
-      "nose.tip": [64, 68],
-      "mouth.center": [64, 80],
-      chin: [64, 102],
-      "left_ear.socket": [29, 58],
-      "right_ear.socket": [99, 58],
-      "hair.crown": [64, 18],
-      "hairline.center": [64, 30],
-      left_temple: [32, 37],
-      right_temple: [96, 37]
+      "left_eye.center": [16, 17],
+      "right_eye.center": [24, 17],
+      "nose.tip": [20, 21],
+      "mouth.center": [20, 25],
+      chin: [20, 32],
+      "left_ear.socket": [9, 18],
+      "right_ear.socket": [31, 18],
+      "hairline.center": [20, 9],
+      left_temple: [10, 11],
+      right_temple: [30, 11]
     },
     profiles: { face_width: "medium", face_height: "medium", jaw: "narrow", forehead: "wide", cheek_width: "wide", ear_height: "medium", chin_space: "small" }
   },
   long: {
-    top: 10,
-    bottom: 112,
-    profile: (t) => 13 + Math.sin(Math.PI * t) * 18 - Math.max(0, t - 0.72) * 7,
+    top: 3,
+    bottom: 35,
+    profile: (t) => 4 + Math.sin(Math.PI * t) * 6 - Math.max(0, t - 0.72) * 3,
     anchors: {
       ...baseAnchors,
-      "head.top": [64, 10],
-      "head.center": [64, 61],
-      "face.center": [64, 65],
-      "left_eye.center": [49, 58],
-      "right_eye.center": [79, 58],
-      "left_eyebrow.center": [49, 51],
-      "right_eyebrow.center": [79, 51],
-      "nose.bridge": [64, 63],
-      "nose.tip": [64, 73],
-      "mouth.center": [64, 87],
-      "mouth.baseline": [64, 88],
-      chin: [64, 110],
-      "left_ear.socket": [32, 62],
-      "right_ear.socket": [96, 62],
-      "hair.crown": [64, 16],
-      "hairline.center": [64, 29]
+      "head.top": [20, 3],
+      "head.center": [20, 19],
+      "face.center": [20, 20],
+      "left_eye.center": [16, 18],
+      "right_eye.center": [24, 18],
+      "left_eyebrow.center": [16, 15],
+      "right_eyebrow.center": [24, 15],
+      "nose.bridge": [20, 20],
+      "nose.tip": [20, 23],
+      "mouth.center": [20, 28],
+      "mouth.baseline": [20, 28],
+      chin: [20, 35],
+      "left_ear.socket": [10, 20],
+      "right_ear.socket": [30, 20],
+      "hair.crown": [20, 4],
+      "hairline.center": [20, 9]
     },
     profiles: { face_width: "narrow", face_height: "long", jaw: "soft", forehead: "medium", cheek_width: "medium", ear_height: "tall", chin_space: "large" }
   }
@@ -157,29 +151,29 @@ const configs: Record<string, FaceConfig> = {
 
 export function createFaceRig(shape = "soft_round", traits?: TraitMap): FaceRig {
   const config = configs[shape] ?? configs.soft_round;
-  const head = maskFromRowProfile(config.top, config.bottom, 64, config.profile);
-  const faceCore = maskIntersect(maskErode(head, 6), maskFromEllipse(64, config.anchors["face.center"][1] + 4, 31, 36));
-  const hairAllowed = maskUnion(maskDilate(head, 5), maskFromRoundedRect(18, 5, 92, 58, 12));
-  const body = maskFromRoundedRect(24, 96, 80, 34, 18);
-  const leftJoin = smallJoinMask(config.anchors["left_ear.socket"], -1);
-  const rightJoin = smallJoinMask(config.anchors["right_ear.socket"], 1);
-
+  const head = maskFromRowProfile(config.top, config.bottom, 20, config.profile);
+  const faceCore = maskIntersect(maskErode(head, 2), maskFromEllipse(20, config.anchors["face.center"][1] + 1, 10, 11));
+  const hairAllowed = maskUnion(maskDilate(head, 2), maskFromRoundedRect(5, 1, 30, 20, 4));
+  const body = maskFromRoundedRect(7, 31, 26, 10, 5);
   const anchors = applyLayoutModifiers(config.anchors, traits);
-  const rig: FaceRig = {
+  const leftJoin = smallJoinMask(anchors["left_ear.socket"], -1);
+  const rightJoin = smallJoinMask(anchors["right_ear.socket"], 1);
+
+  return {
     id: shape,
     anchors,
     sockets: {
-      left_ear: { anchor: anchors["left_ear.socket"], joinMask: leftJoin, minOverlap: 3, zBack: 210, zFront: 450 },
-      right_ear: { anchor: anchors["right_ear.socket"], joinMask: rightJoin, minOverlap: 3, zBack: 210, zFront: 450 }
+      left_ear: { anchor: anchors["left_ear.socket"], joinMask: leftJoin, minOverlap: 1, zBack: 210, zFront: 450 },
+      right_ear: { anchor: anchors["right_ear.socket"], joinMask: rightJoin, minOverlap: 1, zBack: 210, zFront: 450 }
     },
     zones: {
-      eyes: { bbox: [39, anchors["left_eye.center"][1] - 7, 89, anchors["left_eye.center"][1] + 8] },
-      nose: { bbox: [56, anchors["nose.tip"][1] - 10, 72, anchors["nose.tip"][1] + 8] },
-      mouth: { bbox: [49, anchors["mouth.center"][1] - 6, 79, anchors["mouth.center"][1] + 9] },
-      left_ear: { bbox: [18, anchors["left_ear.socket"][1] - 14, 36, anchors["left_ear.socket"][1] + 16] },
-      right_ear: { bbox: [92, anchors["right_ear.socket"][1] - 14, 110, anchors["right_ear.socket"][1] + 16] },
-      hair: { bbox: [18, 5, 110, 66] },
-      body: { bbox: [24, 96, 104, 127] }
+      eyes: { bbox: [12, anchors["left_eye.center"][1] - 2, 28, anchors["left_eye.center"][1] + 3] },
+      nose: { bbox: [18, anchors["nose.tip"][1] - 3, 22, anchors["nose.tip"][1] + 3] },
+      mouth: { bbox: [15, anchors["mouth.center"][1] - 2, 25, anchors["mouth.center"][1] + 3] },
+      left_ear: { bbox: [5, anchors["left_ear.socket"][1] - 4, 11, anchors["left_ear.socket"][1] + 5] },
+      right_ear: { bbox: [29, anchors["right_ear.socket"][1] - 4, 35, anchors["right_ear.socket"][1] + 5] },
+      hair: { bbox: [5, 1, 35, 21] },
+      body: { bbox: [7, 31, 33, 40] }
     },
     masks: {
       head,
@@ -191,19 +185,16 @@ export function createFaceRig(shape = "soft_round", traits?: TraitMap): FaceRig 
       body
     },
     profiles: config.profiles,
-    bbox: [24, config.top, 104, config.bottom]
+    bbox: [8, config.top, 32, config.bottom]
   };
-  return rig;
 }
 
 function smallJoinMask([cx, cy]: Point, side: -1 | 1): Mask {
   const mask = createMask(CANVAS_SIZE, CANVAS_SIZE);
-  for (let y = cy - 6; y <= cy + 6; y += 1) {
-    for (let x = cx - 4; x <= cx + 4; x += 1) {
+  for (let y = cy - 2; y <= cy + 2; y += 1) {
+    for (let x = cx - 2; x <= cx + 2; x += 1) {
       const dx = (x - cx) * side;
-      if (dx >= -1 && dx <= 4 && Math.abs(y - cy) <= 6 - Math.max(0, dx - 1)) {
-        addMaskPoint(mask, x, y);
-      }
+      if (dx >= -1 && dx <= 2 && Math.abs(y - cy) <= 2) addMaskPoint(mask, x, y);
     }
   }
   return mask;
@@ -214,11 +205,11 @@ function applyLayoutModifiers(anchors: Record<string, Point>, traits?: TraitMap)
   const presentation = traits?.presentation;
 
   if (presentation === "cute") {
-    offset(next, "left_eye.center", [0, -2]);
-    offset(next, "right_eye.center", [0, -2]);
-    offset(next, "left_eyebrow.center", [0, -2]);
-    offset(next, "right_eyebrow.center", [0, -2]);
-    offset(next, "mouth.center", [0, -2]);
+    offset(next, "left_eye.center", [0, -1]);
+    offset(next, "right_eye.center", [0, -1]);
+    offset(next, "left_eyebrow.center", [0, -1]);
+    offset(next, "right_eyebrow.center", [0, -1]);
+    offset(next, "mouth.center", [0, -1]);
   }
 
   if (presentation === "mature" || presentation === "elderly") {

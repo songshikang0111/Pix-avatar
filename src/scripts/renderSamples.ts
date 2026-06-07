@@ -51,10 +51,11 @@ await mkdir("examples/outputs", { recursive: true });
 for (let i = 0; i < samples.length; i += 1) {
   const spec = samples[i];
   const result = renderAvatar(spec);
+  const scale = spec.canvas.scale;
   await writeFile(`examples/specs/sample-${i + 1}.json`, `${JSON.stringify(spec, null, 2)}\n`);
-  await writePng(`examples/outputs/sample-${i + 1}.png`, result.image, 4);
-  await writePng(`examples/outputs/sample-${i + 1}-grid.png`, renderAvatar(spec, { debugGrid: true }).image, 4);
-  await writePng(`examples/outputs/sample-${i + 1}-anchors.png`, renderAvatar(spec, { debugAnchors: true }).image, 4);
+  await writePng(`examples/outputs/sample-${i + 1}.png`, result.image, scale);
+  await writePng(`examples/outputs/sample-${i + 1}-grid.png`, renderAvatar(spec, { debugGrid: true }).image, scale);
+  await writePng(`examples/outputs/sample-${i + 1}-anchors.png`, renderAvatar(spec, { debugAnchors: true }).image, scale);
   await writeFile(`examples/outputs/sample-${i + 1}.inspect.json`, `${JSON.stringify(result.inspect, null, 2)}\n`);
 }
 

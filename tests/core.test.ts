@@ -21,7 +21,7 @@ describe("rendering", () => {
     const second = randomSpec({ seed: 42, preset: "friendly_agent" });
     expect(first.traits).toEqual(second.traits);
     const render = renderAvatar(first);
-    expect(render.image.pixels.size).toBeGreaterThan(1200);
+    expect(render.image.pixels.size).toBeGreaterThan(450);
     expect(render.inspect.anchors["mouth.center"]).toBeDefined();
   });
 
@@ -35,8 +35,8 @@ describe("rendering", () => {
     const spec = createDefaultSpec({
       "background.style": "transparent"
     });
-    spec.patches = [parseCompactPatch("rect custom.face 60 80 8 1 mouth.dark clip=face")];
-    const result = renderAvatar(spec, { pixel: [64, 80] });
+    spec.patches = [parseCompactPatch("rect custom.face 18 26 4 1 mouth.dark clip=face")];
+    const result = renderAvatar(spec, { pixel: [20, 26] });
     expect(result.inspect.pixel?.stack.some((entry) => entry.layer === "custom.face")).toBe(true);
   });
 
@@ -45,7 +45,7 @@ describe("rendering", () => {
     for (const face of listTraitValues("face.shape")) {
       for (const hair of listTraitValues("hair.style")) {
         const result = renderAvatar(createDefaultSpec({ "face.shape": face, "hair.style": hair }));
-        expect(result.image.pixels.size).toBeGreaterThan(1000);
+        expect(result.image.pixels.size).toBeGreaterThan(350);
         count += 1;
       }
       for (const glasses of listTraitValues("glasses.shape")) {

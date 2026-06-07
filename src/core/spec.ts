@@ -9,8 +9,8 @@ export function normalizeSpec(input: Partial<AvatarSpec> = {}): AvatarSpec {
   return {
     version: "avatar/v1",
     canvas: {
-      size: [128, 128],
-      scale: input.canvas?.scale ?? 4,
+      size: [40, 40],
+      scale: input.canvas?.scale ?? 12,
       background: input.canvas?.background ?? "transparent"
     },
     asset_pack: {
@@ -28,7 +28,7 @@ export function validateSpecShape(spec: AvatarSpec) {
   const warnings: string[] = [];
   const errors: string[] = [];
   if (spec.version !== "avatar/v1") errors.push(`Unsupported spec version: ${spec.version}`);
-  if (spec.canvas.size[0] !== 128 || spec.canvas.size[1] !== 128) errors.push("Only 128x128 logical canvas is supported in this asset pack.");
+  if (spec.canvas.size[0] !== 40 || spec.canvas.size[1] !== 40) errors.push("Only 40x40 logical canvas is supported in this asset pack.");
   if (spec.asset_pack.id !== "human_v1") errors.push(`Unknown asset pack: ${spec.asset_pack.id}`);
 
   for (const [key, value] of Object.entries(spec.traits)) {

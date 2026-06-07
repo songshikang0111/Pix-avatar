@@ -297,7 +297,7 @@ export function listTraitValues(key: TraitKey | string) {
 export function createDefaultSpec(overrides: TraitMap = {}): AvatarSpec {
   return {
     version: "avatar/v1" as const,
-    canvas: { size: [128, 128] as [number, number], scale: 4, background: "transparent" },
+    canvas: { size: [40, 40] as [number, number], scale: 12, background: "transparent" },
     asset_pack: { id: "human_v1" as const, version: "1.0.0" },
     traits: { ...DEFAULT_TRAITS, ...overrides }
   };

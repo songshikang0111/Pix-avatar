@@ -2,10 +2,10 @@
   "version": "avatar/v1",
   "canvas": {
     "size": [
-      128,
-      128
+      40,
+      40
     ],
-    "scale": 4,
+    "scale": 12,
     "background": "transparent"
   },
   "asset_pack": {

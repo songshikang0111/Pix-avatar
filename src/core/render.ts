@@ -53,13 +53,13 @@ export function renderAvatar(input: Partial<AvatarSpec>, options: RenderOptions 
 function drawDebugGrid(layers: LayerStack, palette: Record<string, string>) {
   const layer = layers.get("debug.grid", zForLayer("foreground.effects") + 10);
   const color = palette["debug.grid"] ?? "#8EA0B7";
-  for (let i = 0; i <= 128; i += 8) {
-    drawLine(layer, i, 0, i, 127, color, { trait: "debug.grid", colorToken: "debug.grid" });
-    drawLine(layer, 0, i, 127, i, color, { trait: "debug.grid", colorToken: "debug.grid" });
+  for (let i = 0; i <= 40; i += 5) {
+    drawLine(layer, i, 0, i, 39, color, { trait: "debug.grid", colorToken: "debug.grid" });
+    drawLine(layer, 0, i, 39, i, color, { trait: "debug.grid", colorToken: "debug.grid" });
   }
-  for (let i = 0; i <= 128; i += 16) {
-    drawLine(layer, i, 0, i, 127, color, { trait: "debug.grid.major", colorToken: "debug.grid" });
-    drawLine(layer, 0, i, 127, i, color, { trait: "debug.grid.major", colorToken: "debug.grid" });
+  for (let i = 0; i <= 40; i += 10) {
+    drawLine(layer, i, 0, i, 39, color, { trait: "debug.grid.major", colorToken: "debug.grid" });
+    drawLine(layer, 0, i, 39, i, color, { trait: "debug.grid.major", colorToken: "debug.grid" });
   }
 }
 

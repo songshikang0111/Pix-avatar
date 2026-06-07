@@ -8,10 +8,10 @@ export function validateAvatar(input: Partial<AvatarSpec>): ValidationResult {
   const traits = result.spec.traits;
   const anchors = result.inspect.anchors;
 
-  if ((anchors["mouth.center"]?.[1] ?? 0) <= (anchors["nose.tip"]?.[1] ?? 0) + 4) errors.push("mouth.center must be below nose.tip by at least 5px.");
-  if ((anchors["chin"]?.[1] ?? 128) - (anchors["mouth.center"]?.[1] ?? 0) < 8) errors.push("mouth.center is too close to chin.");
+  if ((anchors["mouth.center"]?.[1] ?? 0) <= (anchors["nose.tip"]?.[1] ?? 0) + 1) errors.push("mouth.center must be below nose.tip by at least 2px.");
+  if ((anchors["chin"]?.[1] ?? 40) - (anchors["mouth.center"]?.[1] ?? 0) < 3) errors.push("mouth.center is too close to chin.");
   const eyeDistance = Math.abs((anchors["right_eye.center"]?.[0] ?? 0) - (anchors["left_eye.center"]?.[0] ?? 0));
-  if (eyeDistance < 20) errors.push("eyes are too close.");
+  if (eyeDistance < 6) errors.push("eyes are too close.");
 
   for (const key of REQUIRED_TRAIT_KEYS) {
     const value = traits[key];

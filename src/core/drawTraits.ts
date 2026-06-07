@@ -1,8 +1,7 @@
 import { FaceRig, Mask, PixelMeta, Placement, TraitMap } from "../types";
 import { colorToken } from "./color";
-import { addMaskPoint, bboxFromPoints, countOverlap, createMask, keyOf, maskEdge, maskFromEllipse, maskFromRoundedRect, pointFromKey } from "./geometry";
-import { LAYERS } from "./layers";
-import { LayerStack, MutableLayer, drawEllipse, drawLine, drawMask, drawRect, drawTriangle } from "./pixelLayer";
+import { bboxUnion, countOverlap, maskEdge, maskFromEllipse, maskFromRoundedRect, pointFromKey } from "./geometry";
+import { LayerStack, drawEllipse, drawLine, drawMask, drawRect, drawTriangle } from "./pixelLayer";
 
 export interface DrawContext {
   layers: LayerStack;
@@ -39,25 +38,29 @@ function meta(trait: string, colorTokenValue: string): Partial<PixelMeta> {
   return { trait, colorToken: colorTokenValue };
 }
 
-function setRect(ctx: DrawContext, layerId: string, x: number, y: number, w: number, h: number, color: string, trait: string, clip?: Mask) {
-  drawRect(ctx.layers.get(layerId), x, y, w, h, token(ctx, color), meta(trait, color), clip);
+function rect(ctx: DrawContext, layer: string, x: number, y: number, w: number, h: number, color: string, trait: string, clip?: Mask) {
+  drawRect(ctx.layers.get(layer), x, y, w, h, token(ctx, color), meta(trait, color), clip);
 }
 
-function setLine(ctx: DrawContext, layerId: string, x1: number, y1: number, x2: number, y2: number, color: string, trait: string, clip?: Mask) {
-  drawLine(ctx.layers.get(layerId), x1, y1, x2, y2, token(ctx, color), meta(trait, color), clip);
+function px(ctx: DrawContext, layer: string, x: number, y: number, color: string, trait: string, clip?: Mask) {
+  rect(ctx, layer, x, y, 1, 1, color, trait, clip);
 }
 
-function setEllipse(ctx: DrawContext, layerId: string, cx: number, cy: number, rx: number, ry: number, color: string, trait: string, clip?: Mask) {
-  drawEllipse(ctx.layers.get(layerId), cx, cy, rx, ry, token(ctx, color), meta(trait, color), clip);
+function line(ctx: DrawContext, layer: string, x1: number, y1: number, x2: number, y2: number, color: string, trait: string, clip?: Mask) {
+  drawLine(ctx.layers.get(layer), x1, y1, x2, y2, token(ctx, color), meta(trait, color), clip);
 }
 
-function setTriangle(ctx: DrawContext, layerId: string, points: [[number, number], [number, number], [number, number]], color: string, trait: string, clip?: Mask) {
-  drawTriangle(ctx.layers.get(layerId), points, token(ctx, color), meta(trait, color), clip);
+function ellipse(ctx: DrawContext, layer: string, cx: number, cy: number, rx: number, ry: number, color: string, trait: string, clip?: Mask) {
+  drawEllipse(ctx.layers.get(layer), cx, cy, rx, ry, token(ctx, color), meta(trait, color), clip);
 }
 
-function drawEllipseOutline(ctx: DrawContext, layerId: string, cx: number, cy: number, rx: number, ry: number, color: string, trait: string, clip?: Mask) {
+function triangle(ctx: DrawContext, layer: string, points: [[number, number], [number, number], [number, number]], color: string, trait: string, clip?: Mask) {
+  drawTriangle(ctx.layers.get(layer), points, token(ctx, color), meta(trait, color), clip);
+}
+
+function ellipseOutline(ctx: DrawContext, layerId: string, cx: number, cy: number, rx: number, ry: number, color: string, trait: string, clip?: Mask) {
   const outer = maskFromEllipse(cx, cy, rx, ry);
-  const inner = maskFromEllipse(cx, cy, Math.max(1, rx - 1.4), Math.max(1, ry - 1.4));
+  const inner = maskFromEllipse(cx, cy, Math.max(0.5, rx - 0.8), Math.max(0.5, ry - 0.8));
   const layer = ctx.layers.get(layerId);
   for (const key of outer.points) {
     if (!inner.points.has(key)) {
@@ -73,132 +76,102 @@ function drawBackground(ctx: DrawContext) {
   if (style === "transparent") return;
 
   if (style === "solid") {
-    setRect(ctx, "background.base", 0, 0, 128, 128, "background.base", trait);
+    rect(ctx, "background.base", 0, 0, 40, 40, "background.base", trait);
   } else if (style === "circle") {
-    setEllipse(ctx, "background.base", 64, 64, 57, 57, "background.base", trait);
-    setEllipse(ctx, "background.pattern", 64, 64, 49, 49, "background.shadow", trait);
-    setEllipse(ctx, "background.effects", 60, 58, 38, 38, "background.base", trait);
+    ellipse(ctx, "background.base", 20, 20, 18, 18, "background.base", trait);
+    ellipse(ctx, "background.pattern", 20, 20, 15, 15, "background.shadow", trait);
+    ellipse(ctx, "background.effects", 19, 18, 11, 11, "background.base", trait);
   } else if (style === "rounded_square") {
-    drawMask(ctx.layers.get("background.base"), maskFromRoundedRect(8, 8, 112, 112, 18), token(ctx, "background.base"), meta(trait, "background.base"));
-    drawMask(ctx.layers.get("background.pattern"), maskFromRoundedRect(17, 17, 94, 94, 14), token(ctx, "background.shadow"), meta(trait, "background.shadow"));
+    drawMask(ctx.layers.get("background.base"), maskFromRoundedRect(2, 2, 36, 36, 5), token(ctx, "background.base"), meta(trait, "background.base"));
+    drawMask(ctx.layers.get("background.pattern"), maskFromRoundedRect(5, 5, 30, 30, 4), token(ctx, "background.shadow"), meta(trait, "background.shadow"));
   } else if (style === "checker") {
-    setRect(ctx, "background.base", 0, 0, 128, 128, "background.base", trait);
-    for (let y = 0; y < 128; y += 8) {
-      for (let x = 0; x < 128; x += 8) {
-        if ((x + y) / 8 % 2 === 0) setRect(ctx, "background.pattern", x, y, 8, 8, "background.accent", trait);
+    rect(ctx, "background.base", 0, 0, 40, 40, "background.base", trait);
+    for (let y = 0; y < 40; y += 4) {
+      for (let x = 0; x < 40; x += 4) {
+        if ((x + y) / 4 % 2 === 0) rect(ctx, "background.pattern", x, y, 4, 4, "background.accent", trait);
       }
     }
   } else if (style === "stars") {
-    setRect(ctx, "background.base", 0, 0, 128, 128, "background.base", trait);
+    rect(ctx, "background.base", 0, 0, 40, 40, "background.base", trait);
     for (const [x, y] of [
-      [22, 24],
-      [103, 31],
-      [35, 88],
-      [95, 93],
-      [66, 17],
-      [116, 68]
+      [7, 7],
+      [32, 9],
+      [10, 28],
+      [31, 30],
+      [21, 5],
+      [36, 22]
     ]) {
-      setLine(ctx, "background.effects", x - 2, y, x + 2, y, "background.accent", trait);
-      setLine(ctx, "background.effects", x, y - 2, x, y + 2, "background.accent", trait);
+      line(ctx, "background.effects", x - 1, y, x + 1, y, "background.accent", trait);
+      line(ctx, "background.effects", x, y - 1, x, y + 1, "background.accent", trait);
     }
   } else if (style === "diagonal_stripes") {
-    setRect(ctx, "background.base", 0, 0, 128, 128, "background.base", trait);
-    for (let i = -128; i < 160; i += 14) {
-      setLine(ctx, "background.pattern", i, 127, i + 127, 0, "background.accent", trait);
-      setLine(ctx, "background.pattern", i + 1, 127, i + 128, 0, "background.accent", trait);
-    }
+    rect(ctx, "background.base", 0, 0, 40, 40, "background.base", trait);
+    for (let i = -40; i < 50; i += 5) line(ctx, "background.pattern", i, 39, i + 39, 0, "background.accent", trait);
   } else if (style === "aura") {
-    setEllipse(ctx, "background.base", 64, 64, 58, 58, "background.base", trait);
-    setEllipse(ctx, "background.pattern", 64, 64, 48, 48, "background.shadow", trait);
-    setEllipse(ctx, "background.effects", 64, 64, 36, 36, "background.base", trait);
-    for (let i = 0; i < 12; i += 1) {
-      const angle = (i / 12) * Math.PI * 2;
-      const x = 64 + Math.round(Math.cos(angle) * 51);
-      const y = 64 + Math.round(Math.sin(angle) * 51);
-      setRect(ctx, "background.effects", x - 1, y - 1, 3, 3, "background.accent", trait);
-    }
+    ellipse(ctx, "background.base", 20, 20, 18, 18, "background.base", trait);
+    ellipse(ctx, "background.pattern", 20, 20, 15, 15, "background.shadow", trait);
+    for (const [x, y] of [
+      [5, 16],
+      [35, 16],
+      [8, 28],
+      [32, 28],
+      [20, 4],
+      [20, 36]
+    ]) rect(ctx, "background.effects", x, y, 1, 1, "background.accent", trait);
   }
 
-  ctx.placements[trait] = { trait, bbox: [0, 0, 128, 128] };
+  ctx.placements[trait] = { trait, bbox: [0, 0, 40, 40] };
 }
 
 function drawBody(ctx: DrawContext) {
   const top = ctx.traits["clothing.top"] ?? "hoodie";
   const trait = `clothing.top.${top}`;
-  setRect(ctx, "neck", 58, 94, 12, 18, "skin.base", "neck", ctx.rig.masks.head);
-  setEllipse(ctx, "body.shadow", 64, 123, 47, 22, "clothing.shadow", trait);
+  rect(ctx, "neck", 18, 30, 4, 5, "skin.base", "neck", ctx.rig.masks.head);
+  ellipse(ctx, "body.shadow", 20, 39, 14, 7, "clothing.shadow", trait);
+
   if (top === "tshirt") {
-    setTriangle(ctx, "body.base", [
-      [25, 127],
-      [64, 94],
-      [103, 127]
-    ], "clothing.base", trait);
-    setRect(ctx, "body.base", 47, 104, 34, 24, "clothing.base", trait);
+    triangle(ctx, "body.base", [[8, 40], [20, 30], [32, 40]], "clothing.base", trait);
+    rect(ctx, "body.base", 15, 33, 10, 7, "clothing.base", trait);
   } else if (top === "hoodie") {
-    setEllipse(ctx, "body.base", 64, 120, 42, 24, "clothing.base", trait);
-    setLine(ctx, "body.base", 53, 100, 62, 123, "clothing.highlight", trait);
-    setLine(ctx, "body.base", 75, 100, 66, 123, "clothing.highlight", trait);
-    setRect(ctx, "body.base", 56, 96, 16, 8, "clothing.shadow", trait);
+    ellipse(ctx, "body.base", 20, 38, 13, 7, "clothing.base", trait);
+    line(ctx, "body.base", 17, 32, 19, 39, "clothing.highlight", trait);
+    line(ctx, "body.base", 23, 32, 21, 39, "clothing.highlight", trait);
+    rect(ctx, "body.base", 17, 31, 6, 2, "clothing.shadow", trait);
   } else if (top === "jacket") {
-    setRect(ctx, "body.base", 29, 101, 70, 27, "clothing.base", trait);
-    setTriangle(ctx, "body.base", [
-      [50, 101],
-      [64, 126],
-      [64, 101]
-    ], "clothing.shadow", trait);
-    setTriangle(ctx, "body.base", [
-      [78, 101],
-      [64, 126],
-      [64, 101]
-    ], "clothing.highlight", trait);
+    rect(ctx, "body.base", 9, 32, 22, 8, "clothing.base", trait);
+    triangle(ctx, "body.base", [[16, 32], [20, 40], [20, 32]], "clothing.shadow", trait);
+    triangle(ctx, "body.base", [[24, 32], [20, 40], [20, 32]], "clothing.highlight", trait);
   } else if (top === "suit") {
-    setTriangle(ctx, "body.base", [
-      [27, 127],
-      [55, 98],
-      [66, 127]
-    ], "clothing.base", trait);
-    setTriangle(ctx, "body.base", [
-      [101, 127],
-      [73, 98],
-      [62, 127]
-    ], "clothing.base", trait);
-    setTriangle(ctx, "body.base", [
-      [58, 102],
-      [70, 102],
-      [64, 116]
-    ], "accessory.white", trait);
-    setLine(ctx, "body.base", 64, 106, 64, 127, "accessory.red", trait);
+    triangle(ctx, "body.base", [[8, 40], [17, 31], [20, 40]], "clothing.base", trait);
+    triangle(ctx, "body.base", [[32, 40], [23, 31], [20, 40]], "clothing.base", trait);
+    triangle(ctx, "body.base", [[18, 32], [22, 32], [20, 36]], "accessory.white", trait);
+    line(ctx, "body.base", 20, 34, 20, 40, "accessory.red", trait);
   } else if (top === "robe") {
-    setEllipse(ctx, "body.base", 64, 123, 45, 25, "clothing.base", trait);
-    setLine(ctx, "body.base", 42, 107, 86, 127, "clothing.highlight", trait);
-    setLine(ctx, "body.base", 86, 107, 42, 127, "clothing.shadow", trait);
+    ellipse(ctx, "body.base", 20, 38, 14, 8, "clothing.base", trait);
+    line(ctx, "body.base", 13, 33, 27, 40, "clothing.highlight", trait);
+    line(ctx, "body.base", 27, 33, 13, 40, "clothing.shadow", trait);
   } else if (top === "armor") {
-    setRect(ctx, "body.base", 33, 102, 62, 26, "clothing.base", trait);
-    setRect(ctx, "body.base", 39, 106, 50, 5, "clothing.highlight", trait);
-    setLine(ctx, "body.base", 64, 103, 64, 127, "clothing.shadow", trait);
-    setRect(ctx, "body.base", 27, 107, 12, 16, "clothing.shadow", trait);
-    setRect(ctx, "body.base", 89, 107, 12, 16, "clothing.shadow", trait);
+    rect(ctx, "body.base", 10, 32, 20, 8, "clothing.base", trait);
+    rect(ctx, "body.base", 12, 33, 16, 1, "clothing.highlight", trait);
+    line(ctx, "body.base", 20, 32, 20, 40, "clothing.shadow", trait);
   }
-  ctx.placements[trait] = { trait, bbox: [24, 94, 104, 128] };
+
+  ctx.placements[trait] = { trait, bbox: [7, 30, 33, 40] };
 }
 
 function drawHead(ctx: DrawContext) {
   const trait = `face.shape.${ctx.rig.id}`;
   drawMask(ctx.layers.get("head.base"), ctx.rig.masks.head, token(ctx, "skin.base"), meta(trait, "skin.base"));
   const edge = maskEdge(ctx.rig.masks.head);
-  const shadowLayer = ctx.layers.get("skin.shadow");
-  const highlightLayer = ctx.layers.get("skin.highlight");
+  const shadow = ctx.layers.get("skin.shadow");
+  const highlight = ctx.layers.get("skin.highlight");
   for (const point of edge.points) {
     const [x, y] = pointFromKey(point);
-    if (y > ctx.rig.anchors["face.center"][1] + 6 || x > 84 || x < 35) {
-      shadowLayer.set(x, y, token(ctx, "skin.shadow"), meta(trait, "skin.shadow"));
-    }
-    if (x < 58 && y < 50) {
-      highlightLayer.set(x, y, token(ctx, "skin.highlight"), meta(trait, "skin.highlight"));
-    }
+    if (y > ctx.rig.anchors["face.center"][1] + 2 || x > 26 || x < 13) shadow.set(x, y, token(ctx, "skin.shadow"), meta(trait, "skin.shadow"));
+    if (x < 18 && y < 17) highlight.set(x, y, token(ctx, "skin.highlight"), meta(trait, "skin.highlight"));
   }
-  setEllipse(ctx, "skin.highlight", 50, ctx.rig.anchors["left_eye.center"][1] + 10, 7, 3, "skin.highlight", trait, ctx.rig.masks.head);
-  setEllipse(ctx, "skin.shadow", 76, ctx.rig.anchors.chin[1] - 2, 11, 2, "skin.shadow", trait, ctx.rig.masks.head);
+  ellipse(ctx, "skin.highlight", 16, ctx.rig.anchors["left_eye.center"][1] + 4, 2.5, 1, "skin.highlight", trait, ctx.rig.masks.head);
+  ellipse(ctx, "skin.shadow", 24, ctx.rig.anchors.chin[1] - 1, 3, 1, "skin.shadow", trait, ctx.rig.masks.head);
   ctx.placements[trait] = { trait, bbox: ctx.rig.bbox };
 }
 
@@ -215,37 +188,21 @@ function drawEar(ctx: DrawContext, side: "left" | "right", shape: string) {
   const trait = `ears.shape.${shape}.${side}`;
   const [cx, cy] = socket.anchor;
   const dir = side === "left" ? -1 : 1;
-  const baseLayer = ctx.layers.get("ears.base");
-  const backLayer = ctx.layers.get("ears.back");
-  const frontLayer = ctx.layers.get("ears.front");
-
   if (shape === "pointed") {
-    drawTriangle(backLayer, [
-      [cx + dir * 1, cy - 8],
-      [cx + dir * 16, cy - 2],
-      [cx + dir * 1, cy + 9]
-    ], token(ctx, "skin.base"), meta(trait, "skin.base"));
-    drawLine(frontLayer, cx + dir * 2, cy - 2, cx + dir * 9, cy + 3, token(ctx, "skin.shadow"), meta(trait, "skin.shadow"));
+    triangle(ctx, "ears.back", [[cx + dir, cy - 3], [cx + dir * 5, cy], [cx + dir, cy + 3]], "skin.base", trait);
+    line(ctx, "ears.front", cx + dir, cy, cx + dir * 3, cy + 1, "skin.shadow", trait);
   } else {
-    const rx = shape === "small_round" ? 5 : shape === "large_round" || shape === "stick_out" ? 8 : 6;
-    const ry = shape === "large_round" ? 11 : 9;
-    const offset = shape === "stick_out" ? dir * 4 : dir * 2;
-    drawEllipse(backLayer, cx + offset, cy, rx, ry, token(ctx, "skin.shadow"), meta(trait, "skin.shadow"));
-    drawEllipse(baseLayer, cx + offset, cy, Math.max(3, rx - 1), Math.max(5, ry - 1), token(ctx, "skin.base"), meta(trait, "skin.base"));
-    drawEllipse(frontLayer, cx + offset + dir, cy + 1, Math.max(1, rx - 3), Math.max(2, ry - 4), token(ctx, "skin.highlight"), meta(trait, "skin.highlight"));
+    const rx = shape === "small_round" ? 1.5 : shape === "large_round" || shape === "stick_out" ? 2.6 : 2;
+    const ry = shape === "large_round" ? 3.4 : 2.7;
+    const offset = shape === "stick_out" ? dir * 2 : dir;
+    ellipse(ctx, "ears.back", cx + offset, cy, rx + 0.5, ry, "skin.shadow", trait);
+    ellipse(ctx, "ears.base", cx + offset, cy, rx, ry - 0.3, "skin.base", trait);
+    px(ctx, "ears.front", cx + offset + dir, cy, "skin.highlight", trait);
   }
-
-  const layerKeys = new Set([...backLayer.pixels.keys(), ...baseLayer.pixels.keys(), ...frontLayer.pixels.keys()]);
+  const layerKeys = new Set([...ctx.layers.get("ears.back").pixels.keys(), ...ctx.layers.get("ears.base").pixels.keys(), ...ctx.layers.get("ears.front").pixels.keys()]);
   const overlap = countOverlap(socket.joinMask, layerKeys);
   if (overlap < socket.minOverlap) ctx.warnings.push(`${trait} has low socket overlap: ${overlap}px`);
-  ctx.placements[trait] = {
-    trait,
-    socket: socketName,
-    socket_xy: socket.anchor,
-    final_xy: [cx, cy],
-    overlap_pixels: overlap,
-    bbox: side === "left" ? [18, cy - 12, 36, cy + 13] : [92, cy - 12, 110, cy + 13]
-  };
+  ctx.placements[trait] = { trait, socket: socketName, socket_xy: socket.anchor, final_xy: [cx, cy], overlap_pixels: overlap, bbox: side === "left" ? [5, cy - 4, 12, cy + 5] : [28, cy - 4, 35, cy + 5] };
 }
 
 function drawHairBack(ctx: DrawContext) {
@@ -255,95 +212,87 @@ function drawHairBack(ctx: DrawContext) {
   const crown = ctx.rig.anchors["hair.crown"];
 
   if (style === "long_wavy") {
-    setEllipse(ctx, "hair.back", crown[0] - 23, 69, 15, 48, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
-    setEllipse(ctx, "hair.back", crown[0] + 23, 69, 15, 48, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
-    setEllipse(ctx, "hair.back", crown[0], 48, 39, 35, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.back", crown[0] - 8, 22, 4, 16, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.back", crown[0] + 8, 22, 4, 16, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.back", crown[0], 13, 12, 10, "hair.base", trait, ctx.rig.masks.hair_allowed);
   } else if (style === "bob_bangs") {
-    setEllipse(ctx, "hair.back", crown[0], 54, 42, 42, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
-    setRect(ctx, "hair.back", 25, 50, 15, 45, "hair.base", trait, ctx.rig.masks.hair_allowed);
-    setRect(ctx, "hair.back", 88, 50, 15, 45, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.back", crown[0], 16, 13, 12, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.back", 8, 16, 4, 12, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.back", 28, 16, 4, 12, "hair.base", trait, ctx.rig.masks.hair_allowed);
   } else if (style === "curly_short") {
     for (const [x, y, r] of [
-      [35, 31, 9],
-      [47, 22, 11],
-      [64, 18, 12],
-      [81, 23, 10],
-      [94, 34, 9]
-    ]) {
-      setEllipse(ctx, "hair.back", x, y, r, r, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
-    }
+      [11, 10, 3],
+      [15, 7, 4],
+      [20, 6, 4],
+      [25, 7, 4],
+      [29, 11, 3]
+    ]) ellipse(ctx, "hair.back", x, y, r, r, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
   } else if (style === "short_messy") {
-    setEllipse(ctx, "hair.back", crown[0], 32, 37, 24, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.back", crown[0], 10, 12, 7, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
   }
 }
 
 function drawHairFront(ctx: DrawContext) {
   const style = ctx.traits["hair.style"] ?? "short_messy";
   const trait = `hair.style.${style}`;
+  const crown = ctx.rig.anchors["hair.crown"];
+  const y = ctx.rig.anchors["hairline.center"][1];
+
   if (style === "bald_clean") {
     ctx.placements[trait] = { trait, bbox: [0, 0, 0, 0] };
     return;
   }
-  const crown = ctx.rig.anchors["hair.crown"];
-  const hairline = ctx.rig.anchors["hairline.center"];
-  const y = hairline[1];
 
   if (style === "buzz_cut") {
-    setEllipse(ctx, "hair.front", crown[0], y - 1, 35, 17, "hair.base", trait, ctx.rig.masks.hair_allowed);
-    setLine(ctx, "hair.highlight", 42, y - 3, 84, y - 7, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.front", crown[0], y, 11, 5, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    line(ctx, "hair.highlight", 14, y - 2, 26, y - 3, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
   } else if (style === "short_messy") {
-    setEllipse(ctx, "hair.front", crown[0], y - 4, 38, 19, "hair.base", trait, ctx.rig.masks.hair_allowed);
-    const points = [
-      [34, y, 43, y + 14, 49, y],
-      [47, y - 4, 54, y + 16, 63, y - 2],
-      [60, y - 3, 68, y + 15, 76, y - 3],
-      [76, y - 1, 84, y + 15, 94, y + 2]
-    ] as Array<[number, number, number, number, number, number]>;
-    for (const [x1, y1, x2, y2, x3, y3] of points) setTriangle(ctx, "hair.front", [[x1, y1], [x2, y2], [x3, y3]], "hair.base", trait, ctx.rig.masks.hair_allowed);
-    setLine(ctx, "hair.highlight", 47, y + 1, 72, y - 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.front", crown[0], y - 1, 12, 6, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    triangle(ctx, "hair.front", [[10, y], [14, y + 5], [16, y]], "hair.base", trait, ctx.rig.masks.hair_allowed);
+    triangle(ctx, "hair.front", [[15, y - 2], [18, y + 5], [21, y - 1]], "hair.base", trait, ctx.rig.masks.hair_allowed);
+    triangle(ctx, "hair.front", [[21, y - 1], [24, y + 5], [28, y]], "hair.base", trait, ctx.rig.masks.hair_allowed);
+    line(ctx, "hair.highlight", 15, y, 22, y - 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
   } else if (style === "bob_bangs") {
-    setEllipse(ctx, "hair.front", crown[0], y + 2, 39, 21, "hair.base", trait, ctx.rig.masks.hair_allowed);
-    for (let i = 0; i < 7; i += 1) {
-      const bx = 36 + i * 8;
-      setTriangle(ctx, "hair.front", [[bx, y - 2], [bx + 7, y - 2], [bx + 3, y + 17 + (i % 2)]], "hair.base", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.front", crown[0], y + 1, 12, 6, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    for (let i = 0; i < 5; i += 1) {
+      const bx = 12 + i * 3;
+      triangle(ctx, "hair.front", [[bx, y - 1], [bx + 3, y - 1], [bx + 1, y + 5 + (i % 2)]], "hair.base", trait, ctx.rig.masks.hair_allowed);
     }
-    setRect(ctx, "hair.side", 27, 50, 10, 39, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
-    setRect(ctx, "hair.side", 91, 50, 10, 39, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.side", 8, 16, 3, 12, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.side", 29, 16, 3, 12, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
   } else if (style === "curly_short") {
     for (const [x, yy, r] of [
-      [33, y + 8, 9],
-      [44, y - 2, 10],
-      [58, y - 6, 11],
-      [73, y - 4, 10],
-      [88, y + 4, 10],
-      [52, y + 15, 8],
-      [78, y + 14, 8]
+      [11, y + 2, 3],
+      [15, y - 1, 4],
+      [20, y - 3, 4],
+      [25, y - 1, 4],
+      [29, y + 2, 3],
+      [17, y + 4, 3],
+      [23, y + 4, 3]
     ]) {
-      setEllipse(ctx, "hair.front", x, yy, r, r, "hair.base", trait, ctx.rig.masks.hair_allowed);
-      setEllipse(ctx, "hair.highlight", x - 2, yy - 2, Math.max(2, r - 5), Math.max(2, r - 6), "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+      ellipse(ctx, "hair.front", x, yy, r, r, "hair.base", trait, ctx.rig.masks.hair_allowed);
+      if (r >= 4) px(ctx, "hair.highlight", x - 1, yy - 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
     }
   } else if (style === "long_wavy") {
-    setEllipse(ctx, "hair.front", crown[0], y + 1, 37, 21, "hair.base", trait, ctx.rig.masks.hair_allowed);
-    setRect(ctx, "hair.side", 29, 47, 12, 57, "hair.base", trait, ctx.rig.masks.hair_allowed);
-    setRect(ctx, "hair.side", 87, 47, 12, 57, "hair.base", trait, ctx.rig.masks.hair_allowed);
-    setLine(ctx, "hair.highlight", 43, 30, 35, 89, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
-    setLine(ctx, "hair.highlight", 83, 29, 94, 91, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.front", crown[0], y + 1, 12, 6, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.side", 9, 15, 4, 18, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.side", 27, 15, 4, 18, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    line(ctx, "hair.highlight", 13, 10, 11, 29, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+    line(ctx, "hair.highlight", 26, 10, 29, 29, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
   } else if (style === "undercut") {
-    setEllipse(ctx, "hair.front", 61, y - 3, 25, 15, "hair.base", trait, ctx.rig.masks.hair_allowed);
-    setRect(ctx, "hair.side", 30, 37, 12, 35, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
-    setTriangle(ctx, "hair.front", [[43, y - 8], [83, y - 5], [55, y + 13]], "hair.base", trait, ctx.rig.masks.hair_allowed);
-    setLine(ctx, "hair.highlight", 49, y - 4, 78, y - 2, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.front", 19, y - 1, 8, 5, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.side", 10, 11, 3, 12, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    triangle(ctx, "hair.front", [[13, y - 3], [27, y - 2], [17, y + 5]], "hair.base", trait, ctx.rig.masks.hair_allowed);
+    line(ctx, "hair.highlight", 15, y - 2, 25, y - 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
   }
 
-  const boxes = ["hair.back", "hair.side", "hair.front", "hair.highlight"].map((id) => ctx.layers.get(id).bbox());
-  const bbox = bboxFromBoxes(boxes);
   ctx.placements[trait] = {
     trait,
     anchor: "hair.crown",
     anchor_xy: crown,
     mount_point: [0, 0],
     final_xy: crown,
-    bbox
+    bbox: bboxUnion(["hair.back", "hair.side", "hair.front", "hair.highlight"].map((id) => ctx.layers.get(id).bbox()))
   };
 }
 
@@ -351,83 +300,66 @@ function drawFaceDetails(ctx: DrawContext) {
   const detail = ctx.traits["face.detail"] ?? "none";
   if (detail === "none") return;
   const trait = `face.detail.${detail}`;
-  const leftEye = ctx.rig.anchors["left_eye.center"];
-  const rightEye = ctx.rig.anchors["right_eye.center"];
+  const left = ctx.rig.anchors["left_eye.center"];
+  const right = ctx.rig.anchors["right_eye.center"];
+  const clip = ctx.rig.masks.face_core;
 
   if (detail === "blush_soft") {
-    setEllipse(ctx, "face.details", leftEye[0] - 9, leftEye[1] + 12, 5, 2, "blush.soft", trait, ctx.rig.masks.face_core);
-    setEllipse(ctx, "face.details", rightEye[0] + 9, rightEye[1] + 12, 5, 2, "blush.soft", trait, ctx.rig.masks.face_core);
+    rect(ctx, "face.details", left[0] - 4, left[1] + 4, 3, 1, "blush.soft", trait, clip);
+    rect(ctx, "face.details", right[0] + 2, right[1] + 4, 3, 1, "blush.soft", trait, clip);
   } else if (detail === "freckles_light") {
     for (const [x, y] of [
-      [leftEye[0] - 7, leftEye[1] + 9],
-      [leftEye[0] - 2, leftEye[1] + 11],
-      [leftEye[0] + 4, leftEye[1] + 10],
-      [rightEye[0] - 4, rightEye[1] + 10],
-      [rightEye[0] + 2, rightEye[1] + 11],
-      [rightEye[0] + 7, rightEye[1] + 9]
-    ]) setRect(ctx, "face.details", x, y, 1, 1, "skin.shadow", trait, ctx.rig.masks.face_core);
+      [left[0] - 3, left[1] + 3],
+      [left[0] + 1, left[1] + 4],
+      [right[0] - 1, right[1] + 4],
+      [right[0] + 3, right[1] + 3]
+    ]) px(ctx, "face.details", x, y, "skin.shadow", trait, clip);
   } else if (detail === "cheek_mole_left") {
-    setRect(ctx, "face.details", leftEye[0] - 10, leftEye[1] + 17, 2, 2, "line.dark", trait, ctx.rig.masks.face_core);
+    px(ctx, "face.details", left[0] - 4, left[1] + 6, "line.dark", trait, clip);
   } else if (detail === "under_eye_lines") {
-    setLine(ctx, "face.details", leftEye[0] - 5, leftEye[1] + 5, leftEye[0] + 3, leftEye[1] + 5, "skin.shadow", trait, ctx.rig.masks.face_core);
-    setLine(ctx, "face.details", rightEye[0] - 3, rightEye[1] + 5, rightEye[0] + 5, rightEye[1] + 5, "skin.shadow", trait, ctx.rig.masks.face_core);
+    line(ctx, "face.details", left[0] - 2, left[1] + 2, left[0] + 1, left[1] + 2, "skin.shadow", trait, clip);
+    line(ctx, "face.details", right[0] - 1, right[1] + 2, right[0] + 2, right[1] + 2, "skin.shadow", trait, clip);
   } else if (detail === "scar_left_cheek") {
-    setLine(ctx, "face.details", leftEye[0] - 13, leftEye[1] + 15, leftEye[0] - 4, leftEye[1] + 8, "scar.light", trait, ctx.rig.masks.face_core);
-    setLine(ctx, "face.details", leftEye[0] - 11, leftEye[1] + 12, leftEye[0] - 8, leftEye[1] + 15, "skin.shadow", trait, ctx.rig.masks.face_core);
+    line(ctx, "face.details", left[0] - 4, left[1] + 6, left[0] - 1, left[1] + 3, "scar.light", trait, clip);
   }
   ctx.placements[trait] = { trait, bbox: ctx.layers.get("face.details").bbox() };
 }
 
 function drawEyes(ctx: DrawContext) {
   const shape = ctx.traits["eyes.shape"] ?? "almond";
-  drawOneEye(ctx, "left", shape);
-  drawOneEye(ctx, "right", shape);
+  drawEye(ctx, "left", shape);
+  drawEye(ctx, "right", shape);
 }
 
-function drawOneEye(ctx: DrawContext, side: "left" | "right", shape: string) {
-  const anchorKey = `${side}_eye.center`;
-  const [cx, cy] = ctx.rig.anchors[anchorKey];
+function drawEye(ctx: DrawContext, side: "left" | "right", shape: string) {
+  const anchor = `${side}_eye.center`;
+  const [cx, cy] = ctx.rig.anchors[anchor];
   const trait = `eyes.shape.${shape}.${side}`;
-  const pupil = "eyes.pupil";
-  const iris = "eyes.iris";
-  const white = "accessory.white";
   const clip = ctx.rig.masks.face_core;
 
   if (shape === "dot") {
-    setRect(ctx, "eyes.pupil", cx - 1, cy - 1, 2, 2, pupil, trait, clip);
+    px(ctx, "eyes.pupil", cx, cy, "eyes.pupil", trait, clip);
   } else if (shape === "round") {
-    setEllipse(ctx, "eyes.white", cx, cy, 4, 3, white, trait, clip);
-    setEllipse(ctx, "eyes.iris", cx, cy, 2, 2, iris, trait, clip);
-    setRect(ctx, "eyes.pupil", cx, cy, 2, 2, pupil, trait, clip);
-    setRect(ctx, "eyes.pupil", cx - 1, cy - 1, 1, 1, "eyes.highlight", trait, clip);
+    rect(ctx, "eyes.white", cx - 1, cy - 1, 3, 2, "accessory.white", trait, clip);
+    px(ctx, "eyes.iris", cx, cy, "eyes.iris", trait, clip);
+    px(ctx, "eyes.pupil", cx, cy, "eyes.pupil", trait, clip);
   } else if (shape === "almond") {
-    setLine(ctx, "eyes.white", cx - 5, cy, cx + 5, cy, white, trait, clip);
-    setRect(ctx, "eyes.white", cx - 3, cy - 1, 7, 3, white, trait, clip);
-    setRect(ctx, "eyes.iris", cx - 1, cy - 1, 3, 3, iris, trait, clip);
-    setRect(ctx, "eyes.pupil", cx, cy, 1, 2, pupil, trait, clip);
-    setLine(ctx, "eyelids", cx - 6, cy - 2, cx + 5, cy - 1, "line.dark", trait, clip);
+    line(ctx, "eyes.white", cx - 2, cy, cx + 2, cy, "accessory.white", trait, clip);
+    px(ctx, "eyes.iris", cx, cy, "eyes.iris", trait, clip);
+    line(ctx, "eyelids", cx - 2, cy - 1, cx + 2, cy - 1, "line.dark", trait, clip);
   } else if (shape === "sleepy") {
-    setRect(ctx, "eyes.white", cx - 4, cy, 9, 2, white, trait, clip);
-    setRect(ctx, "eyes.iris", cx - 1, cy, 3, 2, iris, trait, clip);
-    setLine(ctx, "eyelids", cx - 5, cy - 1, cx + 5, cy - 1, "line.dark", trait, clip);
+    line(ctx, "eyes.white", cx - 2, cy, cx + 2, cy, "accessory.white", trait, clip);
+    line(ctx, "eyelids", cx - 2, cy - 1, cx + 2, cy - 1, "line.dark", trait, clip);
   } else if (shape === "happy_arc") {
-    setLine(ctx, "eyes.pupil", cx - 4, cy + 1, cx - 1, cy - 1, pupil, trait, clip);
-    setLine(ctx, "eyes.pupil", cx - 1, cy - 1, cx + 4, cy + 1, pupil, trait, clip);
+    line(ctx, "eyes.pupil", cx - 2, cy, cx, cy - 1, "eyes.pupil", trait, clip);
+    line(ctx, "eyes.pupil", cx, cy - 1, cx + 2, cy, "eyes.pupil", trait, clip);
   } else if (shape === "starry") {
-    setRect(ctx, "eyes.iris", cx - 1, cy - 4, 3, 9, iris, trait, clip);
-    setRect(ctx, "eyes.iris", cx - 4, cy - 1, 9, 3, iris, trait, clip);
-    setRect(ctx, "eyes.pupil", cx, cy, 1, 1, pupil, trait, clip);
-    setRect(ctx, "eyes.pupil", cx - 1, cy - 1, 1, 1, "eyes.highlight", trait, clip);
+    line(ctx, "eyes.iris", cx - 1, cy, cx + 1, cy, "eyes.iris", trait, clip);
+    line(ctx, "eyes.iris", cx, cy - 1, cx, cy + 1, "eyes.iris", trait, clip);
+    px(ctx, "eyes.pupil", cx, cy, "eyes.pupil", trait, clip);
   }
 
-  ctx.placements[trait] = {
-    trait,
-    anchor: anchorKey,
-    anchor_xy: [cx, cy],
-    mount_point: [0, 0],
-    final_xy: [cx, cy],
-    bbox: [cx - 6, cy - 5, cx + 7, cy + 6]
-  };
+  ctx.placements[trait] = { trait, anchor, anchor_xy: [cx, cy], mount_point: [0, 0], final_xy: [cx, cy], bbox: [cx - 3, cy - 2, cx + 4, cy + 3] };
 }
 
 function drawEyebrows(ctx: DrawContext) {
@@ -437,25 +369,18 @@ function drawEyebrows(ctx: DrawContext) {
   const right = ctx.rig.anchors["right_eyebrow.center"];
   const clip = ctx.rig.masks.face_core;
   const draw = (cx: number, cy: number, side: "left" | "right") => {
-    if (shape === "soft_flat") setLine(ctx, "eyebrows", cx - 5, cy, cx + 5, cy, "hair.shadow", trait, clip);
+    if (shape === "soft_flat") line(ctx, "eyebrows", cx - 2, cy, cx + 2, cy, "hair.shadow", trait, clip);
     else if (shape === "arched") {
-      setLine(ctx, "eyebrows", cx - 5, cy + 1, cx, cy - 2, "hair.shadow", trait, clip);
-      setLine(ctx, "eyebrows", cx, cy - 2, cx + 5, cy, "hair.shadow", trait, clip);
-    } else if (shape === "thick_flat") {
-      setRect(ctx, "eyebrows", cx - 6, cy - 1, 12, 2, "hair.shadow", trait, clip);
-    } else if (shape === "angry") {
-      const d = side === "left" ? 1 : -1;
-      setLine(ctx, "eyebrows", cx - 6, cy - d * 2, cx + 6, cy + d * 2, "hair.shadow", trait, clip);
-    } else if (shape === "sad") {
-      const d = side === "left" ? -1 : 1;
-      setLine(ctx, "eyebrows", cx - 6, cy - d * 2, cx + 6, cy + d * 2, "hair.shadow", trait, clip);
-    } else if (shape === "raised_left") {
-      setLine(ctx, "eyebrows", cx - 5, cy + (side === "left" ? -2 : 1), cx + 5, cy + (side === "left" ? -2 : 1), "hair.shadow", trait, clip);
-    }
+      line(ctx, "eyebrows", cx - 2, cy, cx, cy - 1, "hair.shadow", trait, clip);
+      line(ctx, "eyebrows", cx, cy - 1, cx + 2, cy, "hair.shadow", trait, clip);
+    } else if (shape === "thick_flat") rect(ctx, "eyebrows", cx - 2, cy - 1, 5, 2, "hair.shadow", trait, clip);
+    else if (shape === "angry") line(ctx, "eyebrows", cx - 2, cy + (side === "left" ? -1 : 1), cx + 2, cy + (side === "left" ? 1 : -1), "hair.shadow", trait, clip);
+    else if (shape === "sad") line(ctx, "eyebrows", cx - 2, cy + (side === "left" ? 1 : -1), cx + 2, cy + (side === "left" ? -1 : 1), "hair.shadow", trait, clip);
+    else if (shape === "raised_left") line(ctx, "eyebrows", cx - 2, cy + (side === "left" ? -1 : 1), cx + 2, cy + (side === "left" ? -1 : 1), "hair.shadow", trait, clip);
   };
   draw(left[0], left[1], "left");
   draw(right[0], right[1], "right");
-  ctx.placements[trait] = { trait, bbox: [left[0] - 6, left[1] - 4, right[0] + 7, right[1] + 4] };
+  ctx.placements[trait] = { trait, bbox: [left[0] - 3, left[1] - 2, right[0] + 4, right[1] + 3] };
 }
 
 function drawNose(ctx: DrawContext) {
@@ -463,21 +388,21 @@ function drawNose(ctx: DrawContext) {
   const trait = `nose.shape.${shape}`;
   const [cx, cy] = ctx.rig.anchors["nose.tip"];
   const clip = ctx.rig.masks.face_core;
-  if (shape === "single_pixel") setRect(ctx, "nose", cx, cy, 1, 1, "skin.shadow", trait, clip);
+  if (shape === "single_pixel") px(ctx, "nose", cx, cy, "skin.shadow", trait, clip);
   else if (shape === "button") {
-    setRect(ctx, "nose", cx - 1, cy, 3, 2, "skin.shadow", trait, clip);
-    setRect(ctx, "nose", cx, cy - 1, 1, 1, "skin.highlight", trait, clip);
-  } else if (shape === "small_line") setLine(ctx, "nose", cx, cy - 4, cx, cy + 2, "skin.shadow", trait, clip);
+    px(ctx, "nose", cx, cy, "skin.shadow", trait, clip);
+    px(ctx, "nose", cx + 1, cy, "skin.shadow", trait, clip);
+  } else if (shape === "small_line") line(ctx, "nose", cx, cy - 1, cx, cy + 1, "skin.shadow", trait, clip);
   else if (shape === "soft_bridge") {
-    setLine(ctx, "nose", cx, cy - 7, cx - 1, cy - 1, "skin.shadow", trait, clip);
-    setRect(ctx, "nose", cx, cy + 1, 3, 1, "skin.shadow", trait, clip);
-  } else if (shape === "triangle") setTriangle(ctx, "nose", [[cx, cy - 4], [cx - 3, cy + 3], [cx + 3, cy + 3]], "skin.shadow", trait, clip);
+    line(ctx, "nose", cx, cy - 2, cx, cy, "skin.shadow", trait, clip);
+    px(ctx, "nose", cx + 1, cy + 1, "skin.shadow", trait, clip);
+  } else if (shape === "triangle") triangle(ctx, "nose", [[cx, cy - 2], [cx - 1, cy + 1], [cx + 2, cy + 1]], "skin.shadow", trait, clip);
   else if (shape === "wide") {
-    setRect(ctx, "nose", cx - 3, cy + 1, 7, 1, "skin.shadow", trait, clip);
-    setRect(ctx, "nose", cx - 2, cy, 1, 1, "skin.shadow", trait, clip);
-    setRect(ctx, "nose", cx + 2, cy, 1, 1, "skin.shadow", trait, clip);
+    line(ctx, "nose", cx - 2, cy + 1, cx + 2, cy + 1, "skin.shadow", trait, clip);
+    px(ctx, "nose", cx - 1, cy, "skin.shadow", trait, clip);
+    px(ctx, "nose", cx + 1, cy, "skin.shadow", trait, clip);
   }
-  ctx.placements[trait] = { trait, anchor: "nose.tip", anchor_xy: [cx, cy], final_xy: [cx, cy], bbox: [cx - 5, cy - 8, cx + 6, cy + 6] };
+  ctx.placements[trait] = { trait, anchor: "nose.tip", anchor_xy: [cx, cy], final_xy: [cx, cy], bbox: [cx - 2, cy - 2, cx + 3, cy + 3] };
 }
 
 function drawMouth(ctx: DrawContext) {
@@ -485,32 +410,33 @@ function drawMouth(ctx: DrawContext) {
   const trait = `mouth.shape.${shape}`;
   const [cx, cy] = ctx.rig.anchors["mouth.center"];
   const clip = ctx.rig.masks.face_core;
-  if (shape === "neutral") setLine(ctx, "mouth", cx - 5, cy, cx + 5, cy, "mouth.dark", trait, clip);
+  if (shape === "neutral") line(ctx, "mouth", cx - 2, cy, cx + 2, cy, "mouth.dark", trait, clip);
   else if (shape === "small_smile") {
-    setLine(ctx, "mouth", cx - 5, cy - 1, cx - 1, cy + 2, "mouth.dark", trait, clip);
-    setLine(ctx, "mouth", cx - 1, cy + 2, cx + 5, cy - 1, "mouth.dark", trait, clip);
-    setRect(ctx, "lips", cx + 1, cy, 2, 1, "lip.highlight", trait, clip);
+    px(ctx, "mouth", cx - 2, cy, "mouth.dark", trait, clip);
+    px(ctx, "mouth", cx - 1, cy + 1, "mouth.dark", trait, clip);
+    px(ctx, "mouth", cx, cy + 1, "mouth.dark", trait, clip);
+    px(ctx, "mouth", cx + 1, cy, "mouth.dark", trait, clip);
+    px(ctx, "lips", cx + 1, cy, "lip.highlight", trait, clip);
   } else if (shape === "big_smile") {
-    setLine(ctx, "mouth", cx - 8, cy - 2, cx - 3, cy + 3, "mouth.dark", trait, clip);
-    setLine(ctx, "mouth", cx - 3, cy + 3, cx + 8, cy - 2, "mouth.dark", trait, clip);
-    setRect(ctx, "mouth", cx - 4, cy + 1, 8, 2, "mouth.teeth", trait, clip);
+    line(ctx, "mouth", cx - 3, cy, cx - 1, cy + 1, "mouth.dark", trait, clip);
+    line(ctx, "mouth", cx - 1, cy + 1, cx + 3, cy, "mouth.dark", trait, clip);
+    rect(ctx, "mouth", cx - 2, cy + 1, 4, 1, "mouth.teeth", trait, clip);
   } else if (shape === "teeth_smile") {
-    setRect(ctx, "mouth", cx - 7, cy - 1, 14, 4, "mouth.dark", trait, clip);
-    setRect(ctx, "mouth", cx - 5, cy, 10, 2, "mouth.teeth", trait, clip);
-    setLine(ctx, "mouth", cx, cy, cx, cy + 2, "skin.shadow", trait, clip);
+    rect(ctx, "mouth", cx - 3, cy, 6, 2, "mouth.dark", trait, clip);
+    rect(ctx, "mouth", cx - 2, cy, 4, 1, "mouth.teeth", trait, clip);
   } else if (shape === "frown") {
-    setLine(ctx, "mouth", cx - 6, cy + 3, cx - 1, cy, "mouth.dark", trait, clip);
-    setLine(ctx, "mouth", cx - 1, cy, cx + 6, cy + 3, "mouth.dark", trait, clip);
+    line(ctx, "mouth", cx - 2, cy + 1, cx, cy, "mouth.dark", trait, clip);
+    line(ctx, "mouth", cx, cy, cx + 2, cy + 1, "mouth.dark", trait, clip);
   } else if (shape === "surprised_o") {
-    setEllipse(ctx, "mouth", cx, cy, 4, 5, "mouth.dark", trait, clip);
-    setEllipse(ctx, "mouth", cx, cy, 2, 3, "mouth.shadow", trait, clip);
+    rect(ctx, "mouth", cx - 1, cy - 1, 3, 3, "mouth.dark", trait, clip);
+    px(ctx, "mouth", cx, cy, "mouth.shadow", trait, clip);
   } else if (shape === "smirk_left") {
-    setLine(ctx, "mouth", cx - 7, cy + 1, cx - 1, cy - 1, "mouth.dark", trait, clip);
-    setLine(ctx, "mouth", cx - 1, cy - 1, cx + 5, cy, "mouth.dark", trait, clip);
+    line(ctx, "mouth", cx - 3, cy + 1, cx - 1, cy, "mouth.dark", trait, clip);
+    line(ctx, "mouth", cx - 1, cy, cx + 2, cy, "mouth.dark", trait, clip);
   }
   const belowNose = cy - ctx.rig.anchors["nose.tip"][1];
-  if (belowNose < 5) ctx.warnings.push(`${trait} is close to nose.tip (${belowNose}px)`);
-  ctx.placements[trait] = { trait, anchor: "mouth.center", anchor_xy: [cx, cy], mount_point: [0, 0], final_xy: [cx, cy], bbox: [cx - 9, cy - 4, cx + 10, cy + 7] };
+  if (belowNose < 2) ctx.warnings.push(`${trait} is close to nose.tip (${belowNose}px)`);
+  ctx.placements[trait] = { trait, anchor: "mouth.center", anchor_xy: [cx, cy], mount_point: [0, 0], final_xy: [cx, cy], bbox: [cx - 4, cy - 2, cx + 5, cy + 4] };
 }
 
 function drawFacialHair(ctx: DrawContext) {
@@ -520,24 +446,22 @@ function drawFacialHair(ctx: DrawContext) {
   const [cx, cy] = ctx.rig.anchors["mouth.center"];
   const clip = ctx.rig.masks.face_core;
   if (style === "stubble") {
-    for (let y = cy + 2; y < cy + 13; y += 3) {
-      for (let x = cx - 12; x <= cx + 12; x += 5) setRect(ctx, "facial_hair", x, y, 1, 1, "hair.shadow", trait, clip);
+    for (let y = cy + 2; y < cy + 6; y += 2) {
+      for (let x = cx - 5; x <= cx + 5; x += 3) px(ctx, "facial_hair", x, y, "hair.shadow", trait, clip);
     }
   } else if (style === "mustache_thin") {
-    setLine(ctx, "facial_hair", cx - 9, cy - 4, cx - 1, cy - 2, "hair.shadow", trait, clip);
-    setLine(ctx, "facial_hair", cx + 1, cy - 2, cx + 9, cy - 4, "hair.shadow", trait, clip);
+    line(ctx, "facial_hair", cx - 4, cy - 1, cx - 1, cy - 1, "hair.shadow", trait, clip);
+    line(ctx, "facial_hair", cx + 1, cy - 1, cx + 4, cy - 1, "hair.shadow", trait, clip);
   } else if (style === "goatee") {
-    setRect(ctx, "facial_hair", cx - 3, cy + 4, 7, 5, "hair.shadow", trait, clip);
-    setRect(ctx, "facial_hair", cx - 1, cy + 9, 3, 5, "hair.shadow", trait, clip);
+    rect(ctx, "facial_hair", cx - 1, cy + 2, 3, 2, "hair.shadow", trait, clip);
+    px(ctx, "facial_hair", cx, cy + 4, "hair.shadow", trait, clip);
   } else if (style === "short_beard") {
-    setRect(ctx, "facial_hair", cx - 13, cy + 5, 4, 10, "hair.shadow", trait, clip);
-    setRect(ctx, "facial_hair", cx + 10, cy + 5, 4, 10, "hair.shadow", trait, clip);
-    setRect(ctx, "facial_hair", cx - 9, cy + 13, 19, 5, "hair.shadow", trait, clip);
-    setLine(ctx, "facial_hair", cx - 11, cy + 8, cx - 5, cy + 15, "hair.base", trait, clip);
-    setLine(ctx, "facial_hair", cx + 11, cy + 8, cx + 5, cy + 15, "hair.base", trait, clip);
+    rect(ctx, "facial_hair", cx - 5, cy + 2, 2, 4, "hair.shadow", trait, clip);
+    rect(ctx, "facial_hair", cx + 4, cy + 2, 2, 4, "hair.shadow", trait, clip);
+    rect(ctx, "facial_hair", cx - 3, cy + 5, 7, 2, "hair.shadow", trait, clip);
   } else if (style === "sideburns") {
-    setRect(ctx, "facial_hair", 36, cy - 20, 5, 25, "hair.shadow", trait, clip);
-    setRect(ctx, "facial_hair", 87, cy - 20, 5, 25, "hair.shadow", trait, clip);
+    rect(ctx, "facial_hair", 12, cy - 7, 2, 8, "hair.shadow", trait, clip);
+    rect(ctx, "facial_hair", 26, cy - 7, 2, 8, "hair.shadow", trait, clip);
   }
   ctx.placements[trait] = { trait, bbox: ctx.layers.get("facial_hair").bbox() };
 }
@@ -549,50 +473,43 @@ function drawGlasses(ctx: DrawContext) {
   const left = ctx.rig.anchors["left_eye.center"];
   const right = ctx.rig.anchors["right_eye.center"];
   const bridge = ctx.rig.anchors["nose.bridge"];
-  const lensColor = shape === "sunglasses" ? "accessory.lens_dark" : "accessory.lens";
   const frame = shape === "thin_frame" ? "accessory.frame_light" : "accessory.frame";
   const clip = ctx.rig.masks.face_core;
 
   if (shape === "round" || shape === "thin_frame") {
-    drawEllipseOutline(ctx, "glasses.frame", left[0], left[1], 8, 7, frame, trait, clip);
-    drawEllipseOutline(ctx, "glasses.frame", right[0], right[1], 8, 7, frame, trait, clip);
-    if (shape !== "thin_frame") {
-      drawEllipseOutline(ctx, "glasses.frame", left[0], left[1], 9, 8, frame, trait, clip);
-      drawEllipseOutline(ctx, "glasses.frame", right[0], right[1], 9, 8, frame, trait, clip);
-    }
+    ellipseOutline(ctx, "glasses.frame", left[0], left[1], 2.4, 2, frame, trait, clip);
+    ellipseOutline(ctx, "glasses.frame", right[0], right[1], 2.4, 2, frame, trait, clip);
   } else {
-    const w = shape === "rectangle" || shape === "sunglasses" ? 16 : 13;
-    const h = shape === "rectangle" || shape === "sunglasses" ? 8 : 11;
-    drawGlassesBox(ctx, left[0] - Math.floor(w / 2), left[1] - Math.floor(h / 2), w, h, lensColor, frame, trait, clip);
-    drawGlassesBox(ctx, right[0] - Math.floor(w / 2), right[1] - Math.floor(h / 2), w, h, lensColor, frame, trait, clip);
+    const w = shape === "rectangle" || shape === "sunglasses" ? 6 : 5;
+    const h = shape === "rectangle" || shape === "sunglasses" ? 3 : 4;
+    glassesBox(ctx, left[0] - Math.floor(w / 2), left[1] - 1, w, h, shape === "sunglasses", frame, trait, clip);
+    glassesBox(ctx, right[0] - Math.floor(w / 2), right[1] - 1, w, h, shape === "sunglasses", frame, trait, clip);
   }
-  setLine(ctx, "glasses.frame", left[0] + 7, left[1], bridge[0], bridge[1], frame, trait, clip);
-  setLine(ctx, "glasses.frame", bridge[0], bridge[1], right[0] - 7, right[1], frame, trait, clip);
-  setLine(ctx, "glasses.frame", left[0] - 8, left[1] - 1, left[0] - 18, left[1] - 4, frame, trait);
-  setLine(ctx, "glasses.frame", right[0] + 8, right[1] - 1, right[0] + 18, right[1] - 4, frame, trait);
-  setRect(ctx, "glasses.highlight", left[0] - 4, left[1] - 4, 4, 1, "accessory.white", trait, clip);
-  setRect(ctx, "glasses.highlight", right[0] - 4, right[1] - 4, 4, 1, "accessory.white", trait, clip);
-  ctx.placements[trait] = { trait, anchor: "nose.bridge", anchor_xy: bridge, final_xy: bridge, bbox: [left[0] - 18, left[1] - 8, right[0] + 19, right[1] + 8] };
+  line(ctx, "glasses.frame", left[0] + 2, left[1], bridge[0], bridge[1], frame, trait, clip);
+  line(ctx, "glasses.frame", bridge[0], bridge[1], right[0] - 2, right[1], frame, trait, clip);
+  line(ctx, "glasses.frame", left[0] - 3, left[1], left[0] - 6, left[1] - 1, frame, trait);
+  line(ctx, "glasses.frame", right[0] + 3, right[1], right[0] + 6, right[1] - 1, frame, trait);
+  px(ctx, "glasses.highlight", left[0] - 1, left[1] - 1, "accessory.white", trait, clip);
+  px(ctx, "glasses.highlight", right[0] - 1, right[1] - 1, "accessory.white", trait, clip);
+  ctx.placements[trait] = { trait, anchor: "nose.bridge", anchor_xy: bridge, final_xy: bridge, bbox: [left[0] - 6, left[1] - 3, right[0] + 7, right[1] + 4] };
 }
 
-function drawGlassesBox(ctx: DrawContext, x: number, y: number, w: number, h: number, lens: string, frame: string, trait: string, clip?: Mask) {
-  if (lens === "accessory.lens_dark") setRect(ctx, "glasses.lens", x + 1, y + 1, w - 2, h - 2, lens, trait, clip);
-  setRect(ctx, "glasses.frame", x, y, w, 1, frame, trait, clip);
-  setRect(ctx, "glasses.frame", x, y + h - 1, w, 1, frame, trait, clip);
-  setRect(ctx, "glasses.frame", x, y, 1, h, frame, trait, clip);
-  setRect(ctx, "glasses.frame", x + w - 1, y, 1, h, frame, trait, clip);
-  setRect(ctx, "glasses.highlight", x + 3, y + 2, 4, 1, "accessory.white", trait, clip);
+function glassesBox(ctx: DrawContext, x: number, y: number, w: number, h: number, filled: boolean, frame: string, trait: string, clip?: Mask) {
+  if (filled) rect(ctx, "glasses.lens", x + 1, y + 1, w - 2, h - 1, "accessory.lens_dark", trait, clip);
+  rect(ctx, "glasses.frame", x, y, w, 1, frame, trait, clip);
+  rect(ctx, "glasses.frame", x, y + h - 1, w, 1, frame, trait, clip);
+  rect(ctx, "glasses.frame", x, y, 1, h, frame, trait, clip);
+  rect(ctx, "glasses.frame", x + w - 1, y, 1, h, frame, trait, clip);
 }
 
 function drawHeadwearBack(ctx: DrawContext) {
   const type = ctx.traits["headwear.type"] ?? "none";
   const trait = `headwear.type.${type}`;
-  if (type === "hood") {
-    setEllipse(ctx, "headwear.back", 64, 60, 46, 56, "clothing.shadow", trait);
-  } else if (type === "headphones") {
-    setLine(ctx, "headwear.back", 41, 28, 87, 28, "accessory.frame", trait);
-    setLine(ctx, "headwear.back", 41, 28, 35, 51, "accessory.frame", trait);
-    setLine(ctx, "headwear.back", 87, 28, 93, 51, "accessory.frame", trait);
+  if (type === "hood") ellipse(ctx, "headwear.back", 20, 20, 15, 18, "clothing.shadow", trait);
+  else if (type === "headphones") {
+    line(ctx, "headwear.back", 13, 10, 27, 10, "accessory.frame", trait);
+    line(ctx, "headwear.back", 13, 10, 11, 17, "accessory.frame", trait);
+    line(ctx, "headwear.back", 27, 10, 29, 17, "accessory.frame", trait);
   }
 }
 
@@ -602,44 +519,30 @@ function drawHeadwearFront(ctx: DrawContext) {
   const trait = `headwear.type.${type}`;
   const top = ctx.rig.anchors["head.top"][1];
   if (type === "beanie") {
-    setEllipse(ctx, "headwear.front", 64, top + 17, 38, 22, "clothing.base", trait, ctx.rig.masks.hair_allowed);
-    setRect(ctx, "headwear.front", 31, top + 27, 66, 6, "clothing.shadow", trait, ctx.rig.masks.hair_allowed);
-    setRect(ctx, "headwear.front", 56, top - 3, 16, 7, "clothing.highlight", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "headwear.front", 20, top + 5, 12, 6, "clothing.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "headwear.front", 10, top + 8, 20, 2, "clothing.shadow", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "headwear.front", 18, top - 1, 4, 2, "clothing.highlight", trait, ctx.rig.masks.hair_allowed);
   } else if (type === "cap") {
-    setEllipse(ctx, "headwear.front", 64, top + 18, 37, 18, "clothing.base", trait, ctx.rig.masks.hair_allowed);
-    setRect(ctx, "headwear.front", 31, top + 26, 66, 5, "clothing.shadow", trait, ctx.rig.masks.hair_allowed);
-    setTriangle(ctx, "headwear.front", [[73, top + 26], [108, top + 30], [75, top + 36]], "clothing.base", trait);
+    ellipse(ctx, "headwear.front", 20, top + 5, 12, 5, "clothing.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "headwear.front", 10, top + 8, 20, 2, "clothing.shadow", trait, ctx.rig.masks.hair_allowed);
+    triangle(ctx, "headwear.front", [[22, top + 8], [34, top + 9], [23, top + 11]], "clothing.base", trait);
   } else if (type === "crown") {
-    setRect(ctx, "headwear.front", 43, top + 2, 42, 9, "accessory.gold", trait);
-    for (const x of [44, 56, 72, 84]) {
-      setTriangle(ctx, "headwear.front", [[x, top + 2], [x + 8, top + 2], [x + 4, top - 9]], "accessory.gold", trait);
-    }
-    setRect(ctx, "headwear.front", 61, top - 2, 5, 5, "accessory.red", trait);
+    rect(ctx, "headwear.front", 14, top + 1, 13, 3, "accessory.gold", trait);
+    for (const x of [14, 18, 23]) triangle(ctx, "headwear.front", [[x, top + 1], [x + 4, top + 1], [x + 2, top - 3]], "accessory.gold", trait);
+    px(ctx, "headwear.front", 20, top, "accessory.red", trait);
   } else if (type === "headphones") {
-    setRect(ctx, "headphones.front", 28, 49, 11, 22, "accessory.frame", trait);
-    setRect(ctx, "headphones.front", 89, 49, 11, 22, "accessory.frame", trait);
-    setRect(ctx, "headphones.front", 31, 54, 5, 12, "accessory.frame_light", trait);
-    setRect(ctx, "headphones.front", 92, 54, 5, 12, "accessory.frame_light", trait);
+    rect(ctx, "headphones.front", 9, 16, 4, 7, "accessory.frame", trait);
+    rect(ctx, "headphones.front", 27, 16, 4, 7, "accessory.frame", trait);
+    rect(ctx, "headphones.front", 10, 18, 2, 3, "accessory.frame_light", trait);
+    rect(ctx, "headphones.front", 28, 18, 2, 3, "accessory.frame_light", trait);
   } else if (type === "hood") {
-    drawEllipseOutline(ctx, "headwear.front", 64, 60, 42, 53, "clothing.base", trait);
-    drawEllipseOutline(ctx, "headwear.front", 64, 60, 41, 52, "clothing.base", trait);
-    setRect(ctx, "headwear.front", 27, 62, 7, 33, "clothing.base", trait);
-    setRect(ctx, "headwear.front", 94, 62, 7, 33, "clothing.base", trait);
-    setRect(ctx, "headwear.front", 42, 101, 44, 9, "clothing.shadow", trait);
+    ellipseOutline(ctx, "headwear.front", 20, 20, 14, 17, "clothing.base", trait);
+    rect(ctx, "headwear.front", 9, 21, 3, 10, "clothing.base", trait);
+    rect(ctx, "headwear.front", 28, 21, 3, 10, "clothing.base", trait);
+    rect(ctx, "headwear.front", 14, 33, 12, 3, "clothing.shadow", trait);
   } else if (type === "beret") {
-    setEllipse(ctx, "headwear.front", 58, top + 10, 35, 14, "clothing.base", trait, ctx.rig.masks.hair_allowed);
-    setRect(ctx, "headwear.front", 49, top - 4, 5, 7, "clothing.shadow", trait);
+    ellipse(ctx, "headwear.front", 18, top + 3, 11, 4, "clothing.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "headwear.front", 16, top - 1, 2, 2, "clothing.shadow", trait);
   }
-  ctx.placements[trait] = { trait, bbox: bboxFromBoxes(["headwear.back", "headwear.front", "headphones.front"].map((id) => ctx.layers.get(id).bbox())) };
-}
-
-function bboxFromBoxes(boxes: Array<[number, number, number, number] | undefined>) {
-  const present = boxes.filter(Boolean) as Array<[number, number, number, number]>;
-  if (!present.length) return undefined;
-  return [
-    Math.min(...present.map((b) => b[0])),
-    Math.min(...present.map((b) => b[1])),
-    Math.max(...present.map((b) => b[2])),
-    Math.max(...present.map((b) => b[3]))
-  ] as [number, number, number, number];
+  ctx.placements[trait] = { trait, bbox: bboxUnion(["headwear.back", "headwear.front", "headphones.front"].map((id) => ctx.layers.get(id).bbox())) };
 }

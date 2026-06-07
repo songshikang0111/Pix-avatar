@@ -97,7 +97,7 @@ program
   .command("render")
   .argument("<input>")
   .requiredOption("--out <path>")
-  .option("--scale <scale>", "output scale", "4")
+  .option("--scale <scale>", "output scale")
   .option("--debug-grid <path>")
   .option("--debug-anchors <path>")
   .option("--layers <dir>")

@@ -3,6 +3,7 @@ import { dirname } from "node:path";
 import { PNG } from "pngjs";
 import { PixelImage, RenderLayer } from "../types";
 import { hexToRgb } from "../core/color";
+import { CANVAS_SIZE } from "../core/geometry";
 
 export function imageToPngBuffer(image: PixelImage, scale = 4) {
   const png = new PNG({ width: image.width * scale, height: image.height * scale });
@@ -31,8 +32,8 @@ export async function writeLayerPngs(dir: string, layers: RenderLayer[], scale =
   await mkdir(dir, { recursive: true });
   for (const layer of layers) {
     const image: PixelImage = {
-      width: 128,
-      height: 128,
+      width: CANVAS_SIZE,
+      height: CANVAS_SIZE,
       pixels: layer.pixels,
       stacks: new Map()
     };

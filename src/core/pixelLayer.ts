@@ -1,5 +1,5 @@
 import { Box, Mask, PixelCell, PixelImage, PixelMeta, PixelStackEntry, Point, RenderLayer } from "../types";
-import { bboxFromPoints, keyOf, pointFromKey, inBounds, maskHas } from "./geometry";
+import { CANVAS_SIZE, bboxFromPoints, keyOf, pointFromKey, inBounds, maskHas } from "./geometry";
 import { zForLayer } from "./layers";
 
 export class MutableLayer implements RenderLayer {
@@ -141,7 +141,7 @@ function edge(a: Point, b: Point, c: Point) {
   return (c[0] - a[0]) * (b[1] - a[1]) - (c[1] - a[1]) * (b[0] - a[0]);
 }
 
-export function compositeLayers(layers: RenderLayer[], width = 128, height = 128): PixelImage {
+export function compositeLayers(layers: RenderLayer[], width = CANVAS_SIZE, height = CANVAS_SIZE): PixelImage {
   const sorted = [...layers].sort((a, b) => a.z - b.z || a.id.localeCompare(b.id));
   const stacks = new Map<string, PixelStackEntry[]>();
   const visible = new Map<string, PixelCell>();

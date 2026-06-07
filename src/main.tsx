@@ -19,7 +19,7 @@ function App() {
   const [seed, setSeed] = useState("42");
   const [debugGrid, setDebugGrid] = useState(false);
   const [debugAnchors, setDebugAnchors] = useState(false);
-  const [patchText, setPatchText] = useState("rect custom.face 60 80 8 1 mouth.dark clip=face");
+  const [patchText, setPatchText] = useState("rect custom.face 18 26 4 1 mouth.dark clip=face");
   const [pixel, setPixel] = useState<[number, number] | undefined>(undefined);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -31,28 +31,21 @@ function App() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const scale = 5;
-    canvas.width = 128 * scale;
-    canvas.height = 128 * scale;
+    const scale = 12;
+    const logicalWidth = render.image.width;
+    const logicalHeight = render.image.height;
+    canvas.width = logicalWidth * scale;
+    canvas.height = logicalHeight * scale;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
     ctx.imageSmoothingEnabled = false;
-    const imageData = ctx.createImageData(canvas.width, canvas.height);
-    for (let y = 0; y < canvas.height; y += 1) {
-      for (let x = 0; x < canvas.width; x += 1) {
-        const srcX = Math.floor(x / scale);
-        const srcY = Math.floor(y / scale);
-        const cell = render.image.pixels.get(`${srcX},${srcY}`);
-        const [r, g, b, a] = cell ? hexToRgb(cell.color) : [0, 0, 0, 0];
-        const idx = (y * canvas.width + x) * 4;
-        imageData.data[idx] = r;
-        imageData.data[idx + 1] = g;
-        imageData.data[idx + 2] = b;
-        imageData.data[idx + 3] = a;
-      }
-    }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.putImageData(imageData, 0, 0);
+    for (const cell of render.image.pixels.values()) {
+      const [r, g, b, a] = hexToRgb(cell.color);
+      if (a === 0) continue;
+      ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a / 255})`;
+      ctx.fillRect(cell.x * scale, cell.y * scale, scale, scale);
+    }
   }, [render]);
 
   const setTrait = (key: string, value: string) => {
@@ -90,8 +83,8 @@ function App() {
 
   const onCanvasClick = (event: React.MouseEvent<HTMLCanvasElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
-    const x = Math.floor(((event.clientX - rect.left) / rect.width) * 128);
-    const y = Math.floor(((event.clientY - rect.top) / rect.height) * 128);
+    const x = Math.floor(((event.clientX - rect.left) / rect.width) * render.image.width);
+    const y = Math.floor(((event.clientY - rect.top) / rect.height) * render.image.height);
     setPixel([x, y]);
   };
 
