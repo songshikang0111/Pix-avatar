@@ -1,0 +1,36 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [
+      128,
+      128
+    ],
+    "scale": 4,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v1",
+    "version": "1.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "mature",
+    "face.shape": "oval",
+    "skin.tone": "light_warm_03",
+    "face.detail": "blush_soft",
+    "hair.style": "buzz_cut",
+    "hair.color": "black_02",
+    "eyes.shape": "almond",
+    "eyes.color": "robot_cyan",
+    "eyebrows.shape": "angry",
+    "nose.shape": "button",
+    "mouth.shape": "teeth_smile",
+    "ears.shape": "none",
+    "glasses.shape": "none",
+    "facial_hair.style": "stubble",
+    "headwear.type": "hood",
+    "clothing.top": "robe",
+    "background.style": "aura"
+  },
+  "seed": 42
+}

@@ -1,0 +1,36 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [
+      128,
+      128
+    ],
+    "scale": 4,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v1",
+    "version": "1.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "cute",
+    "face.shape": "soft_round",
+    "skin.tone": "tan_07",
+    "face.detail": "under_eye_lines",
+    "hair.style": "bob_bangs",
+    "hair.color": "blue",
+    "eyes.shape": "almond",
+    "eyes.color": "green",
+    "eyebrows.shape": "angry",
+    "nose.shape": "button",
+    "mouth.shape": "teeth_smile",
+    "ears.shape": "pointed",
+    "glasses.shape": "rectangle",
+    "facial_hair.style": "short_beard",
+    "headwear.type": "cap",
+    "clothing.top": "hoodie",
+    "background.style": "aura"
+  },
+  "seed": "303"
+}

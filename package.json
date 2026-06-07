@@ -1,0 +1,41 @@
+{
+  "name": "pix-avatar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "avatar": "./dist-node/cli.js"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build && tsup src/cli.ts src/server.ts src/sdk.ts --format esm --dts --out-dir dist-node",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "cli": "tsx src/cli.ts",
+    "serve:api": "tsx src/server.ts",
+    "render:samples": "tsx src/scripts/renderSamples.ts",
+    "validate:assets": "tsx src/scripts/crossValidate.ts"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "commander": "^12.1.0",
+    "express": "^4.19.2",
+    "lucide-react": "^0.468.0",
+    "pngjs": "^7.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "yaml": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.7.4",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "tsx": "^4.19.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.8",
+    "vitest": "^2.1.1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [
+      128,
+      128
+    ],
+    "scale": 4,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v1",
+    "version": "1.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "cute",
+    "face.shape": "heart",
+    "skin.tone": "deep_brown_09",
+    "face.detail": "blush_soft",
+    "hair.style": "bald_clean",
+    "hair.color": "dark_brown",
+    "eyes.shape": "round",
+    "eyes.color": "purple",
+    "eyebrows.shape": "raised_left",
+    "nose.shape": "small_line",
+    "mouth.shape": "small_smile",
+    "ears.shape": "none",
+    "glasses.shape": "none",
+    "facial_hair.style": "short_beard",
+    "headwear.type": "beanie",
+    "clothing.top": "armor",
+    "background.style": "aura"
+  },
+  "seed": "101"
+}

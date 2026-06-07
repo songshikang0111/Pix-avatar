@@ -1,0 +1,36 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [
+      128,
+      128
+    ],
+    "scale": 4,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v1",
+    "version": "1.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "androgynous",
+    "face.shape": "heart",
+    "skin.tone": "robot_gray",
+    "face.detail": "freckles_light",
+    "hair.style": "short_messy",
+    "hair.color": "pink",
+    "eyes.shape": "happy_arc",
+    "eyes.color": "robot_cyan",
+    "eyebrows.shape": "soft_flat",
+    "nose.shape": "button",
+    "mouth.shape": "teeth_smile",
+    "ears.shape": "small_round",
+    "glasses.shape": "thin_frame",
+    "facial_hair.style": "mustache_thin",
+    "headwear.type": "beret",
+    "clothing.top": "hoodie",
+    "background.style": "aura"
+  },
+  "seed": "202"
+}

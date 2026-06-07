@@ -1,0 +1,35 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [
+      128,
+      128
+    ],
+    "scale": 4,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v1",
+    "version": "1.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "androgynous",
+    "face.shape": "heart",
+    "skin.tone": "medium_warm_05",
+    "face.detail": "blush_soft",
+    "hair.style": "bob_bangs",
+    "hair.color": "pink",
+    "eyes.shape": "starry",
+    "eyes.color": "brown",
+    "eyebrows.shape": "soft_flat",
+    "nose.shape": "button",
+    "mouth.shape": "teeth_smile",
+    "ears.shape": "round",
+    "glasses.shape": "none",
+    "facial_hair.style": "none",
+    "headwear.type": "crown",
+    "clothing.top": "hoodie",
+    "background.style": "aura"
+  }
+}

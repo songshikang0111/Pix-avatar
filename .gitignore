@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-node/
+.DS_Store
+*.log
+
+# Generated render and QA artifacts. Regenerate with npm scripts.
+examples/outputs/
