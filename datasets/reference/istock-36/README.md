@@ -24,8 +24,9 @@ This fixture turns a 6x6 reference sheet into Pix Avatar comparable outputs:
   including an `avatar-01` full-layer template with exact `32x32` diff reports.
 - `manual-traits-3part/`: reviewed three-part reference traits for the first
   five avatars. Each sample is reduced to `face.shape`, `clothing.top`, and
-  `hair.style`, plus visual QA sheets for individual assets, exact
-  reconstruction, and 5x5x5 cross-combinations.
+  `hair.style`. The `face.shape` layer uses a manually fitted bald head/body
+  base instead of inheriting the source hair silhouette, plus visual QA sheets
+  for individual assets, exact reconstruction, and 5x5x5 cross-combinations.
 
 The JSON matrices are intentionally dense `32x32` rows of hex colors. The
 normalization uses area-dominant sampling with a `0.5,0.5` source-pixel offset,
@@ -94,8 +95,10 @@ npm run build:three-part-reference-traits -- --count 5
 The three-part report includes exact reconstruction diff rates and two layer
 hygiene checks: `hairCentralFaceLeakagePixels` catches hair assets that absorb
 central face/eye pixels, and `clothingFaceShadowLeakagePixels` catches clothing
-assets that absorb lower-face shadow or chin pixels. Both should stay at `0`
-before accepting the generated assets.
+assets that absorb lower-face shadow or chin pixels.
+`hairCoveredFacePixelsOutsideFittedBase` catches face bases that still follow
+the source hair silhouette outside the manually fitted head/body mask. All three
+should stay at `0` before accepting the generated assets.
 
 The original stock image is not copied into this repo. Some generated entries
 inherit the visible iStock watermark from the reference image; keep that in mind

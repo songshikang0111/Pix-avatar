@@ -358,9 +358,9 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 20,
-      "y": 3,
-      "w": 1,
+      "x": 15,
+      "y": 4,
+      "w": 4,
       "h": 1,
       "color": "#202020"
     },
@@ -369,36 +369,6 @@
       "layer": "manual.10.face",
       "coordSpace": "output",
       "x": 12,
-      "y": 4,
-      "w": 8,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 20,
-      "y": 4,
-      "w": 1,
-      "h": 1,
-      "color": "#F0F0E0"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 21,
-      "y": 4,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 9,
       "y": 5,
       "w": 3,
       "h": 1,
@@ -408,8 +378,38 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 12,
+      "x": 15,
       "y": 5,
+      "w": 4,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.10.face",
+      "coordSpace": "output",
+      "x": 19,
+      "y": 5,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.10.face",
+      "coordSpace": "output",
+      "x": 10,
+      "y": 6,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.10.face",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 6,
       "w": 10,
       "h": 1,
       "color": "#F0F0E0"
@@ -419,7 +419,7 @@
       "layer": "manual.10.face",
       "coordSpace": "output",
       "x": 22,
-      "y": 5,
+      "y": 6,
       "w": 1,
       "h": 1,
       "color": "#202020"
@@ -429,8 +429,8 @@
       "layer": "manual.10.face",
       "coordSpace": "output",
       "x": 8,
-      "y": 6,
-      "w": 1,
+      "y": 7,
+      "w": 2,
       "h": 1,
       "color": "#202020"
     },
@@ -438,9 +438,9 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 9,
-      "y": 6,
-      "w": 14,
+      "x": 10,
+      "y": 7,
+      "w": 13,
       "h": 1,
       "color": "#F0F0E0"
     },
@@ -449,38 +449,8 @@
       "layer": "manual.10.face",
       "coordSpace": "output",
       "x": 23,
-      "y": 6,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 7,
       "y": 7,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 8,
-      "y": 7,
-      "w": 16,
-      "h": 1,
-      "color": "#F0F0E0"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 24,
-      "y": 7,
-      "w": 1,
+      "w": 2,
       "h": 1,
       "color": "#202020"
     },
@@ -500,19 +470,9 @@
       "coordSpace": "output",
       "x": 8,
       "y": 8,
-      "w": 16,
+      "w": 17,
       "h": 1,
       "color": "#F0F0E0"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 24,
-      "y": 8,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
     },
     {
       "op": "rect",
@@ -580,17 +540,7 @@
       "coordSpace": "output",
       "x": 6,
       "y": 11,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 7,
-      "y": 11,
-      "w": 18,
+      "w": 19,
       "h": 1,
       "color": "#F0F0E0"
     },
@@ -610,17 +560,7 @@
       "coordSpace": "output",
       "x": 6,
       "y": 12,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 7,
-      "y": 12,
-      "w": 18,
+      "w": 19,
       "h": 1,
       "color": "#F0F0E0"
     },
@@ -640,17 +580,7 @@
       "coordSpace": "output",
       "x": 6,
       "y": 13,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 7,
-      "y": 13,
-      "w": 18,
+      "w": 19,
       "h": 1,
       "color": "#F0F0E0"
     },
@@ -670,17 +600,7 @@
       "coordSpace": "output",
       "x": 6,
       "y": 14,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 7,
-      "y": 14,
-      "w": 8,
+      "w": 9,
       "h": 1,
       "color": "#F0F0E0"
     },
@@ -740,7 +660,7 @@
       "coordSpace": "output",
       "x": 4,
       "y": 15,
-      "w": 2,
+      "w": 1,
       "h": 1,
       "color": "#202020"
     },
@@ -748,9 +668,9 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 6,
+      "x": 5,
       "y": 15,
-      "w": 4,
+      "w": 5,
       "h": 1,
       "color": "#F0F0E0"
     },
@@ -1328,8 +1248,38 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 6,
+      "x": 8,
       "y": 28,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.10.face",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 28,
+      "w": 6,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.10.face",
+      "coordSpace": "output",
+      "x": 18,
+      "y": 28,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.10.face",
+      "coordSpace": "output",
+      "x": 6,
+      "y": 29,
       "w": 2,
       "h": 1,
       "color": "#202020"
@@ -1339,8 +1289,8 @@
       "layer": "manual.10.face",
       "coordSpace": "output",
       "x": 8,
-      "y": 28,
-      "w": 11,
+      "y": 29,
+      "w": 14,
       "h": 1,
       "color": "#F0F0E0"
     },
@@ -1348,8 +1298,8 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 19,
-      "y": 28,
+      "x": 22,
+      "y": 29,
       "w": 2,
       "h": 1,
       "color": "#202020"
@@ -1358,37 +1308,7 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 5,
-      "y": 29,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 6,
-      "y": 29,
-      "w": 15,
-      "h": 1,
-      "color": "#F0F0E0"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 21,
-      "y": 29,
-      "w": 3,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 3,
+      "x": 4,
       "y": 30,
       "w": 2,
       "h": 1,
@@ -1398,7 +1318,7 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 5,
+      "x": 6,
       "y": 30,
       "w": 18,
       "h": 1,
@@ -1408,19 +1328,9 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 23,
-      "y": 30,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 2,
+      "x": 3,
       "y": 31,
-      "w": 12,
+      "w": 11,
       "h": 1,
       "color": "#202020"
     },
@@ -1443,6 +1353,16 @@
       "w": 8,
       "h": 1,
       "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.20.clothing",
+      "coordSpace": "output",
+      "x": 22,
+      "y": 26,
+      "w": 1,
+      "h": 1,
+      "color": "#D0C090"
     },
     {
       "op": "rect",
@@ -1538,6 +1458,16 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 10,
+      "y": 4,
+      "w": 12,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 9,
       "y": 5,
       "w": 1,
@@ -1553,6 +1483,16 @@
       "w": 11,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 21,
+      "y": 5,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -1588,6 +1528,16 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 23,
+      "y": 6,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 7,
       "y": 7,
       "w": 1,
@@ -1618,6 +1568,16 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 24,
+      "y": 7,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 7,
       "y": 8,
       "w": 4,
@@ -1643,6 +1603,16 @@
       "w": 7,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 24,
+      "y": 8,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -2108,6 +2078,16 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 2,
+      "y": 19,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 3,
       "y": 19,
       "w": 4,
@@ -2138,6 +2118,16 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 2,
+      "y": 20,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 3,
       "y": 20,
       "w": 5,
@@ -2153,6 +2143,26 @@
       "w": 3,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 29,
+      "y": 20,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 3,
+      "y": 21,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -2178,6 +2188,26 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 29,
+      "y": 21,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 4,
+      "y": 22,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 5,
       "y": 22,
       "w": 5,
@@ -2193,6 +2223,16 @@
       "w": 4,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 29,
+      "y": 22,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -2228,6 +2268,16 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 29,
+      "y": 23,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 2,
       "y": 24,
       "w": 2,
@@ -2253,6 +2303,16 @@
       "w": 6,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 29,
+      "y": 24,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -2293,6 +2353,16 @@
       "w": 6,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 29,
+      "y": 25,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",

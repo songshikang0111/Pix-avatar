@@ -39,10 +39,68 @@ interface ThreePartAssetSet {
   background: string;
   skinColor: string;
   outlineColor: string;
+  fittedBaseMask: Set<string>;
   template: ManualTraitTemplate;
   referenceMatrix: PixelMatrix;
   layers: Record<ThreeSlot, ManualTraitPixel[]>;
 }
+
+interface ManualBaseProfile {
+  rows: Array<[number, number, number]>;
+}
+
+const MANUAL_BASE_PROFILES: Record<string, ManualBaseProfile> = {
+  "avatar-01": {
+    rows: [
+      [4, 15, 18], [5, 12, 21], [6, 10, 22], [7, 8, 24], [8, 7, 25], [9, 6, 25],
+      [10, 6, 25], [11, 5, 25], [12, 5, 25], [13, 5, 25], [14, 5, 24],
+      [15, 4, 24], [16, 4, 24], [17, 4, 24], [18, 5, 24], [19, 6, 24],
+      [20, 7, 24], [21, 8, 24], [22, 9, 23], [23, 10, 22], [24, 11, 21],
+      [25, 12, 20], [26, 13, 18], [27, 13, 17], [28, 8, 21], [29, 6, 24],
+      [30, 4, 25], [31, 3, 28]
+    ]
+  },
+  "avatar-02": {
+    rows: [
+      [2, 15, 17], [3, 13, 19], [4, 11, 21], [5, 10, 23], [6, 9, 24],
+      [7, 8, 24], [8, 7, 25], [9, 7, 25], [10, 6, 24], [11, 6, 24],
+      [12, 5, 24], [13, 4, 24], [14, 3, 25], [15, 3, 26], [16, 3, 27],
+      [17, 4, 27], [18, 5, 26], [19, 6, 26], [20, 7, 25], [21, 8, 24],
+      [22, 9, 23], [23, 10, 22], [24, 11, 21], [25, 12, 20], [26, 13, 19],
+      [27, 11, 19], [28, 7, 22], [29, 5, 24], [30, 4, 25], [31, 3, 28]
+    ]
+  },
+  "avatar-03": {
+    rows: [
+      [4, 12, 19], [5, 9, 22], [6, 7, 23], [7, 6, 25], [8, 5, 25],
+      [9, 5, 26], [10, 4, 26], [11, 4, 27], [12, 4, 27], [13, 4, 27],
+      [14, 4, 28], [15, 3, 28], [16, 3, 28], [17, 3, 28], [18, 3, 27],
+      [19, 3, 27], [20, 4, 26], [21, 5, 25], [22, 6, 24], [23, 7, 23],
+      [24, 8, 22], [25, 9, 21], [26, 10, 20], [27, 10, 20], [28, 7, 22],
+      [29, 4, 25], [30, 3, 26], [31, 2, 28]
+    ]
+  },
+  "avatar-04": {
+    rows: [
+      [3, 17, 21], [4, 15, 23], [5, 12, 24], [6, 10, 25], [7, 9, 26],
+      [8, 8, 26], [9, 8, 26], [10, 7, 26], [11, 7, 26], [12, 7, 26],
+      [13, 7, 26], [14, 7, 26], [15, 6, 26], [16, 6, 26], [17, 7, 25],
+      [18, 7, 25], [19, 8, 25], [20, 9, 25], [21, 10, 24], [22, 11, 23],
+      [23, 12, 22], [24, 13, 21], [25, 14, 20], [26, 15, 19], [27, 13, 20],
+      [28, 9, 22], [29, 7, 24], [30, 5, 26], [31, 5, 29]
+    ]
+  },
+  "avatar-05": {
+    rows: [
+      [4, 12, 19], [5, 10, 22], [6, 8, 23], [7, 7, 25], [8, 6, 25],
+      [9, 5, 26], [10, 5, 26], [11, 5, 27], [12, 5, 27], [13, 4, 27],
+      [14, 4, 27], [15, 4, 27], [16, 4, 28], [17, 4, 28], [18, 4, 28],
+      [19, 4, 28], [20, 5, 27], [21, 6, 27], [22, 7, 26], [23, 8, 25],
+      [24, 9, 24], [25, 10, 23], [26, 11, 22], [27, 12, 21], [28, 8, 23],
+      [29, 5, 25], [30, 4, 24], [31, 3, 28]
+    ]
+  }
+};
 
 const args = parseArgs(process.argv.slice(2));
 const datasetDir = args.dataset ?? "datasets/reference/istock-36";
@@ -124,7 +182,8 @@ async function buildThreePartReferenceTraits(datasetDir: string, outDir: string,
         face: asset.layers["face.shape"].length,
         clothing: asset.layers["clothing.top"].length,
         hair: asset.layers["hair.style"].length
-      }
+      },
+      fittedBase: summarizeKeys(asset.fittedBaseMask)
     })),
     reconstruction: {
       reports: "diffs/*.json",
@@ -134,7 +193,8 @@ async function buildThreePartReferenceTraits(datasetDir: string, outDir: string,
     layerHygiene: assets.map((asset) => ({
       id: asset.id,
       hairCentralFaceLeakagePixels: countHairCentralFaceLeakage(asset.layers["hair.style"], asset.skinColor),
-      clothingFaceShadowLeakagePixels: countClothingFaceShadowLeakage(asset.layers["clothing.top"])
+      clothingFaceShadowLeakagePixels: countClothingFaceShadowLeakage(asset.layers["clothing.top"]),
+      hairCoveredFacePixelsOutsideFittedBase: countHairCoveredFaceOutsideFittedBase(asset.layers["face.shape"], asset.layers["hair.style"], asset.fittedBaseMask)
     }))
   };
 
@@ -199,6 +259,8 @@ function buildAssetSet(id: string, background: string, referenceMatrix: PixelMat
   }
 
   promoteAdjacentHairOutlines(referenceMatrix, assigned, skinColor);
+  const fittedBaseMask = fittedBaseMaskFor(id);
+  repairFacePixelsOutsideFittedBase(referenceMatrix, assigned, segmentByKey, fittedBaseMask, skinColor);
 
   const layers: Record<ThreeSlot, ManualTraitPixel[]> = {
     "face.shape": [],
@@ -209,15 +271,21 @@ function buildAssetSet(id: string, background: string, referenceMatrix: PixelMat
   for (let y = 0; y < 32; y += 1) {
     for (let x = 0; x < 32; x += 1) {
       const key = keyOf(x, y);
+      if (!fittedBaseMask.has(key) || !characterKeys.has(key)) continue;
+      layers["face.shape"].push({ x, y, color: baseBodyColor(x, y, fittedBaseMask, skinColor, outlineColor) });
+    }
+  }
+
+  for (let y = 0; y < 32; y += 1) {
+    for (let x = 0; x < 32; x += 1) {
+      const key = keyOf(x, y);
       const slot = assigned.get(key);
       if (!slot) continue;
       const color = normalizeHex(referenceMatrix[y][x]);
       if (slot === "hair.style") {
         layers["hair.style"].push({ x, y, color });
-        layers["face.shape"].push({ x, y, color: baseBodyColor(x, y, characterKeys, skinColor, outlineColor) });
       } else if (slot === "clothing.top") {
         layers["clothing.top"].push({ x, y, color });
-        layers["face.shape"].push({ x, y, color: baseBodyColor(x, y, characterKeys, skinColor, outlineColor) });
       } else {
         layers["face.shape"].push({ x, y, color });
       }
@@ -242,6 +310,7 @@ function buildAssetSet(id: string, background: string, referenceMatrix: PixelMat
     background,
     skinColor,
     outlineColor,
+    fittedBaseMask,
     template,
     referenceMatrix,
     layers: {
@@ -310,7 +379,7 @@ function isFaceProtectedPixel(color: string, x: number, y: number, skinColor: st
   if (isLowSaturationFaceFill(color) && isCentralFaceFillZone(x, y)) return true;
   if (isDarkColor(color) && isFacialInkZone(x, y)) return true;
   if ((segmentName === "accessory" || isFaceKey) && !isLikelyColoredHairPixel(color, x, y, skinColor)) return true;
-  if (segmentName === "ink" && !isTorsoInkZone(x, y)) return true;
+  if (segmentName === "ink" && !isTopHeadAccessory(segmentName, x, y) && !isTorsoInkZone(x, y)) return true;
   return false;
 }
 
@@ -361,6 +430,37 @@ function promoteAdjacentHairOutlines(matrix: PixelMatrix, assigned: Map<string, 
   }
 }
 
+function repairFacePixelsOutsideFittedBase(
+  matrix: PixelMatrix,
+  assigned: Map<string, ThreeSlot>,
+  segmentByKey: Map<string, SegmentName>,
+  fittedBaseMask: Set<string>,
+  skinColor: string
+) {
+  for (const [key, slot] of assigned) {
+    if (slot !== "face.shape" || fittedBaseMask.has(key)) continue;
+    const [x, y] = key.split(",").map(Number);
+    const color = normalizeHex(matrix[y][x]);
+    const segmentName = segmentByKey.get(key);
+    if (segmentName === "clothing" && !isSkinLike(color, skinColor) && !isFacialInkZone(x, y)) {
+      assigned.set(key, "clothing.top");
+    } else if (shouldMoveFacePixelOutsideBaseToHair(color, x, y, skinColor, segmentName)) {
+      assigned.set(key, "hair.style");
+    }
+  }
+}
+
+function shouldMoveFacePixelOutsideBaseToHair(color: string, x: number, y: number, skinColor: string, segmentName: SegmentName | undefined) {
+  if (segmentName === "face_feature") return false;
+  if (isSkinLike(color, skinColor)) return false;
+  if (isLowSaturationFaceFill(color) && isCentralFaceFillZone(x, y)) return false;
+  if (segmentName === "skin" && !isSkinLike(color, skinColor)) return true;
+  if (segmentName === "hair") return true;
+  if (segmentName === "accessory" && !isFrontFaceAccessoryZone(x, y)) return true;
+  if (segmentName === "ink" && !isFrontFaceFeatureZone(x, y)) return true;
+  return (y <= 18 || x <= 6 || x >= 29) && !isFrontFaceFeatureZone(x, y);
+}
+
 function neighbors(x: number, y: number) {
   return [
     [x - 1, y],
@@ -368,6 +468,16 @@ function neighbors(x: number, y: number) {
     [x, y - 1],
     [x, y + 1]
   ].filter(([xx, yy]) => xx >= 0 && xx < 32 && yy >= 0 && yy < 32);
+}
+
+function fittedBaseMaskFor(id: string) {
+  const profile = MANUAL_BASE_PROFILES[id];
+  if (!profile) throw new Error(`Missing manual fitted base profile for ${id}`);
+  const mask = new Set<string>();
+  for (const [y, minX, maxX] of profile.rows) {
+    for (let x = minX; x <= maxX; x += 1) mask.add(keyOf(x, y));
+  }
+  return mask;
 }
 
 function isHeadAndNeckZone(x: number, y: number) {
@@ -392,6 +502,14 @@ function isTorsoZone(x: number, y: number) {
 
 function isTorsoInkZone(x: number, y: number) {
   return y >= 28 || (y >= 26 && (x <= 8 || x >= 23));
+}
+
+function isFrontFaceFeatureZone(x: number, y: number) {
+  return x >= 19 && x <= 28 && y >= 11 && y <= 27;
+}
+
+function isFrontFaceAccessoryZone(x: number, y: number) {
+  return x >= 11 && x <= 28 && y >= 10 && y <= 23;
 }
 
 function isLowSaturationFaceFill(color: string) {
@@ -595,7 +713,8 @@ function isSkinLike(color: string, skinColor: string) {
   const [r, g, b] = hexToRgb(normalizeHex(color));
   const [sr, sg, sb] = hexToRgb(skinColor);
   const distance = Math.hypot(r - sr, g - sg, b - sb);
-  return distance < 55 || (r > 190 && g > 160 && b > 130);
+  const threshold = luminance(sr, sg, sb) > 145 ? 80 : 55;
+  return distance < threshold;
 }
 
 function countNonBackground(matrix: PixelMatrix, background: string) {
@@ -644,6 +763,22 @@ function countHairCentralFaceLeakage(pixels: ManualTraitPixel[], skinColor: stri
 
 function countClothingFaceShadowLeakage(pixels: ManualTraitPixel[]) {
   return pixels.filter((pixel) => isDarkColor(normalizeHex(pixel.color)) && isFacialInkZone(pixel.x, pixel.y)).length;
+}
+
+function countHairCoveredFaceOutsideFittedBase(facePixels: ManualTraitPixel[], hairPixels: ManualTraitPixel[], fittedBaseMask: Set<string>) {
+  const hairKeys = keySet(hairPixels);
+  return facePixels.filter((pixel) => {
+    const key = keyOf(pixel.x, pixel.y);
+    return hairKeys.has(key) && !fittedBaseMask.has(key);
+  }).length;
+}
+
+function summarizeKeys(keys: Set<string>) {
+  const pixels = [...keys].map((key) => {
+    const [x, y] = key.split(",").map(Number);
+    return { x, y, color: "#000000" };
+  });
+  return summarizePixels(pixels);
 }
 
 function bbox(pixels: ManualTraitPixel[]) {

@@ -4,11 +4,11 @@
   "outlineColor": "#202020",
   "slots": {
     "face.shape": {
-      "pixels": 649,
+      "pixels": 551,
       "bbox": [
-        2,
+        3,
         4,
-        32,
+        29,
         32
       ]
     },
@@ -22,11 +22,11 @@
       ]
     },
     "hair.style": {
-      "pixels": 288,
+      "pixels": 315,
       "bbox": [
         2,
-        5,
-        29,
+        4,
+        30,
         30
       ]
     }

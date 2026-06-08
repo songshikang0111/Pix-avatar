@@ -18,9 +18,18 @@
       "stackPreview": "stack-previews/avatar-01.png",
       "assets": "asset-previews/avatar-01",
       "counts": {
-        "face": 490,
+        "face": 470,
         "clothing": 60,
         "hair": 151
+      },
+      "fittedBase": {
+        "pixels": 463,
+        "bbox": [
+          3,
+          4,
+          29,
+          32
+        ]
       }
     },
     {
@@ -33,9 +42,18 @@
       "stackPreview": "stack-previews/avatar-02.png",
       "assets": "asset-previews/avatar-02",
       "counts": {
-        "face": 512,
+        "face": 493,
         "clothing": 63,
-        "hair": 74
+        "hair": 76
+      },
+      "fittedBase": {
+        "pixels": 508,
+        "bbox": [
+          3,
+          2,
+          29,
+          32
+        ]
       }
     },
     {
@@ -48,9 +66,18 @@
       "stackPreview": "stack-previews/avatar-03.png",
       "assets": "asset-previews/avatar-03",
       "counts": {
-        "face": 746,
-        "clothing": 70,
-        "hair": 332
+        "face": 579,
+        "clothing": 71,
+        "hair": 371
+      },
+      "fittedBase": {
+        "pixels": 569,
+        "bbox": [
+          2,
+          4,
+          29,
+          32
+        ]
       }
     },
     {
@@ -63,9 +90,18 @@
       "stackPreview": "stack-previews/avatar-04.png",
       "assets": "asset-previews/avatar-04",
       "counts": {
-        "face": 519,
+        "face": 485,
         "clothing": 27,
         "hair": 175
+      },
+      "fittedBase": {
+        "pixels": 461,
+        "bbox": [
+          5,
+          3,
+          30,
+          32
+        ]
       }
     },
     {
@@ -78,9 +114,18 @@
       "stackPreview": "stack-previews/avatar-05.png",
       "assets": "asset-previews/avatar-05",
       "counts": {
-        "face": 649,
+        "face": 551,
         "clothing": 21,
-        "hair": 288
+        "hair": 315
+      },
+      "fittedBase": {
+        "pixels": 557,
+        "bbox": [
+          3,
+          4,
+          29,
+          32
+        ]
       }
     }
   ],
@@ -93,36 +138,41 @@
     "contactSheet": "cross-combinations/contact-sheet.png",
     "report": "cross-combinations/report.json",
     "characterPixels": {
-      "min": 490,
-      "max": 769,
-      "average": 637.4
+      "min": 489,
+      "max": 746,
+      "average": 604.144
     }
   },
   "layerHygiene": [
     {
       "id": "avatar-01",
       "hairCentralFaceLeakagePixels": 0,
-      "clothingFaceShadowLeakagePixels": 0
+      "clothingFaceShadowLeakagePixels": 0,
+      "hairCoveredFacePixelsOutsideFittedBase": 0
     },
     {
       "id": "avatar-02",
       "hairCentralFaceLeakagePixels": 0,
-      "clothingFaceShadowLeakagePixels": 0
+      "clothingFaceShadowLeakagePixels": 0,
+      "hairCoveredFacePixelsOutsideFittedBase": 0
     },
     {
       "id": "avatar-03",
       "hairCentralFaceLeakagePixels": 0,
-      "clothingFaceShadowLeakagePixels": 0
+      "clothingFaceShadowLeakagePixels": 0,
+      "hairCoveredFacePixelsOutsideFittedBase": 0
     },
     {
       "id": "avatar-04",
       "hairCentralFaceLeakagePixels": 0,
-      "clothingFaceShadowLeakagePixels": 0
+      "clothingFaceShadowLeakagePixels": 0,
+      "hairCoveredFacePixelsOutsideFittedBase": 0
     },
     {
       "id": "avatar-05",
       "hairCentralFaceLeakagePixels": 0,
-      "clothingFaceShadowLeakagePixels": 0
+      "clothingFaceShadowLeakagePixels": 0,
+      "hairCoveredFacePixelsOutsideFittedBase": 0
     }
   ]
 }

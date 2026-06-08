@@ -4,10 +4,10 @@
   "outlineColor": "#202020",
   "slots": {
     "face.shape": {
-      "pixels": 490,
+      "pixels": 470,
       "bbox": [
-        2,
         3,
+        4,
         26,
         32
       ]

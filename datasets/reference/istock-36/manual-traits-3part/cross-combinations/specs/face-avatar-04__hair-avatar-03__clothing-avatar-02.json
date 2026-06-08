@@ -358,9 +358,9 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 19,
-      "y": 1,
-      "w": 4,
+      "x": 17,
+      "y": 3,
+      "w": 5,
       "h": 1,
       "color": "#202020"
     },
@@ -369,8 +369,8 @@
       "layer": "manual.10.face",
       "coordSpace": "output",
       "x": 15,
-      "y": 2,
-      "w": 4,
+      "y": 4,
+      "w": 2,
       "h": 1,
       "color": "#202020"
     },
@@ -378,9 +378,9 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 19,
-      "y": 2,
-      "w": 4,
+      "x": 17,
+      "y": 4,
+      "w": 5,
       "h": 1,
       "color": "#F0F0E0"
     },
@@ -388,9 +388,9 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 23,
-      "y": 2,
-      "w": 1,
+      "x": 22,
+      "y": 4,
+      "w": 2,
       "h": 1,
       "color": "#202020"
     },
@@ -398,9 +398,9 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 14,
-      "y": 3,
-      "w": 1,
+      "x": 12,
+      "y": 5,
+      "w": 3,
       "h": 1,
       "color": "#202020"
     },
@@ -409,7 +409,7 @@
       "layer": "manual.10.face",
       "coordSpace": "output",
       "x": 15,
-      "y": 3,
+      "y": 5,
       "w": 9,
       "h": 1,
       "color": "#F0F0E0"
@@ -419,66 +419,6 @@
       "layer": "manual.10.face",
       "coordSpace": "output",
       "x": 24,
-      "y": 3,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 13,
-      "y": 4,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 14,
-      "y": 4,
-      "w": 10,
-      "h": 1,
-      "color": "#F0F0E0"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 24,
-      "y": 4,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 11,
-      "y": 5,
-      "w": 2,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 13,
-      "y": 5,
-      "w": 12,
-      "h": 1,
-      "color": "#F0F0E0"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 25,
       "y": 5,
       "w": 1,
       "h": 1,
@@ -490,7 +430,7 @@
       "coordSpace": "output",
       "x": 10,
       "y": 6,
-      "w": 1,
+      "w": 2,
       "h": 1,
       "color": "#202020"
     },
@@ -498,9 +438,9 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 11,
+      "x": 12,
       "y": 6,
-      "w": 14,
+      "w": 13,
       "h": 1,
       "color": "#F0F0E0"
     },
@@ -550,17 +490,7 @@
       "coordSpace": "output",
       "x": 9,
       "y": 8,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 10,
-      "y": 8,
-      "w": 16,
+      "w": 17,
       "h": 1,
       "color": "#F0F0E0"
     },
@@ -1038,16 +968,6 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 26,
-      "y": 17,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
       "x": 7,
       "y": 18,
       "w": 2,
@@ -1088,16 +1008,6 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 26,
-      "y": 18,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
       "x": 8,
       "y": 19,
       "w": 2,
@@ -1133,16 +1043,6 @@
       "w": 3,
       "h": 1,
       "color": "#F0F0E0"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 26,
-      "y": 19,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
     },
     {
       "op": "rect",
@@ -1193,16 +1093,6 @@
       "w": 1,
       "h": 1,
       "color": "#D0C0C0"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 26,
-      "y": 20,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
     },
     {
       "op": "rect",
@@ -1448,9 +1338,9 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 7,
+      "x": 9,
       "y": 28,
-      "w": 3,
+      "w": 1,
       "h": 1,
       "color": "#202020"
     },
@@ -1470,16 +1360,6 @@
       "coordSpace": "output",
       "x": 12,
       "y": 28,
-      "w": 10,
-      "h": 1,
-      "color": "#F0F0E0"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
-      "x": 22,
-      "y": 28,
       "w": 1,
       "h": 1,
       "color": "#202020"
@@ -1488,8 +1368,18 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 5,
-      "y": 29,
+      "x": 13,
+      "y": 28,
+      "w": 8,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.10.face",
+      "coordSpace": "output",
+      "x": 21,
+      "y": 28,
       "w": 2,
       "h": 1,
       "color": "#202020"
@@ -1502,7 +1392,7 @@
       "y": 29,
       "w": 1,
       "h": 1,
-      "color": "#F0F0E0"
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -1548,21 +1438,11 @@
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 4,
-      "y": 30,
-      "w": 1,
-      "h": 1,
-      "color": "#202020"
-    },
-    {
-      "op": "rect",
-      "layer": "manual.10.face",
-      "coordSpace": "output",
       "x": 5,
       "y": 30,
       "w": 2,
       "h": 1,
-      "color": "#F0F0E0"
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -1600,16 +1480,16 @@
       "coordSpace": "output",
       "x": 24,
       "y": 30,
-      "w": 2,
+      "w": 1,
       "h": 1,
-      "color": "#202020"
+      "color": "#F0F0E0"
     },
     {
       "op": "rect",
       "layer": "manual.10.face",
       "coordSpace": "output",
-      "x": 4,
-      "y": 31,
+      "x": 25,
+      "y": 30,
       "w": 1,
       "h": 1,
       "color": "#202020"
@@ -1779,6 +1659,26 @@
       "layer": "manual.40.hair",
       "coordSpace": "output",
       "x": 11,
+      "y": 1,
+      "w": 12,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 10,
+      "y": 2,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 11,
       "y": 2,
       "w": 13,
       "h": 1,
@@ -1798,11 +1698,41 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 10,
+      "y": 3,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 11,
+      "y": 3,
+      "w": 1,
+      "h": 1,
+      "color": "#FFFFFF"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 12,
       "y": 3,
       "w": 12,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 24,
+      "y": 3,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -1828,6 +1758,16 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 11,
+      "y": 4,
+      "w": 1,
+      "h": 1,
+      "color": "#FFFFFF"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 12,
       "y": 4,
       "w": 3,
@@ -1843,6 +1783,16 @@
       "w": 9,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 25,
+      "y": 4,
+      "w": 1,
+      "h": 1,
+      "color": "#103010"
     },
     {
       "op": "rect",
@@ -1873,6 +1823,16 @@
       "w": 15,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 26,
+      "y": 5,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -1918,11 +1878,31 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 22,
+      "y": 6,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 23,
       "y": 6,
       "w": 3,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 26,
+      "y": 6,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -1948,11 +1928,31 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 21,
+      "y": 7,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 22,
       "y": 7,
       "w": 4,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 26,
+      "y": 7,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -1978,11 +1978,31 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 20,
+      "y": 8,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 22,
       "y": 8,
       "w": 4,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 26,
+      "y": 8,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -2008,11 +2028,31 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 19,
+      "y": 9,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 23,
       "y": 9,
       "w": 3,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 26,
+      "y": 9,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
     },
     {
       "op": "rect",
@@ -2578,6 +2618,16 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 0,
+      "y": 19,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 1,
       "y": 19,
       "w": 5,
@@ -2618,6 +2668,16 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 0,
+      "y": 20,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 2,
       "y": 20,
       "w": 6,
@@ -2631,6 +2691,16 @@
       "x": 26,
       "y": 20,
       "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 21,
+      "w": 1,
       "h": 1,
       "color": "#202020"
     },
@@ -2658,11 +2728,41 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 29,
+      "y": 21,
+      "w": 1,
+      "h": 1,
+      "color": "#D0C090"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 22,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 1,
       "y": 22,
       "w": 4,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 5,
+      "y": 22,
+      "w": 1,
+      "h": 1,
+      "color": "#FFFFFF"
     },
     {
       "op": "rect",
@@ -2698,11 +2798,31 @@
       "op": "rect",
       "layer": "manual.40.hair",
       "coordSpace": "output",
+      "x": 0,
+      "y": 23,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
       "x": 1,
       "y": 23,
       "w": 3,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 4,
+      "y": 23,
+      "w": 1,
+      "h": 1,
+      "color": "#FFFFFF"
     },
     {
       "op": "rect",
@@ -2753,6 +2873,16 @@
       "w": 2,
       "h": 1,
       "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "manual.40.hair",
+      "coordSpace": "output",
+      "x": 4,
+      "y": 24,
+      "w": 1,
+      "h": 1,
+      "color": "#FFFFFF"
     },
     {
       "op": "rect",

@@ -40,7 +40,7 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-01__hair-avatar-01__clothing-avatar-03.png",
       "spec": "specs/face-avatar-01__hair-avatar-01__clothing-avatar-03.json",
-      "characterPixels": 501,
+      "characterPixels": 502,
       "bbox": [
         1,
         3,
@@ -55,9 +55,9 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-01__hair-avatar-01__clothing-avatar-04.png",
       "spec": "specs/face-avatar-01__hair-avatar-01__clothing-avatar-04.json",
-      "characterPixels": 496,
+      "characterPixels": 493,
       "bbox": [
-        2,
+        3,
         3,
         28,
         32
@@ -70,7 +70,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-01__hair-avatar-01__clothing-avatar-05.png",
       "spec": "specs/face-avatar-01__hair-avatar-01__clothing-avatar-05.json",
-      "characterPixels": 492,
+      "characterPixels": 489,
       "bbox": [
         2,
         3,
@@ -85,7 +85,7 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-01__hair-avatar-02__clothing-avatar-01.png",
       "spec": "specs/face-avatar-01__hair-avatar-02__clothing-avatar-01.json",
-      "characterPixels": 516,
+      "characterPixels": 508,
       "bbox": [
         2,
         1,
@@ -100,7 +100,7 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-01__hair-avatar-02__clothing-avatar-02.png",
       "spec": "specs/face-avatar-01__hair-avatar-02__clothing-avatar-02.json",
-      "characterPixels": 522,
+      "characterPixels": 514,
       "bbox": [
         1,
         1,
@@ -115,7 +115,7 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-01__hair-avatar-02__clothing-avatar-03.png",
       "spec": "specs/face-avatar-01__hair-avatar-02__clothing-avatar-03.json",
-      "characterPixels": 527,
+      "characterPixels": 520,
       "bbox": [
         1,
         1,
@@ -130,7 +130,7 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-01__hair-avatar-02__clothing-avatar-04.png",
       "spec": "specs/face-avatar-01__hair-avatar-02__clothing-avatar-04.json",
-      "characterPixels": 522,
+      "characterPixels": 511,
       "bbox": [
         2,
         1,
@@ -145,7 +145,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-01__hair-avatar-02__clothing-avatar-05.png",
       "spec": "specs/face-avatar-01__hair-avatar-02__clothing-avatar-05.json",
-      "characterPixels": 518,
+      "characterPixels": 507,
       "bbox": [
         2,
         1,
@@ -160,10 +160,10 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-01__hair-avatar-03__clothing-avatar-01.png",
       "spec": "specs/face-avatar-01__hair-avatar-03__clothing-avatar-01.json",
-      "characterPixels": 675,
+      "characterPixels": 706,
       "bbox": [
+        0,
         1,
-        2,
         31,
         32
       ]
@@ -175,10 +175,10 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-01__hair-avatar-03__clothing-avatar-02.png",
       "spec": "specs/face-avatar-01__hair-avatar-03__clothing-avatar-02.json",
-      "characterPixels": 681,
+      "characterPixels": 712,
       "bbox": [
+        0,
         1,
-        2,
         31,
         32
       ]
@@ -190,10 +190,10 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-01__hair-avatar-03__clothing-avatar-03.png",
       "spec": "specs/face-avatar-01__hair-avatar-03__clothing-avatar-03.json",
-      "characterPixels": 686,
+      "characterPixels": 718,
       "bbox": [
+        0,
         1,
-        2,
         31,
         32
       ]
@@ -205,10 +205,10 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-01__hair-avatar-03__clothing-avatar-04.png",
       "spec": "specs/face-avatar-01__hair-avatar-03__clothing-avatar-04.json",
-      "characterPixels": 681,
+      "characterPixels": 709,
       "bbox": [
+        0,
         1,
-        2,
         31,
         32
       ]
@@ -220,10 +220,10 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-01__hair-avatar-03__clothing-avatar-05.png",
       "spec": "specs/face-avatar-01__hair-avatar-03__clothing-avatar-05.json",
-      "characterPixels": 677,
+      "characterPixels": 705,
       "bbox": [
+        0,
         1,
-        2,
         32,
         32
       ]
@@ -235,7 +235,7 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-01__hair-avatar-04__clothing-avatar-01.png",
       "spec": "specs/face-avatar-01__hair-avatar-04__clothing-avatar-01.json",
-      "characterPixels": 539,
+      "characterPixels": 533,
       "bbox": [
         2,
         1,
@@ -250,7 +250,7 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-01__hair-avatar-04__clothing-avatar-02.png",
       "spec": "specs/face-avatar-01__hair-avatar-04__clothing-avatar-02.json",
-      "characterPixels": 545,
+      "characterPixels": 539,
       "bbox": [
         1,
         1,
@@ -265,7 +265,7 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-01__hair-avatar-04__clothing-avatar-03.png",
       "spec": "specs/face-avatar-01__hair-avatar-04__clothing-avatar-03.json",
-      "characterPixels": 550,
+      "characterPixels": 545,
       "bbox": [
         1,
         1,
@@ -280,9 +280,9 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-01__hair-avatar-04__clothing-avatar-04.png",
       "spec": "specs/face-avatar-01__hair-avatar-04__clothing-avatar-04.json",
-      "characterPixels": 545,
+      "characterPixels": 536,
       "bbox": [
-        2,
+        3,
         1,
         28,
         32
@@ -295,7 +295,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-01__hair-avatar-04__clothing-avatar-05.png",
       "spec": "specs/face-avatar-01__hair-avatar-04__clothing-avatar-05.json",
-      "characterPixels": 541,
+      "characterPixels": 532,
       "bbox": [
         2,
         1,
@@ -310,11 +310,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-01__hair-avatar-05__clothing-avatar-01.png",
       "spec": "specs/face-avatar-01__hair-avatar-05__clothing-avatar-01.json",
-      "characterPixels": 609,
+      "characterPixels": 620,
       "bbox": [
         2,
-        3,
-        29,
+        4,
+        30,
         32
       ]
     },
@@ -325,11 +325,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-01__hair-avatar-05__clothing-avatar-02.png",
       "spec": "specs/face-avatar-01__hair-avatar-05__clothing-avatar-02.json",
-      "characterPixels": 612,
+      "characterPixels": 623,
       "bbox": [
         1,
-        3,
-        29,
+        4,
+        30,
         32
       ]
     },
@@ -340,11 +340,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-01__hair-avatar-05__clothing-avatar-03.png",
       "spec": "specs/face-avatar-01__hair-avatar-05__clothing-avatar-03.json",
-      "characterPixels": 617,
+      "characterPixels": 629,
       "bbox": [
         1,
-        3,
-        29,
+        4,
+        30,
         32
       ]
     },
@@ -355,11 +355,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-01__hair-avatar-05__clothing-avatar-04.png",
       "spec": "specs/face-avatar-01__hair-avatar-05__clothing-avatar-04.json",
-      "characterPixels": 615,
+      "characterPixels": 624,
       "bbox": [
         2,
-        3,
-        29,
+        4,
+        30,
         32
       ]
     },
@@ -370,10 +370,10 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-01__hair-avatar-05__clothing-avatar-05.png",
       "spec": "specs/face-avatar-01__hair-avatar-05__clothing-avatar-05.json",
-      "characterPixels": 611,
+      "characterPixels": 622,
       "bbox": [
         2,
-        3,
+        4,
         32,
         32
       ]
@@ -385,10 +385,10 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-02__hair-avatar-01__clothing-avatar-01.png",
       "spec": "specs/face-avatar-02__hair-avatar-01__clothing-avatar-01.json",
-      "characterPixels": 533,
+      "characterPixels": 517,
       "bbox": [
         0,
-        1,
+        2,
         26,
         32
       ]
@@ -400,10 +400,10 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-02__hair-avatar-01__clothing-avatar-02.png",
       "spec": "specs/face-avatar-02__hair-avatar-01__clothing-avatar-02.json",
-      "characterPixels": 531,
+      "characterPixels": 521,
       "bbox": [
         0,
-        1,
+        2,
         26,
         32
       ]
@@ -415,10 +415,10 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-02__hair-avatar-01__clothing-avatar-03.png",
       "spec": "specs/face-avatar-02__hair-avatar-01__clothing-avatar-03.json",
-      "characterPixels": 538,
+      "characterPixels": 529,
       "bbox": [
         0,
-        1,
+        2,
         28,
         32
       ]
@@ -430,10 +430,10 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-02__hair-avatar-01__clothing-avatar-04.png",
       "spec": "specs/face-avatar-02__hair-avatar-01__clothing-avatar-04.json",
-      "characterPixels": 538,
+      "characterPixels": 519,
       "bbox": [
         0,
-        1,
+        2,
         28,
         32
       ]
@@ -445,10 +445,10 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-02__hair-avatar-01__clothing-avatar-05.png",
       "spec": "specs/face-avatar-02__hair-avatar-01__clothing-avatar-05.json",
-      "characterPixels": 534,
+      "characterPixels": 518,
       "bbox": [
         0,
-        1,
+        2,
         32,
         32
       ]
@@ -460,7 +460,7 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-02__hair-avatar-02__clothing-avatar-01.png",
       "spec": "specs/face-avatar-02__hair-avatar-02__clothing-avatar-01.json",
-      "characterPixels": 514,
+      "characterPixels": 508,
       "bbox": [
         0,
         1,
@@ -490,7 +490,7 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-02__hair-avatar-02__clothing-avatar-03.png",
       "spec": "specs/face-avatar-02__hair-avatar-02__clothing-avatar-03.json",
-      "characterPixels": 519,
+      "characterPixels": 520,
       "bbox": [
         0,
         1,
@@ -505,7 +505,7 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-02__hair-avatar-02__clothing-avatar-04.png",
       "spec": "specs/face-avatar-02__hair-avatar-02__clothing-avatar-04.json",
-      "characterPixels": 519,
+      "characterPixels": 510,
       "bbox": [
         0,
         1,
@@ -520,7 +520,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-02__hair-avatar-02__clothing-avatar-05.png",
       "spec": "specs/face-avatar-02__hair-avatar-02__clothing-avatar-05.json",
-      "characterPixels": 515,
+      "characterPixels": 509,
       "bbox": [
         0,
         1,
@@ -535,7 +535,7 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-02__hair-avatar-03__clothing-avatar-01.png",
       "spec": "specs/face-avatar-02__hair-avatar-03__clothing-avatar-01.json",
-      "characterPixels": 688,
+      "characterPixels": 708,
       "bbox": [
         0,
         1,
@@ -550,7 +550,7 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-02__hair-avatar-03__clothing-avatar-02.png",
       "spec": "specs/face-avatar-02__hair-avatar-03__clothing-avatar-02.json",
-      "characterPixels": 686,
+      "characterPixels": 712,
       "bbox": [
         0,
         1,
@@ -565,7 +565,7 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-02__hair-avatar-03__clothing-avatar-03.png",
       "spec": "specs/face-avatar-02__hair-avatar-03__clothing-avatar-03.json",
-      "characterPixels": 693,
+      "characterPixels": 720,
       "bbox": [
         0,
         1,
@@ -580,7 +580,7 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-02__hair-avatar-03__clothing-avatar-04.png",
       "spec": "specs/face-avatar-02__hair-avatar-03__clothing-avatar-04.json",
-      "characterPixels": 693,
+      "characterPixels": 710,
       "bbox": [
         0,
         1,
@@ -595,7 +595,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-02__hair-avatar-03__clothing-avatar-05.png",
       "spec": "specs/face-avatar-02__hair-avatar-03__clothing-avatar-05.json",
-      "characterPixels": 689,
+      "characterPixels": 709,
       "bbox": [
         0,
         1,
@@ -610,7 +610,7 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-02__hair-avatar-04__clothing-avatar-01.png",
       "spec": "specs/face-avatar-02__hair-avatar-04__clothing-avatar-01.json",
-      "characterPixels": 565,
+      "characterPixels": 550,
       "bbox": [
         0,
         1,
@@ -625,7 +625,7 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-02__hair-avatar-04__clothing-avatar-02.png",
       "spec": "specs/face-avatar-02__hair-avatar-04__clothing-avatar-02.json",
-      "characterPixels": 563,
+      "characterPixels": 554,
       "bbox": [
         0,
         1,
@@ -640,7 +640,7 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-02__hair-avatar-04__clothing-avatar-03.png",
       "spec": "specs/face-avatar-02__hair-avatar-04__clothing-avatar-03.json",
-      "characterPixels": 570,
+      "characterPixels": 562,
       "bbox": [
         0,
         1,
@@ -655,7 +655,7 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-02__hair-avatar-04__clothing-avatar-04.png",
       "spec": "specs/face-avatar-02__hair-avatar-04__clothing-avatar-04.json",
-      "characterPixels": 570,
+      "characterPixels": 552,
       "bbox": [
         0,
         1,
@@ -670,7 +670,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-02__hair-avatar-04__clothing-avatar-05.png",
       "spec": "specs/face-avatar-02__hair-avatar-04__clothing-avatar-05.json",
-      "characterPixels": 566,
+      "characterPixels": 551,
       "bbox": [
         0,
         1,
@@ -685,11 +685,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-02__hair-avatar-05__clothing-avatar-01.png",
       "spec": "specs/face-avatar-02__hair-avatar-05__clothing-avatar-01.json",
-      "characterPixels": 630,
+      "characterPixels": 633,
       "bbox": [
         0,
-        1,
-        29,
+        2,
+        30,
         32
       ]
     },
@@ -700,11 +700,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-02__hair-avatar-05__clothing-avatar-02.png",
       "spec": "specs/face-avatar-02__hair-avatar-05__clothing-avatar-02.json",
-      "characterPixels": 628,
+      "characterPixels": 634,
       "bbox": [
         0,
-        1,
-        29,
+        2,
+        30,
         32
       ]
     },
@@ -715,11 +715,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-02__hair-avatar-05__clothing-avatar-03.png",
       "spec": "specs/face-avatar-02__hair-avatar-05__clothing-avatar-03.json",
-      "characterPixels": 635,
+      "characterPixels": 642,
       "bbox": [
         0,
-        1,
-        29,
+        2,
+        30,
         32
       ]
     },
@@ -730,11 +730,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-02__hair-avatar-05__clothing-avatar-04.png",
       "spec": "specs/face-avatar-02__hair-avatar-05__clothing-avatar-04.json",
-      "characterPixels": 635,
+      "characterPixels": 636,
       "bbox": [
         0,
-        1,
-        29,
+        2,
+        30,
         32
       ]
     },
@@ -745,10 +745,10 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-02__hair-avatar-05__clothing-avatar-05.png",
       "spec": "specs/face-avatar-02__hair-avatar-05__clothing-avatar-05.json",
-      "characterPixels": 631,
+      "characterPixels": 635,
       "bbox": [
         0,
-        1,
+        2,
         32,
         32
       ]
@@ -760,11 +760,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-03__hair-avatar-01__clothing-avatar-01.png",
       "spec": "specs/face-avatar-03__hair-avatar-01__clothing-avatar-01.json",
-      "characterPixels": 746,
+      "characterPixels": 583,
       "bbox": [
-        0,
-        1,
-        31,
+        2,
+        3,
+        29,
         32
       ]
     },
@@ -775,11 +775,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-03__hair-avatar-01__clothing-avatar-02.png",
       "spec": "specs/face-avatar-03__hair-avatar-01__clothing-avatar-02.json",
-      "characterPixels": 746,
+      "characterPixels": 588,
       "bbox": [
-        0,
         1,
-        31,
+        3,
+        29,
         32
       ]
     },
@@ -790,11 +790,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-03__hair-avatar-01__clothing-avatar-03.png",
       "spec": "specs/face-avatar-03__hair-avatar-01__clothing-avatar-03.json",
-      "characterPixels": 746,
+      "characterPixels": 590,
       "bbox": [
-        0,
         1,
-        31,
+        3,
+        29,
         32
       ]
     },
@@ -805,11 +805,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-03__hair-avatar-01__clothing-avatar-04.png",
       "spec": "specs/face-avatar-03__hair-avatar-01__clothing-avatar-04.json",
-      "characterPixels": 748,
+      "characterPixels": 584,
       "bbox": [
-        0,
-        1,
-        31,
+        2,
+        3,
+        29,
         32
       ]
     },
@@ -820,10 +820,10 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-03__hair-avatar-01__clothing-avatar-05.png",
       "spec": "specs/face-avatar-03__hair-avatar-01__clothing-avatar-05.json",
-      "characterPixels": 747,
+      "characterPixels": 584,
       "bbox": [
-        0,
-        1,
+        2,
+        3,
         32,
         32
       ]
@@ -835,11 +835,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-03__hair-avatar-02__clothing-avatar-01.png",
       "spec": "specs/face-avatar-03__hair-avatar-02__clothing-avatar-01.json",
-      "characterPixels": 749,
+      "characterPixels": 601,
       "bbox": [
-        0,
+        2,
         1,
-        31,
+        29,
         32
       ]
     },
@@ -850,11 +850,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-03__hair-avatar-02__clothing-avatar-02.png",
       "spec": "specs/face-avatar-03__hair-avatar-02__clothing-avatar-02.json",
-      "characterPixels": 749,
+      "characterPixels": 606,
       "bbox": [
-        0,
         1,
-        31,
+        1,
+        29,
         32
       ]
     },
@@ -865,11 +865,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-03__hair-avatar-02__clothing-avatar-03.png",
       "spec": "specs/face-avatar-03__hair-avatar-02__clothing-avatar-03.json",
-      "characterPixels": 749,
+      "characterPixels": 608,
       "bbox": [
-        0,
         1,
-        31,
+        1,
+        29,
         32
       ]
     },
@@ -880,11 +880,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-03__hair-avatar-02__clothing-avatar-04.png",
       "spec": "specs/face-avatar-03__hair-avatar-02__clothing-avatar-04.json",
-      "characterPixels": 751,
+      "characterPixels": 602,
       "bbox": [
-        0,
+        2,
         1,
-        31,
+        29,
         32
       ]
     },
@@ -895,9 +895,9 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-03__hair-avatar-02__clothing-avatar-05.png",
       "spec": "specs/face-avatar-03__hair-avatar-02__clothing-avatar-05.json",
-      "characterPixels": 750,
+      "characterPixels": 602,
       "bbox": [
-        0,
+        2,
         1,
         32,
         32
@@ -910,7 +910,7 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-03__hair-avatar-03__clothing-avatar-01.png",
       "spec": "specs/face-avatar-03__hair-avatar-03__clothing-avatar-01.json",
-      "characterPixels": 746,
+      "characterPixels": 739,
       "bbox": [
         0,
         1,
@@ -925,7 +925,7 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-03__hair-avatar-03__clothing-avatar-02.png",
       "spec": "specs/face-avatar-03__hair-avatar-03__clothing-avatar-02.json",
-      "characterPixels": 746,
+      "characterPixels": 744,
       "bbox": [
         0,
         1,
@@ -955,7 +955,7 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-03__hair-avatar-03__clothing-avatar-04.png",
       "spec": "specs/face-avatar-03__hair-avatar-03__clothing-avatar-04.json",
-      "characterPixels": 748,
+      "characterPixels": 740,
       "bbox": [
         0,
         1,
@@ -970,7 +970,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-03__hair-avatar-03__clothing-avatar-05.png",
       "spec": "specs/face-avatar-03__hair-avatar-03__clothing-avatar-05.json",
-      "characterPixels": 747,
+      "characterPixels": 740,
       "bbox": [
         0,
         1,
@@ -985,11 +985,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-03__hair-avatar-04__clothing-avatar-01.png",
       "spec": "specs/face-avatar-03__hair-avatar-04__clothing-avatar-01.json",
-      "characterPixels": 746,
+      "characterPixels": 616,
       "bbox": [
-        0,
+        2,
         1,
-        31,
+        29,
         32
       ]
     },
@@ -1000,11 +1000,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-03__hair-avatar-04__clothing-avatar-02.png",
       "spec": "specs/face-avatar-03__hair-avatar-04__clothing-avatar-02.json",
-      "characterPixels": 746,
+      "characterPixels": 621,
       "bbox": [
-        0,
         1,
-        31,
+        1,
+        29,
         32
       ]
     },
@@ -1015,11 +1015,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-03__hair-avatar-04__clothing-avatar-03.png",
       "spec": "specs/face-avatar-03__hair-avatar-04__clothing-avatar-03.json",
-      "characterPixels": 746,
+      "characterPixels": 623,
       "bbox": [
-        0,
         1,
-        31,
+        1,
+        29,
         32
       ]
     },
@@ -1030,11 +1030,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-03__hair-avatar-04__clothing-avatar-04.png",
       "spec": "specs/face-avatar-03__hair-avatar-04__clothing-avatar-04.json",
-      "characterPixels": 748,
+      "characterPixels": 617,
       "bbox": [
-        0,
+        2,
         1,
-        31,
+        29,
         32
       ]
     },
@@ -1045,9 +1045,9 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-03__hair-avatar-04__clothing-avatar-05.png",
       "spec": "specs/face-avatar-03__hair-avatar-04__clothing-avatar-05.json",
-      "characterPixels": 747,
+      "characterPixels": 617,
       "bbox": [
-        0,
+        2,
         1,
         32,
         32
@@ -1060,11 +1060,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-03__hair-avatar-05__clothing-avatar-01.png",
       "spec": "specs/face-avatar-03__hair-avatar-05__clothing-avatar-01.json",
-      "characterPixels": 767,
+      "characterPixels": 660,
       "bbox": [
-        0,
-        1,
-        31,
+        2,
+        4,
+        30,
         32
       ]
     },
@@ -1075,11 +1075,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-03__hair-avatar-05__clothing-avatar-02.png",
       "spec": "specs/face-avatar-03__hair-avatar-05__clothing-avatar-02.json",
-      "characterPixels": 767,
+      "characterPixels": 663,
       "bbox": [
-        0,
         1,
-        31,
+        4,
+        30,
         32
       ]
     },
@@ -1090,11 +1090,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-03__hair-avatar-05__clothing-avatar-03.png",
       "spec": "specs/face-avatar-03__hair-avatar-05__clothing-avatar-03.json",
-      "characterPixels": 767,
+      "characterPixels": 665,
       "bbox": [
-        0,
         1,
-        31,
+        4,
+        30,
         32
       ]
     },
@@ -1105,11 +1105,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-03__hair-avatar-05__clothing-avatar-04.png",
       "spec": "specs/face-avatar-03__hair-avatar-05__clothing-avatar-04.json",
-      "characterPixels": 769,
+      "characterPixels": 662,
       "bbox": [
-        0,
-        1,
-        31,
+        2,
+        4,
+        30,
         32
       ]
     },
@@ -1120,10 +1120,10 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-03__hair-avatar-05__clothing-avatar-05.png",
       "spec": "specs/face-avatar-03__hair-avatar-05__clothing-avatar-05.json",
-      "characterPixels": 768,
+      "characterPixels": 662,
       "bbox": [
-        0,
-        1,
+        2,
+        4,
         32,
         32
       ]
@@ -1135,10 +1135,10 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-04__hair-avatar-01__clothing-avatar-01.png",
       "spec": "specs/face-avatar-04__hair-avatar-01__clothing-avatar-01.json",
-      "characterPixels": 547,
+      "characterPixels": 522,
       "bbox": [
         2,
-        1,
+        3,
         28,
         32
       ]
@@ -1150,10 +1150,10 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-04__hair-avatar-01__clothing-avatar-02.png",
       "spec": "specs/face-avatar-04__hair-avatar-01__clothing-avatar-02.json",
-      "characterPixels": 553,
+      "characterPixels": 528,
       "bbox": [
         1,
-        1,
+        3,
         28,
         32
       ]
@@ -1165,10 +1165,10 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-04__hair-avatar-01__clothing-avatar-03.png",
       "spec": "specs/face-avatar-04__hair-avatar-01__clothing-avatar-03.json",
-      "characterPixels": 554,
+      "characterPixels": 530,
       "bbox": [
         1,
-        1,
+        3,
         28,
         32
       ]
@@ -1180,10 +1180,10 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-04__hair-avatar-01__clothing-avatar-04.png",
       "spec": "specs/face-avatar-04__hair-avatar-01__clothing-avatar-04.json",
-      "characterPixels": 543,
+      "characterPixels": 518,
       "bbox": [
         4,
-        1,
+        3,
         28,
         32
       ]
@@ -1195,10 +1195,10 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-04__hair-avatar-01__clothing-avatar-05.png",
       "spec": "specs/face-avatar-04__hair-avatar-01__clothing-avatar-05.json",
-      "characterPixels": 547,
+      "characterPixels": 517,
       "bbox": [
         2,
-        1,
+        3,
         32,
         32
       ]
@@ -1210,7 +1210,7 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-04__hair-avatar-02__clothing-avatar-01.png",
       "spec": "specs/face-avatar-04__hair-avatar-02__clothing-avatar-01.json",
-      "characterPixels": 556,
+      "characterPixels": 538,
       "bbox": [
         2,
         1,
@@ -1225,7 +1225,7 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-04__hair-avatar-02__clothing-avatar-02.png",
       "spec": "specs/face-avatar-04__hair-avatar-02__clothing-avatar-02.json",
-      "characterPixels": 562,
+      "characterPixels": 544,
       "bbox": [
         1,
         1,
@@ -1240,7 +1240,7 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-04__hair-avatar-02__clothing-avatar-03.png",
       "spec": "specs/face-avatar-04__hair-avatar-02__clothing-avatar-03.json",
-      "characterPixels": 563,
+      "characterPixels": 546,
       "bbox": [
         1,
         1,
@@ -1255,7 +1255,7 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-04__hair-avatar-02__clothing-avatar-04.png",
       "spec": "specs/face-avatar-04__hair-avatar-02__clothing-avatar-04.json",
-      "characterPixels": 552,
+      "characterPixels": 534,
       "bbox": [
         2,
         1,
@@ -1270,7 +1270,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-04__hair-avatar-02__clothing-avatar-05.png",
       "spec": "specs/face-avatar-04__hair-avatar-02__clothing-avatar-05.json",
-      "characterPixels": 556,
+      "characterPixels": 533,
       "bbox": [
         2,
         1,
@@ -1285,9 +1285,9 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-04__hair-avatar-03__clothing-avatar-01.png",
       "spec": "specs/face-avatar-04__hair-avatar-03__clothing-avatar-01.json",
-      "characterPixels": 686,
+      "characterPixels": 711,
       "bbox": [
-        1,
+        0,
         1,
         31,
         32
@@ -1300,9 +1300,9 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-04__hair-avatar-03__clothing-avatar-02.png",
       "spec": "specs/face-avatar-04__hair-avatar-03__clothing-avatar-02.json",
-      "characterPixels": 692,
+      "characterPixels": 717,
       "bbox": [
-        1,
+        0,
         1,
         31,
         32
@@ -1315,9 +1315,9 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-04__hair-avatar-03__clothing-avatar-03.png",
       "spec": "specs/face-avatar-04__hair-avatar-03__clothing-avatar-03.json",
-      "characterPixels": 693,
+      "characterPixels": 719,
       "bbox": [
-        1,
+        0,
         1,
         31,
         32
@@ -1330,9 +1330,9 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-04__hair-avatar-03__clothing-avatar-04.png",
       "spec": "specs/face-avatar-04__hair-avatar-03__clothing-avatar-04.json",
-      "characterPixels": 682,
+      "characterPixels": 707,
       "bbox": [
-        1,
+        0,
         1,
         31,
         32
@@ -1345,9 +1345,9 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-04__hair-avatar-03__clothing-avatar-05.png",
       "spec": "specs/face-avatar-04__hair-avatar-03__clothing-avatar-05.json",
-      "characterPixels": 686,
+      "characterPixels": 706,
       "bbox": [
-        1,
+        0,
         1,
         32,
         32
@@ -1390,7 +1390,7 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-04__hair-avatar-04__clothing-avatar-03.png",
       "spec": "specs/face-avatar-04__hair-avatar-04__clothing-avatar-03.json",
-      "characterPixels": 530,
+      "characterPixels": 531,
       "bbox": [
         1,
         1,
@@ -1420,7 +1420,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-04__hair-avatar-04__clothing-avatar-05.png",
       "spec": "specs/face-avatar-04__hair-avatar-04__clothing-avatar-05.json",
-      "characterPixels": 523,
+      "characterPixels": 518,
       "bbox": [
         2,
         1,
@@ -1435,11 +1435,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-04__hair-avatar-05__clothing-avatar-01.png",
       "spec": "specs/face-avatar-04__hair-avatar-05__clothing-avatar-01.json",
-      "characterPixels": 664,
+      "characterPixels": 656,
       "bbox": [
         2,
-        1,
-        29,
+        3,
+        30,
         32
       ]
     },
@@ -1450,11 +1450,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-04__hair-avatar-05__clothing-avatar-02.png",
       "spec": "specs/face-avatar-04__hair-avatar-05__clothing-avatar-02.json",
-      "characterPixels": 667,
+      "characterPixels": 659,
       "bbox": [
         1,
-        1,
-        29,
+        3,
+        30,
         32
       ]
     },
@@ -1465,11 +1465,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-04__hair-avatar-05__clothing-avatar-03.png",
       "spec": "specs/face-avatar-04__hair-avatar-05__clothing-avatar-03.json",
-      "characterPixels": 668,
+      "characterPixels": 661,
       "bbox": [
         1,
-        1,
-        29,
+        3,
+        30,
         32
       ]
     },
@@ -1480,11 +1480,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-04__hair-avatar-05__clothing-avatar-04.png",
       "spec": "specs/face-avatar-04__hair-avatar-05__clothing-avatar-04.json",
-      "characterPixels": 661,
+      "characterPixels": 653,
       "bbox": [
         2,
-        1,
-        29,
+        3,
+        30,
         32
       ]
     },
@@ -1495,10 +1495,10 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-04__hair-avatar-05__clothing-avatar-05.png",
       "spec": "specs/face-avatar-04__hair-avatar-05__clothing-avatar-05.json",
-      "characterPixels": 665,
+      "characterPixels": 655,
       "bbox": [
         2,
-        1,
+        3,
         32,
         32
       ]
@@ -1510,11 +1510,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-05__hair-avatar-01__clothing-avatar-01.png",
       "spec": "specs/face-avatar-05__hair-avatar-01__clothing-avatar-01.json",
-      "characterPixels": 650,
+      "characterPixels": 559,
       "bbox": [
         2,
         3,
-        32,
+        29,
         32
       ]
     },
@@ -1525,11 +1525,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-05__hair-avatar-01__clothing-avatar-02.png",
       "spec": "specs/face-avatar-05__hair-avatar-01__clothing-avatar-02.json",
-      "characterPixels": 652,
+      "characterPixels": 565,
       "bbox": [
         1,
         3,
-        32,
+        29,
         32
       ]
     },
@@ -1540,11 +1540,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-05__hair-avatar-01__clothing-avatar-03.png",
       "spec": "specs/face-avatar-05__hair-avatar-01__clothing-avatar-03.json",
-      "characterPixels": 657,
+      "characterPixels": 570,
       "bbox": [
         1,
         3,
-        32,
+        29,
         32
       ]
     },
@@ -1555,11 +1555,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-05__hair-avatar-01__clothing-avatar-04.png",
       "spec": "specs/face-avatar-05__hair-avatar-01__clothing-avatar-04.json",
-      "characterPixels": 656,
+      "characterPixels": 562,
       "bbox": [
-        2,
         3,
-        32,
+        3,
+        29,
         32
       ]
     },
@@ -1570,7 +1570,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-05__hair-avatar-01__clothing-avatar-05.png",
       "spec": "specs/face-avatar-05__hair-avatar-01__clothing-avatar-05.json",
-      "characterPixels": 650,
+      "characterPixels": 559,
       "bbox": [
         2,
         3,
@@ -1585,11 +1585,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-05__hair-avatar-02__clothing-avatar-01.png",
       "spec": "specs/face-avatar-05__hair-avatar-02__clothing-avatar-01.json",
-      "characterPixels": 668,
+      "characterPixels": 580,
       "bbox": [
         2,
         1,
-        32,
+        29,
         32
       ]
     },
@@ -1600,11 +1600,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-05__hair-avatar-02__clothing-avatar-02.png",
       "spec": "specs/face-avatar-05__hair-avatar-02__clothing-avatar-02.json",
-      "characterPixels": 670,
+      "characterPixels": 586,
       "bbox": [
         1,
         1,
-        32,
+        29,
         32
       ]
     },
@@ -1615,11 +1615,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-05__hair-avatar-02__clothing-avatar-03.png",
       "spec": "specs/face-avatar-05__hair-avatar-02__clothing-avatar-03.json",
-      "characterPixels": 675,
+      "characterPixels": 591,
       "bbox": [
         1,
         1,
-        32,
+        29,
         32
       ]
     },
@@ -1630,11 +1630,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-05__hair-avatar-02__clothing-avatar-04.png",
       "spec": "specs/face-avatar-05__hair-avatar-02__clothing-avatar-04.json",
-      "characterPixels": 674,
+      "characterPixels": 583,
       "bbox": [
         2,
         1,
-        32,
+        29,
         32
       ]
     },
@@ -1645,7 +1645,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-05__hair-avatar-02__clothing-avatar-05.png",
       "spec": "specs/face-avatar-05__hair-avatar-02__clothing-avatar-05.json",
-      "characterPixels": 668,
+      "characterPixels": 580,
       "bbox": [
         2,
         1,
@@ -1660,11 +1660,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-05__hair-avatar-03__clothing-avatar-01.png",
       "spec": "specs/face-avatar-05__hair-avatar-03__clothing-avatar-01.json",
-      "characterPixels": 734,
+      "characterPixels": 726,
       "bbox": [
+        0,
         1,
-        2,
-        32,
+        31,
         32
       ]
     },
@@ -1675,11 +1675,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-05__hair-avatar-03__clothing-avatar-02.png",
       "spec": "specs/face-avatar-05__hair-avatar-03__clothing-avatar-02.json",
-      "characterPixels": 736,
+      "characterPixels": 732,
       "bbox": [
+        0,
         1,
-        2,
-        32,
+        31,
         32
       ]
     },
@@ -1690,11 +1690,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-05__hair-avatar-03__clothing-avatar-03.png",
       "spec": "specs/face-avatar-05__hair-avatar-03__clothing-avatar-03.json",
-      "characterPixels": 741,
+      "characterPixels": 737,
       "bbox": [
+        0,
         1,
-        2,
-        32,
+        31,
         32
       ]
     },
@@ -1705,11 +1705,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-05__hair-avatar-03__clothing-avatar-04.png",
       "spec": "specs/face-avatar-05__hair-avatar-03__clothing-avatar-04.json",
-      "characterPixels": 740,
+      "characterPixels": 729,
       "bbox": [
+        0,
         1,
-        2,
-        32,
+        31,
         32
       ]
     },
@@ -1720,10 +1720,10 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-05__hair-avatar-03__clothing-avatar-05.png",
       "spec": "specs/face-avatar-05__hair-avatar-03__clothing-avatar-05.json",
-      "characterPixels": 734,
+      "characterPixels": 726,
       "bbox": [
+        0,
         1,
-        2,
         32,
         32
       ]
@@ -1735,11 +1735,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-05__hair-avatar-04__clothing-avatar-01.png",
       "spec": "specs/face-avatar-05__hair-avatar-04__clothing-avatar-01.json",
-      "characterPixels": 686,
+      "characterPixels": 594,
       "bbox": [
         2,
         1,
-        32,
+        29,
         32
       ]
     },
@@ -1750,11 +1750,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-05__hair-avatar-04__clothing-avatar-02.png",
       "spec": "specs/face-avatar-05__hair-avatar-04__clothing-avatar-02.json",
-      "characterPixels": 688,
+      "characterPixels": 600,
       "bbox": [
         1,
         1,
-        32,
+        29,
         32
       ]
     },
@@ -1765,11 +1765,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-05__hair-avatar-04__clothing-avatar-03.png",
       "spec": "specs/face-avatar-05__hair-avatar-04__clothing-avatar-03.json",
-      "characterPixels": 693,
+      "characterPixels": 605,
       "bbox": [
         1,
         1,
-        32,
+        29,
         32
       ]
     },
@@ -1780,11 +1780,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-05__hair-avatar-04__clothing-avatar-04.png",
       "spec": "specs/face-avatar-05__hair-avatar-04__clothing-avatar-04.json",
-      "characterPixels": 692,
+      "characterPixels": 597,
       "bbox": [
-        2,
+        3,
         1,
-        32,
+        29,
         32
       ]
     },
@@ -1795,7 +1795,7 @@
       "clothing": "avatar-05",
       "generated": "generated/face-avatar-05__hair-avatar-04__clothing-avatar-05.png",
       "spec": "specs/face-avatar-05__hair-avatar-04__clothing-avatar-05.json",
-      "characterPixels": 686,
+      "characterPixels": 594,
       "bbox": [
         2,
         1,
@@ -1810,11 +1810,11 @@
       "clothing": "avatar-01",
       "generated": "generated/face-avatar-05__hair-avatar-05__clothing-avatar-01.png",
       "spec": "specs/face-avatar-05__hair-avatar-05__clothing-avatar-01.json",
-      "characterPixels": 649,
+      "characterPixels": 647,
       "bbox": [
         2,
         4,
-        32,
+        30,
         32
       ]
     },
@@ -1825,11 +1825,11 @@
       "clothing": "avatar-02",
       "generated": "generated/face-avatar-05__hair-avatar-05__clothing-avatar-02.png",
       "spec": "specs/face-avatar-05__hair-avatar-05__clothing-avatar-02.json",
-      "characterPixels": 651,
+      "characterPixels": 650,
       "bbox": [
         1,
         4,
-        32,
+        30,
         32
       ]
     },
@@ -1840,11 +1840,11 @@
       "clothing": "avatar-03",
       "generated": "generated/face-avatar-05__hair-avatar-05__clothing-avatar-03.png",
       "spec": "specs/face-avatar-05__hair-avatar-05__clothing-avatar-03.json",
-      "characterPixels": 656,
+      "characterPixels": 655,
       "bbox": [
         1,
         4,
-        32,
+        30,
         32
       ]
     },
@@ -1855,11 +1855,11 @@
       "clothing": "avatar-04",
       "generated": "generated/face-avatar-05__hair-avatar-05__clothing-avatar-04.png",
       "spec": "specs/face-avatar-05__hair-avatar-05__clothing-avatar-04.json",
-      "characterPixels": 655,
+      "characterPixels": 651,
       "bbox": [
         2,
         4,
-        32,
+        30,
         32
       ]
     },
