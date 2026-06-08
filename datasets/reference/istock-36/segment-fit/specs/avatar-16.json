@@ -1,0 +1,1688 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [
+      32,
+      32
+    ],
+    "scale": 12,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v1",
+    "version": "1.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "androgynous",
+    "face.shape": "side_oval",
+    "skin.tone": "medium_warm_05",
+    "face.detail": "none",
+    "hair.style": "bald_clean",
+    "hair.color": "dark_brown",
+    "eyes.shape": "dot",
+    "eyes.color": "brown",
+    "eyebrows.shape": "soft_flat",
+    "nose.shape": "small_line",
+    "mouth.shape": "small_smile",
+    "ears.shape": "none",
+    "glasses.shape": "none",
+    "facial_hair.style": "none",
+    "headwear.type": "none",
+    "clothing.top": "hoodie",
+    "background.style": "transparent"
+  },
+  "seed": "segment-trait-avatar-16",
+  "patches": [
+    {
+      "op": "rect",
+      "layer": "custom.reference.00_background",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 32,
+      "color": "#E0F0B0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 1,
+      "w": 11,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 11,
+      "y": 2,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 16,
+      "y": 2,
+      "w": 9,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 9,
+      "y": 3,
+      "w": 5,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 16,
+      "y": 3,
+      "w": 10,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 8,
+      "y": 4,
+      "w": 19,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 5,
+      "w": 5,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 13,
+      "y": 5,
+      "w": 9,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 24,
+      "y": 5,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 6,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 6,
+      "w": 8,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 25,
+      "y": 6,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 7,
+      "w": 10,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 27,
+      "y": 7,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 6,
+      "y": 8,
+      "w": 11,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 27,
+      "y": 8,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 4,
+      "y": 9,
+      "w": 1,
+      "h": 1,
+      "color": "#102000"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 5,
+      "y": 9,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 8,
+      "y": 9,
+      "w": 8,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 9,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 2,
+      "y": 10,
+      "w": 5,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 9,
+      "y": 10,
+      "w": 6,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 10,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 1,
+      "y": 11,
+      "w": 6,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 8,
+      "y": 11,
+      "w": 5,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 25,
+      "y": 11,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 12,
+      "w": 8,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 9,
+      "y": 12,
+      "w": 1,
+      "h": 1,
+      "color": "#401020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 10,
+      "y": 12,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 12,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 13,
+      "w": 7,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 9,
+      "y": 13,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 25,
+      "y": 13,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 13,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 14,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 5,
+      "y": 14,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 9,
+      "y": 14,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 24,
+      "y": 14,
+      "w": 6,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 15,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 4,
+      "y": 15,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 9,
+      "y": 15,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 25,
+      "y": 15,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 15,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 16,
+      "w": 6,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 8,
+      "y": 16,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 16,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 17,
+      "w": 7,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 8,
+      "y": 17,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 17,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 18,
+      "w": 10,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 18,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 19,
+      "w": 10,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 19,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 20,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 4,
+      "y": 20,
+      "w": 7,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 20,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 0,
+      "y": 21,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 5,
+      "y": 21,
+      "w": 6,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 21,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 1,
+      "y": 22,
+      "w": 11,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 28,
+      "y": 22,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 1,
+      "y": 23,
+      "w": 9,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 27,
+      "y": 23,
+      "w": 5,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 2,
+      "y": 24,
+      "w": 7,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 9,
+      "y": 24,
+      "w": 1,
+      "h": 1,
+      "color": "#D0E0C0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 24,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 27,
+      "y": 24,
+      "w": 5,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 2,
+      "y": 25,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 25,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 25,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 25,
+      "y": 25,
+      "w": 6,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 2,
+      "y": 26,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 26,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 26,
+      "w": 17,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 5,
+      "y": 27,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 10,
+      "y": 27,
+      "w": 4,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 14,
+      "y": 27,
+      "w": 1,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 15,
+      "y": 27,
+      "w": 7,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 25,
+      "y": 27,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 28,
+      "w": 1,
+      "h": 1,
+      "color": "#D0E0C0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 8,
+      "y": 28,
+      "w": 6,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 14,
+      "y": 28,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 19,
+      "y": 28,
+      "w": 5,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 6,
+      "y": 29,
+      "w": 8,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 14,
+      "y": 29,
+      "w": 6,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 20,
+      "y": 29,
+      "w": 6,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 5,
+      "y": 30,
+      "w": 10,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 15,
+      "y": 30,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 20,
+      "y": 30,
+      "w": 7,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 31,
+      "y": 30,
+      "w": 1,
+      "h": 1,
+      "color": "#B0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 4,
+      "y": 31,
+      "w": 12,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 16,
+      "y": 31,
+      "w": 4,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 20,
+      "y": 31,
+      "w": 10,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.10_clothing",
+      "coordSpace": "output",
+      "x": 30,
+      "y": 31,
+      "w": 1,
+      "h": 1,
+      "color": "#B0D0A0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 14,
+      "y": 2,
+      "w": 2,
+      "h": 1,
+      "color": "#FFFFFF"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 14,
+      "y": 3,
+      "w": 2,
+      "h": 1,
+      "color": "#FFFFFF"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 5,
+      "w": 1,
+      "h": 1,
+      "color": "#FFFFFF"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 22,
+      "y": 5,
+      "w": 2,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 11,
+      "y": 6,
+      "w": 1,
+      "h": 1,
+      "color": "#FFFFFF"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 20,
+      "y": 6,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 17,
+      "y": 7,
+      "w": 10,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 17,
+      "y": 8,
+      "w": 10,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 16,
+      "y": 9,
+      "w": 12,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 15,
+      "y": 10,
+      "w": 13,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 13,
+      "y": 11,
+      "w": 3,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 21,
+      "y": 11,
+      "w": 4,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 12,
+      "w": 16,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 13,
+      "w": 1,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 8,
+      "y": 13,
+      "w": 1,
+      "h": 1,
+      "color": "#E0D0D0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 13,
+      "w": 4,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 17,
+      "y": 13,
+      "w": 1,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 20,
+      "y": 13,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 27,
+      "y": 13,
+      "w": 1,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 4,
+      "y": 14,
+      "w": 1,
+      "h": 1,
+      "color": "#FFFFFF"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 6,
+      "y": 14,
+      "w": 3,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 11,
+      "y": 14,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 21,
+      "y": 14,
+      "w": 3,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 2,
+      "y": 15,
+      "w": 2,
+      "h": 1,
+      "color": "#FFFFFF"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 6,
+      "y": 15,
+      "w": 3,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 11,
+      "y": 15,
+      "w": 7,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 21,
+      "y": 15,
+      "w": 4,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 27,
+      "y": 15,
+      "w": 1,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 6,
+      "y": 16,
+      "w": 2,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 11,
+      "y": 16,
+      "w": 17,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 17,
+      "w": 1,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 10,
+      "y": 17,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 18,
+      "y": 17,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 24,
+      "y": 17,
+      "w": 3,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 10,
+      "y": 18,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 18,
+      "y": 18,
+      "w": 10,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 10,
+      "y": 19,
+      "w": 15,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 26,
+      "y": 19,
+      "w": 2,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 2,
+      "y": 20,
+      "w": 2,
+      "h": 1,
+      "color": "#FFFFFF"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 11,
+      "y": 20,
+      "w": 11,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 25,
+      "y": 20,
+      "w": 3,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 4,
+      "y": 21,
+      "w": 1,
+      "h": 1,
+      "color": "#FFFFFF"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 11,
+      "y": 21,
+      "w": 17,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 22,
+      "w": 8,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 23,
+      "y": 22,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 13,
+      "y": 23,
+      "w": 7,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 22,
+      "y": 23,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 14,
+      "y": 24,
+      "w": 6,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 22,
+      "y": 24,
+      "w": 5,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.20_skin",
+      "coordSpace": "output",
+      "x": 15,
+      "y": 25,
+      "w": 10,
+      "h": 1,
+      "color": "#F0F0E0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.40_accessory",
+      "coordSpace": "output",
+      "x": 5,
+      "y": 8,
+      "w": 1,
+      "h": 1,
+      "color": "#809060"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.40_accessory",
+      "coordSpace": "output",
+      "x": 8,
+      "y": 12,
+      "w": 1,
+      "h": 1,
+      "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.40_accessory",
+      "coordSpace": "output",
+      "x": 15,
+      "y": 17,
+      "w": 3,
+      "h": 1,
+      "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.40_accessory",
+      "coordSpace": "output",
+      "x": 15,
+      "y": 18,
+      "w": 3,
+      "h": 1,
+      "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.40_accessory",
+      "coordSpace": "output",
+      "x": 12,
+      "y": 23,
+      "w": 1,
+      "h": 1,
+      "color": "#A0B090"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.30_hair",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 9,
+      "w": 1,
+      "h": 1,
+      "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.30_hair",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 10,
+      "w": 2,
+      "h": 1,
+      "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.30_hair",
+      "coordSpace": "output",
+      "x": 7,
+      "y": 11,
+      "w": 1,
+      "h": 1,
+      "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.30_hair",
+      "coordSpace": "output",
+      "x": 27,
+      "y": 17,
+      "w": 1,
+      "h": 1,
+      "color": "#FF80B0"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 16,
+      "y": 11,
+      "w": 5,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 16,
+      "y": 13,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 18,
+      "y": 13,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 16,
+      "y": 14,
+      "w": 5,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 18,
+      "y": 15,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 23,
+      "y": 17,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 25,
+      "y": 19,
+      "w": 1,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 22,
+      "y": 20,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 20,
+      "y": 22,
+      "w": 3,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 20,
+      "y": 23,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    },
+    {
+      "op": "rect",
+      "layer": "custom.reference.50_face_feature",
+      "coordSpace": "output",
+      "x": 20,
+      "y": 24,
+      "w": 2,
+      "h": 1,
+      "color": "#202020"
+    }
+  ]
+}

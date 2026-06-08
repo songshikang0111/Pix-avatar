@@ -1,0 +1,36 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [
+      32,
+      32
+    ],
+    "scale": 12,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v1",
+    "version": "1.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "androgynous",
+    "face.shape": "side_oval",
+    "skin.tone": "porcelain_01",
+    "face.detail": "none",
+    "hair.style": "bald_clean",
+    "hair.color": "dark_brown",
+    "eyes.shape": "dot",
+    "eyes.color": "black",
+    "eyebrows.shape": "soft_flat",
+    "nose.shape": "small_line",
+    "mouth.shape": "teeth_smile",
+    "ears.shape": "small_round",
+    "glasses.shape": "narrow_rectangle",
+    "facial_hair.style": "none",
+    "headwear.type": "none",
+    "clothing.top": "tshirt",
+    "background.style": "sky_flat"
+  },
+  "seed": "reference-fit-avatar-19"
+}

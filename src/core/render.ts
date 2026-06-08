@@ -18,7 +18,7 @@ export function renderAvatar(input: Partial<AvatarSpec>, options: RenderOptions 
 
   const palette = resolvePalette(spec.traits, spec.palette);
   const rig = createFaceRig(spec.traits["face.shape"], spec.traits);
-  const layers = new LayerStack();
+  const layers = new LayerStack(spec.canvas.size[0], spec.canvas.size[1]);
   const placements = {};
 
   drawAvatarTraits({

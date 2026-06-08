@@ -15,6 +15,7 @@ import {
 interface FaceConfig {
   top: number;
   bottom: number;
+  centerX?: number;
   profile: (t: number) => number;
   anchors: Record<string, Point>;
   profiles: Record<string, string>;
@@ -45,6 +46,37 @@ const baseAnchors = {
 };
 
 const configs: Record<string, FaceConfig> = {
+  side_oval: {
+    top: 4,
+    bottom: 33,
+    centerX: 20,
+    profile: (t) => 4.5 + Math.sin(Math.PI * t) * 6.2 - Math.max(0, t - 0.82) * 2.6,
+    anchors: {
+      ...baseAnchors,
+      "head.top": [20, 4],
+      "head.center": [20, 18],
+      "face.center": [21, 19],
+      "face.centerline.top": [22, 10],
+      "face.centerline.bottom": [22, 31],
+      "left_eye.center": [17, 17],
+      "right_eye.center": [23, 17],
+      "left_eyebrow.center": [17, 14],
+      "right_eyebrow.center": [23, 14],
+      "nose.bridge": [23, 18],
+      "nose.tip": [24, 22],
+      "mouth.center": [22, 26],
+      "mouth.baseline": [22, 26],
+      chin: [21, 33],
+      "left_ear.socket": [9, 18],
+      "right_ear.socket": [30, 18],
+      "hair.crown": [20, 4],
+      "hairline.center": [20, 9],
+      left_temple: [10, 11],
+      right_temple: [29, 11],
+      neck: [20, 33]
+    },
+    profiles: { face_width: "medium", face_height: "medium", jaw: "soft_right", forehead: "medium", cheek_width: "medium", ear_height: "medium", chin_space: "medium" }
+  },
   soft_round: {
     top: 5,
     bottom: 32,
@@ -151,7 +183,7 @@ const configs: Record<string, FaceConfig> = {
 
 export function createFaceRig(shape = "soft_round", traits?: TraitMap): FaceRig {
   const config = configs[shape] ?? configs.soft_round;
-  const head = maskFromRowProfile(config.top, config.bottom, 20, config.profile);
+  const head = maskFromRowProfile(config.top, config.bottom, config.centerX ?? 20, config.profile);
   const faceCore = maskIntersect(maskErode(head, 2), maskFromEllipse(20, config.anchors["face.center"][1] + 1, 10, 11));
   const hairAllowed = maskUnion(maskDilate(head, 2), maskFromRoundedRect(5, 1, 30, 20, 4));
   const body = maskFromRoundedRect(7, 31, 26, 10, 5);

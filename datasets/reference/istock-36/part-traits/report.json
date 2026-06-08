@@ -1,0 +1,1324 @@
+{
+  "version": "pix-avatar/reference-part-traits/v2",
+  "source": "datasets/reference/istock-36/segments",
+  "canvas": {
+    "size": [
+      32,
+      32
+    ]
+  },
+  "slotModel": [
+    "background.style",
+    "face.shape",
+    "ears.shape",
+    "hair.style",
+    "eyes.shape",
+    "eyebrows.shape",
+    "nose.shape",
+    "mouth.shape",
+    "glasses.shape",
+    "facial_hair.style",
+    "headwear.type",
+    "clothing.top"
+  ],
+  "method": "Derives repo-native trait-slot candidates from coarse reference color segments, reviews each candidate with slot-specific bbox/component/zone checks, and builds final specs only from accepted 32px part assets.",
+  "artifacts": {
+    "candidateReport": "part-candidates/report.json",
+    "candidateSlotSheets": "part-candidates/slot-sheets",
+    "partSpecs": "specs",
+    "generatedContactSheet": "contact-sheet.png",
+    "semanticContactSheet": "semantic-contact-sheet.png"
+  },
+  "statusSummary": {
+    "background.style": {
+      "accepted": 36,
+      "review": 0,
+      "rejected": 0
+    },
+    "face.shape": {
+      "accepted": 36,
+      "review": 0,
+      "rejected": 0
+    },
+    "ears.shape": {
+      "accepted": 28,
+      "review": 0,
+      "rejected": 8
+    },
+    "hair.style": {
+      "accepted": 32,
+      "review": 0,
+      "rejected": 4
+    },
+    "eyes.shape": {
+      "accepted": 33,
+      "review": 0,
+      "rejected": 3
+    },
+    "eyebrows.shape": {
+      "accepted": 25,
+      "review": 0,
+      "rejected": 11
+    },
+    "nose.shape": {
+      "accepted": 31,
+      "review": 0,
+      "rejected": 5
+    },
+    "mouth.shape": {
+      "accepted": 27,
+      "review": 0,
+      "rejected": 9
+    },
+    "glasses.shape": {
+      "accepted": 12,
+      "review": 0,
+      "rejected": 24
+    },
+    "facial_hair.style": {
+      "accepted": 0,
+      "review": 0,
+      "rejected": 36
+    },
+    "headwear.type": {
+      "accepted": 13,
+      "review": 0,
+      "rejected": 23
+    },
+    "clothing.top": {
+      "accepted": 36,
+      "review": 0,
+      "rejected": 0
+    }
+  },
+  "entries": [
+    {
+      "id": "avatar-01",
+      "background": "#80E0E0",
+      "allCounts": {
+        "hair.style": 157,
+        "headwear.type": 1,
+        "face.shape": 180,
+        "ears.shape": 14,
+        "eyebrows.shape": 3,
+        "eyes.shape": 4,
+        "nose.shape": 9,
+        "mouth.shape": 3,
+        "clothing.top": 119
+      },
+      "acceptedCounts": {
+        "hair.style": 157,
+        "face.shape": 180,
+        "ears.shape": 14,
+        "eyebrows.shape": 3,
+        "eyes.shape": 4,
+        "nose.shape": 9,
+        "mouth.shape": 3,
+        "clothing.top": 119
+      },
+      "rejectedCounts": {
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-01.json",
+      "parts": "parts/avatar-01.json",
+      "generated": "generated/avatar-01.png",
+      "semantic": "semantic/avatar-01.png"
+    },
+    {
+      "id": "avatar-02",
+      "background": "#E0F0C0",
+      "allCounts": {
+        "hair.style": 76,
+        "face.shape": 235,
+        "ears.shape": 31,
+        "eyebrows.shape": 20,
+        "eyes.shape": 13,
+        "nose.shape": 25,
+        "mouth.shape": 5,
+        "glasses.shape": 2,
+        "clothing.top": 105
+      },
+      "acceptedCounts": {
+        "hair.style": 76,
+        "face.shape": 235,
+        "ears.shape": 31,
+        "eyebrows.shape": 20,
+        "eyes.shape": 13,
+        "nose.shape": 25,
+        "mouth.shape": 5,
+        "clothing.top": 105
+      },
+      "rejectedCounts": {
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-02.json",
+      "parts": "parts/avatar-02.json",
+      "generated": "generated/avatar-02.png",
+      "semantic": "semantic/avatar-02.png"
+    },
+    {
+      "id": "avatar-03",
+      "background": "#F0E0A0",
+      "allCounts": {
+        "hair.style": 267,
+        "ears.shape": 11,
+        "headwear.type": 109,
+        "face.shape": 148,
+        "eyebrows.shape": 12,
+        "eyes.shape": 2,
+        "nose.shape": 17,
+        "mouth.shape": 16,
+        "glasses.shape": 11,
+        "clothing.top": 153
+      },
+      "acceptedCounts": {
+        "hair.style": 267,
+        "ears.shape": 11,
+        "headwear.type": 109,
+        "face.shape": 148,
+        "eyebrows.shape": 12,
+        "eyes.shape": 2,
+        "nose.shape": 17,
+        "mouth.shape": 16,
+        "glasses.shape": 11,
+        "clothing.top": 153
+      },
+      "rejectedCounts": {
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-03.json",
+      "parts": "parts/avatar-03.json",
+      "generated": "generated/avatar-03.png",
+      "semantic": "semantic/avatar-03.png"
+    },
+    {
+      "id": "avatar-04",
+      "background": "#E0F0C0",
+      "allCounts": {
+        "hair.style": 189,
+        "headwear.type": 1,
+        "mouth.shape": 3,
+        "face.shape": 178,
+        "ears.shape": 6,
+        "eyes.shape": 4,
+        "nose.shape": 9,
+        "clothing.top": 129
+      },
+      "acceptedCounts": {
+        "hair.style": 189,
+        "mouth.shape": 3,
+        "face.shape": 178,
+        "ears.shape": 6,
+        "eyes.shape": 4,
+        "nose.shape": 9,
+        "clothing.top": 129
+      },
+      "rejectedCounts": {
+        "eyebrows.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-04.json",
+      "parts": "parts/avatar-04.json",
+      "generated": "generated/avatar-04.png",
+      "semantic": "semantic/avatar-04.png"
+    },
+    {
+      "id": "avatar-05",
+      "background": "#80E0E0",
+      "allCounts": {
+        "hair.style": 165,
+        "ears.shape": 18,
+        "headwear.type": 68,
+        "face.shape": 141,
+        "glasses.shape": 28,
+        "mouth.shape": 18,
+        "eyebrows.shape": 19,
+        "eyes.shape": 7,
+        "nose.shape": 27,
+        "clothing.top": 158
+      },
+      "acceptedCounts": {
+        "hair.style": 165,
+        "ears.shape": 18,
+        "headwear.type": 68,
+        "face.shape": 141,
+        "glasses.shape": 28,
+        "mouth.shape": 18,
+        "eyebrows.shape": 19,
+        "eyes.shape": 7,
+        "nose.shape": 27,
+        "clothing.top": 158
+      },
+      "rejectedCounts": {
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-05.json",
+      "parts": "parts/avatar-05.json",
+      "generated": "generated/avatar-05.png",
+      "semantic": "semantic/avatar-05.png"
+    },
+    {
+      "id": "avatar-06",
+      "background": "#F0E0A0",
+      "allCounts": {
+        "clothing.top": 471,
+        "face.shape": 175,
+        "ears.shape": 7,
+        "hair.style": 86,
+        "eyebrows.shape": 10,
+        "eyes.shape": 7,
+        "nose.shape": 10,
+        "glasses.shape": 4
+      },
+      "acceptedCounts": {
+        "clothing.top": 471,
+        "face.shape": 175,
+        "ears.shape": 7,
+        "hair.style": 86,
+        "eyebrows.shape": 10,
+        "eyes.shape": 7,
+        "nose.shape": 10,
+        "glasses.shape": 4
+      },
+      "rejectedCounts": {
+        "mouth.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-06.json",
+      "parts": "parts/avatar-06.json",
+      "generated": "generated/avatar-06.png",
+      "semantic": "semantic/avatar-06.png"
+    },
+    {
+      "id": "avatar-07",
+      "background": "#F0E0A0",
+      "allCounts": {
+        "hair.style": 221,
+        "eyebrows.shape": 3,
+        "eyes.shape": 2,
+        "nose.shape": 19,
+        "mouth.shape": 2,
+        "face.shape": 129,
+        "clothing.top": 121
+      },
+      "acceptedCounts": {
+        "hair.style": 221,
+        "eyebrows.shape": 3,
+        "eyes.shape": 2,
+        "nose.shape": 19,
+        "mouth.shape": 2,
+        "face.shape": 129,
+        "clothing.top": 121
+      },
+      "rejectedCounts": {
+        "ears.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-07.json",
+      "parts": "parts/avatar-07.json",
+      "generated": "generated/avatar-07.png",
+      "semantic": "semantic/avatar-07.png"
+    },
+    {
+      "id": "avatar-08",
+      "background": "#80E0E0",
+      "allCounts": {
+        "hair.style": 135,
+        "face.shape": 274,
+        "ears.shape": 26,
+        "headwear.type": 4,
+        "glasses.shape": 1,
+        "eyebrows.shape": 2,
+        "eyes.shape": 10,
+        "nose.shape": 11,
+        "mouth.shape": 3,
+        "clothing.top": 118
+      },
+      "acceptedCounts": {
+        "hair.style": 135,
+        "face.shape": 274,
+        "ears.shape": 26,
+        "eyebrows.shape": 2,
+        "eyes.shape": 10,
+        "nose.shape": 11,
+        "mouth.shape": 3,
+        "clothing.top": 118
+      },
+      "rejectedCounts": {
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-08.json",
+      "parts": "parts/avatar-08.json",
+      "generated": "generated/avatar-08.png",
+      "semantic": "semantic/avatar-08.png"
+    },
+    {
+      "id": "avatar-09",
+      "background": "#FF80B0",
+      "allCounts": {
+        "hair.style": 148,
+        "face.shape": 204,
+        "ears.shape": 11,
+        "eyes.shape": 12,
+        "nose.shape": 16,
+        "clothing.top": 105
+      },
+      "acceptedCounts": {
+        "hair.style": 148,
+        "face.shape": 204,
+        "ears.shape": 11,
+        "eyes.shape": 12,
+        "nose.shape": 16,
+        "clothing.top": 105
+      },
+      "rejectedCounts": {
+        "eyebrows.shape": 1,
+        "mouth.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-09.json",
+      "parts": "parts/avatar-09.json",
+      "generated": "generated/avatar-09.png",
+      "semantic": "semantic/avatar-09.png"
+    },
+    {
+      "id": "avatar-10",
+      "background": "#80E0E0",
+      "allCounts": {
+        "hair.style": 166,
+        "headwear.type": 58,
+        "glasses.shape": 4,
+        "ears.shape": 10,
+        "face.shape": 203,
+        "eyebrows.shape": 11,
+        "eyes.shape": 17,
+        "nose.shape": 18,
+        "mouth.shape": 1,
+        "clothing.top": 106
+      },
+      "acceptedCounts": {
+        "hair.style": 166,
+        "headwear.type": 58,
+        "glasses.shape": 4,
+        "ears.shape": 10,
+        "face.shape": 203,
+        "eyebrows.shape": 11,
+        "eyes.shape": 17,
+        "nose.shape": 18,
+        "mouth.shape": 1,
+        "clothing.top": 106
+      },
+      "rejectedCounts": {
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-10.json",
+      "parts": "parts/avatar-10.json",
+      "generated": "generated/avatar-10.png",
+      "semantic": "semantic/avatar-10.png"
+    },
+    {
+      "id": "avatar-11",
+      "background": "#F0E0A0",
+      "allCounts": {
+        "hair.style": 255,
+        "headwear.type": 71,
+        "ears.shape": 16,
+        "glasses.shape": 5,
+        "mouth.shape": 15,
+        "eyebrows.shape": 12,
+        "eyes.shape": 1,
+        "nose.shape": 29,
+        "face.shape": 152,
+        "clothing.top": 112
+      },
+      "acceptedCounts": {
+        "hair.style": 255,
+        "headwear.type": 71,
+        "ears.shape": 16,
+        "glasses.shape": 5,
+        "mouth.shape": 15,
+        "eyebrows.shape": 12,
+        "eyes.shape": 1,
+        "nose.shape": 29,
+        "face.shape": 152,
+        "clothing.top": 112
+      },
+      "rejectedCounts": {
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-11.json",
+      "parts": "parts/avatar-11.json",
+      "generated": "generated/avatar-11.png",
+      "semantic": "semantic/avatar-11.png"
+    },
+    {
+      "id": "avatar-12",
+      "background": "#E0F0C0",
+      "allCounts": {
+        "hair.style": 114,
+        "headwear.type": 54,
+        "eyebrows.shape": 10,
+        "eyes.shape": 6,
+        "nose.shape": 16,
+        "mouth.shape": 3,
+        "face.shape": 187,
+        "ears.shape": 14,
+        "clothing.top": 106
+      },
+      "acceptedCounts": {
+        "hair.style": 114,
+        "headwear.type": 54,
+        "eyebrows.shape": 10,
+        "eyes.shape": 6,
+        "nose.shape": 16,
+        "mouth.shape": 3,
+        "face.shape": 187,
+        "ears.shape": 14,
+        "clothing.top": 106
+      },
+      "rejectedCounts": {
+        "glasses.shape": 1,
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-12.json",
+      "parts": "parts/avatar-12.json",
+      "generated": "generated/avatar-12.png",
+      "semantic": "semantic/avatar-12.png"
+    },
+    {
+      "id": "avatar-13",
+      "background": "#FF80B0",
+      "allCounts": {
+        "hair.style": 180,
+        "face.shape": 149,
+        "eyebrows.shape": 5,
+        "eyes.shape": 5,
+        "nose.shape": 10,
+        "clothing.top": 92
+      },
+      "acceptedCounts": {
+        "hair.style": 180,
+        "face.shape": 149,
+        "eyebrows.shape": 5,
+        "eyes.shape": 5,
+        "nose.shape": 10,
+        "clothing.top": 92
+      },
+      "rejectedCounts": {
+        "ears.shape": 1,
+        "mouth.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-13.json",
+      "parts": "parts/avatar-13.json",
+      "generated": "generated/avatar-13.png",
+      "semantic": "semantic/avatar-13.png"
+    },
+    {
+      "id": "avatar-14",
+      "background": "#E0F0C0",
+      "allCounts": {
+        "hair.style": 352,
+        "ears.shape": 20,
+        "headwear.type": 5,
+        "glasses.shape": 2,
+        "face.shape": 190,
+        "eyebrows.shape": 10,
+        "eyes.shape": 4,
+        "nose.shape": 9,
+        "mouth.shape": 2,
+        "clothing.top": 161
+      },
+      "acceptedCounts": {
+        "hair.style": 352,
+        "ears.shape": 20,
+        "face.shape": 190,
+        "eyebrows.shape": 10,
+        "eyes.shape": 4,
+        "nose.shape": 9,
+        "mouth.shape": 2,
+        "clothing.top": 161
+      },
+      "rejectedCounts": {
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-14.json",
+      "parts": "parts/avatar-14.json",
+      "generated": "generated/avatar-14.png",
+      "semantic": "semantic/avatar-14.png"
+    },
+    {
+      "id": "avatar-15",
+      "background": "#F0E0A0",
+      "allCounts": {
+        "hair.style": 168,
+        "headwear.type": 105,
+        "eyebrows.shape": 4,
+        "eyes.shape": 10,
+        "nose.shape": 15,
+        "mouth.shape": 1,
+        "face.shape": 157,
+        "clothing.top": 133
+      },
+      "acceptedCounts": {
+        "hair.style": 168,
+        "headwear.type": 105,
+        "eyebrows.shape": 4,
+        "eyes.shape": 10,
+        "nose.shape": 15,
+        "mouth.shape": 1,
+        "face.shape": 157,
+        "clothing.top": 133
+      },
+      "rejectedCounts": {
+        "ears.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-15.json",
+      "parts": "parts/avatar-15.json",
+      "generated": "generated/avatar-15.png",
+      "semantic": "semantic/avatar-15.png"
+    },
+    {
+      "id": "avatar-16",
+      "background": "#E0F0B0",
+      "allCounts": {
+        "clothing.top": 463,
+        "face.shape": 251,
+        "ears.shape": 17,
+        "headwear.type": 1,
+        "glasses.shape": 7,
+        "mouth.shape": 3,
+        "hair.style": 5,
+        "eyebrows.shape": 13,
+        "eyes.shape": 4,
+        "nose.shape": 9
+      },
+      "acceptedCounts": {
+        "clothing.top": 463,
+        "face.shape": 251,
+        "ears.shape": 17,
+        "glasses.shape": 7,
+        "mouth.shape": 3,
+        "eyebrows.shape": 13,
+        "eyes.shape": 4,
+        "nose.shape": 9
+      },
+      "rejectedCounts": {
+        "hair.style": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-16.json",
+      "parts": "parts/avatar-16.json",
+      "generated": "generated/avatar-16.png",
+      "semantic": "semantic/avatar-16.png"
+    },
+    {
+      "id": "avatar-17",
+      "background": "#80E0E0",
+      "allCounts": {
+        "hair.style": 136,
+        "headwear.type": 65,
+        "mouth.shape": 13,
+        "eyebrows.shape": 25,
+        "eyes.shape": 10,
+        "nose.shape": 3,
+        "face.shape": 146,
+        "clothing.top": 158
+      },
+      "acceptedCounts": {
+        "hair.style": 136,
+        "headwear.type": 65,
+        "mouth.shape": 13,
+        "eyebrows.shape": 25,
+        "eyes.shape": 10,
+        "face.shape": 146,
+        "clothing.top": 158
+      },
+      "rejectedCounts": {
+        "ears.shape": 1,
+        "nose.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-17.json",
+      "parts": "parts/avatar-17.json",
+      "generated": "generated/avatar-17.png",
+      "semantic": "semantic/avatar-17.png"
+    },
+    {
+      "id": "avatar-18",
+      "background": "#F0E0A0",
+      "allCounts": {
+        "hair.style": 158,
+        "headwear.type": 71,
+        "face.shape": 135,
+        "glasses.shape": 24,
+        "mouth.shape": 9,
+        "ears.shape": 3,
+        "eyebrows.shape": 36,
+        "eyes.shape": 16,
+        "nose.shape": 18,
+        "clothing.top": 230
+      },
+      "acceptedCounts": {
+        "hair.style": 158,
+        "headwear.type": 71,
+        "face.shape": 135,
+        "glasses.shape": 24,
+        "mouth.shape": 9,
+        "ears.shape": 3,
+        "eyebrows.shape": 36,
+        "eyes.shape": 16,
+        "nose.shape": 18,
+        "clothing.top": 230
+      },
+      "rejectedCounts": {
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-18.json",
+      "parts": "parts/avatar-18.json",
+      "generated": "generated/avatar-18.png",
+      "semantic": "semantic/avatar-18.png"
+    },
+    {
+      "id": "avatar-19",
+      "background": "#F0E0A0",
+      "allCounts": {
+        "headwear.type": 53,
+        "ears.shape": 28,
+        "mouth.shape": 13,
+        "hair.style": 130,
+        "face.shape": 244,
+        "eyebrows.shape": 9,
+        "eyes.shape": 12,
+        "nose.shape": 28,
+        "clothing.top": 123
+      },
+      "acceptedCounts": {
+        "headwear.type": 53,
+        "ears.shape": 28,
+        "mouth.shape": 13,
+        "hair.style": 130,
+        "face.shape": 244,
+        "eyebrows.shape": 9,
+        "eyes.shape": 12,
+        "nose.shape": 28,
+        "clothing.top": 123
+      },
+      "rejectedCounts": {
+        "glasses.shape": 1,
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-19.json",
+      "parts": "parts/avatar-19.json",
+      "generated": "generated/avatar-19.png",
+      "semantic": "semantic/avatar-19.png"
+    },
+    {
+      "id": "avatar-20",
+      "background": "#80E0E0",
+      "allCounts": {
+        "hair.style": 154,
+        "eyebrows.shape": 21,
+        "headwear.type": 81,
+        "glasses.shape": 1,
+        "face.shape": 165,
+        "ears.shape": 15,
+        "eyes.shape": 3,
+        "nose.shape": 7,
+        "mouth.shape": 1,
+        "clothing.top": 157
+      },
+      "acceptedCounts": {
+        "hair.style": 154,
+        "eyebrows.shape": 21,
+        "headwear.type": 81,
+        "face.shape": 165,
+        "ears.shape": 15,
+        "eyes.shape": 3,
+        "nose.shape": 7,
+        "mouth.shape": 1,
+        "clothing.top": 157
+      },
+      "rejectedCounts": {
+        "glasses.shape": 1,
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-20.json",
+      "parts": "parts/avatar-20.json",
+      "generated": "generated/avatar-20.png",
+      "semantic": "semantic/avatar-20.png"
+    },
+    {
+      "id": "avatar-21",
+      "background": "#FF80B0",
+      "allCounts": {
+        "hair.style": 151,
+        "face.shape": 254,
+        "ears.shape": 15,
+        "headwear.type": 2,
+        "eyes.shape": 3,
+        "nose.shape": 13,
+        "mouth.shape": 1,
+        "clothing.top": 119
+      },
+      "acceptedCounts": {
+        "hair.style": 151,
+        "face.shape": 254,
+        "ears.shape": 15,
+        "eyes.shape": 3,
+        "nose.shape": 13,
+        "mouth.shape": 1,
+        "clothing.top": 119
+      },
+      "rejectedCounts": {
+        "eyebrows.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-21.json",
+      "parts": "parts/avatar-21.json",
+      "generated": "generated/avatar-21.png",
+      "semantic": "semantic/avatar-21.png"
+    },
+    {
+      "id": "avatar-22",
+      "background": "#80E0E0",
+      "allCounts": {
+        "hair.style": 173,
+        "headwear.type": 108,
+        "glasses.shape": 17,
+        "mouth.shape": 1,
+        "face.shape": 115,
+        "ears.shape": 11,
+        "eyes.shape": 3,
+        "nose.shape": 14,
+        "clothing.top": 68
+      },
+      "acceptedCounts": {
+        "hair.style": 173,
+        "headwear.type": 108,
+        "glasses.shape": 17,
+        "mouth.shape": 1,
+        "face.shape": 115,
+        "ears.shape": 11,
+        "eyes.shape": 3,
+        "nose.shape": 14,
+        "clothing.top": 68
+      },
+      "rejectedCounts": {
+        "eyebrows.shape": 1,
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-22.json",
+      "parts": "parts/avatar-22.json",
+      "generated": "generated/avatar-22.png",
+      "semantic": "semantic/avatar-22.png"
+    },
+    {
+      "id": "avatar-23",
+      "background": "#E0F0C0",
+      "allCounts": {
+        "headwear.type": 1,
+        "hair.style": 236,
+        "face.shape": 118,
+        "ears.shape": 11,
+        "nose.shape": 7
+      },
+      "acceptedCounts": {
+        "hair.style": 236,
+        "face.shape": 118,
+        "ears.shape": 11
+      },
+      "rejectedCounts": {
+        "eyes.shape": 1,
+        "eyebrows.shape": 1,
+        "nose.shape": 1,
+        "mouth.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-23.json",
+      "parts": "parts/avatar-23.json",
+      "generated": "generated/avatar-23.png",
+      "semantic": "semantic/avatar-23.png"
+    },
+    {
+      "id": "avatar-24",
+      "background": "#80E0E0",
+      "allCounts": {
+        "hair.style": 174,
+        "ears.shape": 6,
+        "face.shape": 146,
+        "headwear.type": 3,
+        "glasses.shape": 6,
+        "eyebrows.shape": 34,
+        "eyes.shape": 25,
+        "nose.shape": 14
+      },
+      "acceptedCounts": {
+        "hair.style": 174,
+        "ears.shape": 6,
+        "face.shape": 146,
+        "glasses.shape": 6,
+        "eyebrows.shape": 34,
+        "eyes.shape": 25,
+        "nose.shape": 14
+      },
+      "rejectedCounts": {
+        "mouth.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-24.json",
+      "parts": "parts/avatar-24.json",
+      "generated": "generated/avatar-24.png",
+      "semantic": "semantic/avatar-24.png"
+    },
+    {
+      "id": "avatar-25",
+      "background": "#E0F0C0",
+      "allCounts": {
+        "headwear.type": 1,
+        "glasses.shape": 1,
+        "clothing.top": 451,
+        "face.shape": 106,
+        "ears.shape": 15,
+        "hair.style": 2,
+        "eyes.shape": 9
+      },
+      "acceptedCounts": {
+        "clothing.top": 451,
+        "face.shape": 106,
+        "ears.shape": 15,
+        "eyes.shape": 9
+      },
+      "rejectedCounts": {
+        "hair.style": 1,
+        "eyebrows.shape": 1,
+        "nose.shape": 1,
+        "mouth.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-25.json",
+      "parts": "parts/avatar-25.json",
+      "generated": "generated/avatar-25.png",
+      "semantic": "semantic/avatar-25.png"
+    },
+    {
+      "id": "avatar-26",
+      "background": "#F0E0A0",
+      "allCounts": {
+        "hair.style": 189,
+        "headwear.type": 102,
+        "ears.shape": 33,
+        "glasses.shape": 4,
+        "face.shape": 213,
+        "eyebrows.shape": 18,
+        "eyes.shape": 6,
+        "nose.shape": 8,
+        "mouth.shape": 2,
+        "clothing.top": 113
+      },
+      "acceptedCounts": {
+        "hair.style": 189,
+        "headwear.type": 102,
+        "ears.shape": 33,
+        "glasses.shape": 4,
+        "face.shape": 213,
+        "eyebrows.shape": 18,
+        "eyes.shape": 6,
+        "nose.shape": 8,
+        "mouth.shape": 2,
+        "clothing.top": 113
+      },
+      "rejectedCounts": {
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-26.json",
+      "parts": "parts/avatar-26.json",
+      "generated": "generated/avatar-26.png",
+      "semantic": "semantic/avatar-26.png"
+    },
+    {
+      "id": "avatar-27",
+      "background": "#E0F0C0",
+      "allCounts": {
+        "clothing.top": 459,
+        "headwear.type": 1,
+        "glasses.shape": 6,
+        "face.shape": 219,
+        "ears.shape": 7,
+        "hair.style": 6,
+        "eyebrows.shape": 11,
+        "eyes.shape": 9,
+        "nose.shape": 8,
+        "mouth.shape": 2
+      },
+      "acceptedCounts": {
+        "clothing.top": 459,
+        "glasses.shape": 6,
+        "face.shape": 219,
+        "ears.shape": 7,
+        "eyebrows.shape": 11,
+        "eyes.shape": 9,
+        "nose.shape": 8,
+        "mouth.shape": 2
+      },
+      "rejectedCounts": {
+        "hair.style": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-27.json",
+      "parts": "parts/avatar-27.json",
+      "generated": "generated/avatar-27.png",
+      "semantic": "semantic/avatar-27.png"
+    },
+    {
+      "id": "avatar-28",
+      "background": "#FF80B0",
+      "allCounts": {
+        "hair.style": 254,
+        "face.shape": 133,
+        "eyebrows.shape": 4,
+        "eyes.shape": 3,
+        "mouth.shape": 1,
+        "clothing.top": 164
+      },
+      "acceptedCounts": {
+        "hair.style": 254,
+        "face.shape": 133,
+        "eyebrows.shape": 4,
+        "eyes.shape": 3,
+        "mouth.shape": 1,
+        "clothing.top": 164
+      },
+      "rejectedCounts": {
+        "ears.shape": 1,
+        "nose.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-28.json",
+      "parts": "parts/avatar-28.json",
+      "generated": "generated/avatar-28.png",
+      "semantic": "semantic/avatar-28.png"
+    },
+    {
+      "id": "avatar-29",
+      "background": "#908060",
+      "allCounts": {
+        "hair.style": 223,
+        "face.shape": 163,
+        "ears.shape": 25,
+        "clothing.top": 226,
+        "eyebrows.shape": 10,
+        "eyes.shape": 13,
+        "nose.shape": 12
+      },
+      "acceptedCounts": {
+        "hair.style": 223,
+        "face.shape": 163,
+        "ears.shape": 25,
+        "clothing.top": 226,
+        "eyebrows.shape": 10,
+        "eyes.shape": 13,
+        "nose.shape": 12
+      },
+      "rejectedCounts": {
+        "mouth.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-29.json",
+      "parts": "parts/avatar-29.json",
+      "generated": "generated/avatar-29.png",
+      "semantic": "semantic/avatar-29.png"
+    },
+    {
+      "id": "avatar-30",
+      "background": "#E0F0C0",
+      "allCounts": {
+        "hair.style": 176,
+        "eyebrows.shape": 13,
+        "eyes.shape": 7,
+        "nose.shape": 10,
+        "mouth.shape": 3,
+        "face.shape": 171,
+        "ears.shape": 11,
+        "clothing.top": 131
+      },
+      "acceptedCounts": {
+        "hair.style": 176,
+        "eyebrows.shape": 13,
+        "eyes.shape": 7,
+        "nose.shape": 10,
+        "mouth.shape": 3,
+        "face.shape": 171,
+        "ears.shape": 11,
+        "clothing.top": 131
+      },
+      "rejectedCounts": {
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-30.json",
+      "parts": "parts/avatar-30.json",
+      "generated": "generated/avatar-30.png",
+      "semantic": "semantic/avatar-30.png"
+    },
+    {
+      "id": "avatar-31",
+      "background": "#80E0E0",
+      "allCounts": {
+        "hair.style": 165,
+        "eyebrows.shape": 21,
+        "headwear.type": 80,
+        "mouth.shape": 13,
+        "face.shape": 159,
+        "ears.shape": 19,
+        "eyes.shape": 21,
+        "nose.shape": 23,
+        "clothing.top": 16
+      },
+      "acceptedCounts": {
+        "hair.style": 165,
+        "eyebrows.shape": 21,
+        "headwear.type": 80,
+        "mouth.shape": 13,
+        "face.shape": 159,
+        "ears.shape": 19,
+        "eyes.shape": 21,
+        "nose.shape": 23,
+        "clothing.top": 16
+      },
+      "rejectedCounts": {
+        "glasses.shape": 1,
+        "facial_hair.style": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-31.json",
+      "parts": "parts/avatar-31.json",
+      "generated": "generated/avatar-31.png",
+      "semantic": "semantic/avatar-31.png"
+    },
+    {
+      "id": "avatar-32",
+      "background": "#E0F0C0",
+      "allCounts": {
+        "clothing.top": 399,
+        "face.shape": 171,
+        "ears.shape": 3,
+        "eyes.shape": 5,
+        "nose.shape": 3,
+        "glasses.shape": 3
+      },
+      "acceptedCounts": {
+        "clothing.top": 399,
+        "face.shape": 171,
+        "ears.shape": 3,
+        "eyes.shape": 5,
+        "nose.shape": 3,
+        "glasses.shape": 3
+      },
+      "rejectedCounts": {
+        "eyebrows.shape": 1,
+        "mouth.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-32.json",
+      "parts": "parts/avatar-32.json",
+      "generated": "generated/avatar-32.png",
+      "semantic": "semantic/avatar-32.png"
+    },
+    {
+      "id": "avatar-33",
+      "background": "#80E0E0",
+      "allCounts": {
+        "clothing.top": 533,
+        "headwear.type": 1,
+        "mouth.shape": 10,
+        "hair.style": 39,
+        "face.shape": 119,
+        "eyes.shape": 1,
+        "nose.shape": 19
+      },
+      "acceptedCounts": {
+        "clothing.top": 533,
+        "mouth.shape": 10,
+        "hair.style": 39,
+        "face.shape": 119,
+        "eyes.shape": 1,
+        "nose.shape": 19
+      },
+      "rejectedCounts": {
+        "ears.shape": 1,
+        "eyebrows.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-33.json",
+      "parts": "parts/avatar-33.json",
+      "generated": "generated/avatar-33.png",
+      "semantic": "semantic/avatar-33.png"
+    },
+    {
+      "id": "avatar-34",
+      "background": "#E0F0C0",
+      "allCounts": {
+        "clothing.top": 334,
+        "face.shape": 137,
+        "ears.shape": 11,
+        "hair.style": 6,
+        "eyes.shape": 4,
+        "nose.shape": 3,
+        "glasses.shape": 2,
+        "mouth.shape": 1
+      },
+      "acceptedCounts": {
+        "clothing.top": 334,
+        "face.shape": 137,
+        "ears.shape": 11,
+        "eyes.shape": 4,
+        "mouth.shape": 1
+      },
+      "rejectedCounts": {
+        "hair.style": 1,
+        "eyebrows.shape": 1,
+        "nose.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-34.json",
+      "parts": "parts/avatar-34.json",
+      "generated": "generated/avatar-34.png",
+      "semantic": "semantic/avatar-34.png"
+    },
+    {
+      "id": "avatar-35",
+      "background": "#80E0E0",
+      "allCounts": {
+        "clothing.top": 379,
+        "face.shape": 83,
+        "hair.style": 50,
+        "nose.shape": 2
+      },
+      "acceptedCounts": {
+        "clothing.top": 379,
+        "face.shape": 83,
+        "hair.style": 50,
+        "nose.shape": 2
+      },
+      "rejectedCounts": {
+        "ears.shape": 1,
+        "eyes.shape": 1,
+        "eyebrows.shape": 1,
+        "mouth.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-35.json",
+      "parts": "parts/avatar-35.json",
+      "generated": "generated/avatar-35.png",
+      "semantic": "semantic/avatar-35.png"
+    },
+    {
+      "id": "avatar-36",
+      "background": "#FF80B0",
+      "allCounts": {
+        "hair.style": 274,
+        "face.shape": 149,
+        "ears.shape": 1,
+        "nose.shape": 11,
+        "mouth.shape": 3,
+        "clothing.top": 118
+      },
+      "acceptedCounts": {
+        "hair.style": 274,
+        "face.shape": 149,
+        "nose.shape": 11,
+        "mouth.shape": 3,
+        "clothing.top": 118
+      },
+      "rejectedCounts": {
+        "ears.shape": 1,
+        "eyes.shape": 1,
+        "eyebrows.shape": 1,
+        "glasses.shape": 1,
+        "facial_hair.style": 1,
+        "headwear.type": 1
+      },
+      "reviewCounts": {},
+      "spec": "specs/avatar-36.json",
+      "parts": "parts/avatar-36.json",
+      "generated": "generated/avatar-36.png",
+      "semantic": "semantic/avatar-36.png"
+    }
+  ]
+}

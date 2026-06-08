@@ -1,7 +1,7 @@
 {
   "name": "@shiki0111/pix-avatar",
   "version": "0.1.0",
-  "description": "Spec-first 40x40 pixel avatar generator for agents, CLI, SDK, and HTTP workflows.",
+  "description": "Spec-first 32x32 pixel avatar generator for agents, CLI, SDK, and HTTP workflows.",
   "type": "module",
   "main": "./dist-node/sdk.js",
   "types": "./dist-node/sdk.d.ts",
@@ -36,6 +36,12 @@
     "render:samples": "tsx src/scripts/renderSamples.ts",
     "prepare:reference-dataset": "tsx src/scripts/prepareReferenceDataset.ts",
     "evaluate:reference-dataset": "tsx src/scripts/evaluateReferenceDataset.ts",
+    "extract:reference-traits": "tsx src/scripts/extractReferenceTraitAssets.ts",
+    "derive:reference-parts": "tsx src/scripts/deriveReferencePartTraits.ts",
+    "render:manual-template": "tsx src/scripts/renderManualTraitTemplate.ts",
+    "recombine:reference-traits": "tsx src/scripts/recombineReferenceSegments.ts",
+    "recombine:reference-parts": "tsx src/scripts/recombineReferenceParts.ts",
+    "fit:reference-dataset": "tsx src/scripts/fitReferenceDataset.ts",
     "validate:assets": "tsx src/scripts/crossValidate.ts",
     "prepublishOnly": "npm run typecheck && npm test && npm run validate:assets && npm run build"
   },

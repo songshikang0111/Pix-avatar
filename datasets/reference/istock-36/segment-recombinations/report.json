@@ -1,0 +1,91 @@
+{
+  "version": "pix-avatar/reference-segment-recombination/v1",
+  "source": "datasets/reference/istock-36/segments",
+  "note": "Sanity-check recombinations of independently extracted reference segment layers. This is visual QA, not the 15% reference-fit metric.",
+  "recipes": [
+    {
+      "id": "mix-01",
+      "face": "avatar-01",
+      "hair": "avatar-03",
+      "clothing": "avatar-07",
+      "accessory": "avatar-11"
+    },
+    {
+      "id": "mix-02",
+      "face": "avatar-04",
+      "hair": "avatar-08",
+      "clothing": "avatar-14",
+      "accessory": "avatar-22"
+    },
+    {
+      "id": "mix-03",
+      "face": "avatar-07",
+      "hair": "avatar-13",
+      "clothing": "avatar-21",
+      "accessory": "avatar-33"
+    },
+    {
+      "id": "mix-04",
+      "face": "avatar-10",
+      "hair": "avatar-18",
+      "clothing": "avatar-28",
+      "accessory": "avatar-08"
+    },
+    {
+      "id": "mix-05",
+      "face": "avatar-13",
+      "hair": "avatar-23",
+      "clothing": "avatar-35",
+      "accessory": "avatar-19"
+    },
+    {
+      "id": "mix-06",
+      "face": "avatar-16",
+      "hair": "avatar-28",
+      "clothing": "avatar-06",
+      "accessory": "avatar-30"
+    },
+    {
+      "id": "mix-07",
+      "face": "avatar-19",
+      "hair": "avatar-33",
+      "clothing": "avatar-13",
+      "accessory": "avatar-05"
+    },
+    {
+      "id": "mix-08",
+      "face": "avatar-22",
+      "hair": "avatar-02",
+      "clothing": "avatar-20",
+      "accessory": "avatar-16"
+    },
+    {
+      "id": "mix-09",
+      "face": "avatar-25",
+      "hair": "avatar-07",
+      "clothing": "avatar-27",
+      "accessory": "avatar-27"
+    },
+    {
+      "id": "mix-10",
+      "face": "avatar-28",
+      "hair": "avatar-12",
+      "clothing": "avatar-34",
+      "accessory": "avatar-02"
+    },
+    {
+      "id": "mix-11",
+      "face": "avatar-31",
+      "hair": "avatar-17",
+      "clothing": "avatar-05",
+      "accessory": "avatar-13"
+    },
+    {
+      "id": "mix-12",
+      "face": "avatar-34",
+      "hair": "avatar-22",
+      "clothing": "avatar-12",
+      "accessory": "avatar-24"
+    }
+  ]
+}

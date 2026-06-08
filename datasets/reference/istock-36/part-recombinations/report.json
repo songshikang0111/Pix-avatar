@@ -1,0 +1,127 @@
+{
+  "version": "pix-avatar/reference-part-recombination/v1",
+  "source": "datasets/reference/istock-36/part-traits",
+  "note": "Visual QA for cross-generalization: mixes only accepted repo-native 32px part-slot assets. Face shape and facial feature slots stay together as a face kit because extracted features are absolute 32px assets.",
+  "ignoredSourcesExcluded": [
+    "avatar-22",
+    "avatar-23",
+    "avatar-24",
+    "avatar-28",
+    "avatar-29",
+    "avatar-30",
+    "avatar-31"
+  ],
+  "recipes": [
+    {
+      "id": "mix-01",
+      "background": "avatar-01",
+      "face": "avatar-02",
+      "hair": "avatar-03",
+      "clothing": "avatar-05",
+      "features": "avatar-02",
+      "glasses": "avatar-27",
+      "headwear": "avatar-26"
+    },
+    {
+      "id": "mix-02",
+      "background": "avatar-03",
+      "face": "avatar-05",
+      "hair": "avatar-08",
+      "clothing": "avatar-12",
+      "features": "avatar-05"
+    },
+    {
+      "id": "mix-03",
+      "background": "avatar-05",
+      "face": "avatar-08",
+      "hair": "avatar-13",
+      "clothing": "avatar-19",
+      "features": "avatar-08",
+      "glasses": "avatar-11"
+    },
+    {
+      "id": "mix-04",
+      "background": "avatar-07",
+      "face": "avatar-11",
+      "hair": "avatar-19",
+      "clothing": "avatar-33",
+      "features": "avatar-11",
+      "headwear": "avatar-17"
+    },
+    {
+      "id": "mix-05",
+      "background": "avatar-09",
+      "face": "avatar-14",
+      "hair": "avatar-36",
+      "clothing": "avatar-04",
+      "features": "avatar-14",
+      "glasses": "avatar-03"
+    },
+    {
+      "id": "mix-06",
+      "background": "avatar-11",
+      "face": "avatar-17",
+      "hair": "avatar-05",
+      "clothing": "avatar-11",
+      "features": "avatar-17"
+    },
+    {
+      "id": "mix-07",
+      "background": "avatar-13",
+      "face": "avatar-20",
+      "hair": "avatar-10",
+      "clothing": "avatar-18",
+      "features": "avatar-20",
+      "glasses": "avatar-18",
+      "headwear": "avatar-10"
+    },
+    {
+      "id": "mix-08",
+      "background": "avatar-15",
+      "face": "avatar-27",
+      "hair": "avatar-15",
+      "clothing": "avatar-32",
+      "features": "avatar-27"
+    },
+    {
+      "id": "mix-09",
+      "background": "avatar-17",
+      "face": "avatar-36",
+      "hair": "avatar-21",
+      "clothing": "avatar-03",
+      "features": "avatar-36",
+      "glasses": "avatar-06"
+    },
+    {
+      "id": "mix-10",
+      "background": "avatar-19",
+      "face": "avatar-03",
+      "hair": "avatar-02",
+      "clothing": "avatar-10",
+      "features": "avatar-03",
+      "headwear": "avatar-20"
+    },
+    {
+      "id": "mix-11",
+      "background": "avatar-21",
+      "face": "avatar-06",
+      "hair": "avatar-07",
+      "clothing": "avatar-17",
+      "features": "avatar-06",
+      "glasses": "avatar-27"
+    },
+    {
+      "id": "mix-12",
+      "background": "avatar-26",
+      "face": "avatar-09",
+      "hair": "avatar-12",
+      "clothing": "avatar-27",
+      "features": "avatar-09"
+    }
+  ],
+  "artifacts": {
+    "contactSheet": "contact-sheet.png",
+    "generatedDir": "generated",
+    "specsDir": "specs"
+  }
+}

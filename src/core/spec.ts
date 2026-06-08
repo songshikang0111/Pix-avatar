@@ -1,5 +1,6 @@
 import { AvatarSpec, TraitMap } from "../types";
 import { DEFAULT_TRAITS, REQUIRED_TRAIT_KEYS, createDefaultSpec, getTraitOption } from "../assets/humanV1";
+import { DEFAULT_OUTPUT_SIZE } from "./geometry";
 
 export function normalizeSpec(input: Partial<AvatarSpec> = {}): AvatarSpec {
   const traits: TraitMap = { ...DEFAULT_TRAITS, ...(input.traits ?? {}) };
@@ -9,7 +10,7 @@ export function normalizeSpec(input: Partial<AvatarSpec> = {}): AvatarSpec {
   return {
     version: "avatar/v1",
     canvas: {
-      size: [40, 40],
+      size: input.canvas?.size ?? [DEFAULT_OUTPUT_SIZE, DEFAULT_OUTPUT_SIZE],
       scale: input.canvas?.scale ?? 12,
       background: input.canvas?.background ?? "transparent"
     },
@@ -28,7 +29,9 @@ export function validateSpecShape(spec: AvatarSpec) {
   const warnings: string[] = [];
   const errors: string[] = [];
   if (spec.version !== "avatar/v1") errors.push(`Unsupported spec version: ${spec.version}`);
-  if (spec.canvas.size[0] !== 40 || spec.canvas.size[1] !== 40) errors.push("Only 40x40 logical canvas is supported in this asset pack.");
+  if (spec.canvas.size[0] !== 32 || spec.canvas.size[1] !== 32) {
+    errors.push("Only 32x32 logical canvases are supported in this asset pack.");
+  }
   if (spec.asset_pack.id !== "human_v1") errors.push(`Unknown asset pack: ${spec.asset_pack.id}`);
 
   for (const [key, value] of Object.entries(spec.traits)) {

@@ -1,4 +1,5 @@
 import { AvatarSpec, HumanPalette, TraitKey, TraitMap, TraitOption } from "../types";
+import { DEFAULT_OUTPUT_SIZE } from "../core/geometry";
 
 export const REQUIRED_TRAIT_KEYS: TraitKey[] = [
   "face.shape",
@@ -45,6 +46,7 @@ export const TRAIT_OPTIONS: TraitOption[] = [
     ["elderly", "Elderly"]
   ]),
   ...options("face.shape", "root", [
+    ["side_oval", "Reference side oval", "Compact three-quarter right cartoon face tuned for the 32px reference set.", ["right_facing", "reference"]],
     ["soft_round", "Soft round", "Wide cheeks with a soft jaw.", ["wide", "soft"]],
     ["oval", "Oval", "Balanced neutral face rig.", ["medium"]],
     ["round", "Round", "Short and friendly rounded face.", ["short", "wide"]],
@@ -71,6 +73,15 @@ export const TRAIT_OPTIONS: TraitOption[] = [
     ["scar_left_cheek", "Left cheek scar"]
   ]),
   ...options("hair.style", "occluder", [
+    ["side_sweep", "Side sweep"],
+    ["clean_crop", "Clean crop"],
+    ["bob", "Bob"],
+    ["curly_cap", "Curly cap"],
+    ["pink_bob", "Pink bob"],
+    ["pigtails", "Pigtails"],
+    ["blue_short", "Blue short"],
+    ["blonde_wave", "Blonde wave"],
+    ["long_side", "Long side"],
     ["buzz_cut", "Buzz cut"],
     ["short_messy", "Short messy"],
     ["bob_bangs", "Bob with bangs"],
@@ -142,8 +153,11 @@ export const TRAIT_OPTIONS: TraitOption[] = [
   ...options("glasses.shape", "mounted", [
     ["none", "None"],
     ["round", "Round"],
+    ["small_round", "Small round"],
     ["square", "Square"],
     ["rectangle", "Rectangle"],
+    ["narrow_rectangle", "Narrow rectangle"],
+    ["thick_square", "Thick square"],
     ["thin_frame", "Thin frame"],
     ["sunglasses", "Sunglasses"]
   ]),
@@ -153,6 +167,7 @@ export const TRAIT_OPTIONS: TraitOption[] = [
     ["mustache_thin", "Thin mustache"],
     ["goatee", "Goatee"],
     ["short_beard", "Short beard"],
+    ["full_beard", "Full beard"],
     ["sideburns", "Sideburns"]
   ]),
   ...options("headwear.type", "occluder", [
@@ -175,6 +190,13 @@ export const TRAIT_OPTIONS: TraitOption[] = [
   ...options("background.style", "background", [
     ["transparent", "Transparent"],
     ["solid", "Solid"],
+    ["mint_flat", "Mint flat"],
+    ["cream_flat", "Cream flat"],
+    ["pink_flat", "Pink flat"],
+    ["sky_flat", "Sky flat"],
+    ["yellow_flat", "Yellow flat"],
+    ["lavender_flat", "Lavender flat"],
+    ["peach_flat", "Peach flat"],
     ["circle", "Circle"],
     ["rounded_square", "Rounded square"],
     ["checker", "Checker"],
@@ -236,7 +258,14 @@ export const HUMAN_PALETTE: HumanPalette = {
   },
   background: {
     transparent: { base: "transparent", accent: "#E8EEF5", shadow: "#CBD5E1" },
-    solid: { base: "#DDEAD8", accent: "#8EBCA0", shadow: "#B7CEBA" },
+    solid: { base: "#BFE8D3", accent: "#8EBCA0", shadow: "#9CC9AD" },
+    mint_flat: { base: "#D9EFC0", accent: "#B7D995", shadow: "#C8E4A8" },
+    cream_flat: { base: "#F3E7A8", accent: "#D8BE75", shadow: "#E3D39B" },
+    pink_flat: { base: "#F875AD", accent: "#E75D99", shadow: "#EC8DBA" },
+    sky_flat: { base: "#80E0E0", accent: "#67AFBC", shadow: "#8BCBD3" },
+    yellow_flat: { base: "#F4E5A3", accent: "#D8BE75", shadow: "#E3D39B" },
+    lavender_flat: { base: "#DAC9F0", accent: "#9277BD", shadow: "#BBA8D8" },
+    peach_flat: { base: "#F1C29D", accent: "#CF8656", shadow: "#DFA77E" },
     circle: { base: "#E8EEF5", accent: "#7C9EC8", shadow: "#C6D3E3" },
     rounded_square: { base: "#F0E4C9", accent: "#C7925B", shadow: "#DDC79E" },
     checker: { base: "#EEF0F2", accent: "#C8CDD4", shadow: "#AEB6C2" },
@@ -245,13 +274,13 @@ export const HUMAN_PALETTE: HumanPalette = {
     aura: { base: "#DBF2EC", accent: "#D9617A", shadow: "#81CBBE" }
   },
   semantic: {
-    "mouth.dark": "#5A2A24",
+    "mouth.dark": "#1B1412",
     "mouth.shadow": "#341412",
     "mouth.teeth": "#FFF4E6",
     "lip.highlight": "#E78A94",
     "blush.soft": "#D66B76",
     "scar.light": "#F2A1A1",
-    "line.dark": "#1B1412",
+    "line.dark": "#151313",
     "debug.grid": "#8EA0B7",
     "debug.anchor": "#FF306E"
   }
@@ -260,22 +289,22 @@ export const HUMAN_PALETTE: HumanPalette = {
 export const DEFAULT_TRAITS: TraitMap = {
   "base.species": "human",
   presentation: "androgynous",
-  "face.shape": "soft_round",
+  "face.shape": "side_oval",
   "skin.tone": "medium_warm_05",
-  "face.detail": "blush_soft",
-  "hair.style": "short_messy",
+  "face.detail": "none",
+  "hair.style": "side_sweep",
   "hair.color": "dark_brown",
-  "eyes.shape": "almond",
+  "eyes.shape": "dot",
   "eyes.color": "brown",
   "eyebrows.shape": "soft_flat",
-  "nose.shape": "button",
+  "nose.shape": "small_line",
   "mouth.shape": "small_smile",
-  "ears.shape": "round",
+  "ears.shape": "small_round",
   "glasses.shape": "none",
   "facial_hair.style": "none",
   "headwear.type": "none",
   "clothing.top": "hoodie",
-  "background.style": "circle"
+  "background.style": "mint_flat"
 };
 
 export function traitOptionsByKey() {
@@ -297,7 +326,7 @@ export function listTraitValues(key: TraitKey | string) {
 export function createDefaultSpec(overrides: TraitMap = {}): AvatarSpec {
   return {
     version: "avatar/v1" as const,
-    canvas: { size: [40, 40] as [number, number], scale: 12, background: "transparent" },
+    canvas: { size: [DEFAULT_OUTPUT_SIZE, DEFAULT_OUTPUT_SIZE] as [number, number], scale: 12, background: "transparent" },
     asset_pack: { id: "human_v1" as const, version: "1.0.0" },
     traits: { ...DEFAULT_TRAITS, ...overrides }
   };

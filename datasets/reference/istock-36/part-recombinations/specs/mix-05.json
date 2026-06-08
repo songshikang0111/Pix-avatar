@@ -1,0 +1,1863 @@
+{
+  "recipe": {
+    "id": "mix-05",
+    "background": "avatar-09",
+    "face": "avatar-14",
+    "hair": "avatar-36",
+    "clothing": "avatar-04",
+    "features": "avatar-14",
+    "glasses": "avatar-03"
+  },
+  "spec": {
+    "version": "avatar/v1",
+    "canvas": {
+      "size": [
+        32,
+        32
+      ],
+      "scale": 12,
+      "background": "transparent"
+    },
+    "asset_pack": {
+      "id": "human_v1",
+      "version": "1.0.0"
+    },
+    "traits": {
+      "base.species": "human",
+      "presentation": "androgynous",
+      "face.shape": "reference_mix_avatar-14",
+      "skin.tone": "medium_warm_05",
+      "face.detail": "none",
+      "hair.style": "reference_mix_avatar-36",
+      "hair.color": "dark_brown",
+      "eyes.shape": "reference_mix_avatar-14",
+      "eyes.color": "brown",
+      "eyebrows.shape": "reference_mix_avatar-14",
+      "nose.shape": "reference_mix_avatar-14",
+      "mouth.shape": "reference_mix_avatar-14",
+      "ears.shape": "reference_mix_avatar-14",
+      "glasses.shape": "reference_mix_avatar-03",
+      "facial_hair.style": "none",
+      "headwear.type": "none",
+      "clothing.top": "reference_mix_avatar-04",
+      "background.style": "reference_mix_avatar-09"
+    },
+    "seed": "reference-part-recombine-mix-05",
+    "patches": [
+      {
+        "op": "rect",
+        "layer": "reference.00.background",
+        "coordSpace": "output",
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32,
+        "color": "#FF80B0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 17,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 18,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 19,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 20,
+        "w": 3,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 21,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 22,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 23,
+        "w": 4,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 24,
+        "w": 5,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 11,
+        "y": 25,
+        "w": 5,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 11,
+        "y": 26,
+        "w": 11,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 27,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 11,
+        "y": 27,
+        "w": 1,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 12,
+        "y": 27,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 14,
+        "y": 27,
+        "w": 1,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 15,
+        "y": 27,
+        "w": 6,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 27,
+        "w": 1,
+        "h": 1,
+        "color": "#D0E0B0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 28,
+        "w": 3,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 28,
+        "w": 2,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 12,
+        "y": 28,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 13,
+        "y": 28,
+        "w": 6,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 19,
+        "y": 28,
+        "w": 4,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 5,
+        "y": 29,
+        "w": 3,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 29,
+        "w": 5,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 13,
+        "y": 29,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 14,
+        "y": 29,
+        "w": 6,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 20,
+        "y": 29,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 22,
+        "y": 29,
+        "w": 1,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 23,
+        "y": 29,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 4,
+        "y": 30,
+        "w": 3,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 30,
+        "w": 7,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 14,
+        "y": 30,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 15,
+        "y": 30,
+        "w": 5,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 20,
+        "y": 30,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 30,
+        "w": 3,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 24,
+        "y": 30,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 4,
+        "y": 31,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 5,
+        "y": 31,
+        "w": 10,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 15,
+        "y": 31,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 16,
+        "y": 31,
+        "w": 4,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 20,
+        "y": 31,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 31,
+        "w": 5,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.10.clothing",
+        "coordSpace": "output",
+        "x": 26,
+        "y": 31,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 1,
+        "y": 20,
+        "w": 1,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 2,
+        "y": 20,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 0,
+        "y": 21,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 0,
+        "y": 22,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 31,
+        "y": 22,
+        "w": 1,
+        "h": 1,
+        "color": "#809070"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 0,
+        "y": 23,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 0,
+        "y": 24,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 1,
+        "y": 16,
+        "w": 1,
+        "h": 1,
+        "color": "#B0B080"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 6,
+        "y": 16,
+        "w": 3,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 2,
+        "y": 19,
+        "w": 1,
+        "h": 1,
+        "color": "#D0E0B0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 6,
+        "y": 13,
+        "w": 2,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 6,
+        "y": 14,
+        "w": 3,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.20.ears",
+        "coordSpace": "output",
+        "x": 6,
+        "y": 15,
+        "w": 3,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 16,
+        "y": 7,
+        "w": 1,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 25,
+        "y": 7,
+        "w": 1,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 16,
+        "y": 8,
+        "w": 1,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 24,
+        "y": 8,
+        "w": 2,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 15,
+        "y": 9,
+        "w": 1,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 20,
+        "y": 9,
+        "w": 2,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 20,
+        "y": 10,
+        "w": 2,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 14,
+        "y": 11,
+        "w": 12,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 12,
+        "y": 12,
+        "w": 14,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 12,
+        "y": 13,
+        "w": 3,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 16,
+        "y": 13,
+        "w": 1,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 18,
+        "y": 13,
+        "w": 6,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 11,
+        "y": 14,
+        "w": 3,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 19,
+        "y": 14,
+        "w": 3,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 15,
+        "w": 6,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 18,
+        "y": 15,
+        "w": 4,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 25,
+        "y": 15,
+        "w": 1,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 9,
+        "y": 16,
+        "w": 13,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 22,
+        "y": 16,
+        "w": 1,
+        "h": 1,
+        "color": "#FFFFFF"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 23,
+        "y": 16,
+        "w": 3,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 17,
+        "w": 11,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 22,
+        "y": 17,
+        "w": 4,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 18,
+        "w": 11,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 22,
+        "y": 18,
+        "w": 4,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 19,
+        "w": 11,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 22,
+        "y": 19,
+        "w": 4,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 20,
+        "w": 12,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 23,
+        "y": 20,
+        "w": 3,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 11,
+        "y": 21,
+        "w": 14,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 12,
+        "y": 22,
+        "w": 5,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 22,
+        "w": 4,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 13,
+        "y": 23,
+        "w": 11,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 14,
+        "y": 24,
+        "w": 9,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.30.face",
+        "coordSpace": "output",
+        "x": 15,
+        "y": 25,
+        "w": 7,
+        "h": 1,
+        "color": "#F0F0E0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 12,
+        "y": 3,
+        "w": 10,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 4,
+        "w": 13,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 5,
+        "w": 16,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 6,
+        "w": 18,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 6,
+        "y": 7,
+        "w": 21,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 6,
+        "y": 8,
+        "w": 9,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 15,
+        "y": 8,
+        "w": 2,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 17,
+        "y": 8,
+        "w": 10,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 6,
+        "y": 9,
+        "w": 7,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 13,
+        "y": 9,
+        "w": 4,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 17,
+        "y": 9,
+        "w": 10,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 6,
+        "y": 10,
+        "w": 6,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 12,
+        "y": 10,
+        "w": 14,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 26,
+        "y": 10,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 6,
+        "y": 11,
+        "w": 5,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 11,
+        "y": 11,
+        "w": 15,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 26,
+        "y": 11,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 5,
+        "y": 12,
+        "w": 5,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 12,
+        "y": 12,
+        "w": 9,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 12,
+        "w": 1,
+        "h": 1,
+        "color": "#504040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 22,
+        "y": 12,
+        "w": 6,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 4,
+        "y": 13,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 5,
+        "y": 13,
+        "w": 2,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 13,
+        "w": 7,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 18,
+        "y": 13,
+        "w": 4,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 27,
+        "y": 13,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 4,
+        "y": 14,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 5,
+        "y": 14,
+        "w": 2,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 14,
+        "w": 6,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 18,
+        "y": 14,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 14,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 27,
+        "y": 14,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 4,
+        "y": 15,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 5,
+        "y": 15,
+        "w": 2,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 15,
+        "w": 3,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 12,
+        "y": 15,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 18,
+        "y": 15,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 15,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 27,
+        "y": 15,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 4,
+        "y": 16,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 5,
+        "y": 16,
+        "w": 2,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 16,
+        "w": 3,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 12,
+        "y": 16,
+        "w": 8,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 16,
+        "w": 7,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 4,
+        "y": 17,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 5,
+        "y": 17,
+        "w": 2,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 17,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 9,
+        "y": 17,
+        "w": 1,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 17,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 26,
+        "y": 17,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 5,
+        "y": 18,
+        "w": 2,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 18,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 9,
+        "y": 18,
+        "w": 1,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 18,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 25,
+        "y": 18,
+        "w": 1,
+        "h": 1,
+        "color": "#504040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 26,
+        "y": 18,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 5,
+        "y": 19,
+        "w": 3,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 19,
+        "w": 2,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 19,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 25,
+        "y": 19,
+        "w": 1,
+        "h": 1,
+        "color": "#504040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 26,
+        "y": 19,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 20,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 20,
+        "w": 2,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 26,
+        "y": 20,
+        "w": 1,
+        "h": 1,
+        "color": "#501020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 7,
+        "y": 21,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.40.hair",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 21,
+        "w": 2,
+        "h": 1,
+        "color": "#805040"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.50.eyes",
+        "coordSpace": "output",
+        "x": 16,
+        "y": 15,
+        "w": 2,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.50.eyes",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 17,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.50.eyes",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 18,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.55.eyebrows",
+        "coordSpace": "output",
+        "x": 10,
+        "y": 10,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.55.eyebrows",
+        "coordSpace": "output",
+        "x": 11,
+        "y": 12,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.55.eyebrows",
+        "coordSpace": "output",
+        "x": 11,
+        "y": 13,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.55.eyebrows",
+        "coordSpace": "output",
+        "x": 15,
+        "y": 13,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.55.eyebrows",
+        "coordSpace": "output",
+        "x": 17,
+        "y": 13,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.55.eyebrows",
+        "coordSpace": "output",
+        "x": 14,
+        "y": 14,
+        "w": 5,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.60.nose",
+        "coordSpace": "output",
+        "x": 21,
+        "y": 19,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.60.nose",
+        "coordSpace": "output",
+        "x": 22,
+        "y": 20,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.60.nose",
+        "coordSpace": "output",
+        "x": 25,
+        "y": 21,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.60.nose",
+        "coordSpace": "output",
+        "x": 17,
+        "y": 22,
+        "w": 4,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.60.nose",
+        "coordSpace": "output",
+        "x": 25,
+        "y": 22,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.60.nose",
+        "coordSpace": "output",
+        "x": 27,
+        "y": 22,
+        "w": 1,
+        "h": 1,
+        "color": "#202000"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.65.mouth",
+        "coordSpace": "output",
+        "x": 23,
+        "y": 24,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.65.mouth",
+        "coordSpace": "output",
+        "x": 22,
+        "y": 25,
+        "w": 1,
+        "h": 1,
+        "color": "#202020"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.75.glasses",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 12,
+        "w": 3,
+        "h": 1,
+        "color": "#FF80B0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.75.glasses",
+        "coordSpace": "output",
+        "x": 11,
+        "y": 12,
+        "w": 1,
+        "h": 1,
+        "color": "#A04070"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.75.glasses",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 13,
+        "w": 3,
+        "h": 1,
+        "color": "#FF80B0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.75.glasses",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 14,
+        "w": 1,
+        "h": 1,
+        "color": "#FF80B0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.75.glasses",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 15,
+        "w": 1,
+        "h": 1,
+        "color": "#FF80B0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.75.glasses",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 16,
+        "w": 1,
+        "h": 1,
+        "color": "#FF80B0"
+      },
+      {
+        "op": "rect",
+        "layer": "reference.75.glasses",
+        "coordSpace": "output",
+        "x": 8,
+        "y": 17,
+        "w": 1,
+        "h": 1,
+        "color": "#FF80B0"
+      }
+    ]
+  },
+  "warnings": [
+    "Unknown trait face.shape=reference_mix_avatar-14; default drawing fallback may be used.",
+    "Unknown trait hair.style=reference_mix_avatar-36; default drawing fallback may be used.",
+    "Unknown trait eyes.shape=reference_mix_avatar-14; default drawing fallback may be used.",
+    "Unknown trait eyebrows.shape=reference_mix_avatar-14; default drawing fallback may be used.",
+    "Unknown trait nose.shape=reference_mix_avatar-14; default drawing fallback may be used.",
+    "Unknown trait mouth.shape=reference_mix_avatar-14; default drawing fallback may be used.",
+    "Unknown trait ears.shape=reference_mix_avatar-14; default drawing fallback may be used.",
+    "Unknown trait glasses.shape=reference_mix_avatar-03; default drawing fallback may be used.",
+    "Unknown trait clothing.top=reference_mix_avatar-04; default drawing fallback may be used.",
+    "Unknown trait background.style=reference_mix_avatar-09; default drawing fallback may be used.",
+    "ears.shape.reference_mix_avatar-14.left has low socket overlap: 0px",
+    "ears.shape.reference_mix_avatar-14.right has low socket overlap: 0px"
+  ]
+}

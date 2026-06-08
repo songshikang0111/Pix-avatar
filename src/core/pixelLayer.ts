@@ -5,17 +5,40 @@ import { zForLayer } from "./layers";
 export class MutableLayer implements RenderLayer {
   id: string;
   z: number;
+  width: number;
+  height: number;
+  private designWidth: number;
+  private designHeight: number;
   pixels = new Map<string, PixelCell>();
 
-  constructor(id: string, z = zForLayer(id)) {
+  constructor(id: string, z = zForLayer(id), width = CANVAS_SIZE, height = CANVAS_SIZE, designWidth = CANVAS_SIZE, designHeight = CANVAS_SIZE) {
     this.id = id;
     this.z = z;
+    this.width = width;
+    this.height = height;
+    this.designWidth = designWidth;
+    this.designHeight = designHeight;
   }
 
   set(x: number, y: number, color: string, meta: Partial<PixelMeta> = {}, clip?: Mask) {
     const px = Math.round(x);
     const py = Math.round(y);
-    if (!inBounds(px, py) || !maskHas(clip, px, py) || color === "transparent") return;
+    if (!inBounds(px, py, this.designWidth, this.designHeight) || !maskHas(clip, px, py) || color === "transparent") return;
+    const [mappedX, mappedY] = this.mapPoint(px, py);
+    if (!inBounds(mappedX, mappedY, this.width, this.height)) return;
+    const key = keyOf(mappedX, mappedY);
+    this.pixels.set(key, {
+      x: mappedX,
+      y: mappedY,
+      color,
+      meta: { layer: this.id, ...meta }
+    });
+  }
+
+  setOutput(x: number, y: number, color: string, meta: Partial<PixelMeta> = {}) {
+    const px = Math.round(x);
+    const py = Math.round(y);
+    if (!inBounds(px, py, this.width, this.height) || color === "transparent") return;
     const key = keyOf(px, py);
     this.pixels.set(key, {
       x: px,
@@ -28,7 +51,10 @@ export class MutableLayer implements RenderLayer {
   erase(x: number, y: number, w = 1, h = 1, clip?: Mask) {
     for (let yy = y; yy < y + h; yy += 1) {
       for (let xx = x; xx < x + w; xx += 1) {
-        if (maskHas(clip, xx, yy)) this.pixels.delete(keyOf(xx, yy));
+        if (maskHas(clip, xx, yy)) {
+          const [mappedX, mappedY] = this.mapPoint(xx, yy);
+          this.pixels.delete(keyOf(mappedX, mappedY));
+        }
       }
     }
   }
@@ -44,15 +70,25 @@ export class MutableLayer implements RenderLayer {
   bbox(): Box | undefined {
     return bboxFromPoints([...this.pixels.values()].map((cell) => [cell.x, cell.y] as Point));
   }
+
+  private mapPoint(x: number, y: number): Point {
+    if (this.width === this.designWidth && this.height === this.designHeight) return [x, y];
+    return [
+      Math.min(this.width - 1, Math.max(0, Math.floor((x / this.designWidth) * this.width))),
+      Math.min(this.height - 1, Math.max(0, Math.floor((y / this.designHeight) * this.height)))
+    ];
+  }
 }
 
 export class LayerStack {
   private layers = new Map<string, MutableLayer>();
 
+  constructor(private width = CANVAS_SIZE, private height = CANVAS_SIZE, private designWidth = CANVAS_SIZE, private designHeight = CANVAS_SIZE) {}
+
   get(id: string, z = zForLayer(id)) {
     let layer = this.layers.get(id);
     if (!layer) {
-      layer = new MutableLayer(id, z);
+      layer = new MutableLayer(id, z, this.width, this.height, this.designWidth, this.designHeight);
       this.layers.set(id, layer);
     }
     return layer;

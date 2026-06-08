@@ -1,0 +1,2657 @@
+{
+  "version": "pix-avatar/generator-reference-fit/v1",
+  "dataset": "istock-36",
+  "canvas": {
+    "size": [
+      32,
+      32
+    ],
+    "comparableTo": "renderAvatar(...).image via pixelImageToMatrix, then resizeMatrixDominant to this canvas size"
+  },
+  "source": {
+    "type": "referenceFitSpecs"
+  },
+  "metric": {
+    "direction": "lower_is_better",
+    "weights": {
+      "foregroundF1Loss": 0.38,
+      "edgeF1Loss": 0.32,
+      "inkF1Loss": 0.22,
+      "rgbRmseNorm": 0.08
+    },
+    "rationale": "Foreground, edge, and ink masks de-emphasize exact color and directly reward matching silhouette, hair/accessory mass, facial feature linework, and readable outlines."
+  },
+  "aggregate": {
+    "entries": 36,
+    "score": 0.3929562125402895,
+    "pixelDiffRate": 0.9510985323431069,
+    "globalPixelDiffRate": 0.9502049880423642,
+    "foregroundF1": 0.8782609488512418,
+    "edgeF1": 0.39609027998521024,
+    "inkF1": 0.4372327410238026,
+    "rgbRmse": 163.61479683500474,
+    "rgbRmseNorm": 0.3704433215533174,
+    "foregroundPixelDelta": 85.80555555555556,
+    "ignoredPixels": 1740
+  },
+  "artifacts": {
+    "generatedContactSheet": "generated-contact-sheet.png",
+    "referenceContactSheet": "reference-contact-sheet.png",
+    "diffContactSheet": "diff-contact-sheet.png",
+    "generatedDir": "generated",
+    "diffsDir": "diffs",
+    "specsDir": "specs"
+  },
+  "worst": [
+    {
+      "id": "avatar-14",
+      "score": 0.4866736754118775,
+      "pixelDiffRate": 1,
+      "foregroundF1": 0.82,
+      "edgeF1": 0.2882882882882883,
+      "inkF1": 0.2772727272727273,
+      "rgbRmseNorm": 0.394074095801622,
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "blonde_wave",
+        "hair.color": "blonde",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "small_round",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "yellow_flat"
+      }
+    },
+    {
+      "id": "avatar-24",
+      "score": 0.4830166977970556,
+      "pixelDiffRate": 1,
+      "foregroundF1": 0.8721461187214612,
+      "edgeF1": 0.35761589403973504,
+      "inkF1": 0.10309278350515465,
+      "rgbRmseNorm": 0.39437151718825103,
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "blush_soft",
+        "hair.style": "blonde_wave",
+        "hair.color": "blonde",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "yellow_flat"
+      }
+    },
+    {
+      "id": "avatar-05",
+      "score": 0.46751182340037867,
+      "pixelDiffRate": 0.677734375,
+      "foregroundF1": 0.8742903487429035,
+      "edgeF1": 0.3045685279187817,
+      "inkF1": 0.2389937106918239,
+      "rgbRmseNorm": 0.3722837651111671,
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "pink_bob",
+        "hair.color": "pink",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "big_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "thin_frame",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-11",
+      "score": 0.46294162290250274,
+      "pixelDiffRate": 1,
+      "foregroundF1": 0.8647798742138364,
+      "edgeF1": 0.28837209302325584,
+      "inkF1": 0.3050847457627119,
+      "rgbRmseNorm": 0.3869461117374882,
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "pink_bob",
+        "hair.color": "pink",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "big_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "sunglasses",
+        "facial_hair.style": "goatee",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "cream_flat"
+      }
+    },
+    {
+      "id": "avatar-12",
+      "score": 0.4619758843074109,
+      "pixelDiffRate": 1,
+      "foregroundF1": 0.8655387355298308,
+      "edgeF1": 0.3121951219512195,
+      "inkF1": 0.2757009345794392,
+      "rgbRmseNorm": 0.39296560550766807,
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "blue_short",
+        "hair.color": "blue",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "frown",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "yellow_flat"
+      }
+    },
+    {
+      "id": "avatar-26",
+      "score": 0.45146978713839786,
+      "pixelDiffRate": 1,
+      "foregroundF1": 0.8849693251533742,
+      "edgeF1": 0.2982456140350877,
+      "inkF1": 0.2982005141388175,
+      "rgbRmseNorm": 0.3600105037306,
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "blush_soft",
+        "hair.style": "pigtails",
+        "hair.color": "pink",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "cream_flat"
+      }
+    },
+    {
+      "id": "avatar-31",
+      "score": 0.4474574581274546,
+      "pixelDiffRate": 0.6643518518518519,
+      "foregroundF1": 0.8745098039215686,
+      "edgeF1": 0.37499999999999994,
+      "inkF1": 0.22522522522522526,
+      "rgbRmseNorm": 0.36650916459000243,
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "blue_short",
+        "hair.color": "blue",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "thin_frame",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-06",
+      "score": 0.4383330083678397,
+      "pixelDiffRate": 1,
+      "foregroundF1": 0.8316100443131463,
+      "edgeF1": 0.2869955156950673,
+      "inkF1": 0.47058823529411764,
+      "rgbRmseNorm": 0.37141002492453423,
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "blush_soft",
+        "hair.style": "bob",
+        "hair.color": "dark_brown",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "small_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "yellow_flat"
+      }
+    }
+  ],
+  "entries": [
+    {
+      "id": "avatar-01",
+      "spec": "specs/avatar-01.json",
+      "generated": "generated/avatar-01.png",
+      "diff": "diffs/avatar-01.png",
+      "score": 0.4193162113302526,
+      "alignment": {
+        "dx": -1,
+        "dy": 0
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 667,
+          "scoredPixels": 1024,
+          "diffRate": 0.6513671875
+        },
+        "foreground": {
+          "precision": 0.7301829268292683,
+          "recall": 0.9775510204081632,
+          "f1": 0.8359511343804538,
+          "intersection": 479,
+          "generated": 656,
+          "reference": 490
+        },
+        "edge": {
+          "precision": 0.3465346534653465,
+          "recall": 0.36082474226804123,
+          "f1": 0.3535353535353536,
+          "intersection": 35,
+          "generated": 101,
+          "reference": 97
+        },
+        "ink": {
+          "precision": 0.4240506329113924,
+          "recall": 0.48905109489051096,
+          "f1": 0.4542372881355932,
+          "intersection": 134,
+          "generated": 316,
+          "reference": 274
+        },
+        "rgbRmse": 165.85459322475816,
+        "rgbRmseNorm": 0.37551448644960783,
+        "foregroundPixelDelta": 166,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "side_sweep",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "small_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "jacket",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-02",
+      "spec": "specs/avatar-02.json",
+      "generated": "generated/avatar-02.png",
+      "diff": "diffs/avatar-02.png",
+      "score": 0.3957503267395895,
+      "alignment": {
+        "dx": 0,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.8210702341137124,
+          "recall": 0.958984375,
+          "f1": 0.8846846846846848,
+          "intersection": 491,
+          "generated": 598,
+          "reference": 512
+        },
+        "edge": {
+          "precision": 0.39,
+          "recall": 0.39,
+          "f1": 0.39,
+          "intersection": 39,
+          "generated": 100,
+          "reference": 100
+        },
+        "ink": {
+          "precision": 0.3758169934640523,
+          "recall": 0.5227272727272727,
+          "f1": 0.43726235741444863,
+          "intersection": 115,
+          "generated": 306,
+          "reference": 220
+        },
+        "rgbRmse": 181.79383390774012,
+        "rgbRmseNorm": 0.4116028193868544,
+        "foregroundPixelDelta": 86,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "clean_crop",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "mint_flat"
+      }
+    },
+    {
+      "id": "avatar-03",
+      "spec": "specs/avatar-03.json",
+      "generated": "generated/avatar-03.png",
+      "diff": "diffs/avatar-03.png",
+      "score": 0.41510144759278306,
+      "alignment": {
+        "dx": 0,
+        "dy": 0
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9701986754966887,
+          "recall": 0.7855227882037533,
+          "f1": 0.8681481481481481,
+          "intersection": 586,
+          "generated": 604,
+          "reference": 746
+        },
+        "edge": {
+          "precision": 0.3979591836734694,
+          "recall": 0.31451612903225806,
+          "f1": 0.3513513513513513,
+          "intersection": 39,
+          "generated": 98,
+          "reference": 124
+        },
+        "ink": {
+          "precision": 0.4424778761061947,
+          "recall": 0.36496350364963503,
+          "f1": 0.4,
+          "intersection": 100,
+          "generated": 226,
+          "reference": 274
+        },
+        "rgbRmse": 140.39776432180997,
+        "rgbRmseNorm": 0.3178772040188966,
+        "foregroundPixelDelta": -142,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "none",
+        "hair.style": "pink_bob",
+        "hair.color": "pink",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "sunglasses",
+        "facial_hair.style": "none",
+        "headwear.type": "headphones",
+        "clothing.top": "tshirt",
+        "background.style": "cream_flat"
+      }
+    },
+    {
+      "id": "avatar-04",
+      "spec": "specs/avatar-04.json",
+      "generated": "generated/avatar-04.png",
+      "diff": "diffs/avatar-04.png",
+      "score": 0.358140542773192,
+      "alignment": {
+        "dx": 0,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.8373287671232876,
+          "recall": 0.9421965317919075,
+          "f1": 0.8866727107887579,
+          "intersection": 489,
+          "generated": 584,
+          "reference": 519
+        },
+        "edge": {
+          "precision": 0.4375,
+          "recall": 0.4421052631578947,
+          "f1": 0.43979057591623033,
+          "intersection": 42,
+          "generated": 96,
+          "reference": 95
+        },
+        "ink": {
+          "precision": 0.4838709677419355,
+          "recall": 0.5978260869565217,
+          "f1": 0.5348460291734197,
+          "intersection": 165,
+          "generated": 341,
+          "reference": 276
+        },
+        "rgbRmse": 184.81409314074915,
+        "rgbRmseNorm": 0.41844104480332583,
+        "foregroundPixelDelta": 65,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "bob",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "small_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "mint_flat"
+      }
+    },
+    {
+      "id": "avatar-05",
+      "spec": "specs/avatar-05.json",
+      "generated": "generated/avatar-05.png",
+      "diff": "diffs/avatar-05.png",
+      "score": 0.46751182340037867,
+      "alignment": {
+        "dx": 0,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 694,
+          "scoredPixels": 1024,
+          "diffRate": 0.677734375
+        },
+        "foreground": {
+          "precision": 0.922945205479452,
+          "recall": 0.8305084745762712,
+          "f1": 0.8742903487429035,
+          "intersection": 539,
+          "generated": 584,
+          "reference": 649
+        },
+        "edge": {
+          "precision": 0.3125,
+          "recall": 0.297029702970297,
+          "f1": 0.3045685279187817,
+          "intersection": 30,
+          "generated": 96,
+          "reference": 101
+        },
+        "ink": {
+          "precision": 0.2857142857142857,
+          "recall": 0.20540540540540542,
+          "f1": 0.2389937106918239,
+          "intersection": 38,
+          "generated": 133,
+          "reference": 185
+        },
+        "rgbRmse": 164.42767098142272,
+        "rgbRmseNorm": 0.3722837651111671,
+        "foregroundPixelDelta": -65,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "pink_bob",
+        "hair.color": "pink",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "big_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "thin_frame",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-06",
+      "spec": "specs/avatar-06.json",
+      "generated": "generated/avatar-06.png",
+      "diff": "diffs/avatar-06.png",
+      "score": 0.4383330083678397,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.964041095890411,
+          "recall": 0.7311688311688311,
+          "f1": 0.8316100443131463,
+          "intersection": 563,
+          "generated": 584,
+          "reference": 770
+        },
+        "edge": {
+          "precision": 0.3333333333333333,
+          "recall": 0.25196850393700787,
+          "f1": 0.2869955156950673,
+          "intersection": 32,
+          "generated": 96,
+          "reference": 127
+        },
+        "ink": {
+          "precision": 0.5013333333333333,
+          "recall": 0.44339622641509435,
+          "f1": 0.47058823529411764,
+          "intersection": 188,
+          "generated": 375,
+          "reference": 424
+        },
+        "rgbRmse": 164.04176357047768,
+        "rgbRmseNorm": 0.37141002492453423,
+        "foregroundPixelDelta": -186,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "blush_soft",
+        "hair.style": "bob",
+        "hair.color": "dark_brown",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "small_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "yellow_flat"
+      }
+    },
+    {
+      "id": "avatar-07",
+      "spec": "specs/avatar-07.json",
+      "generated": "generated/avatar-07.png",
+      "diff": "diffs/avatar-07.png",
+      "score": 0.3750288956918681,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.8079470198675497,
+          "recall": 0.9818913480885312,
+          "f1": 0.8864668483197095,
+          "intersection": 488,
+          "generated": 604,
+          "reference": 497
+        },
+        "edge": {
+          "precision": 0.42424242424242425,
+          "recall": 0.4375,
+          "f1": 0.43076923076923074,
+          "intersection": 42,
+          "generated": 99,
+          "reference": 96
+        },
+        "ink": {
+          "precision": 0.4433497536945813,
+          "recall": 0.4166666666666667,
+          "f1": 0.4295942720763724,
+          "intersection": 90,
+          "generated": 203,
+          "reference": 216
+        },
+        "rgbRmse": 133.84452705237894,
+        "rgbRmseNorm": 0.30303989695391814,
+        "foregroundPixelDelta": 107,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "none",
+        "hair.style": "clean_crop",
+        "hair.color": "brown",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "sunglasses",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "hoodie",
+        "background.style": "pink_flat"
+      }
+    },
+    {
+      "id": "avatar-08",
+      "spec": "specs/avatar-08.json",
+      "generated": "generated/avatar-08.png",
+      "diff": "diffs/avatar-08.png",
+      "score": 0.30912174380199614,
+      "alignment": {
+        "dx": -1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.951304347826087,
+          "recall": 0.9366438356164384,
+          "f1": 0.9439171699741157,
+          "intersection": 547,
+          "generated": 575,
+          "reference": 584
+        },
+        "edge": {
+          "precision": 0.6363636363636364,
+          "recall": 0.5575221238938053,
+          "f1": 0.5943396226415094,
+          "intersection": 63,
+          "generated": 99,
+          "reference": 113
+        },
+        "ink": {
+          "precision": 0.4772727272727273,
+          "recall": 0.3870967741935484,
+          "f1": 0.42748091603053434,
+          "intersection": 84,
+          "generated": 176,
+          "reference": 217
+        },
+        "rgbRmse": 176.91623856715358,
+        "rgbRmseNorm": 0.4005593645520085,
+        "foregroundPixelDelta": -9,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "buzz_cut",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "cap",
+        "clothing.top": "tshirt",
+        "background.style": "mint_flat"
+      }
+    },
+    {
+      "id": "avatar-09",
+      "spec": "specs/avatar-09.json",
+      "generated": "generated/avatar-09.png",
+      "diff": "diffs/avatar-09.png",
+      "score": 0.4025754443142679,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.7667731629392971,
+          "recall": 0.967741935483871,
+          "f1": 0.8556149732620322,
+          "intersection": 480,
+          "generated": 626,
+          "reference": 496
+        },
+        "edge": {
+          "precision": 0.37254901960784315,
+          "recall": 0.3917525773195876,
+          "f1": 0.3819095477386935,
+          "intersection": 38,
+          "generated": 102,
+          "reference": 97
+        },
+        "ink": {
+          "precision": 0.40307692307692305,
+          "recall": 0.5622317596566524,
+          "f1": 0.46953405017921146,
+          "intersection": 131,
+          "generated": 325,
+          "reference": 233
+        },
+        "rgbRmse": 183.39188902712547,
+        "rgbRmseNorm": 0.4152210058706073,
+        "foregroundPixelDelta": 130,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "side_sweep",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "cream_flat"
+      }
+    },
+    {
+      "id": "avatar-10",
+      "spec": "specs/avatar-10.json",
+      "generated": "generated/avatar-10.png",
+      "diff": "diffs/avatar-10.png",
+      "score": 0.3653658917552241,
+      "alignment": {
+        "dx": 1,
+        "dy": 0
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9122516556291391,
+          "recall": 0.9276094276094277,
+          "f1": 0.9198664440734559,
+          "intersection": 551,
+          "generated": 604,
+          "reference": 594
+        },
+        "edge": {
+          "precision": 0.5,
+          "recall": 0.4298245614035088,
+          "f1": 0.46226415094339623,
+          "intersection": 49,
+          "generated": 98,
+          "reference": 114
+        },
+        "ink": {
+          "precision": 0.4648648648648649,
+          "recall": 0.3453815261044177,
+          "f1": 0.39631336405529954,
+          "intersection": 86,
+          "generated": 185,
+          "reference": 249
+        },
+        "rgbRmse": 165.78530567612137,
+        "rgbRmseNorm": 0.37535761121487476,
+        "foregroundPixelDelta": 10,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "pink_bob",
+        "hair.color": "pink",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "narrow_rectangle",
+        "facial_hair.style": "none",
+        "headwear.type": "headphones",
+        "clothing.top": "tshirt",
+        "background.style": "mint_flat"
+      }
+    },
+    {
+      "id": "avatar-11",
+      "spec": "specs/avatar-11.json",
+      "generated": "generated/avatar-11.png",
+      "diff": "diffs/avatar-11.png",
+      "score": 0.46294162290250274,
+      "alignment": {
+        "dx": -1,
+        "dy": 0
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9105960264900662,
+          "recall": 0.8233532934131736,
+          "f1": 0.8647798742138364,
+          "intersection": 550,
+          "generated": 604,
+          "reference": 668
+        },
+        "edge": {
+          "precision": 0.3163265306122449,
+          "recall": 0.26495726495726496,
+          "f1": 0.28837209302325584,
+          "intersection": 31,
+          "generated": 98,
+          "reference": 117
+        },
+        "ink": {
+          "precision": 0.3888888888888889,
+          "recall": 0.250996015936255,
+          "f1": 0.3050847457627119,
+          "intersection": 63,
+          "generated": 162,
+          "reference": 251
+        },
+        "rgbRmse": 170.90363295674115,
+        "rgbRmseNorm": 0.3869461117374882,
+        "foregroundPixelDelta": -64,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "pink_bob",
+        "hair.color": "pink",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "big_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "sunglasses",
+        "facial_hair.style": "goatee",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "cream_flat"
+      }
+    },
+    {
+      "id": "avatar-12",
+      "spec": "specs/avatar-12.json",
+      "generated": "generated/avatar-12.png",
+      "diff": "diffs/avatar-12.png",
+      "score": 0.4619758843074109,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.7928221859706363,
+          "recall": 0.9529411764705882,
+          "f1": 0.8655387355298308,
+          "intersection": 486,
+          "generated": 613,
+          "reference": 510
+        },
+        "edge": {
+          "precision": 0.3106796116504854,
+          "recall": 0.3137254901960784,
+          "f1": 0.3121951219512195,
+          "intersection": 32,
+          "generated": 103,
+          "reference": 102
+        },
+        "ink": {
+          "precision": 0.3933333333333333,
+          "recall": 0.21223021582733814,
+          "f1": 0.2757009345794392,
+          "intersection": 59,
+          "generated": 150,
+          "reference": 278
+        },
+        "rgbRmse": 173.56228056341908,
+        "rgbRmseNorm": 0.39296560550766807,
+        "foregroundPixelDelta": 103,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "blue_short",
+        "hair.color": "blue",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "frown",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "yellow_flat"
+      }
+    },
+    {
+      "id": "avatar-13",
+      "spec": "specs/avatar-13.json",
+      "generated": "generated/avatar-13.png",
+      "diff": "diffs/avatar-13.png",
+      "score": 0.4233554245047337,
+      "alignment": {
+        "dx": -1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.6964856230031949,
+          "recall": 0.9886621315192744,
+          "f1": 0.8172446110590441,
+          "intersection": 436,
+          "generated": 626,
+          "reference": 441
+        },
+        "edge": {
+          "precision": 0.29411764705882354,
+          "recall": 0.35714285714285715,
+          "f1": 0.3225806451612903,
+          "intersection": 30,
+          "generated": 102,
+          "reference": 84
+        },
+        "ink": {
+          "precision": 0.3805774278215223,
+          "recall": 0.6712962962962963,
+          "f1": 0.4857621440536013,
+          "intersection": 145,
+          "generated": 381,
+          "reference": 216
+        },
+        "rgbRmse": 132.51212724572608,
+        "rgbRmseNorm": 0.30002318563219565,
+        "foregroundPixelDelta": 185,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "none",
+        "hair.style": "side_sweep",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "small_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "pink_flat"
+      }
+    },
+    {
+      "id": "avatar-14",
+      "spec": "specs/avatar-14.json",
+      "generated": "generated/avatar-14.png",
+      "diff": "diffs/avatar-14.png",
+      "score": 0.4866736754118775,
+      "alignment": {
+        "dx": 1,
+        "dy": 0
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.889922480620155,
+          "recall": 0.7602649006622516,
+          "f1": 0.82,
+          "intersection": 574,
+          "generated": 645,
+          "reference": 755
+        },
+        "edge": {
+          "precision": 0.31683168316831684,
+          "recall": 0.2644628099173554,
+          "f1": 0.2882882882882883,
+          "intersection": 32,
+          "generated": 101,
+          "reference": 121
+        },
+        "ink": {
+          "precision": 0.4236111111111111,
+          "recall": 0.20608108108108109,
+          "f1": 0.2772727272727273,
+          "intersection": 61,
+          "generated": 144,
+          "reference": 296
+        },
+        "rgbRmse": 174.0518707481695,
+        "rgbRmseNorm": 0.394074095801622,
+        "foregroundPixelDelta": -110,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "blonde_wave",
+        "hair.color": "blonde",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "small_round",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "yellow_flat"
+      }
+    },
+    {
+      "id": "avatar-15",
+      "spec": "specs/avatar-15.json",
+      "generated": "generated/avatar-15.png",
+      "diff": "diffs/avatar-15.png",
+      "score": 0.3234336224033926,
+      "alignment": {
+        "dx": 0,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9530434782608695,
+          "recall": 0.924114671163575,
+          "f1": 0.9383561643835616,
+          "intersection": 548,
+          "generated": 575,
+          "reference": 593
+        },
+        "edge": {
+          "precision": 0.5656565656565656,
+          "recall": 0.49122807017543857,
+          "f1": 0.5258215962441315,
+          "intersection": 56,
+          "generated": 99,
+          "reference": 114
+        },
+        "ink": {
+          "precision": 0.39655172413793105,
+          "recall": 0.5082872928176796,
+          "f1": 0.4455205811138015,
+          "intersection": 92,
+          "generated": 232,
+          "reference": 181
+        },
+        "rgbRmse": 145.12491925062352,
+        "rgbRmseNorm": 0.3285800439038047,
+        "foregroundPixelDelta": -18,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "none",
+        "hair.style": "buzz_cut",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "small_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "cap",
+        "clothing.top": "tshirt",
+        "background.style": "pink_flat"
+      }
+    },
+    {
+      "id": "avatar-16",
+      "spec": "specs/avatar-16.json",
+      "generated": "generated/avatar-16.png",
+      "diff": "diffs/avatar-16.png",
+      "score": 0.40998165398232916,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.96,
+          "recall": 0.7761966364812419,
+          "f1": 0.8583690987124463,
+          "intersection": 600,
+          "generated": 625,
+          "reference": 773
+        },
+        "edge": {
+          "precision": 0.3829787234042553,
+          "recall": 0.2748091603053435,
+          "f1": 0.32,
+          "intersection": 36,
+          "generated": 94,
+          "reference": 131
+        },
+        "ink": {
+          "precision": 0.5794621026894865,
+          "recall": 0.5085836909871244,
+          "f1": 0.5417142857142857,
+          "intersection": 237,
+          "generated": 409,
+          "reference": 466
+        },
+        "rgbRmse": 208.35399611073578,
+        "rgbRmseNorm": 0.4717381793775198,
+        "foregroundPixelDelta": -148,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "blush_soft",
+        "hair.style": "long_side",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "surprised_o",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "mint_flat"
+      }
+    },
+    {
+      "id": "avatar-17",
+      "spec": "specs/avatar-17.json",
+      "generated": "generated/avatar-17.png",
+      "diff": "diffs/avatar-17.png",
+      "score": 0.4135713003597805,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 654,
+          "scoredPixels": 1024,
+          "diffRate": 0.638671875
+        },
+        "foreground": {
+          "precision": 0.8401305057096248,
+          "recall": 0.9262589928057554,
+          "f1": 0.8810949529512403,
+          "intersection": 515,
+          "generated": 613,
+          "reference": 556
+        },
+        "edge": {
+          "precision": 0.3592233009708738,
+          "recall": 0.3557692307692308,
+          "f1": 0.35748792270531404,
+          "intersection": 37,
+          "generated": 103,
+          "reference": 104
+        },
+        "ink": {
+          "precision": 0.48128342245989303,
+          "recall": 0.28213166144200624,
+          "f1": 0.35573122529644263,
+          "intersection": 90,
+          "generated": 187,
+          "reference": 319
+        },
+        "rgbRmse": 116.18420937378926,
+        "rgbRmseNorm": 0.2630548414021218,
+        "foregroundPixelDelta": 57,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "none",
+        "hair.style": "blue_short",
+        "hair.color": "blue",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "teeth_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-18",
+      "spec": "specs/avatar-18.json",
+      "generated": "generated/avatar-18.png",
+      "diff": "diffs/avatar-18.png",
+      "score": 0.40082066373889547,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.958904109589041,
+          "recall": 0.8,
+          "f1": 0.8722741433021806,
+          "intersection": 560,
+          "generated": 584,
+          "reference": 700
+        },
+        "edge": {
+          "precision": 0.375,
+          "recall": 0.3564356435643564,
+          "f1": 0.3654822335025381,
+          "intersection": 36,
+          "generated": 96,
+          "reference": 101
+        },
+        "ink": {
+          "precision": 0.5149700598802395,
+          "recall": 0.36752136752136755,
+          "f1": 0.428927680798005,
+          "intersection": 86,
+          "generated": 167,
+          "reference": 234
+        },
+        "rgbRmse": 130.31142460587444,
+        "rgbRmseNorm": 0.2950405336262166,
+        "foregroundPixelDelta": -116,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "blush_soft",
+        "hair.style": "pink_bob",
+        "hair.color": "pink",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "yellow_flat"
+      }
+    },
+    {
+      "id": "avatar-19",
+      "spec": "specs/avatar-19.json",
+      "generated": "generated/avatar-19.png",
+      "diff": "diffs/avatar-19.png",
+      "score": 0.4052027799757615,
+      "alignment": {
+        "dx": 0,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9812734082397003,
+          "recall": 0.81875,
+          "f1": 0.8926746166950597,
+          "intersection": 524,
+          "generated": 534,
+          "reference": 640
+        },
+        "edge": {
+          "precision": 0.43478260869565216,
+          "recall": 0.37383177570093457,
+          "f1": 0.40201005025125625,
+          "intersection": 40,
+          "generated": 92,
+          "reference": 107
+        },
+        "ink": {
+          "precision": 0.43452380952380953,
+          "recall": 0.31063829787234043,
+          "f1": 0.3622828784119107,
+          "intersection": 73,
+          "generated": 168,
+          "reference": 235
+        },
+        "rgbRmse": 180.89038138642144,
+        "rgbRmseNorm": 0.4095572956363313,
+        "foregroundPixelDelta": -106,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "bald_clean",
+        "hair.color": "dark_brown",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "teeth_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "narrow_rectangle",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-20",
+      "spec": "specs/avatar-20.json",
+      "generated": "generated/avatar-20.png",
+      "diff": "diffs/avatar-20.png",
+      "score": 0.3619712733350038,
+      "alignment": {
+        "dx": -1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9434931506849316,
+          "recall": 0.9107438016528926,
+          "f1": 0.926829268292683,
+          "intersection": 551,
+          "generated": 584,
+          "reference": 605
+        },
+        "edge": {
+          "precision": 0.5052631578947369,
+          "recall": 0.44036697247706424,
+          "f1": 0.47058823529411764,
+          "intersection": 48,
+          "generated": 95,
+          "reference": 109
+        },
+        "ink": {
+          "precision": 0.7027027027027027,
+          "recall": 0.2659846547314578,
+          "f1": 0.38589981447124305,
+          "intersection": 104,
+          "generated": 148,
+          "reference": 391
+        },
+        "rgbRmse": 163.70933715067233,
+        "rgbRmseNorm": 0.37065737205017985,
+        "foregroundPixelDelta": -21,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "curly_cap",
+        "hair.color": "blue",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "mint_flat"
+      }
+    },
+    {
+      "id": "avatar-21",
+      "spec": "specs/avatar-21.json",
+      "generated": "generated/avatar-21.png",
+      "diff": "diffs/avatar-21.png",
+      "score": 0.3911038933523983,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.8817391304347826,
+          "recall": 0.9086021505376344,
+          "f1": 0.8949691085613415,
+          "intersection": 507,
+          "generated": 575,
+          "reference": 558
+        },
+        "edge": {
+          "precision": 0.45454545454545453,
+          "recall": 0.39473684210526316,
+          "f1": 0.4225352112676056,
+          "intersection": 45,
+          "generated": 99,
+          "reference": 114
+        },
+        "ink": {
+          "precision": 0.40865384615384615,
+          "recall": 0.38461538461538464,
+          "f1": 0.3962703962703963,
+          "intersection": 85,
+          "generated": 208,
+          "reference": 221
+        },
+        "rgbRmse": 185.40828574223698,
+        "rgbRmseNorm": 0.419786367385363,
+        "foregroundPixelDelta": 17,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "buzz_cut",
+        "hair.color": "dark_brown",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "sunglasses",
+        "facial_hair.style": "none",
+        "headwear.type": "cap",
+        "clothing.top": "tshirt",
+        "background.style": "cream_flat"
+      }
+    },
+    {
+      "id": "avatar-22",
+      "spec": "specs/avatar-22.json",
+      "generated": "generated/avatar-22.png",
+      "diff": "diffs/avatar-22.png",
+      "score": 0.3479055719238673,
+      "alignment": {
+        "dx": 0,
+        "dy": 0
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 889,
+          "scoredPixels": 889,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9165085388994307,
+          "recall": 0.9470588235294117,
+          "f1": 0.9315332690453231,
+          "intersection": 483,
+          "generated": 527,
+          "reference": 510
+        },
+        "edge": {
+          "precision": 0.5670103092783505,
+          "recall": 0.5445544554455446,
+          "f1": 0.5555555555555556,
+          "intersection": 55,
+          "generated": 97,
+          "reference": 101
+        },
+        "ink": {
+          "precision": 0.3937007874015748,
+          "recall": 0.2808988764044944,
+          "f1": 0.3278688524590164,
+          "intersection": 50,
+          "generated": 127,
+          "reference": 178
+        },
+        "rgbRmse": 175.54920730233144,
+        "rgbRmseNorm": 0.397464243498143,
+        "foregroundPixelDelta": 17,
+        "ignoredPixels": 135
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "buzz_cut",
+        "hair.color": "pink",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "beanie",
+        "clothing.top": "tshirt",
+        "background.style": "mint_flat"
+      }
+    },
+    {
+      "id": "avatar-23",
+      "spec": "specs/avatar-23.json",
+      "generated": "generated/avatar-23.png",
+      "diff": "diffs/avatar-23.png",
+      "score": 0.3761922572669247,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 736,
+          "scoredPixels": 736,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.7780126849894292,
+          "recall": 0.9865951742627346,
+          "f1": 0.8699763593380614,
+          "intersection": 368,
+          "generated": 473,
+          "reference": 373
+        },
+        "edge": {
+          "precision": 0.3875,
+          "recall": 0.45588235294117646,
+          "f1": 0.41891891891891897,
+          "intersection": 31,
+          "generated": 80,
+          "reference": 68
+        },
+        "ink": {
+          "precision": 0.4828767123287671,
+          "recall": 0.5802469135802469,
+          "f1": 0.5271028037383179,
+          "intersection": 141,
+          "generated": 292,
+          "reference": 243
+        },
+        "rgbRmse": 203.1692543765248,
+        "rgbRmseNorm": 0.45999930864840055,
+        "foregroundPixelDelta": 100,
+        "ignoredPixels": 288
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "side_sweep",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "full_beard",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-24",
+      "spec": "specs/avatar-24.json",
+      "generated": "generated/avatar-24.png",
+      "diff": "diffs/avatar-24.png",
+      "score": 0.4830166977970556,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 736,
+          "scoredPixels": 736,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.8162393162393162,
+          "recall": 0.9362745098039216,
+          "f1": 0.8721461187214612,
+          "intersection": 382,
+          "generated": 468,
+          "reference": 408
+        },
+        "edge": {
+          "precision": 0.35064935064935066,
+          "recall": 0.36486486486486486,
+          "f1": 0.35761589403973504,
+          "intersection": 27,
+          "generated": 77,
+          "reference": 74
+        },
+        "ink": {
+          "precision": 0.12345679012345678,
+          "recall": 0.08849557522123894,
+          "f1": 0.10309278350515465,
+          "intersection": 10,
+          "generated": 81,
+          "reference": 113
+        },
+        "rgbRmse": 174.18323373115877,
+        "rgbRmseNorm": 0.39437151718825103,
+        "foregroundPixelDelta": 60,
+        "ignoredPixels": 288
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "blush_soft",
+        "hair.style": "blonde_wave",
+        "hair.color": "blonde",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "yellow_flat"
+      }
+    },
+    {
+      "id": "avatar-25",
+      "spec": "specs/avatar-25.json",
+      "generated": "generated/avatar-25.png",
+      "diff": "diffs/avatar-25.png",
+      "score": 0.3439082771868393,
+      "alignment": {
+        "dx": 1,
+        "dy": 0
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9006622516556292,
+          "recall": 0.9299145299145299,
+          "f1": 0.9150546677880573,
+          "intersection": 544,
+          "generated": 604,
+          "reference": 585
+        },
+        "edge": {
+          "precision": 0.3979591836734694,
+          "recall": 0.38235294117647056,
+          "f1": 0.38999999999999996,
+          "intersection": 39,
+          "generated": 98,
+          "reference": 102
+        },
+        "ink": {
+          "precision": 0.6302083333333334,
+          "recall": 0.6157760814249363,
+          "f1": 0.6229086229086228,
+          "intersection": 242,
+          "generated": 384,
+          "reference": 393
+        },
+        "rgbRmse": 184.7791148616707,
+        "rgbRmseNorm": 0.41836184982747593,
+        "foregroundPixelDelta": 19,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "bob",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "full_beard",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-26",
+      "spec": "specs/avatar-26.json",
+      "generated": "generated/avatar-26.png",
+      "diff": "diffs/avatar-26.png",
+      "score": 0.45146978713839786,
+      "alignment": {
+        "dx": -1,
+        "dy": 0
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9366883116883117,
+          "recall": 0.8386627906976745,
+          "f1": 0.8849693251533742,
+          "intersection": 577,
+          "generated": 616,
+          "reference": 688
+        },
+        "edge": {
+          "precision": 0.35051546391752575,
+          "recall": 0.2595419847328244,
+          "f1": 0.2982456140350877,
+          "intersection": 34,
+          "generated": 97,
+          "reference": 131
+        },
+        "ink": {
+          "precision": 0.4142857142857143,
+          "recall": 0.23293172690763053,
+          "f1": 0.2982005141388175,
+          "intersection": 58,
+          "generated": 140,
+          "reference": 249
+        },
+        "rgbRmse": 159.00690334856534,
+        "rgbRmseNorm": 0.3600105037306,
+        "foregroundPixelDelta": -72,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "blush_soft",
+        "hair.style": "pigtails",
+        "hair.color": "pink",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "cream_flat"
+      }
+    },
+    {
+      "id": "avatar-27",
+      "spec": "specs/avatar-27.json",
+      "generated": "generated/avatar-27.png",
+      "diff": "diffs/avatar-27.png",
+      "score": 0.4060713271212843,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9296,
+          "recall": 0.7980769230769231,
+          "f1": 0.8588322246858833,
+          "intersection": 581,
+          "generated": 625,
+          "reference": 728
+        },
+        "edge": {
+          "precision": 0.3404255319148936,
+          "recall": 0.2711864406779661,
+          "f1": 0.30188679245283023,
+          "intersection": 32,
+          "generated": 94,
+          "reference": 118
+        },
+        "ink": {
+          "precision": 0.6161369193154034,
+          "recall": 0.5419354838709678,
+          "f1": 0.5766590389016019,
+          "intersection": 252,
+          "generated": 409,
+          "reference": 465
+        },
+        "rgbRmse": 198.18050287238148,
+        "rgbRmseNorm": 0.44870418306472487,
+        "foregroundPixelDelta": -103,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "blush_soft",
+        "hair.style": "long_side",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "surprised_o",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "cream_flat"
+      }
+    },
+    {
+      "id": "avatar-28",
+      "spec": "specs/avatar-28.json",
+      "generated": "generated/avatar-28.png",
+      "diff": "diffs/avatar-28.png",
+      "score": 0.2557422320607351,
+      "alignment": {
+        "dx": 0,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 859,
+          "scoredPixels": 859,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.956766917293233,
+          "recall": 0.9105545617173524,
+          "f1": 0.9330889092575618,
+          "intersection": 509,
+          "generated": 532,
+          "reference": 559
+        },
+        "edge": {
+          "precision": 0.5784313725490197,
+          "recall": 0.5412844036697247,
+          "f1": 0.5592417061611374,
+          "intersection": 59,
+          "generated": 102,
+          "reference": 109
+        },
+        "ink": {
+          "precision": 0.7655172413793103,
+          "recall": 0.6065573770491803,
+          "f1": 0.6768292682926829,
+          "intersection": 222,
+          "generated": 290,
+          "reference": 366
+        },
+        "rgbRmse": 100.34700561885515,
+        "rgbRmseNorm": 0.22719753218203492,
+        "foregroundPixelDelta": -27,
+        "ignoredPixels": 165
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "none",
+        "hair.style": "side_sweep",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "pink_flat"
+      }
+    },
+    {
+      "id": "avatar-29",
+      "spec": "specs/avatar-29.json",
+      "generated": "generated/avatar-29.png",
+      "diff": "diffs/avatar-29.png",
+      "score": 0.4147251645009826,
+      "alignment": {
+        "dx": -1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 672,
+          "scoredPixels": 672,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 1,
+          "recall": 0.6101190476190477,
+          "f1": 0.7578558225508318,
+          "intersection": 410,
+          "generated": 410,
+          "reference": 672
+        },
+        "edge": {
+          "precision": 0.47619047619047616,
+          "recall": 0.39215686274509803,
+          "f1": 0.4301075268817204,
+          "intersection": 40,
+          "generated": 84,
+          "reference": 102
+        },
+        "ink": {
+          "precision": 0.6916666666666667,
+          "recall": 0.39903846153846156,
+          "f1": 0.5060975609756098,
+          "intersection": 83,
+          "generated": 120,
+          "reference": 208
+        },
+        "rgbRmse": 174.93699120785502,
+        "rgbRmseNorm": 0.3960781135885423,
+        "foregroundPixelDelta": -262,
+        "ignoredPixels": 352
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "side_sweep",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "small_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-30",
+      "spec": "specs/avatar-30.json",
+      "generated": "generated/avatar-30.png",
+      "diff": "diffs/avatar-30.png",
+      "score": 0.35186247454548886,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 672,
+          "scoredPixels": 672,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9811320754716981,
+          "recall": 0.7969348659003831,
+          "f1": 0.8794926004228331,
+          "intersection": 416,
+          "generated": 424,
+          "reference": 522
+        },
+        "edge": {
+          "precision": 0.6627906976744186,
+          "recall": 0.5181818181818182,
+          "f1": 0.5816326530612245,
+          "intersection": 57,
+          "generated": 86,
+          "reference": 110
+        },
+        "ink": {
+          "precision": 0.5360824742268041,
+          "recall": 0.26666666666666666,
+          "f1": 0.3561643835616438,
+          "intersection": 52,
+          "generated": 97,
+          "reference": 195
+        },
+        "rgbRmse": 168.65434237629623,
+        "rgbRmseNorm": 0.38185345086648603,
+        "foregroundPixelDelta": -98,
+        "ignoredPixels": 352
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "blonde_wave",
+        "hair.color": "blonde",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "small_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "yellow_flat"
+      }
+    },
+    {
+      "id": "avatar-31",
+      "spec": "specs/avatar-31.json",
+      "generated": "generated/avatar-31.png",
+      "diff": "diffs/avatar-31.png",
+      "score": 0.4474574581274546,
+      "alignment": {
+        "dx": -1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 574,
+          "scoredPixels": 864,
+          "diffRate": 0.6643518518518519
+        },
+        "foreground": {
+          "precision": 0.8866799204771372,
+          "recall": 0.8626692456479691,
+          "f1": 0.8745098039215686,
+          "intersection": 446,
+          "generated": 503,
+          "reference": 517
+        },
+        "edge": {
+          "precision": 0.3673469387755102,
+          "recall": 0.3829787234042553,
+          "f1": 0.37499999999999994,
+          "intersection": 36,
+          "generated": 98,
+          "reference": 94
+        },
+        "ink": {
+          "precision": 0.42016806722689076,
+          "recall": 0.15384615384615385,
+          "f1": 0.22522522522522526,
+          "intersection": 50,
+          "generated": 119,
+          "reference": 325
+        },
+        "rgbRmse": 161.87718609992461,
+        "rgbRmseNorm": 0.36650916459000243,
+        "foregroundPixelDelta": -14,
+        "ignoredPixels": 160
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "blue_short",
+        "hair.color": "blue",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "thin_frame",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-32",
+      "spec": "specs/avatar-32.json",
+      "generated": "generated/avatar-32.png",
+      "diff": "diffs/avatar-32.png",
+      "score": 0.3440109936179386,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.9023972602739726,
+          "recall": 0.9023972602739726,
+          "f1": 0.9023972602739726,
+          "intersection": 527,
+          "generated": 584,
+          "reference": 584
+        },
+        "edge": {
+          "precision": 0.3854166666666667,
+          "recall": 0.3425925925925926,
+          "f1": 0.36274509803921573,
+          "intersection": 37,
+          "generated": 96,
+          "reference": 108
+        },
+        "ink": {
+          "precision": 0.7038123167155426,
+          "recall": 0.625,
+          "f1": 0.6620689655172415,
+          "intersection": 240,
+          "generated": 341,
+          "reference": 384
+        },
+        "rgbRmse": 158.20480323183932,
+        "rgbRmseNorm": 0.35819445385487925,
+        "foregroundPixelDelta": 0,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "blush_soft",
+        "hair.style": "bob",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "mint_flat"
+      }
+    },
+    {
+      "id": "avatar-33",
+      "spec": "specs/avatar-33.json",
+      "generated": "generated/avatar-33.png",
+      "diff": "diffs/avatar-33.png",
+      "score": 0.33606490389267474,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.979933110367893,
+          "recall": 0.8116343490304709,
+          "f1": 0.8878787878787879,
+          "intersection": 586,
+          "generated": 598,
+          "reference": 722
+        },
+        "edge": {
+          "precision": 0.4,
+          "recall": 0.38095238095238093,
+          "f1": 0.3902439024390244,
+          "intersection": 40,
+          "generated": 100,
+          "reference": 105
+        },
+        "ink": {
+          "precision": 0.7783375314861462,
+          "recall": 0.6,
+          "f1": 0.6776315789473684,
+          "intersection": 309,
+          "generated": 397,
+          "reference": 515
+        },
+        "rgbRmse": 151.360435534893,
+        "rgbRmseNorm": 0.3426979929440372,
+        "foregroundPixelDelta": -124,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "none",
+        "hair.style": "clean_crop",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "teeth_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "sunglasses",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "cream_flat"
+      }
+    },
+    {
+      "id": "avatar-34",
+      "spec": "specs/avatar-34.json",
+      "generated": "generated/avatar-34.png",
+      "diff": "diffs/avatar-34.png",
+      "score": 0.4112349183444573,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.7635782747603834,
+          "recall": 0.9598393574297188,
+          "f1": 0.8505338078291815,
+          "intersection": 478,
+          "generated": 626,
+          "reference": 498
+        },
+        "edge": {
+          "precision": 0.3235294117647059,
+          "recall": 0.3173076923076923,
+          "f1": 0.32038834951456313,
+          "intersection": 33,
+          "generated": 102,
+          "reference": 104
+        },
+        "ink": {
+          "precision": 0.4896907216494845,
+          "recall": 0.5864197530864198,
+          "f1": 0.5337078651685393,
+          "intersection": 190,
+          "generated": 388,
+          "reference": 324
+        },
+        "rgbRmse": 189.79662738211394,
+        "rgbRmseNorm": 0.429722093766065,
+        "foregroundPixelDelta": 128,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "porcelain_01",
+        "face.detail": "none",
+        "hair.style": "side_sweep",
+        "hair.color": "black_02",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "narrow_rectangle",
+        "facial_hair.style": "full_beard",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "mint_flat"
+      }
+    },
+    {
+      "id": "avatar-35",
+      "spec": "specs/avatar-35.json",
+      "generated": "generated/avatar-35.png",
+      "diff": "diffs/avatar-35.png",
+      "score": 0.35429771082285333,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 622,
+          "scoredPixels": 1024,
+          "diffRate": 0.607421875
+        },
+        "foreground": {
+          "precision": 0.8193979933110368,
+          "recall": 0.953307392996109,
+          "f1": 0.881294964028777,
+          "intersection": 490,
+          "generated": 598,
+          "reference": 514
+        },
+        "edge": {
+          "precision": 0.42,
+          "recall": 0.44680851063829785,
+          "f1": 0.43298969072164945,
+          "intersection": 42,
+          "generated": 100,
+          "reference": 94
+        },
+        "ink": {
+          "precision": 0.505524861878453,
+          "recall": 0.5446428571428571,
+          "f1": 0.5243553008595988,
+          "intersection": 183,
+          "generated": 362,
+          "reference": 336
+        },
+        "rgbRmse": 127.55881762200919,
+        "rgbRmseNorm": 0.28880830467285246,
+        "foregroundPixelDelta": 84,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "none",
+        "hair.style": "clean_crop",
+        "hair.color": "dark_brown",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "small_smile",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "sky_flat"
+      }
+    },
+    {
+      "id": "avatar-36",
+      "spec": "specs/avatar-36.json",
+      "generated": "generated/avatar-36.png",
+      "diff": "diffs/avatar-36.png",
+      "score": 0.3351867470619922,
+      "alignment": {
+        "dx": 1,
+        "dy": 1
+      },
+      "metrics": {
+        "pixel": {
+          "diffPixels": 1024,
+          "scoredPixels": 1024,
+          "diffRate": 1
+        },
+        "foreground": {
+          "precision": 0.8482428115015974,
+          "recall": 0.9550359712230215,
+          "f1": 0.898477157360406,
+          "intersection": 531,
+          "generated": 626,
+          "reference": 556
+        },
+        "edge": {
+          "precision": 0.4117647058823529,
+          "recall": 0.4158415841584158,
+          "f1": 0.4137931034482758,
+          "intersection": 42,
+          "generated": 102,
+          "reference": 101
+        },
+        "ink": {
+          "precision": 0.5511811023622047,
+          "recall": 0.6666666666666666,
+          "f1": 0.603448275862069,
+          "intersection": 210,
+          "generated": 381,
+          "reference": 315
+        },
+        "rgbRmse": 120.24811588960551,
+        "rgbRmseNorm": 0.27225600815062373,
+        "foregroundPixelDelta": 70,
+        "ignoredPixels": 0
+      },
+      "traits": {
+        "base.species": "human",
+        "presentation": "androgynous",
+        "face.shape": "side_oval",
+        "skin.tone": "deep_brown_09",
+        "face.detail": "none",
+        "hair.style": "side_sweep",
+        "hair.color": "dark_brown",
+        "eyes.shape": "dot",
+        "eyes.color": "black",
+        "eyebrows.shape": "soft_flat",
+        "nose.shape": "small_line",
+        "mouth.shape": "neutral",
+        "ears.shape": "small_round",
+        "glasses.shape": "none",
+        "facial_hair.style": "none",
+        "headwear.type": "none",
+        "clothing.top": "tshirt",
+        "background.style": "pink_flat"
+      }
+    }
+  ]
+}

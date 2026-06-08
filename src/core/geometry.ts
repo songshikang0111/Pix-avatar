@@ -1,6 +1,7 @@
 import { Box, Mask, Point } from "../types";
 
 export const CANVAS_SIZE = 40;
+export const DEFAULT_OUTPUT_SIZE = 32;
 
 export function keyOf(x: number, y: number) {
   return `${x},${y}`;

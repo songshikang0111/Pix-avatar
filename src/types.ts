@@ -43,11 +43,13 @@ export interface AvatarSpec {
 }
 
 export type PatchClip = "none" | "face" | "head" | "hair" | "body";
+export type PatchCoordSpace = "design" | "output";
 
 export type PixelPatch =
   | {
       op: "px";
       layer: string;
+      coordSpace?: PatchCoordSpace;
       x?: number;
       y?: number;
       at?: AnchorRef;
@@ -60,6 +62,7 @@ export type PixelPatch =
   | {
       op: "rect";
       layer: string;
+      coordSpace?: PatchCoordSpace;
       x?: number;
       y?: number;
       at?: AnchorRef;
@@ -74,6 +77,7 @@ export type PixelPatch =
   | {
       op: "line";
       layer: string;
+      coordSpace?: PatchCoordSpace;
       x1?: number;
       y1?: number;
       x2?: number;
@@ -86,6 +90,7 @@ export type PixelPatch =
   | {
       op: "erase";
       layer: string;
+      coordSpace?: PatchCoordSpace;
       x: number;
       y: number;
       w?: number;
@@ -170,6 +175,8 @@ export interface PixelCell {
 export interface RenderLayer {
   id: string;
   z: number;
+  width?: number;
+  height?: number;
   pixels: Map<string, PixelCell>;
 }
 

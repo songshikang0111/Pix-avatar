@@ -36,7 +36,7 @@ describe("rendering", () => {
       "background.style": "transparent"
     });
     spec.patches = [parseCompactPatch("rect custom.face 18 26 4 1 mouth.dark clip=face")];
-    const result = renderAvatar(spec, { pixel: [20, 26] });
+    const result = renderAvatar(spec, { pixel: [16, 20] });
     expect(result.inspect.pixel?.stack.some((entry) => entry.layer === "custom.face")).toBe(true);
   });
 

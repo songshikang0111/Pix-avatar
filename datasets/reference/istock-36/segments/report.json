@@ -1,0 +1,623 @@
+{
+  "version": "pix-avatar/reference-segmentation/v1",
+  "dataset": "istock-36",
+  "canvas": {
+    "size": [
+      32,
+      32
+    ],
+    "comparableTo": "renderAvatar(...).image via pixelImageToMatrix, then resizeMatrixDominant to this canvas size"
+  },
+  "method": {
+    "summary": "Color-family and connected-component segmentation tuned for the quantized 32px iStock reference matrices.",
+    "segments": {
+      "background": "Manifest background color plus ignored watermark/asset-id regions.",
+      "skin": "Large light or brown face/ear/neck color regions in the head zone.",
+      "hair": "Upper or side head color masses, including black, pink, blue, blonde, brown, and dark hair shadows.",
+      "clothing": "Lower bust color regions and lower outline fragments.",
+      "accessory": "Glasses, headphones, hats, highlights, blush, and high-saturation small props.",
+      "face_feature": "Small dark components inside the face box: eyes, brows, nose, mouth.",
+      "ink": "Remaining dark contour and linework pixels."
+    }
+  },
+  "artifacts": {
+    "semanticContactSheet": "semantic-contact-sheet.png",
+    "segmentAssetSpecs": "../segment-traits/specs",
+    "segmentAssetContactSheet": "../segment-traits/contact-sheet.png"
+  },
+  "entries": [
+    {
+      "id": "avatar-01",
+      "background": "#80E0E0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 534,
+        "hair": 157,
+        "accessory": 1,
+        "skin": 194,
+        "face_feature": 19,
+        "clothing": 119
+      },
+      "spec": "specs/avatar-01.json",
+      "semantic": "../segments/avatar-01.png",
+      "generated": "generated/avatar-01.png"
+    },
+    {
+      "id": "avatar-02",
+      "background": "#E0F0C0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 512,
+        "hair": 74,
+        "ink": 2,
+        "skin": 266,
+        "face_feature": 62,
+        "accessory": 3,
+        "clothing": 105
+      },
+      "spec": "specs/avatar-02.json",
+      "semantic": "../segments/avatar-02.png",
+      "generated": "generated/avatar-02.png"
+    },
+    {
+      "id": "avatar-03",
+      "background": "#F0E0A0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 278,
+        "ink": 33,
+        "hair": 349,
+        "skin": 150,
+        "face_feature": 40,
+        "accessory": 21,
+        "clothing": 153
+      },
+      "spec": "specs/avatar-03.json",
+      "semantic": "../segments/avatar-03.png",
+      "generated": "generated/avatar-03.png"
+    },
+    {
+      "id": "avatar-04",
+      "background": "#E0F0C0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 505,
+        "hair": 189,
+        "accessory": 2,
+        "skin": 184,
+        "face_feature": 15,
+        "clothing": 129
+      },
+      "spec": "specs/avatar-04.json",
+      "semantic": "../segments/avatar-04.png",
+      "generated": "generated/avatar-04.png"
+    },
+    {
+      "id": "avatar-05",
+      "background": "#80E0E0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 375,
+        "ink": 27,
+        "hair": 209,
+        "skin": 146,
+        "accessory": 51,
+        "face_feature": 58,
+        "clothing": 158
+      },
+      "spec": "specs/avatar-05.json",
+      "semantic": "../segments/avatar-05.png",
+      "generated": "generated/avatar-05.png"
+    },
+    {
+      "id": "avatar-06",
+      "background": "#F0E0A0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 254,
+        "clothing": 471,
+        "skin": 182,
+        "hair": 86,
+        "face_feature": 27,
+        "accessory": 4
+      },
+      "spec": "specs/avatar-06.json",
+      "semantic": "../segments/avatar-06.png",
+      "generated": "generated/avatar-06.png"
+    },
+    {
+      "id": "avatar-07",
+      "background": "#F0E0A0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 527,
+        "ink": 17,
+        "hair": 204,
+        "face_feature": 26,
+        "skin": 129,
+        "clothing": 121
+      },
+      "spec": "specs/avatar-07.json",
+      "semantic": "../segments/avatar-07.png",
+      "generated": "generated/avatar-07.png"
+    },
+    {
+      "id": "avatar-08",
+      "background": "#80E0E0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 440,
+        "hair": 134,
+        "skin": 300,
+        "ink": 1,
+        "accessory": 5,
+        "face_feature": 26,
+        "clothing": 118
+      },
+      "spec": "specs/avatar-08.json",
+      "semantic": "../segments/avatar-08.png",
+      "generated": "generated/avatar-08.png"
+    },
+    {
+      "id": "avatar-09",
+      "background": "#FF80B0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 528,
+        "hair": 148,
+        "skin": 215,
+        "face_feature": 28,
+        "clothing": 105
+      },
+      "spec": "specs/avatar-09.json",
+      "semantic": "../segments/avatar-09.png",
+      "generated": "generated/avatar-09.png"
+    },
+    {
+      "id": "avatar-10",
+      "background": "#80E0E0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 430,
+        "hair": 203,
+        "accessory": 8,
+        "ink": 18,
+        "skin": 212,
+        "face_feature": 47,
+        "clothing": 106
+      },
+      "spec": "specs/avatar-10.json",
+      "semantic": "../segments/avatar-10.png",
+      "generated": "generated/avatar-10.png"
+    },
+    {
+      "id": "avatar-11",
+      "background": "#F0E0A0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 356,
+        "hair": 309,
+        "ink": 21,
+        "accessory": 14,
+        "face_feature": 51,
+        "skin": 161,
+        "clothing": 112
+      },
+      "spec": "specs/avatar-11.json",
+      "semantic": "../segments/avatar-11.png",
+      "generated": "generated/avatar-11.png"
+    },
+    {
+      "id": "avatar-12",
+      "background": "#E0F0C0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 514,
+        "ink": 24,
+        "hair": 144,
+        "face_feature": 35,
+        "skin": 201,
+        "clothing": 106
+      },
+      "spec": "specs/avatar-12.json",
+      "semantic": "../segments/avatar-12.png",
+      "generated": "generated/avatar-12.png"
+    },
+    {
+      "id": "avatar-13",
+      "background": "#FF80B0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 583,
+        "hair": 180,
+        "skin": 149,
+        "face_feature": 20,
+        "clothing": 92
+      },
+      "spec": "specs/avatar-13.json",
+      "semantic": "../segments/avatar-13.png",
+      "generated": "generated/avatar-13.png"
+    },
+    {
+      "id": "avatar-14",
+      "background": "#E0F0C0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 269,
+        "ink": 12,
+        "hair": 345,
+        "accessory": 10,
+        "skin": 202,
+        "face_feature": 25,
+        "clothing": 161
+      },
+      "spec": "specs/avatar-14.json",
+      "semantic": "../segments/avatar-14.png",
+      "generated": "generated/avatar-14.png"
+    },
+    {
+      "id": "avatar-15",
+      "background": "#F0E0A0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 431,
+        "ink": 7,
+        "hair": 261,
+        "accessory": 5,
+        "face_feature": 30,
+        "skin": 157,
+        "clothing": 133
+      },
+      "spec": "specs/avatar-15.json",
+      "semantic": "../segments/avatar-15.png",
+      "generated": "generated/avatar-15.png"
+    },
+    {
+      "id": "avatar-16",
+      "background": "#E0F0B0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 251,
+        "clothing": 463,
+        "skin": 268,
+        "accessory": 9,
+        "hair": 5,
+        "face_feature": 28
+      },
+      "spec": "specs/avatar-16.json",
+      "semantic": "../segments/avatar-16.png",
+      "generated": "generated/avatar-16.png"
+    },
+    {
+      "id": "avatar-17",
+      "background": "#80E0E0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 468,
+        "ink": 17,
+        "hair": 182,
+        "accessory": 8,
+        "face_feature": 45,
+        "skin": 146,
+        "clothing": 158
+      },
+      "spec": "specs/avatar-17.json",
+      "semantic": "../segments/avatar-17.png",
+      "generated": "generated/avatar-17.png"
+    },
+    {
+      "id": "avatar-18",
+      "background": "#F0E0A0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 324,
+        "ink": 16,
+        "hair": 211,
+        "skin": 135,
+        "accessory": 37,
+        "face_feature": 71,
+        "clothing": 230
+      },
+      "spec": "specs/avatar-18.json",
+      "semantic": "../segments/avatar-18.png",
+      "generated": "generated/avatar-18.png"
+    },
+    {
+      "id": "avatar-19",
+      "background": "#F0E0A0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 384,
+        "accessory": 10,
+        "ink": 41,
+        "hair": 140,
+        "skin": 271,
+        "face_feature": 55,
+        "clothing": 123
+      },
+      "spec": "specs/avatar-19.json",
+      "semantic": "../segments/avatar-19.png",
+      "generated": "generated/avatar-19.png"
+    },
+    {
+      "id": "avatar-20",
+      "background": "#80E0E0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 419,
+        "ink": 53,
+        "hair": 184,
+        "accessory": 4,
+        "skin": 180,
+        "face_feature": 27,
+        "clothing": 157
+      },
+      "spec": "specs/avatar-20.json",
+      "semantic": "../segments/avatar-20.png",
+      "generated": "generated/avatar-20.png"
+    },
+    {
+      "id": "avatar-21",
+      "background": "#FF80B0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 466,
+        "ink": 19,
+        "skin": 269,
+        "hair": 132,
+        "accessory": 2,
+        "face_feature": 17,
+        "clothing": 119
+      },
+      "spec": "specs/avatar-21.json",
+      "semantic": "../segments/avatar-21.png",
+      "generated": "generated/avatar-21.png"
+    },
+    {
+      "id": "avatar-22",
+      "background": "#80E0E0",
+      "ignoredPixels": 135,
+      "counts": {
+        "background": 379,
+        "ink": 16,
+        "accessory": 20,
+        "hair": 263,
+        "skin": 126,
+        "face_feature": 17,
+        "ignored": 135,
+        "clothing": 68
+      },
+      "spec": "specs/avatar-22.json",
+      "semantic": "../segments/avatar-22.png",
+      "generated": "generated/avatar-22.png"
+    },
+    {
+      "id": "avatar-23",
+      "background": "#E0F0C0",
+      "ignoredPixels": 288,
+      "counts": {
+        "background": 363,
+        "accessory": 1,
+        "hair": 236,
+        "skin": 129,
+        "face_feature": 7,
+        "ignored": 288
+      },
+      "spec": "specs/avatar-23.json",
+      "semantic": "../segments/avatar-23.png",
+      "generated": "generated/avatar-23.png"
+    },
+    {
+      "id": "avatar-24",
+      "background": "#80E0E0",
+      "ignoredPixels": 288,
+      "counts": {
+        "background": 328,
+        "ink": 26,
+        "hair": 153,
+        "skin": 146,
+        "accessory": 10,
+        "face_feature": 73,
+        "ignored": 288
+      },
+      "spec": "specs/avatar-24.json",
+      "semantic": "../segments/avatar-24.png",
+      "generated": "generated/avatar-24.png"
+    },
+    {
+      "id": "avatar-25",
+      "background": "#E0F0C0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 439,
+        "accessory": 2,
+        "clothing": 451,
+        "skin": 121,
+        "hair": 2,
+        "face_feature": 9
+      },
+      "spec": "specs/avatar-25.json",
+      "semantic": "../segments/avatar-25.png",
+      "generated": "generated/avatar-25.png"
+    },
+    {
+      "id": "avatar-26",
+      "background": "#F0E0A0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 336,
+        "hair": 262,
+        "ink": 32,
+        "accessory": 8,
+        "skin": 239,
+        "face_feature": 34,
+        "clothing": 113
+      },
+      "spec": "specs/avatar-26.json",
+      "semantic": "../segments/avatar-26.png",
+      "generated": "generated/avatar-26.png"
+    },
+    {
+      "id": "avatar-27",
+      "background": "#E0F0C0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 296,
+        "clothing": 459,
+        "accessory": 7,
+        "skin": 226,
+        "hair": 6,
+        "face_feature": 30
+      },
+      "spec": "specs/avatar-27.json",
+      "semantic": "../segments/avatar-27.png",
+      "generated": "generated/avatar-27.png"
+    },
+    {
+      "id": "avatar-28",
+      "background": "#FF80B0",
+      "ignoredPixels": 165,
+      "counts": {
+        "background": 300,
+        "ignored": 165,
+        "hair": 254,
+        "skin": 133,
+        "face_feature": 8,
+        "clothing": 164
+      },
+      "spec": "specs/avatar-28.json",
+      "semantic": "../segments/avatar-28.png",
+      "generated": "generated/avatar-28.png"
+    },
+    {
+      "id": "avatar-29",
+      "background": "#908060",
+      "ignoredPixels": 352,
+      "counts": {
+        "ignored": 352,
+        "hair": 223,
+        "skin": 186,
+        "clothing": 226,
+        "face_feature": 35,
+        "ink": 2
+      },
+      "spec": "specs/avatar-29.json",
+      "semantic": "../segments/avatar-29.png",
+      "generated": "generated/avatar-29.png"
+    },
+    {
+      "id": "avatar-30",
+      "background": "#E0F0C0",
+      "ignoredPixels": 352,
+      "counts": {
+        "ignored": 352,
+        "hair": 176,
+        "face_feature": 33,
+        "skin": 179,
+        "background": 150,
+        "ink": 2,
+        "clothing": 131,
+        "accessory": 1
+      },
+      "spec": "specs/avatar-30.json",
+      "semantic": "../segments/avatar-30.png",
+      "generated": "generated/avatar-30.png"
+    },
+    {
+      "id": "avatar-31",
+      "background": "#80E0E0",
+      "ignoredPixels": 160,
+      "counts": {
+        "background": 347,
+        "ink": 22,
+        "hair": 221,
+        "accessory": 5,
+        "skin": 178,
+        "face_feature": 75,
+        "ignored": 160,
+        "clothing": 16
+      },
+      "spec": "specs/avatar-31.json",
+      "semantic": "../segments/avatar-31.png",
+      "generated": "generated/avatar-31.png"
+    },
+    {
+      "id": "avatar-32",
+      "background": "#E0F0C0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 440,
+        "clothing": 399,
+        "skin": 174,
+        "face_feature": 8,
+        "accessory": 3
+      },
+      "spec": "specs/avatar-32.json",
+      "semantic": "../segments/avatar-32.png",
+      "generated": "generated/avatar-32.png"
+    },
+    {
+      "id": "avatar-33",
+      "background": "#80E0E0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 302,
+        "clothing": 533,
+        "accessory": 8,
+        "hair": 39,
+        "skin": 119,
+        "face_feature": 23
+      },
+      "spec": "specs/avatar-33.json",
+      "semantic": "../segments/avatar-33.png",
+      "generated": "generated/avatar-33.png"
+    },
+    {
+      "id": "avatar-34",
+      "background": "#E0F0C0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 526,
+        "clothing": 334,
+        "skin": 148,
+        "hair": 6,
+        "face_feature": 7,
+        "accessory": 3
+      },
+      "spec": "specs/avatar-34.json",
+      "semantic": "../segments/avatar-34.png",
+      "generated": "generated/avatar-34.png"
+    },
+    {
+      "id": "avatar-35",
+      "background": "#80E0E0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 510,
+        "clothing": 379,
+        "skin": 83,
+        "hair": 50,
+        "face_feature": 2
+      },
+      "spec": "specs/avatar-35.json",
+      "semantic": "../segments/avatar-35.png",
+      "generated": "generated/avatar-35.png"
+    },
+    {
+      "id": "avatar-36",
+      "background": "#FF80B0",
+      "ignoredPixels": 0,
+      "counts": {
+        "background": 468,
+        "hair": 274,
+        "skin": 149,
+        "accessory": 1,
+        "face_feature": 14,
+        "clothing": 118
+      },
+      "spec": "specs/avatar-36.json",
+      "semantic": "../segments/avatar-36.png",
+      "generated": "generated/avatar-36.png"
+    }
+  ]
+}

@@ -171,7 +171,7 @@ async function prepareReferenceDataset(options: PrepareOptions) {
     })),
     canvas: {
       size: [options.size, options.size],
-      comparableTo: "renderAvatar(...).image via pixelImageToMatrix, then resizeMatrixDominant to this canvas size"
+      comparableTo: "renderAvatar(...).image via pixelImageToMatrix on the same 32x32 logical canvas"
     },
     normalization: {
       method: "offset-area-dominant-quantized-rgb-with-palette-cleanup",

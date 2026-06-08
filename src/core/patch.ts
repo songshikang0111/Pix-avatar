@@ -103,26 +103,70 @@ function applyPatch(layers: LayerStack, patch: PixelPatch, rig: FaceRig, palette
     return;
   }
   if (patch.op === "erase") {
-    layer.erase(patch.x, patch.y, patch.w ?? 1, patch.h ?? 1, clip);
+    if (patch.coordSpace === "output") eraseOutput(layer, patch.x, patch.y, patch.w ?? 1, patch.h ?? 1);
+    else layer.erase(patch.x, patch.y, patch.w ?? 1, patch.h ?? 1, clip);
     return;
   }
 
   if (patch.op === "px") {
     const [x, y] = resolvePatchPoint(patch, rig, warnings);
-    layer.set(x, y, colorToken(patch.color, palette), { trait: "patch.px", colorToken: patch.color }, clip);
+    const color = colorToken(patch.color, palette);
+    if (patch.coordSpace === "output") layer.setOutput(x, y, color, { trait: "patch.px", colorToken: patch.color });
+    else layer.set(x, y, color, { trait: "patch.px", colorToken: patch.color }, clip);
     return;
   }
 
   if (patch.op === "rect") {
     const [x, y] = resolvePatchPoint(patch, rig, warnings);
-    drawRect(layer, x, y, patch.w, patch.h, colorToken(patch.color, palette), { trait: "patch.rect", colorToken: patch.color }, clip);
+    const color = colorToken(patch.color, palette);
+    if (patch.coordSpace === "output") drawRectOutput(layer, x, y, patch.w, patch.h, color, { trait: "patch.rect", colorToken: patch.color });
+    else drawRect(layer, x, y, patch.w, patch.h, color, { trait: "patch.rect", colorToken: patch.color }, clip);
     return;
   }
 
   if (patch.op === "line") {
     const from = patch.from ? resolveAnchorRef(patch.from, rig) : [patch.x1 ?? 0, patch.y1 ?? 0];
     const to = patch.to ? resolveAnchorRef(patch.to, rig) : [patch.x2 ?? 0, patch.y2 ?? 0];
-    drawLine(layer, from[0], from[1], to[0], to[1], colorToken(patch.color, palette), { trait: "patch.line", colorToken: patch.color }, clip);
+    const color = colorToken(patch.color, palette);
+    if (patch.coordSpace === "output") drawLineOutput(layer, from[0], from[1], to[0], to[1], color, { trait: "patch.line", colorToken: patch.color });
+    else drawLine(layer, from[0], from[1], to[0], to[1], color, { trait: "patch.line", colorToken: patch.color }, clip);
+  }
+}
+
+function drawRectOutput(layer: ReturnType<LayerStack["get"]>, x: number, y: number, w: number, h: number, color: string, meta: { trait: string; colorToken: string }) {
+  for (let yy = y; yy < y + h; yy += 1) {
+    for (let xx = x; xx < x + w; xx += 1) layer.setOutput(xx, yy, color, meta);
+  }
+}
+
+function drawLineOutput(layer: ReturnType<LayerStack["get"]>, x1: number, y1: number, x2: number, y2: number, color: string, meta: { trait: string; colorToken: string }) {
+  let x = Math.round(x1);
+  let y = Math.round(y1);
+  const tx = Math.round(x2);
+  const ty = Math.round(y2);
+  const dx = Math.abs(tx - x);
+  const sx = x < tx ? 1 : -1;
+  const dy = -Math.abs(ty - y);
+  const sy = y < ty ? 1 : -1;
+  let err = dx + dy;
+  while (true) {
+    layer.setOutput(x, y, color, meta);
+    if (x === tx && y === ty) break;
+    const e2 = 2 * err;
+    if (e2 >= dy) {
+      err += dy;
+      x += sx;
+    }
+    if (e2 <= dx) {
+      err += dx;
+      y += sy;
+    }
+  }
+}
+
+function eraseOutput(layer: ReturnType<LayerStack["get"]>, x: number, y: number, w: number, h: number) {
+  for (let yy = y; yy < y + h; yy += 1) {
+    for (let xx = x; xx < x + w; xx += 1) layer.pixels.delete(`${xx},${yy}`);
   }
 }
 

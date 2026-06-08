@@ -32,8 +32,8 @@ export async function writeLayerPngs(dir: string, layers: RenderLayer[], scale =
   await mkdir(dir, { recursive: true });
   for (const layer of layers) {
     const image: PixelImage = {
-      width: CANVAS_SIZE,
-      height: CANVAS_SIZE,
+      width: layer.width ?? CANVAS_SIZE,
+      height: layer.height ?? CANVAS_SIZE,
       pixels: layer.pixels,
       stacks: new Map()
     };
