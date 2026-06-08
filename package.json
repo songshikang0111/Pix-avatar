@@ -38,6 +38,7 @@
     "evaluate:reference-dataset": "tsx src/scripts/evaluateReferenceDataset.ts",
     "extract:reference-traits": "tsx src/scripts/extractReferenceTraitAssets.ts",
     "derive:reference-parts": "tsx src/scripts/deriveReferencePartTraits.ts",
+    "build:three-part-reference-traits": "tsx src/scripts/buildThreePartReferenceTraits.ts",
     "render:manual-template": "tsx src/scripts/renderManualTraitTemplate.ts",
     "recombine:reference-traits": "tsx src/scripts/recombineReferenceSegments.ts",
     "recombine:reference-parts": "tsx src/scripts/recombineReferenceParts.ts",

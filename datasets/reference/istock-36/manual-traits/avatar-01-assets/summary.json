@@ -1,0 +1,122 @@
+[
+  {
+    "slot": "background.style",
+    "label": "Background",
+    "pixels": 1024,
+    "file": "01-background-style.png",
+    "bbox": [
+      0,
+      0,
+      32,
+      32
+    ]
+  },
+  {
+    "slot": "clothing.top",
+    "label": "Clothing",
+    "pixels": 119,
+    "file": "02-clothing-top.png",
+    "bbox": [
+      2,
+      21,
+      26,
+      32
+    ]
+  },
+  {
+    "slot": "ears.shape",
+    "label": "Ears",
+    "pixels": 14,
+    "file": "03-ears-shape.png",
+    "bbox": [
+      6,
+      14,
+      9,
+      21
+    ]
+  },
+  {
+    "slot": "face.shape",
+    "label": "Face",
+    "pixels": 180,
+    "file": "04-face-shape.png",
+    "bbox": [
+      9,
+      9,
+      24,
+      26
+    ]
+  },
+  {
+    "slot": "hair.style",
+    "label": "Hair",
+    "pixels": 157,
+    "file": "05-hair-style.png",
+    "bbox": [
+      4,
+      3,
+      26,
+      22
+    ]
+  },
+  {
+    "slot": "headwear.type",
+    "label": "Headwear",
+    "pixels": 1,
+    "file": "06-headwear-type.png",
+    "bbox": [
+      6,
+      9,
+      7,
+      10
+    ]
+  },
+  {
+    "slot": "eyes.shape",
+    "label": "Eyes",
+    "pixels": 4,
+    "file": "07-eyes-shape.png",
+    "bbox": [
+      16,
+      15,
+      21,
+      19
+    ]
+  },
+  {
+    "slot": "eyebrows.shape",
+    "label": "Eyebrows",
+    "pixels": 3,
+    "file": "08-eyebrows-shape.png",
+    "bbox": [
+      15,
+      14,
+      18,
+      15
+    ]
+  },
+  {
+    "slot": "nose.shape",
+    "label": "Nose",
+    "pixels": 9,
+    "file": "09-nose-shape.png",
+    "bbox": [
+      7,
+      19,
+      24,
+      24
+    ]
+  },
+  {
+    "slot": "mouth.shape",
+    "label": "Mouth",
+    "pixels": 3,
+    "file": "10-mouth-shape.png",
+    "bbox": [
+      20,
+      24,
+      22,
+      26
+    ]
+  }
+]

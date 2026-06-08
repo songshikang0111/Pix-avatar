@@ -1,0 +1,128 @@
+{
+  "version": "pix-avatar/three-part-reference-traits/v1",
+  "source": "datasets/reference/istock-36",
+  "canvas": {
+    "size": [
+      32,
+      32
+    ]
+  },
+  "entries": [
+    {
+      "id": "avatar-01",
+      "background": "#80E0E0",
+      "skinColor": "#F0F0E0",
+      "outlineColor": "#202020",
+      "template": "templates/avatar-01.manual-traits.json",
+      "generated": "generated/avatar-01.png",
+      "stackPreview": "stack-previews/avatar-01.png",
+      "assets": "asset-previews/avatar-01",
+      "counts": {
+        "face": 490,
+        "clothing": 60,
+        "hair": 151
+      }
+    },
+    {
+      "id": "avatar-02",
+      "background": "#E0F0C0",
+      "skinColor": "#F0F0E0",
+      "outlineColor": "#202020",
+      "template": "templates/avatar-02.manual-traits.json",
+      "generated": "generated/avatar-02.png",
+      "stackPreview": "stack-previews/avatar-02.png",
+      "assets": "asset-previews/avatar-02",
+      "counts": {
+        "face": 512,
+        "clothing": 63,
+        "hair": 74
+      }
+    },
+    {
+      "id": "avatar-03",
+      "background": "#F0E0A0",
+      "skinColor": "#805040",
+      "outlineColor": "#202020",
+      "template": "templates/avatar-03.manual-traits.json",
+      "generated": "generated/avatar-03.png",
+      "stackPreview": "stack-previews/avatar-03.png",
+      "assets": "asset-previews/avatar-03",
+      "counts": {
+        "face": 746,
+        "clothing": 70,
+        "hair": 332
+      }
+    },
+    {
+      "id": "avatar-04",
+      "background": "#E0F0C0",
+      "skinColor": "#F0F0E0",
+      "outlineColor": "#202020",
+      "template": "templates/avatar-04.manual-traits.json",
+      "generated": "generated/avatar-04.png",
+      "stackPreview": "stack-previews/avatar-04.png",
+      "assets": "asset-previews/avatar-04",
+      "counts": {
+        "face": 519,
+        "clothing": 27,
+        "hair": 175
+      }
+    },
+    {
+      "id": "avatar-05",
+      "background": "#80E0E0",
+      "skinColor": "#F0F0E0",
+      "outlineColor": "#202020",
+      "template": "templates/avatar-05.manual-traits.json",
+      "generated": "generated/avatar-05.png",
+      "stackPreview": "stack-previews/avatar-05.png",
+      "assets": "asset-previews/avatar-05",
+      "counts": {
+        "face": 649,
+        "clothing": 21,
+        "hair": 288
+      }
+    }
+  ],
+  "reconstruction": {
+    "reports": "diffs/*.json",
+    "aggregateDiffRate": 0
+  },
+  "cross": {
+    "combinations": 125,
+    "contactSheet": "cross-combinations/contact-sheet.png",
+    "report": "cross-combinations/report.json",
+    "characterPixels": {
+      "min": 490,
+      "max": 769,
+      "average": 637.4
+    }
+  },
+  "layerHygiene": [
+    {
+      "id": "avatar-01",
+      "hairCentralFaceLeakagePixels": 0,
+      "clothingFaceShadowLeakagePixels": 0
+    },
+    {
+      "id": "avatar-02",
+      "hairCentralFaceLeakagePixels": 0,
+      "clothingFaceShadowLeakagePixels": 0
+    },
+    {
+      "id": "avatar-03",
+      "hairCentralFaceLeakagePixels": 0,
+      "clothingFaceShadowLeakagePixels": 0
+    },
+    {
+      "id": "avatar-04",
+      "hairCentralFaceLeakagePixels": 0,
+      "clothingFaceShadowLeakagePixels": 0
+    },
+    {
+      "id": "avatar-05",
+      "hairCentralFaceLeakagePixels": 0,
+      "clothingFaceShadowLeakagePixels": 0
+    }
+  ]
+}

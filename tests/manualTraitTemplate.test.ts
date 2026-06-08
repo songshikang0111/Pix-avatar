@@ -22,4 +22,18 @@ describe("manual trait templates", () => {
     expect(spec.patches?.some((patch) => patch.op === "rect" && patch.layer === "manual.80.glasses")).toBe(true);
     expect(matrix[16][16]).toBe("#56CCF2");
   });
+
+  it("renders clothing above the face base for three-part assets", () => {
+    const template = createEmptyManualTemplate("three-part-order-test");
+    const face = template.layers.find((layer) => layer.slot === "face.shape");
+    const clothing = template.layers.find((layer) => layer.slot === "clothing.top");
+    if (!face || !clothing) throw new Error("Missing test layers");
+
+    face.pixels = [{ x: 14, y: 27, color: "#F0F0E0" }];
+    clothing.pixels = [{ x: 14, y: 27, color: "#202020" }];
+
+    const matrix = pixelImageToMatrix(renderAvatar(manualTemplateToSpec(template)).image);
+
+    expect(matrix[27][14]).toBe("#202020");
+  });
 });

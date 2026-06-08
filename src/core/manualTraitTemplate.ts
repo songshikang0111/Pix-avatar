@@ -3,9 +3,9 @@ import { AvatarSpec, PixelPatch, TraitKey, TraitMap } from "../types";
 
 export const MANUAL_TRAIT_LAYER_DEFS = [
   { slot: "background.style", label: "Background", layer: "manual.00.background" },
-  { slot: "clothing.top", label: "Clothing", layer: "manual.10.clothing" },
-  { slot: "ears.shape", label: "Ears", layer: "manual.20.ears" },
-  { slot: "face.shape", label: "Face", layer: "manual.30.face" },
+  { slot: "face.shape", label: "Face", layer: "manual.10.face" },
+  { slot: "ears.shape", label: "Ears", layer: "manual.12.ears" },
+  { slot: "clothing.top", label: "Clothing", layer: "manual.20.clothing" },
   { slot: "hair.style", label: "Hair", layer: "manual.40.hair" },
   { slot: "headwear.type", label: "Headwear", layer: "manual.45.headwear" },
   { slot: "eyes.shape", label: "Eyes", layer: "manual.50.eyes" },

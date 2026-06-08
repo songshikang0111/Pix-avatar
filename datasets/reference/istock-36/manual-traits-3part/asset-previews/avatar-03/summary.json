@@ -1,0 +1,34 @@
+{
+  "id": "avatar-03",
+  "skinColor": "#805040",
+  "outlineColor": "#202020",
+  "slots": {
+    "face.shape": {
+      "pixels": 746,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    "clothing.top": {
+      "pixels": 70,
+      "bbox": [
+        1,
+        27,
+        28,
+        32
+      ]
+    },
+    "hair.style": {
+      "pixels": 332,
+      "bbox": [
+        1,
+        2,
+        31,
+        27
+      ]
+    }
+  }
+}

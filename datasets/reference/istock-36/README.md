@@ -22,6 +22,10 @@ This fixture turns a 6x6 reference sheet into Pix Avatar comparable outputs:
   across different reference avatars.
 - `manual-traits/`: manually reviewed `Pix Avatar Trait Studio` samples,
   including an `avatar-01` full-layer template with exact `32x32` diff reports.
+- `manual-traits-3part/`: reviewed three-part reference traits for the first
+  five avatars. Each sample is reduced to `face.shape`, `clothing.top`, and
+  `hair.style`, plus visual QA sheets for individual assets, exact
+  reconstruction, and 5x5x5 cross-combinations.
 
 The JSON matrices are intentionally dense `32x32` rows of hex colors. The
 normalization uses area-dominant sampling with a `0.5,0.5` source-pixel offset,
@@ -80,6 +84,18 @@ face-kit because the extracted feature pixels are absolute 32px part assets.
 For manual review and cleanup of reference-derived parts, use the local
 `Pix Avatar Trait Studio` workflow documented in
 [`../../../docs/trait-studio-manual.zh.md`](../../../docs/trait-studio-manual.zh.md).
+
+Three-part reference traits can be regenerated with:
+
+```bash
+npm run build:three-part-reference-traits -- --count 5
+```
+
+The three-part report includes exact reconstruction diff rates and two layer
+hygiene checks: `hairCentralFaceLeakagePixels` catches hair assets that absorb
+central face/eye pixels, and `clothingFaceShadowLeakagePixels` catches clothing
+assets that absorb lower-face shadow or chin pixels. Both should stay at `0`
+before accepting the generated assets.
 
 The original stock image is not copied into this repo. Some generated entries
 inherit the visible iStock watermark from the reference image; keep that in mind

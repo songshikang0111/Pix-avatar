@@ -1,0 +1,1882 @@
+{
+  "version": "pix-avatar/three-part-cross-combinations/v1",
+  "combinations": 125,
+  "layout": "Rows are face assets. Within each row, columns are grouped as hair 01-05 x clothing 01-05.",
+  "entries": [
+    {
+      "id": "face-avatar-01__hair-avatar-01__clothing-avatar-01",
+      "face": "avatar-01",
+      "hair": "avatar-01",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-01__hair-avatar-01__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-01__hair-avatar-01__clothing-avatar-01.json",
+      "characterPixels": 490,
+      "bbox": [
+        2,
+        3,
+        26,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-01__clothing-avatar-02",
+      "face": "avatar-01",
+      "hair": "avatar-01",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-01__hair-avatar-01__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-01__hair-avatar-01__clothing-avatar-02.json",
+      "characterPixels": 496,
+      "bbox": [
+        1,
+        3,
+        26,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-01__clothing-avatar-03",
+      "face": "avatar-01",
+      "hair": "avatar-01",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-01__hair-avatar-01__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-01__hair-avatar-01__clothing-avatar-03.json",
+      "characterPixels": 501,
+      "bbox": [
+        1,
+        3,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-01__clothing-avatar-04",
+      "face": "avatar-01",
+      "hair": "avatar-01",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-01__hair-avatar-01__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-01__hair-avatar-01__clothing-avatar-04.json",
+      "characterPixels": 496,
+      "bbox": [
+        2,
+        3,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-01__clothing-avatar-05",
+      "face": "avatar-01",
+      "hair": "avatar-01",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-01__hair-avatar-01__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-01__hair-avatar-01__clothing-avatar-05.json",
+      "characterPixels": 492,
+      "bbox": [
+        2,
+        3,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-02__clothing-avatar-01",
+      "face": "avatar-01",
+      "hair": "avatar-02",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-01__hair-avatar-02__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-01__hair-avatar-02__clothing-avatar-01.json",
+      "characterPixels": 516,
+      "bbox": [
+        2,
+        1,
+        26,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-02__clothing-avatar-02",
+      "face": "avatar-01",
+      "hair": "avatar-02",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-01__hair-avatar-02__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-01__hair-avatar-02__clothing-avatar-02.json",
+      "characterPixels": 522,
+      "bbox": [
+        1,
+        1,
+        26,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-02__clothing-avatar-03",
+      "face": "avatar-01",
+      "hair": "avatar-02",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-01__hair-avatar-02__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-01__hair-avatar-02__clothing-avatar-03.json",
+      "characterPixels": 527,
+      "bbox": [
+        1,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-02__clothing-avatar-04",
+      "face": "avatar-01",
+      "hair": "avatar-02",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-01__hair-avatar-02__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-01__hair-avatar-02__clothing-avatar-04.json",
+      "characterPixels": 522,
+      "bbox": [
+        2,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-02__clothing-avatar-05",
+      "face": "avatar-01",
+      "hair": "avatar-02",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-01__hair-avatar-02__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-01__hair-avatar-02__clothing-avatar-05.json",
+      "characterPixels": 518,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-03__clothing-avatar-01",
+      "face": "avatar-01",
+      "hair": "avatar-03",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-01__hair-avatar-03__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-01__hair-avatar-03__clothing-avatar-01.json",
+      "characterPixels": 675,
+      "bbox": [
+        1,
+        2,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-03__clothing-avatar-02",
+      "face": "avatar-01",
+      "hair": "avatar-03",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-01__hair-avatar-03__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-01__hair-avatar-03__clothing-avatar-02.json",
+      "characterPixels": 681,
+      "bbox": [
+        1,
+        2,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-03__clothing-avatar-03",
+      "face": "avatar-01",
+      "hair": "avatar-03",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-01__hair-avatar-03__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-01__hair-avatar-03__clothing-avatar-03.json",
+      "characterPixels": 686,
+      "bbox": [
+        1,
+        2,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-03__clothing-avatar-04",
+      "face": "avatar-01",
+      "hair": "avatar-03",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-01__hair-avatar-03__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-01__hair-avatar-03__clothing-avatar-04.json",
+      "characterPixels": 681,
+      "bbox": [
+        1,
+        2,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-03__clothing-avatar-05",
+      "face": "avatar-01",
+      "hair": "avatar-03",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-01__hair-avatar-03__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-01__hair-avatar-03__clothing-avatar-05.json",
+      "characterPixels": 677,
+      "bbox": [
+        1,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-04__clothing-avatar-01",
+      "face": "avatar-01",
+      "hair": "avatar-04",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-01__hair-avatar-04__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-01__hair-avatar-04__clothing-avatar-01.json",
+      "characterPixels": 539,
+      "bbox": [
+        2,
+        1,
+        27,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-04__clothing-avatar-02",
+      "face": "avatar-01",
+      "hair": "avatar-04",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-01__hair-avatar-04__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-01__hair-avatar-04__clothing-avatar-02.json",
+      "characterPixels": 545,
+      "bbox": [
+        1,
+        1,
+        27,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-04__clothing-avatar-03",
+      "face": "avatar-01",
+      "hair": "avatar-04",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-01__hair-avatar-04__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-01__hair-avatar-04__clothing-avatar-03.json",
+      "characterPixels": 550,
+      "bbox": [
+        1,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-04__clothing-avatar-04",
+      "face": "avatar-01",
+      "hair": "avatar-04",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-01__hair-avatar-04__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-01__hair-avatar-04__clothing-avatar-04.json",
+      "characterPixels": 545,
+      "bbox": [
+        2,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-04__clothing-avatar-05",
+      "face": "avatar-01",
+      "hair": "avatar-04",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-01__hair-avatar-04__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-01__hair-avatar-04__clothing-avatar-05.json",
+      "characterPixels": 541,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-05__clothing-avatar-01",
+      "face": "avatar-01",
+      "hair": "avatar-05",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-01__hair-avatar-05__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-01__hair-avatar-05__clothing-avatar-01.json",
+      "characterPixels": 609,
+      "bbox": [
+        2,
+        3,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-05__clothing-avatar-02",
+      "face": "avatar-01",
+      "hair": "avatar-05",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-01__hair-avatar-05__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-01__hair-avatar-05__clothing-avatar-02.json",
+      "characterPixels": 612,
+      "bbox": [
+        1,
+        3,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-05__clothing-avatar-03",
+      "face": "avatar-01",
+      "hair": "avatar-05",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-01__hair-avatar-05__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-01__hair-avatar-05__clothing-avatar-03.json",
+      "characterPixels": 617,
+      "bbox": [
+        1,
+        3,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-05__clothing-avatar-04",
+      "face": "avatar-01",
+      "hair": "avatar-05",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-01__hair-avatar-05__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-01__hair-avatar-05__clothing-avatar-04.json",
+      "characterPixels": 615,
+      "bbox": [
+        2,
+        3,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-01__hair-avatar-05__clothing-avatar-05",
+      "face": "avatar-01",
+      "hair": "avatar-05",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-01__hair-avatar-05__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-01__hair-avatar-05__clothing-avatar-05.json",
+      "characterPixels": 611,
+      "bbox": [
+        2,
+        3,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-01__clothing-avatar-01",
+      "face": "avatar-02",
+      "hair": "avatar-01",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-02__hair-avatar-01__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-02__hair-avatar-01__clothing-avatar-01.json",
+      "characterPixels": 533,
+      "bbox": [
+        0,
+        1,
+        26,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-01__clothing-avatar-02",
+      "face": "avatar-02",
+      "hair": "avatar-01",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-02__hair-avatar-01__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-02__hair-avatar-01__clothing-avatar-02.json",
+      "characterPixels": 531,
+      "bbox": [
+        0,
+        1,
+        26,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-01__clothing-avatar-03",
+      "face": "avatar-02",
+      "hair": "avatar-01",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-02__hair-avatar-01__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-02__hair-avatar-01__clothing-avatar-03.json",
+      "characterPixels": 538,
+      "bbox": [
+        0,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-01__clothing-avatar-04",
+      "face": "avatar-02",
+      "hair": "avatar-01",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-02__hair-avatar-01__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-02__hair-avatar-01__clothing-avatar-04.json",
+      "characterPixels": 538,
+      "bbox": [
+        0,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-01__clothing-avatar-05",
+      "face": "avatar-02",
+      "hair": "avatar-01",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-02__hair-avatar-01__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-02__hair-avatar-01__clothing-avatar-05.json",
+      "characterPixels": 534,
+      "bbox": [
+        0,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-02__clothing-avatar-01",
+      "face": "avatar-02",
+      "hair": "avatar-02",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-02__hair-avatar-02__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-02__hair-avatar-02__clothing-avatar-01.json",
+      "characterPixels": 514,
+      "bbox": [
+        0,
+        1,
+        26,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-02__clothing-avatar-02",
+      "face": "avatar-02",
+      "hair": "avatar-02",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-02__hair-avatar-02__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-02__hair-avatar-02__clothing-avatar-02.json",
+      "characterPixels": 512,
+      "bbox": [
+        0,
+        1,
+        26,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-02__clothing-avatar-03",
+      "face": "avatar-02",
+      "hair": "avatar-02",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-02__hair-avatar-02__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-02__hair-avatar-02__clothing-avatar-03.json",
+      "characterPixels": 519,
+      "bbox": [
+        0,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-02__clothing-avatar-04",
+      "face": "avatar-02",
+      "hair": "avatar-02",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-02__hair-avatar-02__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-02__hair-avatar-02__clothing-avatar-04.json",
+      "characterPixels": 519,
+      "bbox": [
+        0,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-02__clothing-avatar-05",
+      "face": "avatar-02",
+      "hair": "avatar-02",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-02__hair-avatar-02__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-02__hair-avatar-02__clothing-avatar-05.json",
+      "characterPixels": 515,
+      "bbox": [
+        0,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-03__clothing-avatar-01",
+      "face": "avatar-02",
+      "hair": "avatar-03",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-02__hair-avatar-03__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-02__hair-avatar-03__clothing-avatar-01.json",
+      "characterPixels": 688,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-03__clothing-avatar-02",
+      "face": "avatar-02",
+      "hair": "avatar-03",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-02__hair-avatar-03__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-02__hair-avatar-03__clothing-avatar-02.json",
+      "characterPixels": 686,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-03__clothing-avatar-03",
+      "face": "avatar-02",
+      "hair": "avatar-03",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-02__hair-avatar-03__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-02__hair-avatar-03__clothing-avatar-03.json",
+      "characterPixels": 693,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-03__clothing-avatar-04",
+      "face": "avatar-02",
+      "hair": "avatar-03",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-02__hair-avatar-03__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-02__hair-avatar-03__clothing-avatar-04.json",
+      "characterPixels": 693,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-03__clothing-avatar-05",
+      "face": "avatar-02",
+      "hair": "avatar-03",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-02__hair-avatar-03__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-02__hair-avatar-03__clothing-avatar-05.json",
+      "characterPixels": 689,
+      "bbox": [
+        0,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-04__clothing-avatar-01",
+      "face": "avatar-02",
+      "hair": "avatar-04",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-02__hair-avatar-04__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-02__hair-avatar-04__clothing-avatar-01.json",
+      "characterPixels": 565,
+      "bbox": [
+        0,
+        1,
+        27,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-04__clothing-avatar-02",
+      "face": "avatar-02",
+      "hair": "avatar-04",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-02__hair-avatar-04__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-02__hair-avatar-04__clothing-avatar-02.json",
+      "characterPixels": 563,
+      "bbox": [
+        0,
+        1,
+        27,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-04__clothing-avatar-03",
+      "face": "avatar-02",
+      "hair": "avatar-04",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-02__hair-avatar-04__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-02__hair-avatar-04__clothing-avatar-03.json",
+      "characterPixels": 570,
+      "bbox": [
+        0,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-04__clothing-avatar-04",
+      "face": "avatar-02",
+      "hair": "avatar-04",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-02__hair-avatar-04__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-02__hair-avatar-04__clothing-avatar-04.json",
+      "characterPixels": 570,
+      "bbox": [
+        0,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-04__clothing-avatar-05",
+      "face": "avatar-02",
+      "hair": "avatar-04",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-02__hair-avatar-04__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-02__hair-avatar-04__clothing-avatar-05.json",
+      "characterPixels": 566,
+      "bbox": [
+        0,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-05__clothing-avatar-01",
+      "face": "avatar-02",
+      "hair": "avatar-05",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-02__hair-avatar-05__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-02__hair-avatar-05__clothing-avatar-01.json",
+      "characterPixels": 630,
+      "bbox": [
+        0,
+        1,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-05__clothing-avatar-02",
+      "face": "avatar-02",
+      "hair": "avatar-05",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-02__hair-avatar-05__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-02__hair-avatar-05__clothing-avatar-02.json",
+      "characterPixels": 628,
+      "bbox": [
+        0,
+        1,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-05__clothing-avatar-03",
+      "face": "avatar-02",
+      "hair": "avatar-05",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-02__hair-avatar-05__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-02__hair-avatar-05__clothing-avatar-03.json",
+      "characterPixels": 635,
+      "bbox": [
+        0,
+        1,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-05__clothing-avatar-04",
+      "face": "avatar-02",
+      "hair": "avatar-05",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-02__hair-avatar-05__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-02__hair-avatar-05__clothing-avatar-04.json",
+      "characterPixels": 635,
+      "bbox": [
+        0,
+        1,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-02__hair-avatar-05__clothing-avatar-05",
+      "face": "avatar-02",
+      "hair": "avatar-05",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-02__hair-avatar-05__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-02__hair-avatar-05__clothing-avatar-05.json",
+      "characterPixels": 631,
+      "bbox": [
+        0,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-01__clothing-avatar-01",
+      "face": "avatar-03",
+      "hair": "avatar-01",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-03__hair-avatar-01__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-03__hair-avatar-01__clothing-avatar-01.json",
+      "characterPixels": 746,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-01__clothing-avatar-02",
+      "face": "avatar-03",
+      "hair": "avatar-01",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-03__hair-avatar-01__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-03__hair-avatar-01__clothing-avatar-02.json",
+      "characterPixels": 746,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-01__clothing-avatar-03",
+      "face": "avatar-03",
+      "hair": "avatar-01",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-03__hair-avatar-01__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-03__hair-avatar-01__clothing-avatar-03.json",
+      "characterPixels": 746,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-01__clothing-avatar-04",
+      "face": "avatar-03",
+      "hair": "avatar-01",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-03__hair-avatar-01__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-03__hair-avatar-01__clothing-avatar-04.json",
+      "characterPixels": 748,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-01__clothing-avatar-05",
+      "face": "avatar-03",
+      "hair": "avatar-01",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-03__hair-avatar-01__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-03__hair-avatar-01__clothing-avatar-05.json",
+      "characterPixels": 747,
+      "bbox": [
+        0,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-02__clothing-avatar-01",
+      "face": "avatar-03",
+      "hair": "avatar-02",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-03__hair-avatar-02__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-03__hair-avatar-02__clothing-avatar-01.json",
+      "characterPixels": 749,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-02__clothing-avatar-02",
+      "face": "avatar-03",
+      "hair": "avatar-02",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-03__hair-avatar-02__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-03__hair-avatar-02__clothing-avatar-02.json",
+      "characterPixels": 749,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-02__clothing-avatar-03",
+      "face": "avatar-03",
+      "hair": "avatar-02",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-03__hair-avatar-02__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-03__hair-avatar-02__clothing-avatar-03.json",
+      "characterPixels": 749,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-02__clothing-avatar-04",
+      "face": "avatar-03",
+      "hair": "avatar-02",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-03__hair-avatar-02__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-03__hair-avatar-02__clothing-avatar-04.json",
+      "characterPixels": 751,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-02__clothing-avatar-05",
+      "face": "avatar-03",
+      "hair": "avatar-02",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-03__hair-avatar-02__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-03__hair-avatar-02__clothing-avatar-05.json",
+      "characterPixels": 750,
+      "bbox": [
+        0,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-03__clothing-avatar-01",
+      "face": "avatar-03",
+      "hair": "avatar-03",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-03__hair-avatar-03__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-03__hair-avatar-03__clothing-avatar-01.json",
+      "characterPixels": 746,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-03__clothing-avatar-02",
+      "face": "avatar-03",
+      "hair": "avatar-03",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-03__hair-avatar-03__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-03__hair-avatar-03__clothing-avatar-02.json",
+      "characterPixels": 746,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-03__clothing-avatar-03",
+      "face": "avatar-03",
+      "hair": "avatar-03",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-03__hair-avatar-03__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-03__hair-avatar-03__clothing-avatar-03.json",
+      "characterPixels": 746,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-03__clothing-avatar-04",
+      "face": "avatar-03",
+      "hair": "avatar-03",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-03__hair-avatar-03__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-03__hair-avatar-03__clothing-avatar-04.json",
+      "characterPixels": 748,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-03__clothing-avatar-05",
+      "face": "avatar-03",
+      "hair": "avatar-03",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-03__hair-avatar-03__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-03__hair-avatar-03__clothing-avatar-05.json",
+      "characterPixels": 747,
+      "bbox": [
+        0,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-04__clothing-avatar-01",
+      "face": "avatar-03",
+      "hair": "avatar-04",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-03__hair-avatar-04__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-03__hair-avatar-04__clothing-avatar-01.json",
+      "characterPixels": 746,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-04__clothing-avatar-02",
+      "face": "avatar-03",
+      "hair": "avatar-04",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-03__hair-avatar-04__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-03__hair-avatar-04__clothing-avatar-02.json",
+      "characterPixels": 746,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-04__clothing-avatar-03",
+      "face": "avatar-03",
+      "hair": "avatar-04",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-03__hair-avatar-04__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-03__hair-avatar-04__clothing-avatar-03.json",
+      "characterPixels": 746,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-04__clothing-avatar-04",
+      "face": "avatar-03",
+      "hair": "avatar-04",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-03__hair-avatar-04__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-03__hair-avatar-04__clothing-avatar-04.json",
+      "characterPixels": 748,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-04__clothing-avatar-05",
+      "face": "avatar-03",
+      "hair": "avatar-04",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-03__hair-avatar-04__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-03__hair-avatar-04__clothing-avatar-05.json",
+      "characterPixels": 747,
+      "bbox": [
+        0,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-05__clothing-avatar-01",
+      "face": "avatar-03",
+      "hair": "avatar-05",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-03__hair-avatar-05__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-03__hair-avatar-05__clothing-avatar-01.json",
+      "characterPixels": 767,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-05__clothing-avatar-02",
+      "face": "avatar-03",
+      "hair": "avatar-05",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-03__hair-avatar-05__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-03__hair-avatar-05__clothing-avatar-02.json",
+      "characterPixels": 767,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-05__clothing-avatar-03",
+      "face": "avatar-03",
+      "hair": "avatar-05",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-03__hair-avatar-05__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-03__hair-avatar-05__clothing-avatar-03.json",
+      "characterPixels": 767,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-05__clothing-avatar-04",
+      "face": "avatar-03",
+      "hair": "avatar-05",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-03__hair-avatar-05__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-03__hair-avatar-05__clothing-avatar-04.json",
+      "characterPixels": 769,
+      "bbox": [
+        0,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-03__hair-avatar-05__clothing-avatar-05",
+      "face": "avatar-03",
+      "hair": "avatar-05",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-03__hair-avatar-05__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-03__hair-avatar-05__clothing-avatar-05.json",
+      "characterPixels": 768,
+      "bbox": [
+        0,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-01__clothing-avatar-01",
+      "face": "avatar-04",
+      "hair": "avatar-01",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-04__hair-avatar-01__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-04__hair-avatar-01__clothing-avatar-01.json",
+      "characterPixels": 547,
+      "bbox": [
+        2,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-01__clothing-avatar-02",
+      "face": "avatar-04",
+      "hair": "avatar-01",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-04__hair-avatar-01__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-04__hair-avatar-01__clothing-avatar-02.json",
+      "characterPixels": 553,
+      "bbox": [
+        1,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-01__clothing-avatar-03",
+      "face": "avatar-04",
+      "hair": "avatar-01",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-04__hair-avatar-01__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-04__hair-avatar-01__clothing-avatar-03.json",
+      "characterPixels": 554,
+      "bbox": [
+        1,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-01__clothing-avatar-04",
+      "face": "avatar-04",
+      "hair": "avatar-01",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-04__hair-avatar-01__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-04__hair-avatar-01__clothing-avatar-04.json",
+      "characterPixels": 543,
+      "bbox": [
+        4,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-01__clothing-avatar-05",
+      "face": "avatar-04",
+      "hair": "avatar-01",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-04__hair-avatar-01__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-04__hair-avatar-01__clothing-avatar-05.json",
+      "characterPixels": 547,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-02__clothing-avatar-01",
+      "face": "avatar-04",
+      "hair": "avatar-02",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-04__hair-avatar-02__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-04__hair-avatar-02__clothing-avatar-01.json",
+      "characterPixels": 556,
+      "bbox": [
+        2,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-02__clothing-avatar-02",
+      "face": "avatar-04",
+      "hair": "avatar-02",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-04__hair-avatar-02__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-04__hair-avatar-02__clothing-avatar-02.json",
+      "characterPixels": 562,
+      "bbox": [
+        1,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-02__clothing-avatar-03",
+      "face": "avatar-04",
+      "hair": "avatar-02",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-04__hair-avatar-02__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-04__hair-avatar-02__clothing-avatar-03.json",
+      "characterPixels": 563,
+      "bbox": [
+        1,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-02__clothing-avatar-04",
+      "face": "avatar-04",
+      "hair": "avatar-02",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-04__hair-avatar-02__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-04__hair-avatar-02__clothing-avatar-04.json",
+      "characterPixels": 552,
+      "bbox": [
+        2,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-02__clothing-avatar-05",
+      "face": "avatar-04",
+      "hair": "avatar-02",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-04__hair-avatar-02__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-04__hair-avatar-02__clothing-avatar-05.json",
+      "characterPixels": 556,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-03__clothing-avatar-01",
+      "face": "avatar-04",
+      "hair": "avatar-03",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-04__hair-avatar-03__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-04__hair-avatar-03__clothing-avatar-01.json",
+      "characterPixels": 686,
+      "bbox": [
+        1,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-03__clothing-avatar-02",
+      "face": "avatar-04",
+      "hair": "avatar-03",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-04__hair-avatar-03__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-04__hair-avatar-03__clothing-avatar-02.json",
+      "characterPixels": 692,
+      "bbox": [
+        1,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-03__clothing-avatar-03",
+      "face": "avatar-04",
+      "hair": "avatar-03",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-04__hair-avatar-03__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-04__hair-avatar-03__clothing-avatar-03.json",
+      "characterPixels": 693,
+      "bbox": [
+        1,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-03__clothing-avatar-04",
+      "face": "avatar-04",
+      "hair": "avatar-03",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-04__hair-avatar-03__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-04__hair-avatar-03__clothing-avatar-04.json",
+      "characterPixels": 682,
+      "bbox": [
+        1,
+        1,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-03__clothing-avatar-05",
+      "face": "avatar-04",
+      "hair": "avatar-03",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-04__hair-avatar-03__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-04__hair-avatar-03__clothing-avatar-05.json",
+      "characterPixels": 686,
+      "bbox": [
+        1,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-04__clothing-avatar-01",
+      "face": "avatar-04",
+      "hair": "avatar-04",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-04__hair-avatar-04__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-04__hair-avatar-04__clothing-avatar-01.json",
+      "characterPixels": 523,
+      "bbox": [
+        2,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-04__clothing-avatar-02",
+      "face": "avatar-04",
+      "hair": "avatar-04",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-04__hair-avatar-04__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-04__hair-avatar-04__clothing-avatar-02.json",
+      "characterPixels": 529,
+      "bbox": [
+        1,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-04__clothing-avatar-03",
+      "face": "avatar-04",
+      "hair": "avatar-04",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-04__hair-avatar-04__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-04__hair-avatar-04__clothing-avatar-03.json",
+      "characterPixels": 530,
+      "bbox": [
+        1,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-04__clothing-avatar-04",
+      "face": "avatar-04",
+      "hair": "avatar-04",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-04__hair-avatar-04__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-04__hair-avatar-04__clothing-avatar-04.json",
+      "characterPixels": 519,
+      "bbox": [
+        4,
+        1,
+        28,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-04__clothing-avatar-05",
+      "face": "avatar-04",
+      "hair": "avatar-04",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-04__hair-avatar-04__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-04__hair-avatar-04__clothing-avatar-05.json",
+      "characterPixels": 523,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-05__clothing-avatar-01",
+      "face": "avatar-04",
+      "hair": "avatar-05",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-04__hair-avatar-05__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-04__hair-avatar-05__clothing-avatar-01.json",
+      "characterPixels": 664,
+      "bbox": [
+        2,
+        1,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-05__clothing-avatar-02",
+      "face": "avatar-04",
+      "hair": "avatar-05",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-04__hair-avatar-05__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-04__hair-avatar-05__clothing-avatar-02.json",
+      "characterPixels": 667,
+      "bbox": [
+        1,
+        1,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-05__clothing-avatar-03",
+      "face": "avatar-04",
+      "hair": "avatar-05",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-04__hair-avatar-05__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-04__hair-avatar-05__clothing-avatar-03.json",
+      "characterPixels": 668,
+      "bbox": [
+        1,
+        1,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-05__clothing-avatar-04",
+      "face": "avatar-04",
+      "hair": "avatar-05",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-04__hair-avatar-05__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-04__hair-avatar-05__clothing-avatar-04.json",
+      "characterPixels": 661,
+      "bbox": [
+        2,
+        1,
+        29,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-04__hair-avatar-05__clothing-avatar-05",
+      "face": "avatar-04",
+      "hair": "avatar-05",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-04__hair-avatar-05__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-04__hair-avatar-05__clothing-avatar-05.json",
+      "characterPixels": 665,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-01__clothing-avatar-01",
+      "face": "avatar-05",
+      "hair": "avatar-01",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-05__hair-avatar-01__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-05__hair-avatar-01__clothing-avatar-01.json",
+      "characterPixels": 650,
+      "bbox": [
+        2,
+        3,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-01__clothing-avatar-02",
+      "face": "avatar-05",
+      "hair": "avatar-01",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-05__hair-avatar-01__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-05__hair-avatar-01__clothing-avatar-02.json",
+      "characterPixels": 652,
+      "bbox": [
+        1,
+        3,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-01__clothing-avatar-03",
+      "face": "avatar-05",
+      "hair": "avatar-01",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-05__hair-avatar-01__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-05__hair-avatar-01__clothing-avatar-03.json",
+      "characterPixels": 657,
+      "bbox": [
+        1,
+        3,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-01__clothing-avatar-04",
+      "face": "avatar-05",
+      "hair": "avatar-01",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-05__hair-avatar-01__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-05__hair-avatar-01__clothing-avatar-04.json",
+      "characterPixels": 656,
+      "bbox": [
+        2,
+        3,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-01__clothing-avatar-05",
+      "face": "avatar-05",
+      "hair": "avatar-01",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-05__hair-avatar-01__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-05__hair-avatar-01__clothing-avatar-05.json",
+      "characterPixels": 650,
+      "bbox": [
+        2,
+        3,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-02__clothing-avatar-01",
+      "face": "avatar-05",
+      "hair": "avatar-02",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-05__hair-avatar-02__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-05__hair-avatar-02__clothing-avatar-01.json",
+      "characterPixels": 668,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-02__clothing-avatar-02",
+      "face": "avatar-05",
+      "hair": "avatar-02",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-05__hair-avatar-02__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-05__hair-avatar-02__clothing-avatar-02.json",
+      "characterPixels": 670,
+      "bbox": [
+        1,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-02__clothing-avatar-03",
+      "face": "avatar-05",
+      "hair": "avatar-02",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-05__hair-avatar-02__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-05__hair-avatar-02__clothing-avatar-03.json",
+      "characterPixels": 675,
+      "bbox": [
+        1,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-02__clothing-avatar-04",
+      "face": "avatar-05",
+      "hair": "avatar-02",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-05__hair-avatar-02__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-05__hair-avatar-02__clothing-avatar-04.json",
+      "characterPixels": 674,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-02__clothing-avatar-05",
+      "face": "avatar-05",
+      "hair": "avatar-02",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-05__hair-avatar-02__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-05__hair-avatar-02__clothing-avatar-05.json",
+      "characterPixels": 668,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-03__clothing-avatar-01",
+      "face": "avatar-05",
+      "hair": "avatar-03",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-05__hair-avatar-03__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-05__hair-avatar-03__clothing-avatar-01.json",
+      "characterPixels": 734,
+      "bbox": [
+        1,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-03__clothing-avatar-02",
+      "face": "avatar-05",
+      "hair": "avatar-03",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-05__hair-avatar-03__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-05__hair-avatar-03__clothing-avatar-02.json",
+      "characterPixels": 736,
+      "bbox": [
+        1,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-03__clothing-avatar-03",
+      "face": "avatar-05",
+      "hair": "avatar-03",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-05__hair-avatar-03__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-05__hair-avatar-03__clothing-avatar-03.json",
+      "characterPixels": 741,
+      "bbox": [
+        1,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-03__clothing-avatar-04",
+      "face": "avatar-05",
+      "hair": "avatar-03",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-05__hair-avatar-03__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-05__hair-avatar-03__clothing-avatar-04.json",
+      "characterPixels": 740,
+      "bbox": [
+        1,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-03__clothing-avatar-05",
+      "face": "avatar-05",
+      "hair": "avatar-03",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-05__hair-avatar-03__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-05__hair-avatar-03__clothing-avatar-05.json",
+      "characterPixels": 734,
+      "bbox": [
+        1,
+        2,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-04__clothing-avatar-01",
+      "face": "avatar-05",
+      "hair": "avatar-04",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-05__hair-avatar-04__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-05__hair-avatar-04__clothing-avatar-01.json",
+      "characterPixels": 686,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-04__clothing-avatar-02",
+      "face": "avatar-05",
+      "hair": "avatar-04",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-05__hair-avatar-04__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-05__hair-avatar-04__clothing-avatar-02.json",
+      "characterPixels": 688,
+      "bbox": [
+        1,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-04__clothing-avatar-03",
+      "face": "avatar-05",
+      "hair": "avatar-04",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-05__hair-avatar-04__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-05__hair-avatar-04__clothing-avatar-03.json",
+      "characterPixels": 693,
+      "bbox": [
+        1,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-04__clothing-avatar-04",
+      "face": "avatar-05",
+      "hair": "avatar-04",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-05__hair-avatar-04__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-05__hair-avatar-04__clothing-avatar-04.json",
+      "characterPixels": 692,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-04__clothing-avatar-05",
+      "face": "avatar-05",
+      "hair": "avatar-04",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-05__hair-avatar-04__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-05__hair-avatar-04__clothing-avatar-05.json",
+      "characterPixels": 686,
+      "bbox": [
+        2,
+        1,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-05__clothing-avatar-01",
+      "face": "avatar-05",
+      "hair": "avatar-05",
+      "clothing": "avatar-01",
+      "generated": "generated/face-avatar-05__hair-avatar-05__clothing-avatar-01.png",
+      "spec": "specs/face-avatar-05__hair-avatar-05__clothing-avatar-01.json",
+      "characterPixels": 649,
+      "bbox": [
+        2,
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-05__clothing-avatar-02",
+      "face": "avatar-05",
+      "hair": "avatar-05",
+      "clothing": "avatar-02",
+      "generated": "generated/face-avatar-05__hair-avatar-05__clothing-avatar-02.png",
+      "spec": "specs/face-avatar-05__hair-avatar-05__clothing-avatar-02.json",
+      "characterPixels": 651,
+      "bbox": [
+        1,
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-05__clothing-avatar-03",
+      "face": "avatar-05",
+      "hair": "avatar-05",
+      "clothing": "avatar-03",
+      "generated": "generated/face-avatar-05__hair-avatar-05__clothing-avatar-03.png",
+      "spec": "specs/face-avatar-05__hair-avatar-05__clothing-avatar-03.json",
+      "characterPixels": 656,
+      "bbox": [
+        1,
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-05__clothing-avatar-04",
+      "face": "avatar-05",
+      "hair": "avatar-05",
+      "clothing": "avatar-04",
+      "generated": "generated/face-avatar-05__hair-avatar-05__clothing-avatar-04.png",
+      "spec": "specs/face-avatar-05__hair-avatar-05__clothing-avatar-04.json",
+      "characterPixels": 655,
+      "bbox": [
+        2,
+        4,
+        32,
+        32
+      ]
+    },
+    {
+      "id": "face-avatar-05__hair-avatar-05__clothing-avatar-05",
+      "face": "avatar-05",
+      "hair": "avatar-05",
+      "clothing": "avatar-05",
+      "generated": "generated/face-avatar-05__hair-avatar-05__clothing-avatar-05.png",
+      "spec": "specs/face-avatar-05__hair-avatar-05__clothing-avatar-05.json",
+      "characterPixels": 649,
+      "bbox": [
+        2,
+        4,
+        32,
+        32
+      ]
+    }
+  ]
+}
