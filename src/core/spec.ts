@@ -1,21 +1,23 @@
-import { AvatarSpec, TraitMap } from "../types";
-import { DEFAULT_TRAITS, REQUIRED_TRAIT_KEYS, createDefaultSpec, getTraitOption } from "../assets/humanV1";
+import { AssetPackId, AvatarSpec, TraitMap } from "../types";
+import { DEFAULT_ASSET_PACK_ID, getAssetPack, getTraitOption } from "../assets/registry";
 
 export function normalizeSpec(input: Partial<AvatarSpec> = {}): AvatarSpec {
-  const traits: TraitMap = { ...DEFAULT_TRAITS, ...(input.traits ?? {}) };
-  for (const key of REQUIRED_TRAIT_KEYS) {
-    if (!traits[key]) traits[key] = DEFAULT_TRAITS[key];
+  const assetPackId = input.asset_pack?.id ?? DEFAULT_ASSET_PACK_ID;
+  const assetPack = getAssetPack(assetPackId);
+  const traits: TraitMap = { ...assetPack.defaultTraits, ...(input.traits ?? {}) };
+  for (const key of assetPack.requiredTraitKeys) {
+    if (!traits[key]) traits[key] = assetPack.defaultTraits[key];
   }
   return {
     version: "avatar/v1",
     canvas: {
-      size: [40, 40],
-      scale: input.canvas?.scale ?? 12,
+      size: assetPack.canvas.size,
+      scale: input.canvas?.scale ?? assetPack.canvas.scale,
       background: input.canvas?.background ?? "transparent"
     },
     asset_pack: {
-      id: "human_v1",
-      version: input.asset_pack?.version ?? "1.0.0"
+      id: assetPack.id,
+      version: input.asset_pack?.version ?? assetPack.version
     },
     seed: input.seed,
     palette: input.palette,
@@ -27,13 +29,15 @@ export function normalizeSpec(input: Partial<AvatarSpec> = {}): AvatarSpec {
 export function validateSpecShape(spec: AvatarSpec) {
   const warnings: string[] = [];
   const errors: string[] = [];
+  const assetPack = getAssetPack(spec.asset_pack.id);
   if (spec.version !== "avatar/v1") errors.push(`Unsupported spec version: ${spec.version}`);
-  if (spec.canvas.size[0] !== 40 || spec.canvas.size[1] !== 40) errors.push("Only 40x40 logical canvas is supported in this asset pack.");
-  if (spec.asset_pack.id !== "human_v1") errors.push(`Unknown asset pack: ${spec.asset_pack.id}`);
+  if (spec.canvas.size[0] !== assetPack.canvas.size[0] || spec.canvas.size[1] !== assetPack.canvas.size[1]) {
+    errors.push(`Only ${assetPack.canvas.size[0]}x${assetPack.canvas.size[1]} logical canvas is supported in ${assetPack.id}.`);
+  }
 
   for (const [key, value] of Object.entries(spec.traits)) {
     if (!value) continue;
-    if (!getTraitOption(key, value)) {
+    if (!getTraitOption(assetPack.id, key, value)) {
       warnings.push(`Unknown trait ${key}=${value}; default drawing fallback may be used.`);
     }
   }
@@ -41,6 +45,19 @@ export function validateSpecShape(spec: AvatarSpec) {
   return { warnings, errors };
 }
 
-export function createSpecWithTraits(traits: TraitMap = {}) {
-  return createDefaultSpec(traits);
+export function createSpecWithTraits(traits: TraitMap = {}, assetPackId: AssetPackId = DEFAULT_ASSET_PACK_ID): AvatarSpec {
+  const assetPack = getAssetPack(assetPackId);
+  return {
+    version: "avatar/v1" as const,
+    canvas: {
+      size: assetPack.canvas.size,
+      scale: assetPack.canvas.scale,
+      background: "transparent"
+    },
+    asset_pack: {
+      id: assetPack.id,
+      version: assetPack.version
+    },
+    traits: { ...assetPack.defaultTraits, ...traits }
+  };
 }

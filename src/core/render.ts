@@ -9,6 +9,7 @@ import { bboxUnion, keyOf } from "./geometry";
 import { applyPatches } from "./patch";
 import { exportSvg } from "./svg";
 import { zForLayer } from "./layers";
+import { getAssetPack } from "../assets/registry";
 
 export function renderAvatar(input: Partial<AvatarSpec>, options: RenderOptions = {}): RenderResult {
   const spec = normalizeSpec(input);
@@ -16,8 +17,10 @@ export function renderAvatar(input: Partial<AvatarSpec>, options: RenderOptions 
   const warnings = [...schema.warnings];
   if (schema.errors.length) throw new Error(schema.errors.join("; "));
 
-  const palette = resolvePalette(spec.traits, spec.palette);
-  const rig = createFaceRig(spec.traits["face.shape"], spec.traits);
+  const assetPack = getAssetPack(spec.asset_pack.id);
+  const palette = resolvePalette(spec.traits, spec.palette, assetPack.palette);
+  const rigTraits = { ...spec.traits, "__asset_pack": spec.asset_pack.id };
+  const rig = createFaceRig(spec.traits["face.shape"], rigTraits);
   const layers = new LayerStack();
   const placements = {};
 
@@ -25,6 +28,7 @@ export function renderAvatar(input: Partial<AvatarSpec>, options: RenderOptions 
     layers,
     rig,
     traits: spec.traits,
+    assetPackId: spec.asset_pack.id,
     palette,
     placements,
     warnings

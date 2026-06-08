@@ -1,4 +1,4 @@
-import { FaceRig, Mask, PixelMeta, Placement, TraitMap } from "../types";
+import { AssetPackId, FaceRig, Mask, PixelMeta, Placement, TraitMap } from "../types";
 import { colorToken } from "./color";
 import { bboxUnion, countOverlap, maskEdge, maskFromEllipse, maskFromRoundedRect, pointFromKey } from "./geometry";
 import { LayerStack, drawEllipse, drawLine, drawMask, drawRect, drawTriangle } from "./pixelLayer";
@@ -7,6 +7,7 @@ export interface DrawContext {
   layers: LayerStack;
   rig: FaceRig;
   traits: TraitMap;
+  assetPackId?: AssetPackId;
   palette: Record<string, string>;
   placements: Record<string, Placement>;
   warnings: string[];
@@ -36,6 +37,10 @@ function token(ctx: DrawContext, value: string) {
 
 function meta(trait: string, colorTokenValue: string): Partial<PixelMeta> {
   return { trait, colorToken: colorTokenValue };
+}
+
+function isHumanV2Icon(ctx: DrawContext) {
+  return ctx.assetPackId === "human_v2_icon";
 }
 
 function rect(ctx: DrawContext, layer: string, x: number, y: number, w: number, h: number, color: string, trait: string, clip?: Mask) {
@@ -75,7 +80,24 @@ function drawBackground(ctx: DrawContext) {
   const trait = `background.style.${style}`;
   if (style === "transparent") return;
 
-  if (style === "solid") {
+  if (style.startsWith("pastel_")) {
+    rect(ctx, "background.base", 0, 0, 40, 40, "background.base", trait);
+    if (style === "pastel_pink" || style === "pastel_lavender") {
+      ellipse(ctx, "background.pattern", 32, 8, 10, 10, "background.accent", trait);
+      ellipse(ctx, "background.effects", 5, 34, 7, 5, "background.shadow", trait);
+    } else {
+      rect(ctx, "background.pattern", 0, 29, 40, 11, "background.shadow", trait);
+      ellipse(ctx, "background.effects", 33, 6, 8, 6, "background.accent", trait);
+    }
+  } else if (style === "diagonal") {
+    rect(ctx, "background.base", 0, 0, 40, 40, "background.base", trait);
+    triangle(ctx, "background.pattern", [[0, 40], [40, 0], [40, 40]], "background.accent", trait);
+    line(ctx, "background.effects", 0, 39, 39, 0, "background.shadow", trait);
+  } else if (style === "split_color") {
+    rect(ctx, "background.base", 0, 0, 20, 40, "background.base", trait);
+    rect(ctx, "background.pattern", 20, 0, 20, 40, "background.accent", trait);
+    rect(ctx, "background.effects", 0, 30, 40, 10, "background.shadow", trait);
+  } else if (style === "solid") {
     rect(ctx, "background.base", 0, 0, 40, 40, "background.base", trait);
   } else if (style === "circle") {
     ellipse(ctx, "background.base", 20, 20, 18, 18, "background.base", trait);
@@ -165,13 +187,23 @@ function drawHead(ctx: DrawContext) {
   const edge = maskEdge(ctx.rig.masks.head);
   const shadow = ctx.layers.get("skin.shadow");
   const highlight = ctx.layers.get("skin.highlight");
+  const v2 = isHumanV2Icon(ctx);
   for (const point of edge.points) {
     const [x, y] = pointFromKey(point);
-    if (y > ctx.rig.anchors["face.center"][1] + 2 || x > 26 || x < 13) shadow.set(x, y, token(ctx, "skin.shadow"), meta(trait, "skin.shadow"));
+    if (v2) {
+      shadow.set(x, y, token(ctx, "line.dark"), meta(trait, "line.dark"));
+    } else if (y > ctx.rig.anchors["face.center"][1] + 2 || x > 26 || x < 13) {
+      shadow.set(x, y, token(ctx, "skin.shadow"), meta(trait, "skin.shadow"));
+    }
     if (x < 18 && y < 17) highlight.set(x, y, token(ctx, "skin.highlight"), meta(trait, "skin.highlight"));
   }
-  ellipse(ctx, "skin.highlight", 16, ctx.rig.anchors["left_eye.center"][1] + 4, 2.5, 1, "skin.highlight", trait, ctx.rig.masks.head);
-  ellipse(ctx, "skin.shadow", 24, ctx.rig.anchors.chin[1] - 1, 3, 1, "skin.shadow", trait, ctx.rig.masks.head);
+  if (v2) {
+    rect(ctx, "skin.highlight", 13, ctx.rig.anchors["left_eye.center"][1] + 4, 3, 1, "skin.highlight", trait, ctx.rig.masks.head);
+    rect(ctx, "skin.shadow", 23, ctx.rig.anchors.chin[1] - 2, 4, 1, "skin.shadow", trait, ctx.rig.masks.head);
+  } else {
+    ellipse(ctx, "skin.highlight", 16, ctx.rig.anchors["left_eye.center"][1] + 4, 2.5, 1, "skin.highlight", trait, ctx.rig.masks.head);
+    ellipse(ctx, "skin.shadow", 24, ctx.rig.anchors.chin[1] - 1, 3, 1, "skin.shadow", trait, ctx.rig.masks.head);
+  }
   ctx.placements[trait] = { trait, bbox: ctx.rig.bbox };
 }
 
@@ -208,18 +240,26 @@ function drawEar(ctx: DrawContext, side: "left" | "right", shape: string) {
 function drawHairBack(ctx: DrawContext) {
   const style = ctx.traits["hair.style"] ?? "short_messy";
   const trait = `hair.style.${style}`;
-  if (style === "bald_clean" || style === "buzz_cut" || style === "undercut") return;
+  if (style === "bald_clean" || style === "bald" || style === "buzz_cut" || style === "buzz" || style === "undercut" || style === "clean_crop" || style === "blue_short") return;
   const crown = ctx.rig.anchors["hair.crown"];
 
-  if (style === "long_wavy") {
+  if (style === "long_side") {
+    ellipse(ctx, "hair.back", crown[0] - 8, 22, 4, 14, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.back", crown[0] + 7, 21, 4, 13, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.back", crown[0], 12, 12, 8, "hair.base", trait, ctx.rig.masks.hair_allowed);
+  } else if (style === "blonde_wave") {
+    ellipse(ctx, "hair.back", crown[0] - 6, 20, 4, 12, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.back", crown[0] + 8, 20, 4, 12, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
+    ellipse(ctx, "hair.back", crown[0], 12, 12, 8, "hair.base", trait, ctx.rig.masks.hair_allowed);
+  } else if (style === "long_wavy") {
     ellipse(ctx, "hair.back", crown[0] - 8, 22, 4, 16, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
     ellipse(ctx, "hair.back", crown[0] + 8, 22, 4, 16, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
     ellipse(ctx, "hair.back", crown[0], 13, 12, 10, "hair.base", trait, ctx.rig.masks.hair_allowed);
-  } else if (style === "bob_bangs") {
+  } else if (style === "bob_bangs" || style === "bob" || style === "pink_bob") {
     ellipse(ctx, "hair.back", crown[0], 16, 13, 12, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
     rect(ctx, "hair.back", 8, 16, 4, 12, "hair.base", trait, ctx.rig.masks.hair_allowed);
     rect(ctx, "hair.back", 28, 16, 4, 12, "hair.base", trait, ctx.rig.masks.hair_allowed);
-  } else if (style === "curly_short") {
+  } else if (style === "curly_short" || style === "curly_cap") {
     for (const [x, y, r] of [
       [11, 10, 3],
       [15, 7, 4],
@@ -227,7 +267,7 @@ function drawHairBack(ctx: DrawContext) {
       [25, 7, 4],
       [29, 11, 3]
     ]) ellipse(ctx, "hair.back", x, y, r, r, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
-  } else if (style === "short_messy") {
+  } else if (style === "short_messy" || style === "side_sweep") {
     ellipse(ctx, "hair.back", crown[0], 10, 12, 7, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
   }
 }
@@ -238,29 +278,45 @@ function drawHairFront(ctx: DrawContext) {
   const crown = ctx.rig.anchors["hair.crown"];
   const y = ctx.rig.anchors["hairline.center"][1];
 
-  if (style === "bald_clean") {
+  if (style === "bald_clean" || style === "bald") {
     ctx.placements[trait] = { trait, bbox: [0, 0, 0, 0] };
     return;
   }
 
-  if (style === "buzz_cut") {
+  if (style === "buzz_cut" || style === "buzz") {
     ellipse(ctx, "hair.front", crown[0], y, 11, 5, "hair.base", trait, ctx.rig.masks.hair_allowed);
     line(ctx, "hair.highlight", 14, y - 2, 26, y - 3, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+  } else if (style === "clean_crop") {
+    ellipse(ctx, "hair.front", crown[0], y - 1, 12, 6, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.front", 11, y + 2, 18, 4, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    line(ctx, "hair.highlight", 14, y - 1, 24, y - 2, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+  } else if (style === "side_sweep" || style === "blue_short") {
+    ellipse(ctx, "hair.front", crown[0], y - 2, 13, 7, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    triangle(ctx, "hair.front", [[10, y + 1], [18, y + 6], [21, y]], "hair.base", trait, ctx.rig.masks.hair_allowed);
+    triangle(ctx, "hair.front", [[20, y - 2], [30, y], [24, y + 5]], "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.front", 13, y + 3, 12, 3, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.highlight", 14, y - 3, 5, 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.highlight", 19, y - 4, 4, 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
   } else if (style === "short_messy") {
     ellipse(ctx, "hair.front", crown[0], y - 1, 12, 6, "hair.base", trait, ctx.rig.masks.hair_allowed);
     triangle(ctx, "hair.front", [[10, y], [14, y + 5], [16, y]], "hair.base", trait, ctx.rig.masks.hair_allowed);
     triangle(ctx, "hair.front", [[15, y - 2], [18, y + 5], [21, y - 1]], "hair.base", trait, ctx.rig.masks.hair_allowed);
     triangle(ctx, "hair.front", [[21, y - 1], [24, y + 5], [28, y]], "hair.base", trait, ctx.rig.masks.hair_allowed);
     line(ctx, "hair.highlight", 15, y, 22, y - 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
-  } else if (style === "bob_bangs") {
+  } else if (style === "bob_bangs" || style === "bob" || style === "pink_bob") {
     ellipse(ctx, "hair.front", crown[0], y + 1, 12, 6, "hair.base", trait, ctx.rig.masks.hair_allowed);
     for (let i = 0; i < 5; i += 1) {
       const bx = 12 + i * 3;
-      triangle(ctx, "hair.front", [[bx, y - 1], [bx + 3, y - 1], [bx + 1, y + 5 + (i % 2)]], "hair.base", trait, ctx.rig.masks.hair_allowed);
+      const drop = isHumanV2Icon(ctx) ? 4 : 5 + (i % 2);
+      triangle(ctx, "hair.front", [[bx, y - 1], [bx + 3, y - 1], [bx + 1, y + drop]], "hair.base", trait, ctx.rig.masks.hair_allowed);
     }
     rect(ctx, "hair.side", 8, 16, 3, 12, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
     rect(ctx, "hair.side", 29, 16, 3, 12, "hair.shadow", trait, ctx.rig.masks.hair_allowed);
-  } else if (style === "curly_short") {
+    if (isHumanV2Icon(ctx)) {
+      rect(ctx, "hair.highlight", 16, y - 3, 4, 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+      rect(ctx, "hair.highlight", 22, y - 2, 4, 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+    }
+  } else if (style === "curly_short" || style === "curly_cap") {
     for (const [x, yy, r] of [
       [11, y + 2, 3],
       [15, y - 1, 4],
@@ -273,6 +329,19 @@ function drawHairFront(ctx: DrawContext) {
       ellipse(ctx, "hair.front", x, yy, r, r, "hair.base", trait, ctx.rig.masks.hair_allowed);
       if (r >= 4) px(ctx, "hair.highlight", x - 1, yy - 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
     }
+  } else if (style === "blonde_wave") {
+    ellipse(ctx, "hair.front", crown[0], y, 12, 6, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    triangle(ctx, "hair.front", [[11, y], [20, y + 5], [23, y - 1]], "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.side", 9, 15, 4, 15, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.side", 27, 15, 4, 15, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.highlight", 15, y - 3, 5, 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.highlight", 22, y - 2, 5, 1, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
+  } else if (style === "long_side") {
+    ellipse(ctx, "hair.front", crown[0], y, 12, 7, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.side", 9, 14, 4, 19, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "hair.side", 27, 14, 4, 17, "hair.base", trait, ctx.rig.masks.hair_allowed);
+    triangle(ctx, "hair.front", [[14, y - 1], [27, y], [17, y + 6]], "hair.base", trait, ctx.rig.masks.hair_allowed);
+    line(ctx, "hair.highlight", 13, 10, 11, 28, "hair.highlight", trait, ctx.rig.masks.hair_allowed);
   } else if (style === "long_wavy") {
     ellipse(ctx, "hair.front", crown[0], y + 1, 12, 6, "hair.base", trait, ctx.rig.masks.hair_allowed);
     rect(ctx, "hair.side", 9, 15, 4, 18, "hair.base", trait, ctx.rig.masks.hair_allowed);
@@ -411,13 +480,17 @@ function drawMouth(ctx: DrawContext) {
   const [cx, cy] = ctx.rig.anchors["mouth.center"];
   const clip = ctx.rig.masks.face_core;
   if (shape === "neutral") line(ctx, "mouth", cx - 2, cy, cx + 2, cy, "mouth.dark", trait, clip);
-  else if (shape === "small_smile") {
+  else if (shape === "tiny_smile") {
+    px(ctx, "mouth", cx - 1, cy, "mouth.dark", trait, clip);
+    px(ctx, "mouth", cx, cy + 1, "mouth.dark", trait, clip);
+    px(ctx, "mouth", cx + 1, cy, "mouth.dark", trait, clip);
+  } else if (shape === "small_smile") {
     px(ctx, "mouth", cx - 2, cy, "mouth.dark", trait, clip);
     px(ctx, "mouth", cx - 1, cy + 1, "mouth.dark", trait, clip);
     px(ctx, "mouth", cx, cy + 1, "mouth.dark", trait, clip);
     px(ctx, "mouth", cx + 1, cy, "mouth.dark", trait, clip);
     px(ctx, "lips", cx + 1, cy, "lip.highlight", trait, clip);
-  } else if (shape === "big_smile") {
+  } else if (shape === "big_smile" || shape === "open_smile") {
     line(ctx, "mouth", cx - 3, cy, cx - 1, cy + 1, "mouth.dark", trait, clip);
     line(ctx, "mouth", cx - 1, cy + 1, cx + 3, cy, "mouth.dark", trait, clip);
     rect(ctx, "mouth", cx - 2, cy + 1, 4, 1, "mouth.teeth", trait, clip);
@@ -427,10 +500,10 @@ function drawMouth(ctx: DrawContext) {
   } else if (shape === "frown") {
     line(ctx, "mouth", cx - 2, cy + 1, cx, cy, "mouth.dark", trait, clip);
     line(ctx, "mouth", cx, cy, cx + 2, cy + 1, "mouth.dark", trait, clip);
-  } else if (shape === "surprised_o") {
+  } else if (shape === "surprised_o" || shape === "surprised") {
     rect(ctx, "mouth", cx - 1, cy - 1, 3, 3, "mouth.dark", trait, clip);
     px(ctx, "mouth", cx, cy, "mouth.shadow", trait, clip);
-  } else if (shape === "smirk_left") {
+  } else if (shape === "smirk_left" || shape === "smirk") {
     line(ctx, "mouth", cx - 3, cy + 1, cx - 1, cy, "mouth.dark", trait, clip);
     line(ctx, "mouth", cx - 1, cy, cx + 2, cy, "mouth.dark", trait, clip);
   }
@@ -473,17 +546,27 @@ function drawGlasses(ctx: DrawContext) {
   const left = ctx.rig.anchors["left_eye.center"];
   const right = ctx.rig.anchors["right_eye.center"];
   const bridge = ctx.rig.anchors["nose.bridge"];
-  const frame = shape === "thin_frame" ? "accessory.frame_light" : "accessory.frame";
+  const frame = shape === "thin_frame" || shape === "small_round" ? "accessory.frame_light" : "accessory.frame";
   const clip = ctx.rig.masks.face_core;
 
-  if (shape === "round" || shape === "thin_frame") {
-    ellipseOutline(ctx, "glasses.frame", left[0], left[1], 2.4, 2, frame, trait, clip);
-    ellipseOutline(ctx, "glasses.frame", right[0], right[1], 2.4, 2, frame, trait, clip);
+  if (shape === "round" || shape === "thin_frame" || shape === "small_round") {
+    const rx = shape === "small_round" ? 2 : 2.4;
+    ellipseOutline(ctx, "glasses.frame", left[0], left[1], rx, 2, frame, trait, clip);
+    ellipseOutline(ctx, "glasses.frame", right[0], right[1], rx, 2, frame, trait, clip);
   } else {
-    const w = shape === "rectangle" || shape === "sunglasses" ? 6 : 5;
-    const h = shape === "rectangle" || shape === "sunglasses" ? 3 : 4;
+    const w = shape === "rectangle" || shape === "sunglasses" || shape === "narrow_rectangle" ? 6 : 5;
+    const h = shape === "narrow_rectangle" ? 2 : shape === "rectangle" || shape === "sunglasses" ? 3 : 4;
+    const filled = shape === "sunglasses";
+    if (shape === "nerd_frame" || shape === "thick_square") {
+      rect(ctx, "glasses.frame", left[0] - Math.floor(w / 2) - 1, left[1] - 2, w + 2, h + 1, "accessory.dark", trait, clip);
+      rect(ctx, "glasses.frame", right[0] - Math.floor(w / 2) - 1, right[1] - 2, w + 2, h + 1, "accessory.dark", trait, clip);
+    }
     glassesBox(ctx, left[0] - Math.floor(w / 2), left[1] - 1, w, h, shape === "sunglasses", frame, trait, clip);
     glassesBox(ctx, right[0] - Math.floor(w / 2), right[1] - 1, w, h, shape === "sunglasses", frame, trait, clip);
+    if (filled) {
+      px(ctx, "glasses.highlight", left[0] - 1, left[1] - 1, "accessory.frame_light", trait, clip);
+      px(ctx, "glasses.highlight", right[0] - 1, right[1] - 1, "accessory.frame_light", trait, clip);
+    }
   }
   line(ctx, "glasses.frame", left[0] + 2, left[1], bridge[0], bridge[1], frame, trait, clip);
   line(ctx, "glasses.frame", bridge[0], bridge[1], right[0] - 2, right[1], frame, trait, clip);
@@ -543,6 +626,11 @@ function drawHeadwearFront(ctx: DrawContext) {
   } else if (type === "beret") {
     ellipse(ctx, "headwear.front", 18, top + 3, 11, 4, "clothing.base", trait, ctx.rig.masks.hair_allowed);
     rect(ctx, "headwear.front", 16, top - 1, 2, 2, "clothing.shadow", trait);
+  } else if (type === "hairband") {
+    const y = ctx.rig.anchors["hairline.center"][1] - 2;
+    line(ctx, "headwear.front", 11, y, 29, y, "clothing.shadow", trait, ctx.rig.masks.hair_allowed);
+    line(ctx, "headwear.front", 11, y + 1, 29, y + 1, "clothing.base", trait, ctx.rig.masks.hair_allowed);
+    rect(ctx, "headwear.front", 19, y - 1, 3, 1, "clothing.highlight", trait, ctx.rig.masks.hair_allowed);
   }
   ctx.placements[trait] = { trait, bbox: bboxUnion(["headwear.back", "headwear.front", "headphones.front"].map((id) => ctx.layers.get(id).bbox())) };
 }

@@ -40,6 +40,14 @@ npm run cli -- inspect examples/specs/seed-42.json --pixel 20,26 --json
 npm run validate:assets
 ```
 
+Human v2 icon examples:
+
+```bash
+npm run cli -- random --asset-pack human_v2_icon --seed 101 --out examples/specs/v2-seed-101.json
+npm run cli -- render examples/specs/v2-seed-101.json --out examples/outputs/v2-seed-101.png --debug-grid examples/outputs/v2-seed-101-grid.png --debug-anchors examples/outputs/v2-seed-101-anchors.png
+npm run cli -- assets validate --asset-pack human_v2_icon --json
+```
+
 The default logical canvas is `40x40`; the default scale is `12`, so PNG
 renders are `480x480` unless `--scale` is provided.
 

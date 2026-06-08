@@ -1,0 +1,45 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [40, 40],
+    "scale": 12,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v2_icon",
+    "version": "2.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "cute",
+    "face.shape": "soft_round",
+    "skin.tone": "deep_brown_09",
+    "face.detail": "none",
+    "hair.style": "curly_cap",
+    "hair.color": "black_02",
+    "eyes.shape": "dot",
+    "eyes.color": "black",
+    "eyebrows.shape": "soft_flat",
+    "nose.shape": "button",
+    "mouth.shape": "open_smile",
+    "ears.shape": "small_round",
+    "glasses.shape": "none",
+    "facial_hair.style": "none",
+    "headwear.type": "none",
+    "clothing.top": "hoodie",
+    "background.style": "pastel_mint"
+  },
+  "palette": {
+    "background.base": "#BDEDD8",
+    "clothing.base": "#F09BC2",
+    "clothing.shadow": "#A84E7B",
+    "mouth.teeth": "#FFF4E6",
+    "mouth.dark": "#1B1412",
+    "lip.highlight": "#E78A94"
+  },
+  "patches": [
+    { "op": "rect", "layer": "mouth", "region": "mouth", "dx": -3, "dy": 0, "w": 6, "h": 1, "color": "mouth.dark", "clip": "face" },
+    { "op": "rect", "layer": "mouth", "region": "mouth", "dx": -2, "dy": 1, "w": 4, "h": 1, "color": "mouth.teeth", "clip": "face" },
+    { "op": "rect", "layer": "hair.highlight", "x": 14, "y": 8, "w": 2, "h": 1, "color": "hair.highlight", "clip": "hair" }
+  ]
+}

@@ -217,6 +217,19 @@ function applyLayoutModifiers(anchors: Record<string, Point>, traits?: TraitMap)
     offset(next, "mouth.center", [0, 1]);
   }
 
+  if (traits?.["__asset_pack"] === "human_v2_icon") {
+    offset(next, "left_eye.center", [0, 2]);
+    offset(next, "right_eye.center", [0, 2]);
+    offset(next, "left_eyebrow.center", [0, 2]);
+    offset(next, "right_eyebrow.center", [0, 2]);
+    offset(next, "nose.bridge", [0, 1]);
+    offset(next, "nose.tip", [0, 1]);
+    offset(next, "mouth.center", [0, 2]);
+    offset(next, "mouth.baseline", [0, 2]);
+    offset(next, "left_ear.socket", [0, 1]);
+    offset(next, "right_ear.socket", [0, 1]);
+  }
+
   return next;
 }
 

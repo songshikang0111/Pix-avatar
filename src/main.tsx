@@ -1,18 +1,17 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { Boxes, Crosshair, Download, Grid2X2, RefreshCcw, Shuffle, Sparkles } from "lucide-react";
-import { AvatarSpec, PixelPatch, TraitKey } from "./types";
+import { AssetPackId, AvatarSpec, PixelPatch, TraitKey } from "./types";
 import { createSpecWithTraits } from "./core/spec";
 import { randomSpec } from "./core/random";
 import { renderAvatar } from "./core/render";
 import { parseCompactPatch } from "./core/patch";
-import { REQUIRED_TRAIT_KEYS, TRAIT_OPTIONS, traitOptionsByKey } from "./assets/humanV1";
+import { DEFAULT_ASSET_PACK_ID, getAssetPack, listAssetPacks, traitOptionsByKey } from "./assets/registry";
 import { hexToRgb } from "./core/color";
 import "./styles.css";
 
-const traitGroups = traitOptionsByKey();
-const controlKeys = REQUIRED_TRAIT_KEYS.filter((key) => !["skin.tone", "hair.color", "eyes.color"].includes(key));
 const paletteKeys = ["skin.tone", "hair.color", "eyes.color"] as TraitKey[];
+const assetPacks = listAssetPacks();
 
 function App() {
   const [spec, setSpec] = useState<AvatarSpec>(() => createSpecWithTraits());
@@ -27,6 +26,9 @@ function App() {
     () => renderAvatar(spec, { debugGrid, debugAnchors, pixel }),
     [spec, debugGrid, debugAnchors, pixel]
   );
+  const activePack = getAssetPack(spec.asset_pack.id);
+  const traitGroups = useMemo(() => traitOptionsByKey(spec.asset_pack.id), [spec.asset_pack.id]);
+  const controlKeys = activePack.requiredTraitKeys.filter((key) => !paletteKeys.includes(key));
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -56,7 +58,12 @@ function App() {
   };
 
   const randomize = () => {
-    setSpec(randomSpec({ seed, preset: "friendly_agent" }));
+    setSpec(randomSpec({ seed, preset: "friendly_agent", assetPackId: spec.asset_pack.id }));
+  };
+
+  const switchAssetPack = (assetPackId: AssetPackId) => {
+    setSpec(createSpecWithTraits({}, assetPackId));
+    setPixel(undefined);
   };
 
   const applyPatch = () => {
@@ -101,6 +108,13 @@ function App() {
           </div>
         </div>
         <div className="topActions">
+          <select className="seedInput" value={spec.asset_pack.id} onChange={(event) => switchAssetPack(parseAssetPack(event.target.value))} aria-label="Asset pack">
+            {assetPacks.map((pack) => (
+              <option key={pack.id} value={pack.id}>
+                {pack.label}
+              </option>
+            ))}
+          </select>
           <input className="seedInput" value={seed} onChange={(event) => setSeed(event.target.value)} aria-label="Seed" />
           <button type="button" className="button primary" onClick={randomize}>
             <Shuffle size={16} /> Random
@@ -184,6 +198,10 @@ function App() {
               <dd>{spec.traits["face.shape"]}</dd>
             </div>
             <div>
+              <dt>Pack</dt>
+              <dd>{activePack.id}</dd>
+            </div>
+            <div>
               <dt>Seed</dt>
               <dd>{String(spec.seed ?? "manual")}</dd>
             </div>
@@ -217,6 +235,11 @@ function App() {
       </section>
     </main>
   );
+}
+
+function parseAssetPack(input: string): AssetPackId {
+  if (input === "human_v2_icon") return "human_v2_icon";
+  return DEFAULT_ASSET_PACK_ID;
 }
 
 function shortLabel(key: string) {

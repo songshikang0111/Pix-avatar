@@ -1,0 +1,45 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [40, 40],
+    "scale": 12,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v2_icon",
+    "version": "2.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "feminine",
+    "face.shape": "soft_round",
+    "skin.tone": "porcelain_01",
+    "face.detail": "blush_soft",
+    "hair.style": "bob",
+    "hair.color": "blonde",
+    "eyes.shape": "happy_arc",
+    "eyes.color": "black",
+    "eyebrows.shape": "soft_flat",
+    "nose.shape": "small_line",
+    "mouth.shape": "tiny_smile",
+    "ears.shape": "small_round",
+    "glasses.shape": "none",
+    "facial_hair.style": "none",
+    "headwear.type": "none",
+    "clothing.top": "tshirt",
+    "background.style": "pastel_cream"
+  },
+  "palette": {
+    "background.base": "#F6EFB8",
+    "hair.base": "#F1D06C",
+    "hair.shadow": "#8E6A25",
+    "hair.highlight": "#FFF0A8",
+    "clothing.base": "#F7F3D2",
+    "blush.soft": "#E7818B"
+  },
+  "patches": [
+    { "op": "rect", "layer": "hair.front", "x": 11, "y": 11, "w": 18, "h": 3, "color": "hair.base", "clip": "hair" },
+    { "op": "rect", "layer": "hair.highlight", "x": 16, "y": 8, "w": 4, "h": 1, "color": "hair.highlight", "clip": "hair" },
+    { "op": "rect", "layer": "hair.highlight", "x": 21, "y": 9, "w": 3, "h": 1, "color": "hair.highlight", "clip": "hair" }
+  ]
+}

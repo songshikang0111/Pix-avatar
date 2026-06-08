@@ -1,0 +1,45 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [40, 40],
+    "scale": 12,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v2_icon",
+    "version": "2.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "androgynous",
+    "face.shape": "oval",
+    "skin.tone": "fair_02",
+    "face.detail": "none",
+    "hair.style": "buzz",
+    "hair.color": "black_02",
+    "eyes.shape": "dot",
+    "eyes.color": "black",
+    "eyebrows.shape": "soft_flat",
+    "nose.shape": "single_pixel",
+    "mouth.shape": "neutral",
+    "ears.shape": "small_round",
+    "glasses.shape": "none",
+    "facial_hair.style": "none",
+    "headwear.type": "cap",
+    "clothing.top": "tshirt",
+    "background.style": "pastel_cream"
+  },
+  "palette": {
+    "background.base": "#F2EFC3",
+    "background.accent": "#B6E6D2",
+    "background.shadow": "#DAD8A8",
+    "accessory.frame": "#DFF2BF",
+    "accessory.dark": "#171719",
+    "clothing.base": "#CDEFD0"
+  },
+  "patches": [
+    { "op": "rect", "layer": "headwear.front", "x": 12, "y": 9, "w": 16, "h": 3, "color": "#DFF2BF" },
+    { "op": "rect", "layer": "headwear.front", "x": 19, "y": 6, "w": 5, "h": 2, "color": "#171719" },
+    { "op": "erase", "layer": "face.details", "x": 0, "y": 0, "w": 40, "h": 40, "clip": "face" }
+  ]
+}

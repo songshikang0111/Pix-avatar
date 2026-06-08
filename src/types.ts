@@ -29,11 +29,13 @@ export interface CanvasSpec {
   background?: "transparent" | string;
 }
 
+export type AssetPackId = "human_v1" | "human_v2_icon";
+
 export interface AvatarSpec {
   version: "avatar/v1";
   canvas: CanvasSpec;
   asset_pack: {
-    id: "human_v1";
+    id: AssetPackId;
     version: string;
   };
   seed?: number | string;

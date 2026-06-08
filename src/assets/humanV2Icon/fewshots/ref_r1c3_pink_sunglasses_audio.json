@@ -1,0 +1,48 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [40, 40],
+    "scale": 12,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v2_icon",
+    "version": "2.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "cute",
+    "face.shape": "round",
+    "skin.tone": "deep_brown_09",
+    "face.detail": "none",
+    "hair.style": "pink_bob",
+    "hair.color": "pink",
+    "eyes.shape": "dot",
+    "eyes.color": "black",
+    "eyebrows.shape": "soft_flat",
+    "nose.shape": "button",
+    "mouth.shape": "tiny_smile",
+    "ears.shape": "round",
+    "glasses.shape": "sunglasses",
+    "facial_hair.style": "none",
+    "headwear.type": "headphones",
+    "clothing.top": "jacket",
+    "background.style": "pastel_pink"
+  },
+  "palette": {
+    "background.base": "#F8A7C8",
+    "background.accent": "#BEEFE3",
+    "background.shadow": "#F4E89A",
+    "hair.base": "#F16EA9",
+    "hair.shadow": "#A92D6E",
+    "hair.highlight": "#FFB6D4",
+    "accessory.dark": "#171719",
+    "accessory.frame": "#171719"
+  },
+  "patches": [
+    { "op": "rect", "layer": "hair.highlight", "x": 13, "y": 9, "w": 3, "h": 1, "color": "hair.highlight", "clip": "hair" },
+    { "op": "rect", "layer": "glasses.frame", "x": 13, "y": 18, "w": 14, "h": 2, "color": "accessory.dark" },
+    { "op": "rect", "layer": "glasses.lens", "x": 14, "y": 16, "w": 4, "h": 3, "color": "accessory.lens_dark" },
+    { "op": "rect", "layer": "glasses.lens", "x": 22, "y": 16, "w": 4, "h": 3, "color": "accessory.lens_dark" }
+  ]
+}

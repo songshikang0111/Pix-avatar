@@ -1,0 +1,45 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [40, 40],
+    "scale": 12,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v2_icon",
+    "version": "2.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "cute",
+    "face.shape": "round",
+    "skin.tone": "fair_02",
+    "face.detail": "none",
+    "hair.style": "clean_crop",
+    "hair.color": "brown",
+    "eyes.shape": "dot",
+    "eyes.color": "black",
+    "eyebrows.shape": "soft_flat",
+    "nose.shape": "button",
+    "mouth.shape": "neutral",
+    "ears.shape": "small_round",
+    "glasses.shape": "narrow_rectangle",
+    "facial_hair.style": "none",
+    "headwear.type": "beanie",
+    "clothing.top": "hoodie",
+    "background.style": "pastel_mint"
+  },
+  "palette": {
+    "background.base": "#A8E6DD",
+    "accessory.frame": "#1F2430",
+    "accessory.dark": "#171719",
+    "clothing.base": "#F05A9B",
+    "clothing.shadow": "#8F2D5A"
+  },
+  "patches": [
+    { "op": "rect", "layer": "headwear.front", "x": 13, "y": 6, "w": 14, "h": 3, "color": "#F05A9B" },
+    { "op": "rect", "layer": "headwear.front", "x": 16, "y": 3, "w": 8, "h": 3, "color": "#F05A9B" },
+    { "op": "rect", "layer": "headwear.front", "x": 18, "y": 3, "w": 4, "h": 1, "color": "#FFB1D0" },
+    { "op": "rect", "layer": "glasses.frame", "x": 13, "y": 18, "w": 14, "h": 1, "color": "accessory.dark" }
+  ]
+}

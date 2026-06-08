@@ -1,6 +1,6 @@
 import { FaceRig, Mask, PatchClip, PixelPatch, Point } from "../types";
 import { colorToken } from "./color";
-import { maskHas } from "./geometry";
+import { CANVAS_SIZE, maskHas } from "./geometry";
 import { LayerStack, drawLine, drawRect } from "./pixelLayer";
 
 export function parseCompactPatch(input: string): PixelPatch {
@@ -88,7 +88,8 @@ export function applyPatches(layers: LayerStack, patches: PixelPatch[], rig: Fac
 
 function applyPatch(layers: LayerStack, patch: PixelPatch, rig: FaceRig, palette: Record<string, string>, warnings: string[]) {
   if (patch.op === "mirror") {
-    const axisValue = patch.axis === "vertical" ? patch.x ?? 63.5 : patch.y ?? 63.5;
+    const defaultPivot = (CANVAS_SIZE - 1) / 2;
+    const axisValue = patch.axis === "vertical" ? patch.x ?? defaultPivot : patch.y ?? defaultPivot;
     for (const child of patch.ops) {
       applyPatch(layers, child, rig, palette, warnings);
       applyPatch(layers, mirrorPatch(child, patch.axis, axisValue), rig, palette, warnings);

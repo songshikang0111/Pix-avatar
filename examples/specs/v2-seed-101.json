@@ -1,0 +1,36 @@
+{
+  "version": "avatar/v1",
+  "canvas": {
+    "size": [
+      40,
+      40
+    ],
+    "scale": 12,
+    "background": "transparent"
+  },
+  "asset_pack": {
+    "id": "human_v2_icon",
+    "version": "2.0.0"
+  },
+  "traits": {
+    "base.species": "human",
+    "presentation": "androgynous",
+    "face.shape": "square_soft",
+    "skin.tone": "tan_07",
+    "face.detail": "none",
+    "hair.style": "long_side",
+    "hair.color": "black_02",
+    "eyes.shape": "happy_arc",
+    "eyes.color": "blue",
+    "eyebrows.shape": "raised_left",
+    "nose.shape": "small_line",
+    "mouth.shape": "smirk",
+    "ears.shape": "none",
+    "glasses.shape": "small_round",
+    "facial_hair.style": "none",
+    "headwear.type": "cap",
+    "clothing.top": "tshirt",
+    "background.style": "diagonal"
+  },
+  "seed": "101"
+}

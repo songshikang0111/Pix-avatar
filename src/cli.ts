@@ -3,13 +3,13 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
 import { Command } from "commander";
 import YAML from "yaml";
-import { AvatarSpec, TraitMap } from "./types";
+import { AssetPackId, AvatarSpec, TraitMap } from "./types";
 import { createSpecWithTraits } from "./core/spec";
 import { randomSpec } from "./core/random";
 import { renderAvatar } from "./core/render";
 import { parseCompactPatch } from "./core/patch";
 import { validateAssetPackMinimums, validateAvatar } from "./core/validate";
-import { TRAIT_OPTIONS } from "./assets/humanV1";
+import { DEFAULT_ASSET_PACK_ID, getAssetPack, listAssetPacks } from "./assets/registry";
 import { writeLayerPngs, writePng } from "./node/png";
 
 const program = new Command();
@@ -20,15 +20,17 @@ program
   .argument("<action>", "list or show")
   .argument("[id]")
   .option("--type <type>")
+  .option("--asset-pack <id>", "human_v1 or human_v2_icon", DEFAULT_ASSET_PACK_ID)
   .option("--json")
   .action((action, id, options) => {
+    const assetPack = getAssetPack(parseAssetPack(options.assetPack));
     if (action === "list") {
-      const rows = TRAIT_OPTIONS.filter((trait) => !options.type || trait.key === options.type);
+      const rows = assetPack.traitOptions.filter((trait) => !options.type || trait.key === options.type);
       output(rows, options.json);
       return;
     }
     if (action === "show") {
-      const trait = TRAIT_OPTIONS.find((option) => option.id === id || `${option.key}.${option.value}` === id);
+      const trait = assetPack.traitOptions.find((option) => option.id === id || `${option.key}.${option.value}` === id);
       if (!trait) throw new Error(`Trait not found: ${id}`);
       output(trait, options.json);
       return;
@@ -39,9 +41,10 @@ program
 program
   .command("new")
   .option("--preset <preset>", "currently supports human", "human")
+  .option("--asset-pack <id>", "human_v1 or human_v2_icon")
   .option("--out <path>")
   .action(async (options) => {
-    const spec = createSpecWithTraits();
+    const spec = createSpecWithTraits({}, assetPackFromOptions(options));
     await writeSpecOrStdout(spec, options.out);
   });
 
@@ -49,6 +52,7 @@ program
   .command("random")
   .option("--seed <seed>")
   .option("--preset <preset>", "optional preset, e.g. friendly_agent")
+  .option("--asset-pack <id>", "human_v1 or human_v2_icon")
   .option("--constraint <constraint...>", "key=value1,value2")
   .option("--out <path>")
   .action(async (options) => {
@@ -57,7 +61,7 @@ program
       const [key, values] = raw.split("=");
       constraints[key] = values.split(",");
     }
-    const spec = randomSpec({ seed: options.seed, preset: options.preset, constraints });
+    const spec = randomSpec({ seed: options.seed, preset: options.preset, assetPackId: assetPackFromOptions(options), constraints });
     await writeSpecOrStdout(spec, options.out);
   });
 
@@ -131,10 +135,11 @@ program
 program
   .command("validate")
   .argument("[input]")
+  .option("--asset-pack <id>", "human_v1 or human_v2_icon", DEFAULT_ASSET_PACK_ID)
   .option("--json")
   .action(async (input, options) => {
     if (!input) {
-      output(validateAssetPackMinimums(5), options.json);
+      output(validateAssetPackMinimums(5, parseAssetPack(options.assetPack)), options.json);
       return;
     }
     output(validateAvatar(await readSpec(input)), options.json);
@@ -151,11 +156,16 @@ program
 
 program
   .command("assets")
-  .argument("<action>", "validate")
+  .argument("<action>", "list or validate")
+  .option("--asset-pack <id>", "human_v1 or human_v2_icon", DEFAULT_ASSET_PACK_ID)
   .option("--json")
   .action((action, options) => {
+    if (action === "list") {
+      output(listAssetPacks(), options.json);
+      return;
+    }
     if (action !== "validate") throw new Error(`Unknown assets action: ${action}`);
-    output(validateAssetPackMinimums(5), options.json);
+    output(validateAssetPackMinimums(5, parseAssetPack(options.assetPack)), options.json);
   });
 
 program.parseAsync();
@@ -186,6 +196,18 @@ async function writeText(path: string, text: string) {
 function parsePixel(input: string): [number, number] {
   const [x, y] = input.split(",").map(Number);
   return [x, y];
+}
+
+function parseAssetPack(input?: string): AssetPackId {
+  if (!input || input === "human" || input === "human_v1") return "human_v1";
+  if (input === "human_v2_icon") return "human_v2_icon";
+  throw new Error(`Unknown asset pack: ${input}`);
+}
+
+function assetPackFromOptions(options: { assetPack?: string; preset?: string }): AssetPackId {
+  if (options.assetPack) return parseAssetPack(options.assetPack);
+  if (options.preset === "human_v2_icon") return "human_v2_icon";
+  return DEFAULT_ASSET_PACK_ID;
 }
 
 function output(value: unknown, json = false) {
