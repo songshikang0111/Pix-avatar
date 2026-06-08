@@ -1,0 +1,93 @@
+{
+  "id": "avatar-01",
+  "workflow": "Pix Avatar Trait Studio in-app Browser canvas pass",
+  "reference": {
+    "matrix": "../matrices/avatar-01.json",
+    "underlay": "built-in avatar-01"
+  },
+  "canvas": {
+    "size": [
+      32,
+      32
+    ]
+  },
+  "platformActions": {
+    "openedLocalApp": "http://127.0.0.1:5173/",
+    "templateName": "manual-avatar-01-platform-pass",
+    "drawingMethod": "Selected each trait slot in the UI and painted grouped color runs through the visible canvas using brush pointer events.",
+    "savedLocalAssets": [
+      "avatar-01 Background",
+      "avatar-01 Clothing",
+      "avatar-01 Ears",
+      "avatar-01 Face",
+      "avatar-01 Hair",
+      "avatar-01 Headwear",
+      "avatar-01 Eyes",
+      "avatar-01 Eyebrows",
+      "avatar-01 Nose",
+      "avatar-01 Mouth"
+    ],
+    "manualJsonExportAttempted": true,
+    "manualJsonExportNote": "The in-app Browser reported that downloads are not supported. The same manual template was written to disk and rendered through npm run render:manual-template for content verification."
+  },
+  "layerCountsFromPlatformJsonPane": [
+    {
+      "slot": "background.style",
+      "pixels": 1024
+    },
+    {
+      "slot": "clothing.top",
+      "pixels": 119
+    },
+    {
+      "slot": "ears.shape",
+      "pixels": 14
+    },
+    {
+      "slot": "face.shape",
+      "pixels": 180
+    },
+    {
+      "slot": "hair.style",
+      "pixels": 157
+    },
+    {
+      "slot": "headwear.type",
+      "pixels": 1
+    },
+    {
+      "slot": "eyes.shape",
+      "pixels": 4
+    },
+    {
+      "slot": "eyebrows.shape",
+      "pixels": 3
+    },
+    {
+      "slot": "nose.shape",
+      "pixels": 9
+    },
+    {
+      "slot": "mouth.shape",
+      "pixels": 3
+    },
+    {
+      "slot": "facial_hair.style",
+      "pixels": 0
+    },
+    {
+      "slot": "glasses.shape",
+      "pixels": 0
+    }
+  ],
+  "verification": {
+    "renderCommand": "npm run render:manual-template -- --input datasets/reference/istock-36/manual-traits/avatar-01.manual-traits.json --out datasets/reference/istock-36/manual-traits/avatar-01.rendered.png --specOut datasets/reference/istock-36/manual-traits/avatar-01.avatar-spec.json --scale 6",
+    "diffReport": "avatar-01.diff-report.json",
+    "scoredPixels": 1024,
+    "diffPixels": 0,
+    "diffRate": 0,
+    "targetDiffRate": 0.05,
+    "passed": true
+  }
+}
+

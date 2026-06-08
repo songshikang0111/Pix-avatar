@@ -20,6 +20,8 @@ This fixture turns a 6x6 reference sheet into Pix Avatar comparable outputs:
 - `part-fit/`: generator-vs-reference fit report for accepted part-trait specs.
 - `part-recombinations/`: visual QA sheet for mixing accepted 32px part assets
   across different reference avatars.
+- `manual-traits/`: manually reviewed `Pix Avatar Trait Studio` samples,
+  including an `avatar-01` full-layer template with exact `32x32` diff reports.
 
 The JSON matrices are intentionally dense `32x32` rows of hex colors. The
 normalization uses area-dominant sampling with a `0.5,0.5` source-pixel offset,
