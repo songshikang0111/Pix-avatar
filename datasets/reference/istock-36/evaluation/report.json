@@ -1,0 +1,1175 @@
+{
+  "version": "pix-avatar/reference-evaluation/v1",
+  "dataset": "istock-36",
+  "source": "/Users/songs/Downloads/istockphoto-1820670230-1024x1024.jpg",
+  "canvas": {
+    "size": [
+      32,
+      32
+    ],
+    "comparableTo": "renderAvatar(...).image via pixelImageToMatrix, then resizeMatrixDominant to this canvas size"
+  },
+  "normalization": {
+    "method": "offset-area-dominant-quantized-rgb-with-palette-cleanup",
+    "quantizeStep": 16,
+    "sampleOffset": [
+      0.5,
+      0.5
+    ],
+    "paletteCleanupThreshold": 24,
+    "paletteMinRepresentativeCount": 3,
+    "previewScale": 6
+  },
+  "diffThreshold": 30,
+  "artifacts": {
+    "diffContactSheet": "diff-contact-sheet.png",
+    "reconstructionContactSheet": "reconstruction-contact-sheet.png",
+    "diffsDir": "diffs"
+  },
+  "aggregate": {
+    "all": {
+      "pixels": 1056784,
+      "rmse": 47.838,
+      "diffPixels": 147269,
+      "diffRate": 0.139356
+    },
+    "scored": {
+      "pixels": 1006606,
+      "rmse": 47.816,
+      "diffPixels": 137075,
+      "diffRate": 0.136175
+    },
+    "ignoredPixels": 50178,
+    "averageColors": 12.972,
+    "averageRareColors": 5.722
+  },
+  "entries": [
+    {
+      "id": "avatar-01",
+      "row": 0,
+      "column": 0,
+      "crop": [
+        0,
+        0,
+        170.66666666666666,
+        170.66666666666666
+      ],
+      "diff": "diffs/avatar-01.png",
+      "colors": 7,
+      "rareColors": 4,
+      "all": {
+        "pixels": 29241,
+        "rmse": 42.576,
+        "diffPixels": 2848,
+        "diffRate": 0.097397
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 42.576,
+        "diffPixels": 2848,
+        "diffRate": 0.097397
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-02",
+      "row": 0,
+      "column": 1,
+      "crop": [
+        170.66666666666666,
+        0,
+        341.3333333333333,
+        170.66666666666666
+      ],
+      "diff": "diffs/avatar-02.png",
+      "colors": 9,
+      "rareColors": 6,
+      "all": {
+        "pixels": 29412,
+        "rmse": 48.986,
+        "diffPixels": 3050,
+        "diffRate": 0.103699
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 48.986,
+        "diffPixels": 3050,
+        "diffRate": 0.103699
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-03",
+      "row": 0,
+      "column": 2,
+      "crop": [
+        341.3333333333333,
+        0,
+        512,
+        170.66666666666666
+      ],
+      "diff": "diffs/avatar-03.png",
+      "colors": 15,
+      "rareColors": 9,
+      "all": {
+        "pixels": 29241,
+        "rmse": 48.743,
+        "diffPixels": 5141,
+        "diffRate": 0.175815
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 48.743,
+        "diffPixels": 5141,
+        "diffRate": 0.175815
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-04",
+      "row": 0,
+      "column": 3,
+      "crop": [
+        512,
+        0,
+        682.6666666666666,
+        170.66666666666666
+      ],
+      "diff": "diffs/avatar-04.png",
+      "colors": 7,
+      "rareColors": 2,
+      "all": {
+        "pixels": 29241,
+        "rmse": 47.321,
+        "diffPixels": 3003,
+        "diffRate": 0.102698
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 47.321,
+        "diffPixels": 3003,
+        "diffRate": 0.102698
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-05",
+      "row": 0,
+      "column": 4,
+      "crop": [
+        682.6666666666666,
+        0,
+        853.3333333333334,
+        170.66666666666666
+      ],
+      "diff": "diffs/avatar-05.png",
+      "colors": 18,
+      "rareColors": 11,
+      "all": {
+        "pixels": 29412,
+        "rmse": 54.04,
+        "diffPixels": 5148,
+        "diffRate": 0.175031
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 54.04,
+        "diffPixels": 5148,
+        "diffRate": 0.175031
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-06",
+      "row": 0,
+      "column": 5,
+      "crop": [
+        853.3333333333334,
+        0,
+        1024,
+        170.66666666666666
+      ],
+      "diff": "diffs/avatar-06.png",
+      "colors": 10,
+      "rareColors": 3,
+      "all": {
+        "pixels": 29241,
+        "rmse": 40.721,
+        "diffPixels": 3875,
+        "diffRate": 0.132519
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 40.721,
+        "diffPixels": 3875,
+        "diffRate": 0.132519
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-07",
+      "row": 1,
+      "column": 0,
+      "crop": [
+        0,
+        170.66666666666666,
+        170.66666666666666,
+        341.3333333333333
+      ],
+      "diff": "diffs/avatar-07.png",
+      "colors": 14,
+      "rareColors": 7,
+      "all": {
+        "pixels": 29412,
+        "rmse": 33.989,
+        "diffPixels": 3501,
+        "diffRate": 0.119033
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 33.989,
+        "diffPixels": 3501,
+        "diffRate": 0.119033
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-08",
+      "row": 1,
+      "column": 1,
+      "crop": [
+        170.66666666666666,
+        170.66666666666666,
+        341.3333333333333,
+        341.3333333333333
+      ],
+      "diff": "diffs/avatar-08.png",
+      "colors": 10,
+      "rareColors": 4,
+      "all": {
+        "pixels": 29584,
+        "rmse": 49.298,
+        "diffPixels": 4012,
+        "diffRate": 0.135614
+      },
+      "scored": {
+        "pixels": 29584,
+        "rmse": 49.298,
+        "diffPixels": 4012,
+        "diffRate": 0.135614
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-09",
+      "row": 1,
+      "column": 2,
+      "crop": [
+        341.3333333333333,
+        170.66666666666666,
+        512,
+        341.3333333333333
+      ],
+      "diff": "diffs/avatar-09.png",
+      "colors": 8,
+      "rareColors": 3,
+      "all": {
+        "pixels": 29412,
+        "rmse": 46.159,
+        "diffPixels": 3386,
+        "diffRate": 0.115123
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 46.159,
+        "diffPixels": 3386,
+        "diffRate": 0.115123
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-10",
+      "row": 1,
+      "column": 3,
+      "crop": [
+        512,
+        170.66666666666666,
+        682.6666666666666,
+        341.3333333333333
+      ],
+      "diff": "diffs/avatar-10.png",
+      "colors": 11,
+      "rareColors": 5,
+      "all": {
+        "pixels": 29412,
+        "rmse": 55.985,
+        "diffPixels": 4855,
+        "diffRate": 0.165069
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 55.985,
+        "diffPixels": 4855,
+        "diffRate": 0.165069
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-11",
+      "row": 1,
+      "column": 4,
+      "crop": [
+        682.6666666666666,
+        170.66666666666666,
+        853.3333333333334,
+        341.3333333333333
+      ],
+      "diff": "diffs/avatar-11.png",
+      "colors": 17,
+      "rareColors": 10,
+      "all": {
+        "pixels": 29584,
+        "rmse": 55.578,
+        "diffPixels": 5077,
+        "diffRate": 0.171613
+      },
+      "scored": {
+        "pixels": 29584,
+        "rmse": 55.578,
+        "diffPixels": 5077,
+        "diffRate": 0.171613
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-12",
+      "row": 1,
+      "column": 5,
+      "crop": [
+        853.3333333333334,
+        170.66666666666666,
+        1024,
+        341.3333333333333
+      ],
+      "diff": "diffs/avatar-12.png",
+      "colors": 11,
+      "rareColors": 6,
+      "all": {
+        "pixels": 29412,
+        "rmse": 52.093,
+        "diffPixels": 3749,
+        "diffRate": 0.127465
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 52.093,
+        "diffPixels": 3749,
+        "diffRate": 0.127465
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-13",
+      "row": 2,
+      "column": 0,
+      "crop": [
+        0,
+        341.3333333333333,
+        170.66666666666666,
+        512
+      ],
+      "diff": "diffs/avatar-13.png",
+      "colors": 7,
+      "rareColors": 2,
+      "all": {
+        "pixels": 29241,
+        "rmse": 31.588,
+        "diffPixels": 3149,
+        "diffRate": 0.107691
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 31.588,
+        "diffPixels": 3149,
+        "diffRate": 0.107691
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-14",
+      "row": 2,
+      "column": 1,
+      "crop": [
+        170.66666666666666,
+        341.3333333333333,
+        341.3333333333333,
+        512
+      ],
+      "diff": "diffs/avatar-14.png",
+      "colors": 13,
+      "rareColors": 5,
+      "all": {
+        "pixels": 29412,
+        "rmse": 60.124,
+        "diffPixels": 5272,
+        "diffRate": 0.179247
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 60.124,
+        "diffPixels": 5272,
+        "diffRate": 0.179247
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-15",
+      "row": 2,
+      "column": 2,
+      "crop": [
+        341.3333333333333,
+        341.3333333333333,
+        512,
+        512
+      ],
+      "diff": "diffs/avatar-15.png",
+      "colors": 12,
+      "rareColors": 5,
+      "all": {
+        "pixels": 29241,
+        "rmse": 42.131,
+        "diffPixels": 4157,
+        "diffRate": 0.142163
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 42.131,
+        "diffPixels": 4157,
+        "diffRate": 0.142163
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-16",
+      "row": 2,
+      "column": 3,
+      "crop": [
+        512,
+        341.3333333333333,
+        682.6666666666666,
+        512
+      ],
+      "diff": "diffs/avatar-16.png",
+      "colors": 13,
+      "rareColors": 8,
+      "all": {
+        "pixels": 29241,
+        "rmse": 54.205,
+        "diffPixels": 4304,
+        "diffRate": 0.147191
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 54.205,
+        "diffPixels": 4304,
+        "diffRate": 0.147191
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-17",
+      "row": 2,
+      "column": 4,
+      "crop": [
+        682.6666666666666,
+        341.3333333333333,
+        853.3333333333334,
+        512
+      ],
+      "diff": "diffs/avatar-17.png",
+      "colors": 17,
+      "rareColors": 8,
+      "all": {
+        "pixels": 29412,
+        "rmse": 34.312,
+        "diffPixels": 4000,
+        "diffRate": 0.135999
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 34.312,
+        "diffPixels": 4000,
+        "diffRate": 0.135999
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-18",
+      "row": 2,
+      "column": 5,
+      "crop": [
+        853.3333333333334,
+        341.3333333333333,
+        1024,
+        512
+      ],
+      "diff": "diffs/avatar-18.png",
+      "colors": 20,
+      "rareColors": 12,
+      "all": {
+        "pixels": 29241,
+        "rmse": 43.009,
+        "diffPixels": 4564,
+        "diffRate": 0.156082
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 43.009,
+        "diffPixels": 4564,
+        "diffRate": 0.156082
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-19",
+      "row": 3,
+      "column": 0,
+      "crop": [
+        0,
+        512,
+        170.66666666666666,
+        682.6666666666666
+      ],
+      "diff": "diffs/avatar-19.png",
+      "colors": 10,
+      "rareColors": 4,
+      "all": {
+        "pixels": 29241,
+        "rmse": 58.144,
+        "diffPixels": 5161,
+        "diffRate": 0.176499
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 58.144,
+        "diffPixels": 5161,
+        "diffRate": 0.176499
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-20",
+      "row": 3,
+      "column": 1,
+      "crop": [
+        170.66666666666666,
+        512,
+        341.3333333333333,
+        682.6666666666666
+      ],
+      "diff": "diffs/avatar-20.png",
+      "colors": 15,
+      "rareColors": 8,
+      "all": {
+        "pixels": 29412,
+        "rmse": 46.594,
+        "diffPixels": 4513,
+        "diffRate": 0.153441
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 46.594,
+        "diffPixels": 4513,
+        "diffRate": 0.153441
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-21",
+      "row": 3,
+      "column": 2,
+      "crop": [
+        341.3333333333333,
+        512,
+        512,
+        682.6666666666666
+      ],
+      "diff": "diffs/avatar-21.png",
+      "colors": 10,
+      "rareColors": 6,
+      "all": {
+        "pixels": 29241,
+        "rmse": 53.411,
+        "diffPixels": 4487,
+        "diffRate": 0.153449
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 53.411,
+        "diffPixels": 4487,
+        "diffRate": 0.153449
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-22",
+      "row": 3,
+      "column": 3,
+      "crop": [
+        512,
+        512,
+        682.6666666666666,
+        682.6666666666666
+      ],
+      "diff": "diffs/avatar-22.png",
+      "colors": 19,
+      "rareColors": 9,
+      "all": {
+        "pixels": 29241,
+        "rmse": 53.284,
+        "diffPixels": 5186,
+        "diffRate": 0.177354
+      },
+      "scored": {
+        "pixels": 25401,
+        "rmse": 50.909,
+        "diffPixels": 3948,
+        "diffRate": 0.155427
+      },
+      "ignoredPixels": 3840,
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            604.16,
+            634.88,
+            682.67,
+            682.67
+          ],
+          "matrixRegion": [
+            17,
+            23,
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avatar-23",
+      "row": 3,
+      "column": 4,
+      "crop": [
+        682.6666666666666,
+        512,
+        853.3333333333334,
+        682.6666666666666
+      ],
+      "diff": "diffs/avatar-23.png",
+      "colors": 11,
+      "rareColors": 0,
+      "all": {
+        "pixels": 29412,
+        "rmse": 44.589,
+        "diffPixels": 3588,
+        "diffRate": 0.121991
+      },
+      "scored": {
+        "pixels": 21156,
+        "rmse": 47.013,
+        "diffPixels": 2184,
+        "diffRate": 0.103233
+      },
+      "ignoredPixels": 8256,
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            682.67,
+            634.88,
+            853.33,
+            682.67
+          ],
+          "matrixRegion": [
+            0,
+            23,
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avatar-24",
+      "row": 3,
+      "column": 5,
+      "crop": [
+        853.3333333333334,
+        512,
+        1024,
+        682.6666666666666
+      ],
+      "diff": "diffs/avatar-24.png",
+      "colors": 31,
+      "rareColors": 12,
+      "all": {
+        "pixels": 29241,
+        "rmse": 48.802,
+        "diffPixels": 4932,
+        "diffRate": 0.168667
+      },
+      "scored": {
+        "pixels": 21033,
+        "rmse": 52.205,
+        "diffPixels": 3518,
+        "diffRate": 0.167261
+      },
+      "ignoredPixels": 8208,
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            853.33,
+            634.88,
+            1024,
+            682.67
+          ],
+          "matrixRegion": [
+            0,
+            23,
+            32,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avatar-25",
+      "row": 4,
+      "column": 0,
+      "crop": [
+        0,
+        682.6666666666666,
+        170.66666666666666,
+        853.3333333333334
+      ],
+      "diff": "diffs/avatar-25.png",
+      "colors": 9,
+      "rareColors": 4,
+      "all": {
+        "pixels": 29412,
+        "rmse": 48.436,
+        "diffPixels": 3326,
+        "diffRate": 0.113083
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 48.436,
+        "diffPixels": 3326,
+        "diffRate": 0.113083
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-26",
+      "row": 4,
+      "column": 1,
+      "crop": [
+        170.66666666666666,
+        682.6666666666666,
+        341.3333333333333,
+        853.3333333333334
+      ],
+      "diff": "diffs/avatar-26.png",
+      "colors": 17,
+      "rareColors": 10,
+      "all": {
+        "pixels": 29584,
+        "rmse": 56.247,
+        "diffPixels": 4811,
+        "diffRate": 0.162622
+      },
+      "scored": {
+        "pixels": 29584,
+        "rmse": 56.247,
+        "diffPixels": 4811,
+        "diffRate": 0.162622
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-27",
+      "row": 4,
+      "column": 2,
+      "crop": [
+        341.3333333333333,
+        682.6666666666666,
+        512,
+        853.3333333333334
+      ],
+      "diff": "diffs/avatar-27.png",
+      "colors": 10,
+      "rareColors": 5,
+      "all": {
+        "pixels": 29412,
+        "rmse": 49.938,
+        "diffPixels": 3569,
+        "diffRate": 0.121345
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 49.938,
+        "diffPixels": 3569,
+        "diffRate": 0.121345
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-28",
+      "row": 4,
+      "column": 3,
+      "crop": [
+        512,
+        682.6666666666666,
+        682.6666666666666,
+        853.3333333333334
+      ],
+      "diff": "diffs/avatar-28.png",
+      "colors": 14,
+      "rareColors": 5,
+      "all": {
+        "pixels": 29412,
+        "rmse": 34.67,
+        "diffPixels": 3747,
+        "diffRate": 0.127397
+      },
+      "scored": {
+        "pixels": 24612,
+        "rmse": 32.761,
+        "diffPixels": 2898,
+        "diffRate": 0.117747
+      },
+      "ignoredPixels": 4800,
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            604.16,
+            682.67,
+            682.67,
+            737.28
+          ],
+          "matrixRegion": [
+            17,
+            0,
+            32,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avatar-29",
+      "row": 4,
+      "column": 4,
+      "crop": [
+        682.6666666666666,
+        682.6666666666666,
+        853.3333333333334,
+        853.3333333333334
+      ],
+      "diff": "diffs/avatar-29.png",
+      "colors": 12,
+      "rareColors": 1,
+      "all": {
+        "pixels": 29584,
+        "rmse": 52.955,
+        "diffPixels": 4338,
+        "diffRate": 0.146633
+      },
+      "scored": {
+        "pixels": 19264,
+        "rmse": 53.853,
+        "diffPixels": 2606,
+        "diffRate": 0.135278
+      },
+      "ignoredPixels": 10320,
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            682.67,
+            682.67,
+            853.33,
+            737.28
+          ],
+          "matrixRegion": [
+            0,
+            0,
+            32,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avatar-30",
+      "row": 4,
+      "column": 5,
+      "crop": [
+        853.3333333333334,
+        682.6666666666666,
+        1024,
+        853.3333333333334
+      ],
+      "diff": "diffs/avatar-30.png",
+      "colors": 19,
+      "rareColors": 2,
+      "all": {
+        "pixels": 29412,
+        "rmse": 54.673,
+        "diffPixels": 5103,
+        "diffRate": 0.173501
+      },
+      "scored": {
+        "pixels": 19152,
+        "rmse": 59.228,
+        "diffPixels": 3103,
+        "diffRate": 0.16202
+      },
+      "ignoredPixels": 10260,
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            853.33,
+            682.67,
+            1024,
+            737.28
+          ],
+          "matrixRegion": [
+            0,
+            0,
+            32,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avatar-31",
+      "row": 5,
+      "column": 0,
+      "crop": [
+        0,
+        853.3333333333334,
+        170.66666666666666,
+        1024
+      ],
+      "diff": "diffs/avatar-31.png",
+      "colors": 23,
+      "rareColors": 9,
+      "all": {
+        "pixels": 29241,
+        "rmse": 51.143,
+        "diffPixels": 5256,
+        "diffRate": 0.179748
+      },
+      "scored": {
+        "pixels": 24747,
+        "rmse": 48.203,
+        "diffPixels": 3699,
+        "diffRate": 0.149473
+      },
+      "ignoredPixels": 4494,
+      "ignoreRegions": [
+        {
+          "id": "lower_left_asset_id",
+          "reason": "Visible stock asset id in the lower-left corner.",
+          "sourceRegion": [
+            0,
+            983.04,
+            102.4,
+            1024
+          ],
+          "matrixRegion": [
+            0,
+            24,
+            20,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avatar-32",
+      "row": 5,
+      "column": 1,
+      "crop": [
+        170.66666666666666,
+        853.3333333333334,
+        341.3333333333333,
+        1024
+      ],
+      "diff": "diffs/avatar-32.png",
+      "colors": 5,
+      "rareColors": 0,
+      "all": {
+        "pixels": 29412,
+        "rmse": 47.85,
+        "diffPixels": 2935,
+        "diffRate": 0.099789
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 47.85,
+        "diffPixels": 2935,
+        "diffRate": 0.099789
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-33",
+      "row": 5,
+      "column": 2,
+      "crop": [
+        341.3333333333333,
+        853.3333333333334,
+        512,
+        1024
+      ],
+      "diff": "diffs/avatar-33.png",
+      "colors": 15,
+      "rareColors": 7,
+      "all": {
+        "pixels": 29241,
+        "rmse": 35.101,
+        "diffPixels": 3398,
+        "diffRate": 0.116207
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 35.101,
+        "diffPixels": 3398,
+        "diffRate": 0.116207
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-34",
+      "row": 5,
+      "column": 3,
+      "crop": [
+        512,
+        853.3333333333334,
+        682.6666666666666,
+        1024
+      ],
+      "diff": "diffs/avatar-34.png",
+      "colors": 7,
+      "rareColors": 3,
+      "all": {
+        "pixels": 29241,
+        "rmse": 51.666,
+        "diffPixels": 3360,
+        "diffRate": 0.114907
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 51.666,
+        "diffPixels": 3360,
+        "diffRate": 0.114907
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-35",
+      "row": 5,
+      "column": 4,
+      "crop": [
+        682.6666666666666,
+        853.3333333333334,
+        853.3333333333334,
+        1024
+      ],
+      "diff": "diffs/avatar-35.png",
+      "colors": 11,
+      "rareColors": 6,
+      "all": {
+        "pixels": 29412,
+        "rmse": 37.47,
+        "diffPixels": 3473,
+        "diffRate": 0.118081
+      },
+      "scored": {
+        "pixels": 29412,
+        "rmse": 37.47,
+        "diffPixels": 3473,
+        "diffRate": 0.118081
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    },
+    {
+      "id": "avatar-36",
+      "row": 5,
+      "column": 5,
+      "crop": [
+        853.3333333333334,
+        853.3333333333334,
+        1024,
+        1024
+      ],
+      "diff": "diffs/avatar-36.png",
+      "colors": 10,
+      "rareColors": 5,
+      "all": {
+        "pixels": 29241,
+        "rmse": 33.572,
+        "diffPixels": 2995,
+        "diffRate": 0.102425
+      },
+      "scored": {
+        "pixels": 29241,
+        "rmse": 33.572,
+        "diffPixels": 2995,
+        "diffRate": 0.102425
+      },
+      "ignoredPixels": 0,
+      "ignoreRegions": []
+    }
+  ]
+}

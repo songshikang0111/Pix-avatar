@@ -1,0 +1,845 @@
+{
+  "version": "pix-avatar/reference-dataset/v1",
+  "id": "istock-36",
+  "description": "36 reference avatars normalized to a 32x32 logical canvas for pixel-level evaluation.",
+  "source": {
+    "fileName": "istockphoto-1820670230-1024x1024.jpg",
+    "sha256": "933684c6408ff404eef7f8dfa78c325060401987f083dc1ae0b6a3226f178f7d",
+    "width": 1024,
+    "height": 1024,
+    "grid": [
+      6,
+      6
+    ],
+    "note": "The original source file is not copied into this repository. Generated files are derived local evaluation fixtures."
+  },
+  "sourceIssueRegions": [
+    {
+      "id": "large_istock_overlay",
+      "reason": "Visible iStock credit overlay in the downloaded reference image.",
+      "box": [
+        604.16,
+        634.88,
+        1024,
+        737.28
+      ]
+    },
+    {
+      "id": "lower_left_asset_id",
+      "reason": "Visible stock asset id in the lower-left corner.",
+      "box": [
+        0,
+        983.04,
+        102.4,
+        1024
+      ]
+    }
+  ],
+  "canvas": {
+    "size": [
+      32,
+      32
+    ],
+    "comparableTo": "renderAvatar(...).image via pixelImageToMatrix, then resizeMatrixDominant to this canvas size"
+  },
+  "normalization": {
+    "method": "offset-area-dominant-quantized-rgb-with-palette-cleanup",
+    "quantizeStep": 16,
+    "sampleOffset": [
+      0.5,
+      0.5
+    ],
+    "paletteCleanupThreshold": 24,
+    "paletteMinRepresentativeCount": 3,
+    "previewScale": 6
+  },
+  "artifacts": {
+    "tilesDir": "tiles",
+    "normalizedDir": "normalized",
+    "matricesDir": "matrices",
+    "contactSheet": "preview/contact-sheet.png"
+  },
+  "entries": [
+    {
+      "id": "avatar-01",
+      "index": 1,
+      "row": 0,
+      "column": 0,
+      "tile": "tiles/avatar-01.png",
+      "normalized": "normalized/avatar-01.png",
+      "matrix": "matrices/avatar-01.json",
+      "background": "#80E0E0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        0,
+        0,
+        170.66666666666666,
+        170.66666666666666
+      ]
+    },
+    {
+      "id": "avatar-02",
+      "index": 2,
+      "row": 0,
+      "column": 1,
+      "tile": "tiles/avatar-02.png",
+      "normalized": "normalized/avatar-02.png",
+      "matrix": "matrices/avatar-02.json",
+      "background": "#E0F0C0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        170.66666666666666,
+        0,
+        341.3333333333333,
+        170.66666666666666
+      ]
+    },
+    {
+      "id": "avatar-03",
+      "index": 3,
+      "row": 0,
+      "column": 2,
+      "tile": "tiles/avatar-03.png",
+      "normalized": "normalized/avatar-03.png",
+      "matrix": "matrices/avatar-03.json",
+      "background": "#F0E0A0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        341.3333333333333,
+        0,
+        512,
+        170.66666666666666
+      ]
+    },
+    {
+      "id": "avatar-04",
+      "index": 4,
+      "row": 0,
+      "column": 3,
+      "tile": "tiles/avatar-04.png",
+      "normalized": "normalized/avatar-04.png",
+      "matrix": "matrices/avatar-04.json",
+      "background": "#E0F0C0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        512,
+        0,
+        682.6666666666666,
+        170.66666666666666
+      ]
+    },
+    {
+      "id": "avatar-05",
+      "index": 5,
+      "row": 0,
+      "column": 4,
+      "tile": "tiles/avatar-05.png",
+      "normalized": "normalized/avatar-05.png",
+      "matrix": "matrices/avatar-05.json",
+      "background": "#80E0E0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        682.6666666666666,
+        0,
+        853.3333333333334,
+        170.66666666666666
+      ]
+    },
+    {
+      "id": "avatar-06",
+      "index": 6,
+      "row": 0,
+      "column": 5,
+      "tile": "tiles/avatar-06.png",
+      "normalized": "normalized/avatar-06.png",
+      "matrix": "matrices/avatar-06.json",
+      "background": "#F0E0A0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        853.3333333333334,
+        0,
+        1024,
+        170.66666666666666
+      ]
+    },
+    {
+      "id": "avatar-07",
+      "index": 7,
+      "row": 1,
+      "column": 0,
+      "tile": "tiles/avatar-07.png",
+      "normalized": "normalized/avatar-07.png",
+      "matrix": "matrices/avatar-07.json",
+      "background": "#F0E0A0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        0,
+        170.66666666666666,
+        170.66666666666666,
+        341.3333333333333
+      ]
+    },
+    {
+      "id": "avatar-08",
+      "index": 8,
+      "row": 1,
+      "column": 1,
+      "tile": "tiles/avatar-08.png",
+      "normalized": "normalized/avatar-08.png",
+      "matrix": "matrices/avatar-08.json",
+      "background": "#80E0E0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        170.66666666666666,
+        170.66666666666666,
+        341.3333333333333,
+        341.3333333333333
+      ]
+    },
+    {
+      "id": "avatar-09",
+      "index": 9,
+      "row": 1,
+      "column": 2,
+      "tile": "tiles/avatar-09.png",
+      "normalized": "normalized/avatar-09.png",
+      "matrix": "matrices/avatar-09.json",
+      "background": "#FF80B0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        341.3333333333333,
+        170.66666666666666,
+        512,
+        341.3333333333333
+      ]
+    },
+    {
+      "id": "avatar-10",
+      "index": 10,
+      "row": 1,
+      "column": 3,
+      "tile": "tiles/avatar-10.png",
+      "normalized": "normalized/avatar-10.png",
+      "matrix": "matrices/avatar-10.json",
+      "background": "#80E0E0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        512,
+        170.66666666666666,
+        682.6666666666666,
+        341.3333333333333
+      ]
+    },
+    {
+      "id": "avatar-11",
+      "index": 11,
+      "row": 1,
+      "column": 4,
+      "tile": "tiles/avatar-11.png",
+      "normalized": "normalized/avatar-11.png",
+      "matrix": "matrices/avatar-11.json",
+      "background": "#F0E0A0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        682.6666666666666,
+        170.66666666666666,
+        853.3333333333334,
+        341.3333333333333
+      ]
+    },
+    {
+      "id": "avatar-12",
+      "index": 12,
+      "row": 1,
+      "column": 5,
+      "tile": "tiles/avatar-12.png",
+      "normalized": "normalized/avatar-12.png",
+      "matrix": "matrices/avatar-12.json",
+      "background": "#E0F0C0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        853.3333333333334,
+        170.66666666666666,
+        1024,
+        341.3333333333333
+      ]
+    },
+    {
+      "id": "avatar-13",
+      "index": 13,
+      "row": 2,
+      "column": 0,
+      "tile": "tiles/avatar-13.png",
+      "normalized": "normalized/avatar-13.png",
+      "matrix": "matrices/avatar-13.json",
+      "background": "#FF80B0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        0,
+        341.3333333333333,
+        170.66666666666666,
+        512
+      ]
+    },
+    {
+      "id": "avatar-14",
+      "index": 14,
+      "row": 2,
+      "column": 1,
+      "tile": "tiles/avatar-14.png",
+      "normalized": "normalized/avatar-14.png",
+      "matrix": "matrices/avatar-14.json",
+      "background": "#E0F0C0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        170.66666666666666,
+        341.3333333333333,
+        341.3333333333333,
+        512
+      ]
+    },
+    {
+      "id": "avatar-15",
+      "index": 15,
+      "row": 2,
+      "column": 2,
+      "tile": "tiles/avatar-15.png",
+      "normalized": "normalized/avatar-15.png",
+      "matrix": "matrices/avatar-15.json",
+      "background": "#F0E0A0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        341.3333333333333,
+        341.3333333333333,
+        512,
+        512
+      ]
+    },
+    {
+      "id": "avatar-16",
+      "index": 16,
+      "row": 2,
+      "column": 3,
+      "tile": "tiles/avatar-16.png",
+      "normalized": "normalized/avatar-16.png",
+      "matrix": "matrices/avatar-16.json",
+      "background": "#E0F0B0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        512,
+        341.3333333333333,
+        682.6666666666666,
+        512
+      ]
+    },
+    {
+      "id": "avatar-17",
+      "index": 17,
+      "row": 2,
+      "column": 4,
+      "tile": "tiles/avatar-17.png",
+      "normalized": "normalized/avatar-17.png",
+      "matrix": "matrices/avatar-17.json",
+      "background": "#80E0E0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        682.6666666666666,
+        341.3333333333333,
+        853.3333333333334,
+        512
+      ]
+    },
+    {
+      "id": "avatar-18",
+      "index": 18,
+      "row": 2,
+      "column": 5,
+      "tile": "tiles/avatar-18.png",
+      "normalized": "normalized/avatar-18.png",
+      "matrix": "matrices/avatar-18.json",
+      "background": "#F0E0A0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        853.3333333333334,
+        341.3333333333333,
+        1024,
+        512
+      ]
+    },
+    {
+      "id": "avatar-19",
+      "index": 19,
+      "row": 3,
+      "column": 0,
+      "tile": "tiles/avatar-19.png",
+      "normalized": "normalized/avatar-19.png",
+      "matrix": "matrices/avatar-19.json",
+      "background": "#F0E0A0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        0,
+        512,
+        170.66666666666666,
+        682.6666666666666
+      ]
+    },
+    {
+      "id": "avatar-20",
+      "index": 20,
+      "row": 3,
+      "column": 1,
+      "tile": "tiles/avatar-20.png",
+      "normalized": "normalized/avatar-20.png",
+      "matrix": "matrices/avatar-20.json",
+      "background": "#80E0E0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        170.66666666666666,
+        512,
+        341.3333333333333,
+        682.6666666666666
+      ]
+    },
+    {
+      "id": "avatar-21",
+      "index": 21,
+      "row": 3,
+      "column": 2,
+      "tile": "tiles/avatar-21.png",
+      "normalized": "normalized/avatar-21.png",
+      "matrix": "matrices/avatar-21.json",
+      "background": "#FF80B0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        341.3333333333333,
+        512,
+        512,
+        682.6666666666666
+      ]
+    },
+    {
+      "id": "avatar-22",
+      "index": 22,
+      "row": 3,
+      "column": 3,
+      "tile": "tiles/avatar-22.png",
+      "normalized": "normalized/avatar-22.png",
+      "matrix": "matrices/avatar-22.json",
+      "background": "#80E0E0",
+      "qualityFlags": [
+        "large_istock_overlay"
+      ],
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            604.16,
+            634.88,
+            682.67,
+            682.67
+          ],
+          "matrixRegion": [
+            17,
+            23,
+            32,
+            32
+          ]
+        }
+      ],
+      "crop": [
+        512,
+        512,
+        682.6666666666666,
+        682.6666666666666
+      ]
+    },
+    {
+      "id": "avatar-23",
+      "index": 23,
+      "row": 3,
+      "column": 4,
+      "tile": "tiles/avatar-23.png",
+      "normalized": "normalized/avatar-23.png",
+      "matrix": "matrices/avatar-23.json",
+      "background": "#E0F0C0",
+      "qualityFlags": [
+        "large_istock_overlay"
+      ],
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            682.67,
+            634.88,
+            853.33,
+            682.67
+          ],
+          "matrixRegion": [
+            0,
+            23,
+            32,
+            32
+          ]
+        }
+      ],
+      "crop": [
+        682.6666666666666,
+        512,
+        853.3333333333334,
+        682.6666666666666
+      ]
+    },
+    {
+      "id": "avatar-24",
+      "index": 24,
+      "row": 3,
+      "column": 5,
+      "tile": "tiles/avatar-24.png",
+      "normalized": "normalized/avatar-24.png",
+      "matrix": "matrices/avatar-24.json",
+      "background": "#80E0E0",
+      "qualityFlags": [
+        "large_istock_overlay"
+      ],
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            853.33,
+            634.88,
+            1024,
+            682.67
+          ],
+          "matrixRegion": [
+            0,
+            23,
+            32,
+            32
+          ]
+        }
+      ],
+      "crop": [
+        853.3333333333334,
+        512,
+        1024,
+        682.6666666666666
+      ]
+    },
+    {
+      "id": "avatar-25",
+      "index": 25,
+      "row": 4,
+      "column": 0,
+      "tile": "tiles/avatar-25.png",
+      "normalized": "normalized/avatar-25.png",
+      "matrix": "matrices/avatar-25.json",
+      "background": "#E0F0C0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        0,
+        682.6666666666666,
+        170.66666666666666,
+        853.3333333333334
+      ]
+    },
+    {
+      "id": "avatar-26",
+      "index": 26,
+      "row": 4,
+      "column": 1,
+      "tile": "tiles/avatar-26.png",
+      "normalized": "normalized/avatar-26.png",
+      "matrix": "matrices/avatar-26.json",
+      "background": "#F0E0A0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        170.66666666666666,
+        682.6666666666666,
+        341.3333333333333,
+        853.3333333333334
+      ]
+    },
+    {
+      "id": "avatar-27",
+      "index": 27,
+      "row": 4,
+      "column": 2,
+      "tile": "tiles/avatar-27.png",
+      "normalized": "normalized/avatar-27.png",
+      "matrix": "matrices/avatar-27.json",
+      "background": "#E0F0C0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        341.3333333333333,
+        682.6666666666666,
+        512,
+        853.3333333333334
+      ]
+    },
+    {
+      "id": "avatar-28",
+      "index": 28,
+      "row": 4,
+      "column": 3,
+      "tile": "tiles/avatar-28.png",
+      "normalized": "normalized/avatar-28.png",
+      "matrix": "matrices/avatar-28.json",
+      "background": "#FF80B0",
+      "qualityFlags": [
+        "large_istock_overlay"
+      ],
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            604.16,
+            682.67,
+            682.67,
+            737.28
+          ],
+          "matrixRegion": [
+            17,
+            0,
+            32,
+            11
+          ]
+        }
+      ],
+      "crop": [
+        512,
+        682.6666666666666,
+        682.6666666666666,
+        853.3333333333334
+      ]
+    },
+    {
+      "id": "avatar-29",
+      "index": 29,
+      "row": 4,
+      "column": 4,
+      "tile": "tiles/avatar-29.png",
+      "normalized": "normalized/avatar-29.png",
+      "matrix": "matrices/avatar-29.json",
+      "background": "#908060",
+      "qualityFlags": [
+        "large_istock_overlay"
+      ],
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            682.67,
+            682.67,
+            853.33,
+            737.28
+          ],
+          "matrixRegion": [
+            0,
+            0,
+            32,
+            11
+          ]
+        }
+      ],
+      "crop": [
+        682.6666666666666,
+        682.6666666666666,
+        853.3333333333334,
+        853.3333333333334
+      ]
+    },
+    {
+      "id": "avatar-30",
+      "index": 30,
+      "row": 4,
+      "column": 5,
+      "tile": "tiles/avatar-30.png",
+      "normalized": "normalized/avatar-30.png",
+      "matrix": "matrices/avatar-30.json",
+      "background": "#E0F0C0",
+      "qualityFlags": [
+        "large_istock_overlay"
+      ],
+      "ignoreRegions": [
+        {
+          "id": "large_istock_overlay",
+          "reason": "Visible iStock credit overlay in the downloaded reference image.",
+          "sourceRegion": [
+            853.33,
+            682.67,
+            1024,
+            737.28
+          ],
+          "matrixRegion": [
+            0,
+            0,
+            32,
+            11
+          ]
+        }
+      ],
+      "crop": [
+        853.3333333333334,
+        682.6666666666666,
+        1024,
+        853.3333333333334
+      ]
+    },
+    {
+      "id": "avatar-31",
+      "index": 31,
+      "row": 5,
+      "column": 0,
+      "tile": "tiles/avatar-31.png",
+      "normalized": "normalized/avatar-31.png",
+      "matrix": "matrices/avatar-31.json",
+      "background": "#80E0E0",
+      "qualityFlags": [
+        "lower_left_asset_id"
+      ],
+      "ignoreRegions": [
+        {
+          "id": "lower_left_asset_id",
+          "reason": "Visible stock asset id in the lower-left corner.",
+          "sourceRegion": [
+            0,
+            983.04,
+            102.4,
+            1024
+          ],
+          "matrixRegion": [
+            0,
+            24,
+            20,
+            32
+          ]
+        }
+      ],
+      "crop": [
+        0,
+        853.3333333333334,
+        170.66666666666666,
+        1024
+      ]
+    },
+    {
+      "id": "avatar-32",
+      "index": 32,
+      "row": 5,
+      "column": 1,
+      "tile": "tiles/avatar-32.png",
+      "normalized": "normalized/avatar-32.png",
+      "matrix": "matrices/avatar-32.json",
+      "background": "#E0F0C0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        170.66666666666666,
+        853.3333333333334,
+        341.3333333333333,
+        1024
+      ]
+    },
+    {
+      "id": "avatar-33",
+      "index": 33,
+      "row": 5,
+      "column": 2,
+      "tile": "tiles/avatar-33.png",
+      "normalized": "normalized/avatar-33.png",
+      "matrix": "matrices/avatar-33.json",
+      "background": "#80E0E0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        341.3333333333333,
+        853.3333333333334,
+        512,
+        1024
+      ]
+    },
+    {
+      "id": "avatar-34",
+      "index": 34,
+      "row": 5,
+      "column": 3,
+      "tile": "tiles/avatar-34.png",
+      "normalized": "normalized/avatar-34.png",
+      "matrix": "matrices/avatar-34.json",
+      "background": "#E0F0C0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        512,
+        853.3333333333334,
+        682.6666666666666,
+        1024
+      ]
+    },
+    {
+      "id": "avatar-35",
+      "index": 35,
+      "row": 5,
+      "column": 4,
+      "tile": "tiles/avatar-35.png",
+      "normalized": "normalized/avatar-35.png",
+      "matrix": "matrices/avatar-35.json",
+      "background": "#80E0E0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        682.6666666666666,
+        853.3333333333334,
+        853.3333333333334,
+        1024
+      ]
+    },
+    {
+      "id": "avatar-36",
+      "index": 36,
+      "row": 5,
+      "column": 5,
+      "tile": "tiles/avatar-36.png",
+      "normalized": "normalized/avatar-36.png",
+      "matrix": "matrices/avatar-36.json",
+      "background": "#FF80B0",
+      "qualityFlags": [],
+      "ignoreRegions": [],
+      "crop": [
+        853.3333333333334,
+        853.3333333333334,
+        1024,
+        1024
+      ]
+    }
+  ]
+}
