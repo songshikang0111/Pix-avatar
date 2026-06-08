@@ -34,6 +34,8 @@
     "cli": "tsx src/cli.ts",
     "serve:api": "tsx src/server.ts",
     "render:samples": "tsx src/scripts/renderSamples.ts",
+    "prepare:reference-dataset": "tsx src/scripts/prepareReferenceDataset.ts",
+    "evaluate:reference-dataset": "tsx src/scripts/evaluateReferenceDataset.ts",
     "validate:assets": "tsx src/scripts/crossValidate.ts",
     "prepublishOnly": "npm run typecheck && npm test && npm run validate:assets && npm run build"
   },
@@ -46,10 +48,12 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^5.0.0",
     "@types/express": "^4.17.21",
+    "@types/jpeg-js": "^0.3.0",
     "@types/node": "^22.7.4",
     "@types/pngjs": "^6.0.5",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
+    "jpeg-js": "^0.4.4",
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
